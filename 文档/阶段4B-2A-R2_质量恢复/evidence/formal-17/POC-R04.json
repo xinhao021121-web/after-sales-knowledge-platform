@@ -1,0 +1,180 @@
+{
+  "task_id": "POC-R04",
+  "core_task_id": "CORE-R4",
+  "question_hash": "9597b2bffa88173af7d45f5cfd7f449e97643827a77b9e8ccb8d73b9f8a1b058",
+  "question_length": 29,
+  "question_summary": {
+    "original": "AirPods Pro 长时间单耳佩戴后另一只不响怎么办？",
+    "rewrites": [
+      "右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？",
+      "一只耳机有声音另一只没声音，要先检查什么？"
+    ]
+  },
+  "answer_status": "ANSWERED",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-FAQ-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods Pro 长时间单耳佩戴后另一只不响怎么办？",
+      "右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？",
+      "一只耳机有声音另一只没声音，要先检查什么？"
+    ],
+    "internal_candidate_pool_size": 12,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "d527d9cd-c27b-4f41-8ddb-a0c903e49a18",
+      "provider_request_id": "da8dfd8a-52c7-423c-ac38-87b655cf6110",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [
+    {
+      "citation_id": "EVD-f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "score": 0.670809,
+      "supported_claims": [
+        "单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。",
+        "仍未恢复时，可在设备中忽略旧配对并重新配对。",
+        "只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "source": {
+        "src_id": "SRC-PUB-002",
+        "doc_id": "DOC-SAFETY-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 安全处置 SOP",
+        "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f"
+      },
+      "kb_id": "KB-DOC-SAFETY-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "score": 0.54902005,
+      "supported_claims": [
+        "进液后立即停止佩戴和充电，用柔软干燥的无绒布擦干外表，放入充电盒前至少等待 2 小时完全干燥。",
+        "不得使用加热、压缩空气、甩动或尖锐物清理接口和声学孔。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 950,
+  "completion_tokens": 2297,
+  "total_tokens": 3247,
+  "provider_latency_ms": 25012,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "da8dfd8a-52c7-423c-ac38-87b655cf6110",
+  "bff_request_id": "d527d9cd-c27b-4f41-8ddb-a0c903e49a18",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-FAQ-V1",
+        "chunk_id": "CHUNK-FAQ-CONNECT-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+        "score": 0.670809,
+        "claim_support_count": 3
+      },
+      {
+        "position": 2,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.57652855,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "02_安全SOP.md",
+        "document_id": "DOC-SAFETY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+        "score": 0.54902005,
+        "claim_support_count": 3
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "AirPods Pro 长时间单耳佩戴后另一只不响怎么办？",
+        "右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？",
+        "一只耳机有声音另一只没声音，要先检查什么？"
+      ],
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3,
+      "candidate_document_count": 5,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "简短结论：不能据此判定“长期单耳佩戴坏了”。 左耳无声应按单侧无声排查处理；只有完成排查、清洁、重置后仍持续无声，才转售后检测，且不得承诺换新。",
+    "suggested_action": "将左右耳机都放回充电盒，合盖至少 10 秒，再取出重连；检查设备声道平衡是否居中，避免“平衡拉到右耳”导致左耳无声。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 2,
+      "unsupported_count": 0
+    }
+  }
+}

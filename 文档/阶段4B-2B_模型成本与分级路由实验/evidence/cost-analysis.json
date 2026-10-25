@@ -1,0 +1,18 @@
+{
+  "official_price_source": "evidence/pricing-2026-10-25.json",
+  "currency": "CNY",
+  "official_model_list_estimates": {
+    "A": 0.8375355,
+    "B": 0.162326,
+    "C": 0.28924000000000005
+  },
+  "dify_billed_cost_cny": null,
+  "dify_billing_cost_status": "COST_UNKNOWN",
+  "input_cache_assumption": "All prompt tokens priced as cache-miss because per-call cache-hit usage was unavailable.",
+  "average_pro_cost_per_non_p0": 0.04408081578947368,
+  "average_flash_cost_per_non_p0": 0.008543473684210526,
+  "average_pro_fallback_cost": 0.0332604,
+  "estimated_break_even_fallback_rate": 1.068458049369916,
+  "observed_fallback_rate": 0.2631578947368421,
+  "note": "Official DeepSeek list prices are available; Dify invoice/contract charges remain unknown."
+}

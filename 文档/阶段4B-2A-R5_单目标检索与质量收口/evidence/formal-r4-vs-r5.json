@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-25T13:20:18.416Z",
+  "r4": {
+    "run_id": "EVAL-REAL-8279ab81-8545-4473-acaf-80df57d5bd95",
+    "status": "PASSED",
+    "recall_at_3_core": 1,
+    "source_hits_core": 7,
+    "covered_sources": "9/9",
+    "model_effective_answers": 3,
+    "provider_errors": 0
+  },
+  "r5": {
+    "run_id": "EVAL-REAL-658cce03-c558-4e40-b0d7-ca59f96f92e8",
+    "status": "PASSED",
+    "recall_at_3_core": 1,
+    "source_hits_core": 7,
+    "covered_sources": "9/9",
+    "model_effective_answers": 3,
+    "provider_errors": 0
+  },
+  "result": "Formal 17-task aggregate gates remain PASSED after relevance-first retrieval."
+}

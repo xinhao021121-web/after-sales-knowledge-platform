@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="F01 创建咨询任务并补齐上下文">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F01  创建咨询任务并补齐上下文" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="客户诉求 / 客服入口" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="创建 ASQ 并记录原话" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="展示缺失字段并补 CTX" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="上下文达到最低判断条件？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="进入证据与建议" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="ASQ_ASSESSING 或进入风险流程" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="识别失败/重复/无权限" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="复用原任务、补证或转人工" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：识别失败/重复/无权限&#xA;恢复：复用原任务、补证或转人工&#xA;终点：ASQ_ASSESSING 或进入风险流程" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F02 证据不足时追问和补证">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F02  证据不足时追问和补证" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="ASQ 已存在但证据不足" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="显示缺失字段与证据原因" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="客户补充 / 售后取证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="证据有效且适用？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="进入条件性建议" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="继续判断、转交或 CASE_OPEN" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="无证据/冲突/来源不可用" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="保持待补证、保留冲突或创建 CASE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：无证据/冲突/来源不可用&#xA;恢复：保持待补证、保留冲突或创建 CASE&#xA;终点：继续判断、转交或 CASE_OPEN" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F03 条件性建议、承诺拦截和人工确认">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F03  条件性建议、承诺拦截和人工确认" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="已有有效 EVD 或明确缺口" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="生成带条件与边界的 ADV" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="人工核对并执行承诺/风险复检" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="可发送且无越权承诺？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="发送并记录确认版本" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="ASQ_RESPONDED 或返回处理" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="承诺拦截/无依据/风险出现" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="改写、补证、转授权或进入风险" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：承诺拦截/无依据/风险出现&#xA;恢复：改写、补证、转授权或进入风险&#xA;终点：ASQ_RESPONDED 或返回处理" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F04 R2/R3 安全止损和升级">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F04  R2/R3 安全止损和升级" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="检测到风险信号" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="暂停普通建议并创建 ESC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="立即止损、追问伤害/异味/鼓包" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="风险已排除或关闭？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="按 R2/R3 转交并监控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="ESC_CLOSED/DISMISSED 后恢复 ASQ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="客户拒绝止损/无接收人" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="持续警示、升级安全/法务、保留待办" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：客户拒绝止损/无接收人&#xA;恢复：持续警示、升级安全/法务、保留待办&#xA;终点：ESC_CLOSED/DISMISSED 后恢复 ASQ" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F05 来源失效触发对象阻断">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F05  来源失效触发对象阻断" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="SRC 过期/撤回/不可访问" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="展示影响对象清单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="阻断 KB/EVAL/REL/LINK/CASE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="是否存在关联 CASE？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="重开或修复受影响 CASE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="阻断完成并进入 CASE 闭环" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="影响分析或审计失败" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="先阻断对外引用，保留治理待办并重试" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：影响分析或审计失败&#xA;恢复：先阻断对外引用，保留治理待办并重试&#xA;终点：阻断完成并进入 CASE 闭环" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F06 CASE 创建、分诊和修复">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F06  CASE 创建、分诊和修复" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="错误/缺口/冲突/发布异常" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="创建 CASE 并保存原证据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="分诊、补证、制定修复" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="需要知识修复？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="EV-14 创建 KB_DRAFT + LINK_OPEN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="CASE_REGRESSION_PENDING 或受控延期" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="无责任人/重复 CASE/来源失败" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="延期、补责任人、复用原对象" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：无责任人/重复 CASE/来源失败&#xA;恢复：延期、补责任人、复用原对象&#xA;终点：CASE_REGRESSION_PENDING 或受控延期" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F07 CASE 关联 0/1/N 个 KB_LINK">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F07  CASE 关联 0/1/N 个 KB_LINK" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="打开 CASE 修复计划" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="按 knowledge_item 分组 LINK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="展示 0/1/N 条轨道与下一步" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="同知识条目已有活动 LINK？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="展示可用 LINK 或创建入口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="P09 展示聚合状态" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="重复开链/previous_link_id 非法" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="拒绝非法链、显示审计、复用活动链" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：重复开链/previous_link_id 非法&#xA;恢复：拒绝非法链、显示审计、复用活动链&#xA;终点：P09 展示聚合状态" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F08 部分完成、全部完成和明确弃置">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F08  部分完成、全部完成和明确弃置" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="多条 LINK 处于不同状态" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="展示已完成/活动/失败 LINK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="计算 CASE 关闭门禁" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="全部最新 LINK 已 RELEASED/ABANDONED？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="CASE_CLOSED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="关闭或继续处理" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="部分完成/最新失败/批准缺失" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="保持 CASE_FIXING 或申请弃置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：部分完成/最新失败/批准缺失&#xA;恢复：保持 CASE_FIXING 或申请弃置&#xA;终点：关闭或继续处理" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F09 EVAL 通过、REL 拒绝和重试">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F09  EVAL 通过、REL 拒绝和重试" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="候选 KB 冻结" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="运行 EVAL 并记录结果" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="通过则更新 LINK 并创建 REL 候选" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="主管批准 REL？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="EV-16 激活 REL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="REL_ACTIVE 或回到修复" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="EVAL 失败/REL 拒绝/写入失败" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="LINK_FAILED 回 CASE_FIXING 或重试" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：EVAL 失败/REL 拒绝/写入失败&#xA;恢复：LINK_FAILED 回 CASE_FIXING 或重试&#xA;终点：REL_ACTIVE 或回到修复" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F10 发布生效、LINK 释放和 CASE 聚合">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F10  发布生效、LINK 释放和 CASE 聚合" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="REL_PENDING_APPROVAL" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="EV-16 激活新 REL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="EV-11 释放匹配 LINK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="CASE 全部知识条目最新 LINK 完成？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="CASE_CLOSED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="发布完成且 CASE 可安全关闭" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="其他 LINK 活动/失败/审计失败" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="保持 FIXING/PENDING 或重试" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：其他 LINK 活动/失败/审计失败&#xA;恢复：保持 FIXING/PENDING 或重试&#xA;终点：发布完成且 CASE 可安全关闭" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F11 REL 停用、回滚和后继 LINK">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F11  REL 停用、回滚和后继 LINK" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="ACTIVE REL 异常或来源失效" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="停用当前 REL 并选择历史目标" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="创建回滚候选，重新审批" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="回滚目标与批准有效？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="激活新候选；历史 LINK 不变" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="新 REL_ACTIVE + 后继 LINK 或显式停用" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="目标失效/审批缺失/后继失败" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="保持 SUSPENDED/REJECTED 和治理待办" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：目标失效/审批缺失/后继失败&#xA;恢复：保持 SUSPENDED/REJECTED 和治理待办&#xA;终点：新 REL_ACTIVE + 后继 LINK 或显式停用" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F12 无 LINK CASE 无需知识修复审批">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F12  无 LINK CASE 无需知识修复审批" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="CASE 分诊确认无需知识修复" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="填写根因、责任人和理由" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="主管 + 业务/渠道独立批准" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="0 LINK 且双角色批准有效？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="CASE_CLOSED 并保存批准审计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="受控关闭或转修复" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="活动 LINK/批准缺失/自审自批" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="返回 CASE_FIXING 或改走知识修复" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：活动 LINK/批准缺失/自审自批&#xA;恢复：返回 CASE_FIXING 或改走知识修复&#xA;终点：受控关闭或转修复" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="F13 ESC 关闭后风险复发新建 ESC">
+    <mxGraphModel pageHeight="700" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="F13  ESC 关闭后风险复发新建 ESC" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="1200" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="同一客户再次出现风险" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="start" vertex="1" parent="1">
+          <mxGeometry width="160" as="geometry" y="150" height="90" x="40" />
+        </mxCell>
+        <mxCell value="创建新 ESC 并暂停 ASQ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a1" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="250" />
+        </mxCell>
+        <mxCell value="校验 previous_esc_id 与立即止损" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="a2" vertex="1" parent="1">
+          <mxGeometry width="240" as="geometry" y="140" height="100" x="530" />
+        </mxCell>
+        <mxCell value="旧 ESC 为同客户终态且无循环？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;fontColor=#111111;" id="decision" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="135" height="110" x="820" />
+        </mxCell>
+        <mxCell value="新 ESC 进入 CONFIRMED/MITIGATING" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="success" vertex="1" parent="1">
+          <mxGeometry width="200" as="geometry" y="140" height="100" x="1080" />
+        </mxCell>
+        <mxCell value="新 ESC 活动，旧 ESC 不变" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#444444;fontColor=#111111;" id="end" vertex="1" parent="1">
+          <mxGeometry width="210" as="geometry" y="145" height="90" x="1320" />
+        </mxCell>
+        <mxCell value="非终态/跨客户/循环/重复后继" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;dashed=1;fontColor=#111111;" id="failure" vertex="1" parent="1">
+          <mxGeometry width="220" as="geometry" y="330" height="100" x="820" />
+        </mxCell>
+        <mxCell value="先安全处置；修复引用后重试" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#555555;dashed=1;fontColor=#111111;" id="recovery" vertex="1" parent="1">
+          <mxGeometry width="260" as="geometry" y="330" height="100" x="1080" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="start" target="a1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a1" target="a2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="a2" target="decision" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="success" edge="1" parent="1" value="是/成功">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="success" target="end" edge="1" parent="1" value="完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="decision" target="failure" edge="1" parent="1" value="否/异常">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="failure" target="recovery" edge="1" parent="1" value="恢复">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="decision" edge="1" parent="1" value="修复后重试">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="recovery" target="end" edge="1" parent="1" value="升级/终止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="失败：非终态/跨客户/循环/重复后继&#xA;恢复：先安全处置；修复引用后重试&#xA;终点：新 ESC 活动，旧 ESC 不变" style="text;html=1;fontSize=14;align=left;verticalAlign=top;fontColor=#444444;" id="note" vertex="1" parent="1">
+          <mxGeometry width="1490" as="geometry" y="500" height="100" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

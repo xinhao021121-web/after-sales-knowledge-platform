@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业级 RAG 知识库平台 PRD V1.0 独立逻辑验收</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --bg: #f5f7fb;
+      --card: #fff;
+      --block: #b42318;
+      --high: #c2410c;
+      --medium: #a16207;
+      --low: #2563eb;
+      --accent: #4338ca;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font: 14px/1.7 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header, main, footer { width: min(1180px, calc(100% - 32px)); margin: auto; }
+    header { padding: 48px 0 28px; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); line-height: 1.18; }
+    h2 { margin: 0 0 16px; font-size: 22px; }
+    h3 { margin: 0 0 10px; font-size: 17px; }
+    p { margin: 8px 0; }
+    .muted { color: var(--muted); }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    section {
+      margin: 0 0 22px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: 0 8px 28px rgba(30, 41, 59, .05);
+    }
+    .verdict { border-left: 7px solid var(--block); background: linear-gradient(135deg, #fff 0, #fff7f6 100%); }
+    .verdict h2 { color: var(--block); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .stat { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .stat strong { display: block; font-size: 28px; line-height: 1.2; }
+    .stat span { color: var(--muted); }
+    .risk-scale { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 16px 0 24px; }
+    .risk-card, .blocker-summary { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .risk-card h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .blocker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .blocker-summary { border-left: 4px solid var(--block); }
+    .blocker-summary strong { display: block; margin-bottom: 6px; color: var(--block); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #f8fafc; white-space: nowrap; }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; color: #fff; font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .block { background: var(--block); }
+    .high { background: var(--high); }
+    .medium { background: var(--medium); }
+    .low { background: var(--low); }
+    article { margin-top: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    article.blocker { border-left: 5px solid var(--block); }
+    article.high-risk { border-left: 5px solid var(--high); }
+    article.medium-risk { border-left: 5px solid var(--medium); }
+    .meta { display: flex; flex-wrap: wrap; gap: 7px; margin: 8px 0 14px; }
+    .tag { padding: 2px 8px; border-radius: 999px; background: #eef2ff; color: #3730a3; font-size: 12px; font-weight: 700; }
+    dl { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 7px 14px; margin: 12px 0 0; }
+    dt { font-weight: 800; color: #334155; }
+    dd { margin: 0; }
+    code { padding: 2px 5px; border-radius: 5px; background: #eef2f7; }
+    ol, ul { padding-left: 22px; }
+    .callout { padding: 14px 16px; border-radius: 10px; background: #fff8e8; border: 1px solid #f6d995; }
+    .side-nav {
+      position: fixed;
+      top: 50%;
+      left: 24px;
+      z-index: 9;
+      width: 168px;
+      padding: 8px 0;
+      border-left: 1px solid var(--line);
+      transform: translateY(-50%);
+    }
+    .side-nav strong { display: block; padding: 0 12px 8px 14px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .side-nav a { display: block; padding: 7px 12px 7px 14px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; }
+    .side-nav a:hover { border-left-color: var(--accent); color: var(--accent); }
+    section[id] { scroll-margin-top: 24px; }
+    @media (min-width: 981px) {
+      header, main, footer {
+        width: min(1180px, calc(100% - 260px));
+        margin-left: clamp(220px, calc((100% - 1180px) / 2 + 100px), 360px);
+        margin-right: 24px;
+      }
+    }
+    @media (max-width: 980px) {
+      .side-nav { display: none; }
+      header, main, footer { width: min(1180px, calc(100% - 32px)); margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 760px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .risk-scale, .blocker-grid { grid-template-columns: 1fr; }
+      section { padding: 18px; }
+      dl { grid-template-columns: 1fr; gap: 0; }
+      dt { margin-top: 9px; }
+    }
+    @media print {
+      body { background: #fff; }
+      header, main, footer { width: 100%; margin-left: auto; margin-right: auto; }
+      .side-nav { display: none; }
+      section, article { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="side-nav" aria-label="报告目录">
+    <strong>报告目录</strong>
+    <a href="#scope">检查范围</a>
+    <a href="#verdict">评审结论</a>
+    <a href="#risk-guide">风险说明</a>
+    <a href="#summary">问题总览</a>
+    <a href="#details">问题详情</a>
+    <a href="#order">修改路线</a>
+    <a href="#decisions">产品拍板</a>
+    <a href="#impact">改全材料</a>
+    <a href="#coverage">覆盖说明</a>
+  </nav>
+
+  <header>
+    <p class="eyebrow">PRD Logic Check</p>
+    <h1>企业级 RAG 知识库平台 PRD V1.0 独立逻辑验收</h1>
+    <p class="muted">生成日期：2026-10-23 · 检查人：导师窗口 · 输入：阶段 2B 全部 PRD、追踪矩阵、状态表、GTW、异常与权限附录、原逻辑检查报告</p>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>检查范围</h2>
+      <p>已完整检查 30 条功能需求、12 条正式核心任务、24 条核心 GTW、15 条跨需求验收、7 个对象状态机、49 个状态行、U1-U9、8 类角色、权限矩阵、发布回滚、来源生命周期和需求追踪矩阵。</p>
+      <p class="muted">未覆盖：真实客服观察、真实客户数据、真实技术性能、模型与检索参数，以及 Draw.io 的像素级渲染。</p>
+    </section>
+
+    <section id="verdict" class="verdict">
+      <h2>结论：修改后再评审</h2>
+      <p>PRD 主体完整，但跨对象状态混写和关系生命周期缺口会迫使研发自行猜测实现。独立复核还发现原检查报告未覆盖的角色冲突与来源建立路径缺失，因此当前不能直接进入交互原型。</p>
+      <div class="stats">
+        <div class="stat"><strong>1</strong><span>阻断</span></div>
+        <div class="stat"><strong>3</strong><span>高风险</span></div>
+        <div class="stat"><strong>2</strong><span>中风险</span></div>
+        <div class="stat"><strong>6</strong><span>去重问题总数</span></div>
+      </div>
+    </section>
+
+    <section id="risk-guide">
+      <h2>风险等级怎么理解？</h2>
+      <p><strong>“阻断”表示核心规则没有唯一实现方式，不代表产品方向错误。</strong> 当前状态表把不同对象的状态写入同一“下一状态”字段，研发无法据此稳定实现状态更新。</p>
+      <div class="risk-scale">
+        <div class="risk-card"><h3><span class="badge block">阻断</span></h3><p>核心实现无法唯一，可能造成状态卡死、重复对象或错误恢复。评审前必须关闭。</p></div>
+        <div class="risk-card"><h3><span class="badge high">高风险</span></h3><p>主流程可做，但可能造成错误引用、越权编辑或无法回滚，应在开发前明确。</p></div>
+        <div class="risk-card"><h3><span class="badge medium">中风险</span></h3><p>边界未唯一，较可能造成返工或验收分歧。</p></div>
+        <div class="risk-card"><h3><span class="badge low">低风险</span></h3><p>局部表达或可维护性问题，不影响主流程。</p></div>
+      </div>
+      <div class="blocker-grid">
+        <div class="blocker-summary">
+          <strong>PRD-001 跨对象状态所有权被混写</strong>
+          <p>“下一状态”同时容纳本对象状态和其他对象的创建/状态变化，无法唯一确定谁应更新、何时更新及失败时哪个对象回退。</p>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>评审放行条件</strong>
+        <p>先区分本对象状态转换与跨对象事件影响，并补齐来源、回滚和角色编辑的唯一定义；完成后重新核对状态表、追踪矩阵、GTW、权限和验收记录。</p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>问题总览</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>编号</th><th>风险</th><th>痛苦类型</th><th>结论状态</th><th>问题摘要</th><th>主要位置</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>阻断</td><td>状态机断裂</td><td>确定冲突</td><td>下一状态字段跨对象混写</td><td>03 第 2、3、5、7 节</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>高风险</td><td>条件缺失</td><td>确定缺口</td><td>来源首次登记及失效传播无完整状态路径</td><td>FR-015/016；03 第 4、5、8 节</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>高风险</td><td>恢复路径</td><td>确定缺口</td><td>回滚后如何恢复旧版本未唯一定义</td><td>FR-021；03 第 8 节</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>高风险</td><td>权限冲突</td><td>确定冲突</td><td>FR-004 允许主管编辑，权限矩阵只允许读取</td><td>PRD 7.1；06 权限矩阵</td></tr>
+            <tr><td><a href="#prd-005">PRD-005</a></td><td>中风险</td><td>回退路径</td><td>表达问题</td><td>风险排除后返回哪个咨询状态不明确</td><td>03 第 3 节</td></tr>
+            <tr><td><a href="#prd-006">PRD-006</a></td><td>中风险</td><td>权限遗漏</td><td>确定缺口</td><td>角色委托规则未进入功能需求与验收</td><td>06 G-05；02 矩阵</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="details">
+      <h2>问题详情</h2>
+
+      <article id="prd-001" class="blocker">
+        <h3>PRD-001 跨对象状态混写在“下一状态”字段中</h3>
+        <div class="meta"><span class="badge block">阻断</span><span class="tag">状态机断裂</span><span class="tag">确定冲突</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>《03_状态转换总表》声称对象状态所有权严格分离，但 <code>ASQ_NEW</code> 的下一状态包含 <code>ESC_CANDIDATE</code>，<code>ESC_DISMISSED</code> 返回 <code>ASQ_ASSESSING</code>，<code>KB_EVAL_PENDING</code> 可进入 <code>CASE_OPEN</code>，<code>EVAL_PASSED</code> 可进入 <code>REL_PENDING_APPROVAL</code>，<code>EVAL_FAILED</code> 可进入 <code>CASE_FIXING</code>。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发按表实现时，同一行的“下一状态”既可能表示当前对象自身变化，也可能表示创建另一个对象。不同工程师会得到不同实现：有人把 EVAL 改成 REL 状态，有人只在 EVAL 保持 PASSED 并创建 REL，最终造成状态覆盖、重复记录或追踪矩阵无法校验。</dd>
+          <dt>触发场景</dt>
+          <dd>评测通过 → 系统读取“下一状态 REL_PENDING_APPROVAL” → 一方更新 EVAL 状态，另一方创建 REL → 两个对象状态和审计记录发生分叉。</dd>
+          <dt>影响范围</dt>
+          <dd>ASQ、ESC、KB、CASE、EVAL、REL、状态实现、事件设计、审计、追踪矩阵和 GTW。</dd>
+          <dt>待确认问题</dt>
+          <dd>每个状态表是否应拆成“本对象下一状态”和“跨对象事件/创建动作”两列？</dd>
+          <dt>最小修改建议</dt>
+          <dd>统一规定：当前对象只能进入自己的状态；“创建 ESC/CASE/REL”和“使父对象暂停/恢复”写入独立事件列。跨对象影响必须指明来源对象、目标对象、触发事件和幂等规则。</dd>
+          <dt>关联修改</dt>
+          <dd>03 全部跨对象行；02 需求追踪矩阵的 <code>state_transition</code>；04 GTW 中状态断言；07 PRD 决策记录；08 阶段验收记录。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-002" class="high-risk">
+        <h3>PRD-002 来源首次登记与失效传播缺少完整状态路径</h3>
+        <div class="meta"><span class="badge high">高风险</span><span class="tag">条件缺失</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>FR-015 要求创建来源并标记核验状态，FR-016 要求来源变化触发 KB 影响评估；但《03_状态转换总表》的 SRC 从 <code>SRC_ACTIVE</code> 开始，没有首次登记/待核验状态。KB 的 <code>KB_EVAL_PENDING</code> 和 REL 的 <code>REL_PENDING_APPROVAL</code> 也没有在来源突然失效时被阻断的明确转换。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发可能把新建来源直接设为 ACTIVE，或只更新 SRC、不更新依赖它的 KB/REL。这样来源已失效但评测或发布仍可继续，违反 PRD 的 G-04 和 U4。</dd>
+          <dt>触发场景</dt>
+          <dd>KB 处于评测待执行 → SRC 被撤回 → 系统只把 SRC 改为 WITHDRAWN → EVAL 继续通过 → REL 仍可发布错误知识。</dd>
+          <dt>影响范围</dt>
+          <dd>来源登记、知识审核、评测、发布、回滚、证据引用、审计和发布影响评估。</dd>
+          <dt>待确认问题</dt>
+          <dd>新来源的初始状态是否固定为待核验，以及来源失效时应自动阻断哪些 KB/EVAL/REL 状态？</dd>
+          <dt>最小修改建议</dt>
+          <dd>增加 <code>SRC_REGISTERED</code> 或等价初始态；ACTIVE 必须同时满足可访问、标题、范围、有效期和责任人校验。来源撤回/过期/不可访问时，向 KB、EVAL、REL 发出阻断事件，并写明各对象的回退状态。</dd>
+          <dt>关联修改</dt>
+          <dd>FR-015、FR-016、FR-019、FR-020、G-04、AC-G-11、03 第 4/5/7/8 节、02 矩阵对应行。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-003" class="high-risk">
+        <h3>PRD-003 回滚后如何恢复旧版本没有唯一实现</h3>
+        <div class="meta"><span class="badge high">高风险</span><span class="tag">恢复路径</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>FR-021 要求选择已验证的回滚目标；状态表把 <code>REL_SUPERSEDED</code> 和 <code>REL_ROLLED_BACK</code> 定义为终态，同时提示“重新启用需新审批”，但没有定义如何生成新的待批准 REL，也没有写明回滚目标必须是 ACTIVE、SUPERSEDED 还是可复制版本。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发可能直接修改旧 REL 为 ACTIVE，破坏不可变与审批；也可能把旧 REL 保持终态，导致系统回滚完成后没有任何在线版本。</dd>
+          <dt>触发场景</dt>
+          <dd>REL-B 出现严重错误 → 主管选择 REL-A 为回滚目标 → 系统把 REL-B 标为 ROLLED_BACK → REL-A 仍是 SUPERSEDED 终态 → 新建议没有有效发布版本。</dd>
+          <dt>影响范围</dt>
+          <dd>线上知识可用性、回滚事务、业务审批、案例重开、审计和所有检索请求。</dd>
+          <dt>待确认问题</dt>
+          <dd>回滚是直接激活历史 REL，还是复制历史内容生成新的 REL 并重新审批？</dd>
+          <dt>最小修改建议</dt>
+          <dd>建议保持历史 REL 不可变，回滚时创建新的发布候选并继承历史版本引用；或明确增加受控的 <code>REL_REACTIVATION_PENDING</code>，但必须重新审批和审计。同时明确“唯一 ACTIVE”是全局还是按租户/环境/业务域。</dd>
+          <dt>关联修改</dt>
+          <dd>FR-020、FR-021、AC-G-15、03 REL 状态机、10 发布对象字段、13.2 发布门槛、权限附录“停用/回滚”。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-004" class="high-risk">
+        <h3>PRD-004 客户上下文编辑角色与权限矩阵冲突</h3>
+        <div class="meta"><span class="badge high">高风险</span><span class="tag">权限冲突</span><span class="tag">确定冲突</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>FR-004 用户故事写“作为售后/主管，我希望修正错误上下文”，正常流程也允许该用户创建新版本。06 权限矩阵中，编辑 CTX 只有一线客服、售后专员为“执行”，客服主管仅为“读取”。</dd>
+          <dt>漏洞说明</dt>
+          <dd>若研发按 FR-004 开放主管编辑，权限测试会失败；若按权限矩阵关闭，主管无法执行需求中描述的动作。页面、接口和审计无法形成一致实现。</dd>
+          <dt>触发场景</dt>
+          <dd>客服主管点击“修正上下文” → FR-004 允许 → 服务端按权限附录拒绝 → 需求验收出现争议。</dd>
+          <dt>影响范围</dt>
+          <dd>上下文的准确性、主管纠错、权限服务端校验、审计和 FR-004/AC-G-04。</dd>
+          <dt>待确认问题</dt>
+          <dd>主管是否应拥有上下文编辑权，还是只能通过售后/一线提交修正？</dd>
+          <dt>最小修改建议</dt>
+          <dd>二选一并统一全文；若选择主管可编辑，则更新 06 矩阵和权限测试；若选择只读，则修改 FR-004 用户故事与流程。</dd>
+          <dt>关联修改</dt>
+          <dd>PRD 3.1、7.1 FR-004、06 权限矩阵、AC-G-04、02 矩阵 FR-004 行、阶段 2B 验收记录。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-005" class="medium-risk">
+        <h3>PRD-005 风险排除后的咨询恢复状态不明确</h3>
+        <div class="meta"><span class="badge medium">中风险</span><span class="tag">回退路径</span><span class="tag">表达问题</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd><code>ESC_DISMISSED</code> 的下一状态写为“返回 <code>ASQ_ASSESSING</code>”，但风险可能从 <code>ASQ_NEW</code>、<code>ASQ_CONTEXT_PENDING</code>、<code>ASQ_ADVICE_PENDING</code>、<code>ASQ_HANDOFF_PENDING</code> 或 <code>ASQ_RESPONDED</code> 触发。</dd>
+          <dt>漏洞说明</dt>
+          <dd>统一回到 ASSESSING 可能跳过上下文补齐、丢弃待确认建议或破坏已有转交。研发无法判断应恢复原状态还是重新评估。</dd>
+          <dt>触发场景</dt>
+          <dd>建议已待确认 → 客服标记疑似风险 → 风险排除 → 系统强制回到 ASSESSING → 原先的待确认建议失效，但 PRD 未说明是否重新生成、是否保留。</dd>
+          <dt>影响范围</dt>
+          <dd>ASQ 状态、ADV 版本、上下文的继续使用、转交待办和客户沟通连续性。</dd>
+          <dt>待确认问题</dt>
+          <dd>风险排除后应恢复到进入风险前的 ASQ 状态，还是统一重新判断？</dd>
+          <dt>最小修改建议</dt>
+          <dd>ESC 记录 <code>paused_from_state</code>；排除后恢复该状态，并重新校验 CTX/EVD/ADV。若原 ADV 失效，明确生成新版本或回到 ASSESSING。</dd>
+          <dt>关联修改</dt>
+          <dd>ESC 对象字段、FR-013、03 ASQ/ESC 状态机、AC-S1-S4、审计字段。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-006" class="medium-risk">
+        <h3>PRD-006 角色委托规则没有进入功能需求与验收</h3>
+        <div class="meta"><span class="badge medium">中风险</span><span class="tag">权限遗漏</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>权限附录 G-05 定义了有时限、可审计的角色委托，并禁止委托给同一提交人自批或管理员批准业务；但 FR-026/FR-027、AC-G-01/AC-G-04 和追踪矩阵没有委托对象的创建、撤销、生效时间、冲突和审计验收。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发可能忽略委托，导致真实请假场景无法办理；也可能实现成永久权限，绕过职责分离。</dd>
+          <dt>触发场景</dt>
+          <dd>业务负责人委托他人批准知识 → 系统未校验委托有效期或不可委托边界 → 同一知识提交人被委托批准 → 发生自审自批。</dd>
+          <dt>影响范围</dt>
+          <dd>角色权限、职责分离、审批、发布、审计和异常处理。</dd>
+          <dt>待确认问题</dt>
+          <dd>首版是否提供角色委托，还是仅记录线下授权并通过新成员角色处理？</dd>
+          <dt>最小修改建议</dt>
+          <dd>若首版支持，增加委托功能、有效期、范围、撤销和验收；若不支持，从权限附录移除或标明后续范围。</dd>
+          <dt>关联修改</dt>
+          <dd>06 G-05、FR-026/FR-027、AC-G-01/AC-G-04、02 追踪矩阵、08 验收记录。</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>发现问题后，产品经理怎么处理</h2>
+      <ol>
+        <li>先统一状态机表达，再修改来源与回滚规则，避免继续在错误模型上补需求。</li>
+        <li>由项目负责人明确 CTX 编辑权限和角色委托是否进入首版。</li>
+        <li>拍板后同步修改 PRD、追踪矩阵、GTW、权限附录、状态表、图表说明和验收记录。</li>
+      </ol>
+    </section>
+
+    <section id="order">
+      <h2>第 1 步：先看修改路线</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>顺序</th><th>相关问题</th><th>这一轮要解决什么</th><th>为什么先做这一步</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><a href="#prd-001">PRD-001</a></td><td>拆分本对象状态与跨对象事件</td><td>这是所有状态、权限和追踪矩阵的基础</td></tr>
+            <tr><td>2</td><td><a href="#prd-002">PRD-002</a>、<a href="#prd-003">PRD-003</a></td><td>补齐来源失效传播和回滚恢复</td><td>决定知识能否被安全停止、替换和恢复</td></tr>
+            <tr><td>3</td><td><a href="#prd-004">PRD-004</a>、<a href="#prd-005">PRD-005</a>、<a href="#prd-006">PRD-006</a></td><td>统一角色编辑权限、风险恢复和委托范围</td><td>修复角色与异常分支，随后统一验收</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <strong>建议评审门槛</strong>
+        <p>状态表不再混写跨对象状态；SRC/KB/EVAL/REL 的失效传播有唯一路径；回滚后始终有且只有一个可解释的有效发布版本；角色权限与需求故事一致。</p>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <h2>第 2 步：轮到该问题时，产品拍板</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>你要拍板的事</th><th>为什么现在必须定</th><th>定完要补进 PRD</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>状态表是否采用“本对象下一状态 + 跨对象事件”双列模型</td><td>避免同一字段承载两种语义</td><td>状态表、事件定义、追踪矩阵和 GTW</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>新来源先进入待核验，还是仅在登记时原子校验</td><td>决定来源是否能绕过复核进入评测</td><td>SRC 初始态、ACTIVE 条件和失效传播</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>回滚复制历史版本生成新 REL，还是增加重新激活状态</td><td>决定不可变、审批和回滚语义</td><td>REL 状态、FR-021、发布对象和验收</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>客服主管是否拥有 CTX 编辑权</td><td>当前需求和权限矩阵直接冲突</td><td>FR-004、权限矩阵和权限测试</td></tr>
+            <tr><td><a href="#prd-005">PRD-005</a></td><td>风险排除后恢复原状态还是重新评估</td><td>避免建议、上下文和转交待办丢失</td><td>ESC 字段、ASQ 状态和异常验收</td></tr>
+            <tr><td><a href="#prd-006">PRD-006</a></td><td>首版是否包含角色委托</td><td>防止永久委托或自审自批绕过</td><td>权限需求、验收或后续范围说明</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2>第 3 步：拍板后，把相关材料改全</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>拿着什么结论去改</th><th>还要改哪些地方</th><th>怎样算改完</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>状态所有权和跨对象事件模型</td><td>03 状态表、02 矩阵、04 GTW、05 异常附录、图形、08 验收</td><td>任何一条状态行的所属对象和下一状态都能唯一判定</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>SRC 初始状态与失效事件</td><td>FR-015/016/019/020、G-04、AC-G-11、03 状态表</td><td>来源失效后相关 KB/EVAL/REL 自动进入明确阻断状态</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>回滚对象与审批方式</td><td>FR-020/021、AC-G-15、03 REL 状态、10 对象字段、13.2 门槛</td><td>回滚完成后存在唯一可解释的 ACTIVE 或被阻塞的明确状态</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a>、<a href="#prd-006">PRD-006</a></td><td>CTX 编辑角色和委托范围</td><td>FR-004/026/027、06 权限矩阵、AC-G-01/04、02 矩阵</td><td>角色故事、按钮权限和服务端校验完全一致</td></tr>
+            <tr><td><a href="#prd-005">PRD-005</a></td><td>风险排除后的恢复策略</td><td>FR-013、03 ASQ/ESC 状态、AC-S1-S4、审计字段</td><td>任何来源状态下的风险排除都有唯一恢复目标</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="coverage">
+      <h2>覆盖说明</h2>
+      <p>已确认无明显问题的范围：30 条 FR 与追踪矩阵一一对应；12 条核心任务均有 GTW；U1-U9 均被引用；24 条核心 GTW 和 15 条跨需求验收均可定位；权限职责分离的主体约束总体完整；PRD 未提前锁定模型、向量库或检索参数。</p>
+      <p>仍需在修改后复检：状态所有权、来源失效传播、回滚后的有效版本、主管上下文编辑权、风险排除恢复和角色委托。完成修改前不得制作高保真原型，也不得开始 RAG 实现。</p>
+      <p class="muted">本报告是阶段 2B 的独立导师验收，不替代阶段 1B 中尚未完成的人工样本复核。</p>
+    </section>
+  </main>
+
+  <footer>阶段 2B PRD 独立逻辑验收 · 生成日期：2026-10-23</footer>
+</body>
+</html>

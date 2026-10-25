@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-10-25T21:22:04.081Z",
+  "reviewer_role": "AI产品经理兼交付负责人",
+  "product_owner_acceptance": "PENDING",
+  "content_hygiene": {
+    "interview_preparation_material_exposed": false,
+    "internal_markdown_links_exposed": false,
+    "raw_evidence_json_links_exposed": false
+  },
+  "deployment": {
+    "portfolio_url": "https://xinhao-portfolio.pages.dev/",
+    "prototype_url": "https://xinhao-after-sales.pages.dev/",
+    "live_pages_checked": 6,
+    "live_http_status": 200,
+    "desktop_horizontal_overflow": false
+  },
+  "checks": {
+    "desktop_1440": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "simulation_label_visible": true,
+      "screenshots_loaded": 6,
+      "hierarchy": "single H1, three-tier section hierarchy, no clipped text",
+      "clickable_secondary_projects": 2
+    },
+    "mobile_390": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "simulation_label_visible": true,
+      "screenshots_loaded": 6,
+      "hierarchy": "single-column reading order, 44px minimum primary and navigation controls",
+      "clickable_secondary_projects": 2
+    },
+    "case_desktop_1440": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "sections": 5,
+      "evidence_screenshots": 3,
+      "chapter_navigation": "sticky desktop rail",
+      "screenshot": "case-desktop-full.png"
+    },
+    "case_mobile_390": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "sections": 5,
+      "evidence_screenshots": 3,
+      "chapter_navigation": "collapsible mobile table of contents",
+      "screenshot": "case-mobile-full.png"
+    },
+    "askneed_desktop_1440": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "sections": 5,
+      "evidence_screenshots": 3,
+      "research_boundary": "3 designers, exploratory study"
+    },
+    "askneed_mobile_390": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "sections": 5,
+      "evidence_screenshots": 3,
+      "research_boundary": "3 designers, exploratory study"
+    },
+    "other_practice_desktop_1440": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "case_count": 2,
+      "clickable_entries": true
+    },
+    "other_practice_mobile_390": {
+      "reviewed": true,
+      "horizontal_overflow": false,
+      "case_count": 2,
+      "clickable_entries": true
+    },
+    "print_a4": {
+      "reviewed": true,
+      "pages_reviewed": [1, 2, 3, 4, 5, 6, 7],
+      "page_count": 7,
+      "horizontal_overflow": false,
+      "observed_clipping": false,
+      "orphaned_section_heading": false,
+      "contact_sheet": "portfolio-print-contact-sheet.png"
+    }
+  },
+  "conclusion": "一主两副的首页结构、五段式主项目与问需详情、可点击的其他实践、统一深浅色节奏和打印分页已完成视觉抽查；产品决策人的最终验收仍为 PENDING。"
+}

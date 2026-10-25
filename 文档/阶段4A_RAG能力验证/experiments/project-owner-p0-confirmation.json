@@ -1,0 +1,35 @@
+{
+  "confirmation_id": "STAGE4A-P0-CONFIRM-20261024",
+  "confirmed_at": "2026-10-24",
+  "confirmer_role": "项目负责人",
+  "confirmation_subject": "阶段4A六条P0安全基线与最终BFF前置门禁",
+  "confirmation_scope": {
+    "p0_sample_ids": [
+      "POC-S01",
+      "POC-S02",
+      "POC-S03",
+      "POC-S04",
+      "POC-K03",
+      "POC-E05"
+    ],
+    "confirmed_rules": [
+      "P0必须先由BFF识别并执行止损",
+      "P0不得依赖生成模型自行安全兜底",
+      "最终对客回答必须包含停止使用、停止充电、危险隔离和应急条件",
+      "安全引用必须指向固定安全SOP切片"
+    ],
+    "stage_4b1_usage": "以上六条P0基线可直接用于阶段4B-1真实问答链路验收"
+  },
+  "source_review": {
+    "manual_review_path": "experiments/manual-review.json",
+    "manual_review_reviewer": "项目窗口逐条规则复核",
+    "manual_review_sha256": "a35245256477770a5e9ab21aefa63c5d65fbca96fada82f385ef9ad031961eb9",
+    "manual_review_modified": false,
+    "provider_raw_p0_failures_preserved": true
+  },
+  "status": "CONFIRMED",
+  "notes": [
+    "本签署只确认P0最终安全基线与BFF前置职责，不把提供方原始回答改写为通过。",
+    "CFG-BASE、CFG-HYBRID、CFG-RERANK的原始P0失败仍保留在manual-review.json中。"
+  ]
+}

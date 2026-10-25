@@ -1,0 +1,45 @@
+{
+  "status": "PRO_PRIMARY_VALIDATED_FLASH_COST_CANDIDATE",
+  "validated_at": "2026-10-25T06:54:42.879Z",
+  "evaluation_set_id": "EVAL-RAG-POC-1.0.0",
+  "dataset": "CANDIDATE",
+  "rounds_completed": 3,
+  "tasks_per_round": 17,
+  "provider_calls_per_round": [
+    11,
+    11,
+    11
+  ],
+  "p0_gate_per_round": [
+    6,
+    6,
+    6
+  ],
+  "recommended_primary_model": "deepseek-v4-pro",
+  "flash_status": "COST_OPTIMIZATION_CANDIDATE_ONLY",
+  "active_dify_model": "deepseek-v4-pro",
+  "active_dify_version": 12,
+  "automatic_provider_switch_performed": true,
+  "fallback_strategy": "阶段4B1仅使用Pro；Flash保留两轮真实证据，阶段4B2再评估Flash优先、Pro回退的路由，不在本阶段实现复杂模型路由。",
+  "reasons": [
+    "项目负责人已决定Pro作为阶段4B1主模型。",
+    "Flash两轮真实记录完整保留，作为阶段4B2成本优化候选。",
+    "P0始终由BFF前置阻断，不使用生成模型。",
+    "模型单价未获官方计费页或合同确认，成本状态为COST_UNKNOWN。"
+  ],
+  "flash_vs_pro": {
+    "verdict": "DEGRADED",
+    "recall_at_3_core": [
+      0.7639,
+      0.7639
+    ],
+    "correct_source_hits_core": [
+      10,
+      10
+    ],
+    "citation_support_core": [
+      8,
+      8
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "captured_at": "2026-10-25T11:38:01.575Z",
+  "git_commit": "a3ec72522ea7f3704311a180079fa89d62ae2222",
+  "git_commit_short": "a3ec725",
+  "r2_run_id": "EVAL-REAL-e4fc0214-0318-412a-ae97-d156f5f92462",
+  "r2_status": "PASSED",
+  "r2_metrics": {
+    "task_count": 17,
+    "core_task_count": 12,
+    "p0_task_count": 6,
+    "provider_call_count": 11,
+    "p0_gate_count": 6,
+    "answer_status_counts": {
+      "NO_ANSWER": 2,
+      "NEED_CLARIFICATION": 4,
+      "ANSWERED": 1,
+      "BLOCKED_SAFETY": 6,
+      "CONFLICT": 2,
+      "KNOWLEDGE_EXPIRED": 1,
+      "PERMISSION_DENIED": 1
+    },
+    "retrieval_completed_core_count": 7,
+    "retrieval_expected_source_count": 9,
+    "retrieval_covered_source_count": 9,
+    "recall_at_3_core": 1,
+    "correct_source_hits_core": 7,
+    "correct_source_denominator": 7,
+    "source_hit_rate_core": 1,
+    "provider_error_core_count": 0,
+    "result_classification": {
+      "p0_short_circuit": 6,
+      "retrieval_completed": 7,
+      "provider_error": 0,
+      "non_core_retrieval": 4
+    },
+    "p0_final_failures": 0,
+    "citation_failures": 0,
+    "provider_errors": 0,
+    "quality_gate_status": "PASSED",
+    "quality_warnings": [],
+    "quality_baseline": {
+      "recall_at_3_core": 0.9167,
+      "source_hit_rate_core": 1,
+      "model_effective_answer_count_min": 1
+    },
+    "cost": {
+      "cost_status": "COST_UNKNOWN",
+      "currency": null,
+      "model_request_count": 11,
+      "p0_short_circuit_count": 6,
+      "p0_short_circuit_model_cost": 0,
+      "all_effective_response_count": 17,
+      "model_effective_answer_count": 1,
+      "correct_source_hit_count": 8,
+      "prompt_tokens_total": 9468,
+      "completion_tokens_total": 26262,
+      "total_tokens_total": 35730,
+      "prompt_tokens_average": 860.7272727272727,
+      "completion_tokens_average": 2387.4545454545455,
+      "provider_latency_average_ms": 26445.545454545456,
+      "provider_latency_p95_ms": 41472,
+      "all_effective_response_cost": null,
+      "model_effective_answer_cost": null,
+      "correct_source_hit_cost": null,
+      "formula": {
+        "all_effective_response_cost": "全部模型费用 / 可验收响应数",
+        "model_effective_answer_cost": "模型费用 / claim门禁通过的ANSWERED数",
+        "correct_source_hit_cost": "模型费用 / 正确来源命中数"
+      }
+    }
+  },
+  "files": {
+    "baseline/p10-real-r2.json": "661afd3e4fcdf3e94bc3a5328cf60189807fa2a09d4040bb13e9425625fc7f25",
+    "baseline/holdout-real-r2.json": "397f1addf5eb4384c65ba16a015a74a6f7f6d6f421be67767b77388e7ef1156f",
+    "baseline/RET-H01-first-failure.json": "f6f4d1057345fe7f8036c38884c151724dca9766c904ab55800e26eeb438b713",
+    "baseline/RET-H02-first-failure.json": "784ec0071974d416a56509257ae07367a965df258c7478f894f968435c58ea78",
+    "baseline/RET-H03-first-failure.json": "629e6362fdbded9e7aa31e05da29b7eac8959378ac6e69aa76e6b68665d52747",
+    "baseline/quality-gate-r2.json": "0035c39ce15ad194f4027d8f80e3b27ee1658887c73f0cc768fdc127c3959a61",
+    "baseline/dify-config-r2-final.json": "ebf7af9c57c35271f02137ee6dc0af46d0a1db2faf42e62c21702c60e76d44a9"
+  }
+}

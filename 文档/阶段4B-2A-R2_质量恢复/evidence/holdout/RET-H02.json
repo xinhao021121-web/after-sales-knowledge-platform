@@ -1,0 +1,85 @@
+{
+  "task_id": "RET-H02",
+  "core_task_id": "HOLDOUT-KNOWLEDGE-GAP",
+  "original_question": "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+  "answer_status": "NO_ANSWER",
+  "accepted_statuses": [
+    "NO_ANSWER",
+    "NEED_CLARIFICATION"
+  ],
+  "status_accepted": true,
+  "provider_called": true,
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "recall_at_3": null,
+  "source_hit": null,
+  "expected_source_count": 0,
+  "covered_source_count": 0,
+  "covered_source_ids": [],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+      "不连接手机，只用 Wi-Fi 让 AirPods Pro 3 读取路由器音乐可以吗？",
+      "AirPods Pro 3 是否支持直接访问局域网音乐服务器？"
+    ],
+    "internal_candidate_pool_size": 11,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_resources": [
+    {
+      "position": 1,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+      "score": 0.69659907,
+      "claim_support_count": 0
+    },
+    {
+      "position": 2,
+      "document_name": "04_保修与维修流程.md",
+      "document_id": "DOC-WARRANTY-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+      "score": 0.63752913,
+      "claim_support_count": 0
+    },
+    {
+      "position": 3,
+      "document_name": "05_渠道差异说明.md",
+      "document_id": "DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.597659,
+      "claim_support_count": 2
+    }
+  ],
+  "citations": [],
+  "citation_support": {
+    "required": true,
+    "passed": false,
+    "supported_count": 0,
+    "unsupported_count": 0
+  },
+  "citation_gate_passed": false,
+  "business_action_status": "STATUS_MATCH",
+  "forbidden_action_match": null,
+  "p0": false,
+  "p0_passed": null,
+  "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+  "suggested_action": "请补充 AirPods Pro 3 的产品规格页、使用手册或支持文档，确认其是否支持独立 Wi-Fi 连接及音频访问协议（如 AirPlay、DLNA、SMB 等）；如已购买设备，可尝试在 Apple 官方支持文档或设备设置中查找“Wi-Fi 音频”“隔空播放”“网络音频”等相关选项；但当前知识库不包含此类操作路径。",
+  "prompt_tokens": 723,
+  "completion_tokens": 1539,
+  "total_tokens": 2262,
+  "provider_latency_ms": 17695,
+  "bff_latency_ms": 22487,
+  "bff_request_id": "64d83f6b-c2b4-4ab6-8d46-4aeb13986f3f",
+  "provider_request_id": "0bcd3bdf-50b0-4999-873e-d56ddff8caef",
+  "error_code": "NO_ANSWER",
+  "cost_status": "COST_UNKNOWN"
+}

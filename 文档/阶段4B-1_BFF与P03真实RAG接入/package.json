@@ -1,0 +1,22 @@
+{
+  "name": "chengming-after-sales-bff-poc",
+  "private": true,
+  "version": "4.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server/start.mjs",
+    "test:unit": "node tests/server-unit.mjs",
+    "test:e2e": "node tests/e2e-bff.mjs",
+    "test:4b2a": "node tests/stage4b2-unit.mjs",
+    "test:e2e:4b2a": "node tests/e2e-stage4b2.mjs",
+    "validate:4b2a": "pwsh -NoProfile -File tests/validate-stage4b2a.ps1",
+    "validate:4b2a-r1": "pwsh -NoProfile -File tests/validate-stage4b2a-r1.ps1",
+    "validate:4b2a-r2": "pwsh -NoProfile -File tests/validate-stage4b2a-r2.ps1",
+    "validate:4b2a-r3": "pwsh -NoProfile -File tests/validate-stage4b2a-r3.ps1",
+    "validate:4b2a-r4": "pwsh -NoProfile -File tests/validate-stage4b2a-r4.ps1",
+    "validate:4b2a-r5": "pwsh -NoProfile -File tests/validate-stage4b2a-r5.ps1",
+    "validate:4b2a-closure": "pwsh -NoProfile -File tests/validate-stage4b2a-closure.ps1",
+    "validate:4b2b": "pwsh -NoProfile -File tests/validate-stage4b2b.ps1",
+    "validate:stage5": "pwsh -NoProfile -File tests/validate-stage5.ps1"
+  }
+}

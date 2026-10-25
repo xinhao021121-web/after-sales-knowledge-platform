@@ -1,0 +1,26 @@
+{
+  "config_id": "CFG-RERANK-PRO",
+  "display_name": "RERANK-PRO",
+  "status": "IMMUTABLE_BASELINE",
+  "provider": "Dify Cloud",
+  "provider_app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "generation_model": "deepseek-v4-pro",
+  "knowledge_dataset": "CANDIDATE",
+  "knowledge_dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "retrieval": {
+    "mode": "hybrid",
+    "top_k": 3,
+    "rerank_model": "qwen3-rerank",
+    "chunk_size": 700,
+    "chunk_overlap": 100
+  },
+  "system_prompt": "keep-existing-dify-system-prompt",
+  "temperature": "keep-existing-dify-setting",
+  "recorded_at": "2026-10-24",
+  "source_of_truth": {
+    "experiment_root": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK",
+    "formal_comparison": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/comparison.json",
+    "manual_review": "../阶段4A_RAG能力验证/experiments/manual-review.json"
+  },
+  "immutability_rule": "Pro 原始响应、汇总和复核记录只读；本阶段不得覆盖或改写。"
+}

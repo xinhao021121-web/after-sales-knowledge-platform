@@ -1,0 +1,50 @@
+{
+  "captured_at": "2026-10-25T14:17:03.522Z",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "capture_only": false,
+  "label": "4B2B-C-PRO-FALLBACK",
+  "before_model": "deepseek-v4-flash",
+  "after_model": "deepseek-v4-pro",
+  "published_version": 24,
+  "prompt_sha256": "6f354ed76dbdc62ec9048eafee5713bcdfe0c2f6b1312ea6a85d64a21d2620a8",
+  "model": {
+    "provider": "langgenius/deepseek/deepseek",
+    "name": "deepseek-v4-pro",
+    "mode": "chat",
+    "completion_params": {
+      "temperature": 0.7
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "id": "1792828605452",
+      "dataset_ids": [
+        "0d5a11ce-c017-4376-8099-d8e083243a7d"
+      ],
+      "multiple_retrieval_config": {
+        "top_k": 10,
+        "score_threshold": null,
+        "reranking_mode": "reranking_model",
+        "reranking_model": {
+          "provider": "langgenius/tongyi/tongyi",
+          "model": "qwen3-rerank"
+        },
+        "weights": {
+          "weight_type": "customized",
+          "vector_setting": {
+            "vector_weight": 0.7,
+            "embedding_provider_name": "langgenius/tongyi/tongyi",
+            "embedding_model_name": "text-embedding-v4"
+          },
+          "keyword_setting": {
+            "keyword_weight": 0.3
+          }
+        },
+        "reranking_enable": true
+      }
+    }
+  ],
+  "knowledge_config_sha256": "df3c664e75ea01ebc74841a33472827f44beb4625be26c87ec6cb7e57b404776",
+  "default_primary_model": "deepseek-v4-pro",
+  "experiment_mode_only": true
+}

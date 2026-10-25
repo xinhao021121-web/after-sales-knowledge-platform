@@ -1,0 +1,32 @@
+{
+  "config_id": "CFG-RERANK-FLASH",
+  "display_name": "RERANK-FLASH",
+  "status": "PUBLISHED_TEST_CONFIGURATION",
+  "provider": "Dify Cloud",
+  "provider_app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "provider_published_version": 9,
+  "generation_model": "deepseek-v4-flash",
+  "generation_model_env": "RAG_GENERATION_MODEL",
+  "network_access": "server-only",
+  "knowledge_dataset": "CANDIDATE",
+  "knowledge_dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "retrieval": {
+    "mode": "hybrid",
+    "top_k": 3,
+    "rerank_model": "qwen3-rerank",
+    "chunk_size": 700,
+    "chunk_overlap": 100
+  },
+  "system_prompt": "unchanged-from-CFG-RERANK-PRO",
+  "temperature": "unchanged-from-CFG-RERANK-PRO",
+  "single_variable": "generation_model",
+  "rounds": [
+    "FLASH-R1",
+    "FLASH-R2"
+  ],
+  "credentials": {
+    "stored_in_git": false,
+    "storage": "阶段4A_RAG能力验证/.env.local (Git ignored)",
+    "exposed_in_browser_or_logs": false
+  }
+}

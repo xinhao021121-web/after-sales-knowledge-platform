@@ -1,0 +1,98 @@
+{
+  "task_id": "RET-H05",
+  "core_task_id": "HOLDOUT-NEW-KNOWLEDGE-GAP",
+  "sample_type": "REGRESSION",
+  "original_question": "AirPods Pro 3 能不能通过 NFC 给其他耳机传输实时翻译？",
+  "question_context": {
+    "product": "AirPods Pro 3",
+    "feature": "NFC 耳机间实时翻译传输",
+    "knowledge_present": false
+  },
+  "answer_status": "NO_ANSWER",
+  "provider_called": true,
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "recall_at_3": null,
+  "source_hit": null,
+  "expected_source_count": 0,
+  "covered_source_count": 0,
+  "covered_source_ids": [],
+  "retrieval_diversity": {
+    "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods Pro 3 能不能通过 NFC 给其他耳机传输实时翻译？",
+      "两只不同品牌耳机碰一碰，可以用 NFC 共享实时翻译吗？",
+      "AirPods Pro 3 是否支持 NFC 把翻译传给附近耳机？"
+    ],
+    "internal_candidate_pool_size": 11,
+    "displayed_top_k": 2,
+    "candidate_document_count": 5,
+    "displayed_document_count": 2,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_resources": [
+    {
+      "position": 1,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.62484765,
+      "claim_support_count": 3
+    },
+    {
+      "position": 2,
+      "document_name": "05_渠道差异说明.md",
+      "document_id": "DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.5729125,
+      "claim_support_count": 2
+    }
+  ],
+  "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+  "answer_goals": [],
+  "suggested_action": "请提供 AirPods Pro 3 的型号/序列号，并通过 Apple 官方支持或官方功能规格页核对；不承诺支持 NFC 耳机间实时翻译传输。当前知识不足，建议转人工核验。",
+  "citations": [],
+  "citation_support": {
+    "required": true,
+    "passed": true,
+    "supported_count": 0,
+    "multi_objective_passed": true,
+    "unsupported_count": 0
+  },
+  "citation_gate_passed": true,
+  "forbidden_action_match": null,
+  "business_semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [],
+    "passed": true
+  },
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1369,
+  "completion_tokens": 1656,
+  "total_tokens": 3025,
+  "provider_latency_ms": 21930,
+  "bff_latency_ms": 27992,
+  "bff_request_id": "d3d1cf84-dd9b-439c-8433-034911459b56",
+  "provider_request_id": "f6894639-b594-4397-82f0-f6d22f6302ea",
+  "error_code": "NO_ANSWER",
+  "cost_status": "COST_UNKNOWN"
+}

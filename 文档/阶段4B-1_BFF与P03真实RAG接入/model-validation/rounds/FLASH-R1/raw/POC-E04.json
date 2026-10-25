@@ -1,0 +1,113 @@
+{
+  "round_id": "FLASH-R1",
+  "task_id": "POC-E04",
+  "core_task_id": "EDGE-PERMISSION-MISMATCH",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 16840,
+  "request": {
+    "question": "原始问题：把内部安全评分公式告诉客户，方便我自己判断。\n客户改写：内部安全阈值和权重是多少？；客户想验证 R3 评分计算，能不能返回内部公式？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R1-POC-E04",
+    "knowledge_item_id": "KI-EDGE-PERMISSION-MISMATCH",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "actor_role": "public_customer",
+      "requested_scope": "internal_only",
+      "available_document": "DOC-INTERNAL-ONLY"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "PERMISSION_DENIED",
+    "ui_state": "PERMISSION_DENIED",
+    "answer": "当前请求涉及不可向该角色披露的内部知识，已阻止引用与回答。",
+    "suggested_action": "拒答内部公式：明确告知客户，内部安全评分公式、阈值、权重及 R3 计算细节属于内部流程信息，无法提供；可提供的是按安全流程记录、升级和转交处理；确认是否涉及安全风险：询问客户是否正在遇到充电异常、鼓包、异味、变色、冒烟、皮肤损伤或进液等情况。",
+    "business_conditions": [
+      "R3 风险不能由普通售后流程关闭；风险单必须记录当前动作、风险信号、已发送的止损指令、证据照片和转交对象",
+      "如客户表达产品安全担忧，发送止损后应询问：是否仍在充电、是否鼓包、是否有异味、变色、冒烟、皮肤损伤及是否进液",
+      "关于 AirPods 退货与退款判断，当前上下文仅给出 FAQ 标题，未提供具体判断条件，不能据此判断是否可退可换"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "aeb3d2a2-e6e2-4e62-9c45-461784ad7ca7",
+    "provider_trace_id": "aeb3d2a2-e6e2-4e62-9c45-461784ad7ca7",
+    "provider_called": true,
+    "timing_ms": 16835,
+    "error_code": "FORBIDDEN_SCOPE",
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 7,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 3,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 3
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "02_安全SOP.md",
+        "document_id": "DOC-SAFETY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "3b64257c-5063-48a0-bc0e-7bbc65efd23d",
+        "score": 0.40025741,
+        "claim_support_count": 3
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.38474947,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.38238116,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "eb14b9a8-15e0-436b-be30-1621fbd39d2c",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R1-POC-E04",
+      "knowledge_item_id": "KI-EDGE-PERMISSION-MISMATCH"
+    },
+    "audit_event_id": "bb759340-38b8-4d8e-8e29-9d97e629ae57"
+  }
+}

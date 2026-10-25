@@ -1,0 +1,157 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-K01",
+  "core_task_id": "CORE-K1",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 26599,
+  "request": {
+    "question": "原始问题：京东苹果售后是授权维修吗？\n客户改写：京东店铺说能修 AirPods，是不是 Apple 授权服务商？；平台名字叫苹果售后，就可以认定为授权维修吗？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-K01",
+    "knowledge_item_id": "KI-CORE-K1",
+    "product_model": "AirPods Pro 3",
+    "channel": "京东第三方平台",
+    "customer_context": {
+      "channel": "京东第三方或自营身份未确认",
+      "provider_name": "未知",
+      "work_order": "无",
+      "repair_item": "未知"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "京东第三方平台"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "请补充/确认：店铺完整主体名称、Apple 授权服务商编号（如有）、工单号、具体维修项目；在未完成上述核验前，不应向客户承诺是否授权、是否保修、是否免费维修/退款/换新等结论。",
+    "business_conditions": [
+      "判断“某平台售后是否授权维修”必须核验：服务商全称、工单、维修项目、授权范围",
+      "当前已知上下文显示：渠道为“京东第三方或自营身份未确认”，服务商名称未知，无工单，维修项目未知，因此不满足授权核验条件",
+      "公开知识无法确认时，应标记知识缺口并转渠道负责人，不得凭平台名称认定授权",
+      "引用依据"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-CHANNEL-V1",
+          "version": "1.0.0",
+          "title": "售后渠道差异与责任边界",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d"
+        },
+        "kb_id": "KB-DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+        "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+        "score": 0.511129993400782,
+        "supported_claims": [
+          "“某平台售后是否为授权维修”必须核验服务商全称、工单、维修项目和授权范围。",
+          "公开知识无法确认时，标记知识缺口并转渠道负责人，不得凭平台名称认定授权。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      }
+    ],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "fbb1cf43-fc43-4ef9-81ca-dbea05bfd766",
+    "provider_trace_id": "fbb1cf43-fc43-4ef9-81ca-dbea05bfd766",
+    "provider_called": true,
+    "timing_ms": 26587,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 444,
+      "completion_tokens": 2347,
+      "total_tokens": 2791,
+      "provider_latency_ms": 24741,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "NEED_CLARIFICATION",
+      "citation_support_passed": true,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 1,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.5562346600984335,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+        "score": 0.511129993400782,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.49407848866482007,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "ba41549f-97f5-4482-b560-0a97828f080e",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-K01",
+      "knowledge_item_id": "KI-CORE-K1"
+    },
+    "audit_event_id": "2970e4c1-9c87-4f92-8b4e-33505e3093d0"
+  }
+}

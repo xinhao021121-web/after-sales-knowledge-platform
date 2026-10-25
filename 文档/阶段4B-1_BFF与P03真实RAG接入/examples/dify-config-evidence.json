@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-25T06:54:16.257Z",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "published_version": 12,
+  "generation_model": "deepseek-v4-pro",
+  "prompt_version": "DIFY-PROMPT-CLAIM-20261025",
+  "prompt_sha256": "c7f4b395b2fa81b0025a22420ce46a96f7d306ac802744e03144dde812cd1ca7",
+  "prompt_contains_body_evidence_rules": true,
+  "dataset": "CANDIDATE",
+  "chunking": "700/100",
+  "retrieval_mode": "hybrid",
+  "top_k": 3,
+  "rerank_model": "qwen3-rerank",
+  "temperature": "unchanged-current-setting"
+}

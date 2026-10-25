@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "adapter_version": "4B1-1.0.0",
+  "environment": "candidate",
+  "provider": {
+    "name": "Dify Cloud",
+    "version": "advanced-chat",
+    "mode": "advanced-chat"
+  },
+  "generation_model": "deepseek-v4-pro",
+  "cost_status": "COST_UNKNOWN",
+  "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "p0_gate": "BFF_BEFORE_DIFY",
+  "provider_latency_ms": 1056,
+  "checked_at": "2026-10-25T07:10:36.937Z"
+}

@@ -1,0 +1,113 @@
+{
+  "group": "C",
+  "run_id": "ROUTING-4B2B-C-6a7fe443-9e89-414e-aab7-93458a0ba993",
+  "route_mode": "C_FLASH_WITH_PRO_FALLBACK",
+  "model_config_version": 24,
+  "task_count": 27,
+  "p0_task_count": 8,
+  "p0_model_calls": 0,
+  "p0_failures": 0,
+  "status_match_count": 27,
+  "semantic_passed_count": 26,
+  "semantic_failed_task_ids": [
+    "RET-H09"
+  ],
+  "effective_answered_count": 10,
+  "citation_failures": 0,
+  "provider_errors": 0,
+  "preserved_provider_failures": 0,
+  "forbidden_action_failures": 0,
+  "generic_fallback_count": 3,
+  "generic_fallback_ratio": 0.15789473684210525,
+  "source_hit_count": 14,
+  "expected_source_count": 33,
+  "covered_source_count": 16,
+  "recall_at_3": 0.48484848484848486,
+  "human_confirmable_count": 18,
+  "known_defect_task_ids": [
+    "RET-H09"
+  ],
+  "flash_initial_success_count": 14,
+  "flash_initial_success_rate": 0.7368421052631579,
+  "fallback_count": 5,
+  "fallback_rate": 0.2631578947368421,
+  "recovery_count": 2,
+  "recovery_rate": 0.4,
+  "fallback_reason_distribution": {
+    "GENERIC_FALLBACK_WITH_EVIDENCE": 3,
+    "NO_ACTIONABLE_NEXT_STEP": 3,
+    "REQUIRED_STATUS_MISMATCH": 1,
+    "UNSUPPORTED_CLAIM": 1
+  },
+  "model_call_count": 24,
+  "prompt_tokens_total": 34115,
+  "completion_tokens_total": 33945,
+  "total_tokens_total": 68060,
+  "tokens_per_effective_answer": 6806,
+  "tokens_per_source_hit": 4861.428571428572,
+  "provider_latency_average_ms": 15189.791666666666,
+  "provider_latency_p95_ms": 38511,
+  "official_model_list_cost_cny": 0.28924000000000005,
+  "official_model_list_cost_per_model_request_cny": 0.012051666666666669,
+  "official_model_list_cost_per_effective_answer_cny": 0.028924000000000005,
+  "official_model_list_cost_per_source_hit_cny": 0.020660000000000005,
+  "dify_billed_cost_cny": null,
+  "dify_billing_cost_status": "COST_UNKNOWN",
+  "priced_calls_off_peak": 24,
+  "priced_calls_peak": 0,
+  "retrieval_snapshot_consistent_count": 27,
+  "retrieval_snapshot_consistent": true,
+  "suites": {
+    "FORMAL_17": {
+      "task_count": 17,
+      "status_match_count": 17,
+      "semantic_passed_count": 17,
+      "semantic_failed_task_ids": [],
+      "effective_answered_count": 4,
+      "source_hit_count": 8,
+      "expected_source_count": 21,
+      "covered_source_count": 10,
+      "recall_at_3": 0.47619047619047616,
+      "p0_failures": 0,
+      "citation_failures": 0,
+      "provider_errors": 0
+    },
+    "REGRESSION_8": {
+      "task_count": 8,
+      "status_match_count": 8,
+      "semantic_passed_count": 8,
+      "semantic_failed_task_ids": [],
+      "effective_answered_count": 4,
+      "source_hit_count": 4,
+      "expected_source_count": 9,
+      "covered_source_count": 4,
+      "recall_at_3": 0.4444444444444444,
+      "p0_failures": 0,
+      "citation_failures": 0,
+      "provider_errors": 0
+    },
+    "HOLDOUT_2": {
+      "task_count": 2,
+      "status_match_count": 2,
+      "semantic_passed_count": 1,
+      "semantic_failed_task_ids": [
+        "RET-H09"
+      ],
+      "effective_answered_count": 2,
+      "source_hit_count": 2,
+      "expected_source_count": 3,
+      "covered_source_count": 2,
+      "recall_at_3": 0.6666666666666666,
+      "p0_failures": 0,
+      "citation_failures": 0,
+      "provider_errors": 0
+    }
+  },
+  "formal_17_core": {
+    "task_count": 7,
+    "source_hit_count": 7,
+    "expected_source_count": 9,
+    "covered_source_count": 9,
+    "recall_at_3": 1
+  }
+}

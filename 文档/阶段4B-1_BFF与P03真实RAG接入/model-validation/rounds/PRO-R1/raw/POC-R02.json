@@ -1,0 +1,130 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-R02",
+  "core_task_id": "CORE-R2",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 19696,
+  "request": {
+    "question": "原始问题：AirPods 过保了还能维修吗？\n客户改写：用了 14 个月，已经过保，还能付费维修吗？；AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-R02",
+    "knowledge_item_id": "KI-CORE-R2",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "warranty": "已过保 2 个月",
+      "fault": "充电不稳定",
+      "repair_history": "无"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NO_ANSWER",
+    "ui_state": "NO_ANSWER",
+    "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+    "suggested_action": "请补充或检索以下内容；AirPods Pro 3 保外维修服务范围、可维修故障类型。",
+    "business_conditions": [
+      "是否提供保外付费维修，取决于官方是否对该型号开放保外服务",
+      "即使提供付费维修，也可能要求：非人为损坏或人为损坏有不同价格、对应故障有可维修项目、可能收取检测费、需提供购买凭证、支持到店或邮寄等",
+      "“充电不稳定”需确认是耳机本体、充电盒还是接口问题，不同部件维修价格可能不同",
+      "已过保 2 个月属于保外状态，通常不适用免费保修，但具体是否可修、价格多少必须依据有效条款判断"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "69e946a2-db72-42b8-9b1d-adf1ff094821",
+    "provider_trace_id": "69e946a2-db72-42b8-9b1d-adf1ff094821",
+    "provider_called": true,
+    "timing_ms": 19680,
+    "error_code": "NO_ANSWER",
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 546,
+      "completion_tokens": 1306,
+      "total_tokens": 1852,
+      "provider_latency_ms": 17117,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "NO_ANSWER",
+      "citation_support_passed": false,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.7344123202225721,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6107939456024208,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "a5da3389-7e07-49ff-ab5a-a979904ba5c8",
+        "score": 0.48017746,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "29752aa3-9d1d-4c70-a8c6-3f2f98789bf6",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-R02",
+      "knowledge_item_id": "KI-CORE-R2"
+    },
+    "audit_event_id": "d7b4e3ec-2de7-43b4-8617-8eeb18c09b1f"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "round_id": "FLASH-R2",
+  "task_id": "POC-S01",
+  "core_task_id": "CORE-S1",
+  "dataset": "CANDIDATE",
+  "p0": true,
+  "http_status": 200,
+  "wall_ms": 5,
+  "request": {
+    "question": "原始问题：AirPods 进水了还能保修吗？\n客户改写：耳机整个掉进水里，现在没充电但有水，保修还有效吗？；进液之后能不能直接放回充电盒继续用？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R2-POC-S01",
+    "knowledge_item_id": "KI-CORE-S1",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "liquid_event": "整机入水",
+      "charging": false,
+      "heat": "未知",
+      "swelling": "未知",
+      "odor": "未知"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "request_id": "c5178f06-cbb6-46c3-b9a1-89043f16c11e",
+    "answer_status": "BLOCKED_SAFETY",
+    "ui_state": "BLOCKED_SAFETY",
+    "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+    "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+    "business_conditions": [
+      "安全信号优先于保修、退款和维修判断",
+      "不得按压、拆解、加热、穿刺或继续充电",
+      "出现明火、持续冒烟或人员不适时联系应急部门"
+    ],
+    "citations": [
+      {
+        "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+        "source": {
+          "src_id": "SRC-PUB-002",
+          "doc_id": "DOC-SAFETY-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 安全处置 SOP",
+          "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "CHUNK-SAFE-STOP-01"
+        },
+        "kb_id": "KB-DOC-SAFETY-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "CHUNK-SAFE-STOP-01",
+        "segment_id": "CHUNK-SAFE-STOP-01",
+        "supported_claims": [
+          "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true
+      }
+    ],
+    "risk": {
+      "level": "R3",
+      "p0_triggered": true,
+      "escalation_required": true,
+      "trigger": "BFF_SIGNAL_MATCH"
+    },
+    "provider_request_id": null,
+    "provider_trace_id": null,
+    "provider_called": false,
+    "timing_ms": 0,
+    "error_code": null,
+    "source_mode": "BFF_SAFETY_GATE",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R2-POC-S01",
+      "knowledge_item_id": "KI-CORE-S1"
+    },
+    "audit_event_id": "d3c88657-2edb-44f9-a14d-c1f2824661bf"
+  }
+}

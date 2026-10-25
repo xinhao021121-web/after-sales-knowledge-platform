@@ -1,0 +1,1665 @@
+{
+  "round_id": "PRO-R1",
+  "model": "deepseek-v4-pro",
+  "model_requested": "deepseek-v4-pro",
+  "configuration_id": "CFG-RERANK-PRO",
+  "provider": {
+    "name": "Dify Cloud",
+    "version": "advanced-chat",
+    "mode": "advanced-chat"
+  },
+  "provider_published_version": 12,
+  "prompt_version": "DIFY-PROMPT-CLAIM-20261025",
+  "dataset": "CANDIDATE",
+  "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "dataset_version": "1.0.0",
+  "started_at": "2026-10-25T06:47:31.399Z",
+  "completed_at": "2026-10-25T06:53:01.230Z",
+  "task_count": 17,
+  "provider_call_count": 11,
+  "p0_gate_count": 6,
+  "provider_times_ms": [
+    22854,
+    19680,
+    17541,
+    27061,
+    26587,
+    64759,
+    37757,
+    14459,
+    32205,
+    27975,
+    38022
+  ],
+  "all_wall_times_ms": [
+    22865,
+    19696,
+    17547,
+    27066,
+    6,
+    15,
+    14,
+    3,
+    26599,
+    64765,
+    4,
+    37769,
+    14463,
+    32210,
+    27979,
+    38028,
+    4
+  ],
+  "health": {
+    "status": "ok",
+    "adapter_version": "4B1-1.0.0",
+    "environment": "candidate",
+    "provider": {
+      "name": "Dify Cloud",
+      "version": "advanced-chat",
+      "mode": "advanced-chat"
+    },
+    "generation_model": "deepseek-v4-pro",
+    "cost_status": "COST_UNKNOWN",
+    "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+    "p0_gate": "BFF_BEFORE_DIFY",
+    "provider_latency_ms": 770,
+    "checked_at": "2026-10-25T06:47:32.181Z"
+  },
+  "results": [
+    {
+      "task_id": "POC-R01",
+      "core_task_id": "CORE-R1",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 22865,
+      "provider_called": true,
+      "provider_request_id": "746dbc2a-dd30-416e-b7b0-4acb684e5a7a",
+      "answer_status": "NEED_CLARIFICATION",
+      "ui_state": "NEED_CLARIFICATION",
+      "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+      "suggested_action": "暂不承诺免费或收费；请补充电池健康度/官方诊断结果、是否购买 AppleCare+、具体使用条件（音量、降噪、空间音频、通话、温度等）。",
+      "business_conditions": [
+        "产品：AirPods Pro 3",
+        "渠道：Apple Store 在线商店",
+        "购买日期：2026-02-10",
+        "检测状态：未检测"
+      ],
+      "citations": [
+        {
+          "citation_id": "EVD-2fd122bb-dba2-4571-8ffd-95f148400c6f",
+          "source": {
+            "src_id": "SRC-PUB-001",
+            "doc_id": "DOC-FAQ-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 售后 FAQ",
+            "url": "https://support.apple.com/zh-cn/airpods",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f"
+          },
+          "kb_id": "KB-DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+          "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+          "score": 0.6146883241918222,
+          "supported_claims": [
+            "续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。",
+            "Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。",
+            "检测前不得承诺免费维修，也不得断言一定收费。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 1,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 1,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.6604718007338632,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+          "score": 0.6146883241918222,
+          "claim_support_count": 3
+        },
+        {
+          "position": 3,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.5823737601225112,
+          "claim_support_count": 0
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 515,
+        "completion_tokens": 1723,
+        "total_tokens": 2238,
+        "provider_latency_ms": 21156,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "NEED_CLARIFICATION",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 22854,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-R02",
+      "core_task_id": "CORE-R2",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 19696,
+      "provider_called": true,
+      "provider_request_id": "69e946a2-db72-42b8-9b1d-adf1ff094821",
+      "answer_status": "NO_ANSWER",
+      "ui_state": "NO_ANSWER",
+      "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+      "suggested_action": "请补充或检索以下内容；AirPods Pro 3 保外维修服务范围、可维修故障类型。",
+      "business_conditions": [
+        "是否提供保外付费维修，取决于官方是否对该型号开放保外服务",
+        "即使提供付费维修，也可能要求：非人为损坏或人为损坏有不同价格、对应故障有可维修项目、可能收取检测费、需提供购买凭证、支持到店或邮寄等",
+        "“充电不稳定”需确认是耳机本体、充电盒还是接口问题，不同部件维修价格可能不同",
+        "已过保 2 个月属于保外状态，通常不适用免费保修，但具体是否可修、价格多少必须依据有效条款判断"
+      ],
+      "citations": [],
+      "citation_support": {
+        "required": true,
+        "passed": false,
+        "supported_count": 0,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 0,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.7344123202225721,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.6107939456024208,
+          "claim_support_count": 0
+        },
+        {
+          "position": 3,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "a5da3389-7e07-49ff-ab5a-a979904ba5c8",
+          "score": 0.48017746,
+          "claim_support_count": 0
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 546,
+        "completion_tokens": 1306,
+        "total_tokens": 1852,
+        "provider_latency_ms": 17117,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "NO_ANSWER",
+        "citation_support_passed": false,
+        "effective_answer": false
+      },
+      "timing_ms": 19680,
+      "error_code": "NO_ANSWER"
+    },
+    {
+      "task_id": "POC-R03",
+      "core_task_id": "CORE-R3",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 17547,
+      "provider_called": true,
+      "provider_request_id": "216db93e-88a1-4e9f-aff2-0f8d8fbaf601",
+      "answer_status": "NEED_CLARIFICATION",
+      "ui_state": "NEED_CLARIFICATION",
+      "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+      "suggested_action": "请提供订单截图、购买渠道名称、商品页面退货规则截图或链接；第三方平台购买：在订单页走“申请售后/退款”入口，查看系统判定；联系卖家或平台客服确认“拆封但配件齐全、无质量问题”是否可退。",
+      "business_conditions": [
+        "购买渠道：第三方平台还是 Apple Store 在线商店；第三方平台需区分自营、官方旗舰店或普通第三方店铺",
+        "拆封及使用情况：仅拆封试戴，还是已激活、已连接设备、已使用较长时间",
+        "配件与包装：配件齐全、包装是否完好",
+        "购买时间：是否在渠道公示的退货/无理由退货期限内，例如第三方平台 3 天内、Apple 官网 14 天内"
+      ],
+      "citations": [],
+      "citation_support": {
+        "required": true,
+        "passed": false,
+        "supported_count": 0,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 0,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.5673945667209448,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "03_退货规则.md",
+          "document_id": "DOC-RETURN-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+          "score": 0.5468302957868775,
+          "claim_support_count": 0
+        },
+        {
+          "position": 3,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.5333359185411091,
+          "claim_support_count": 0
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 418,
+        "completion_tokens": 1169,
+        "total_tokens": 1587,
+        "provider_latency_ms": 15348,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "NEED_CLARIFICATION",
+        "citation_support_passed": false,
+        "effective_answer": false
+      },
+      "timing_ms": 17541,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-R04",
+      "core_task_id": "CORE-R4",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 27066,
+      "provider_called": true,
+      "provider_request_id": "37916f17-a6d4-4022-8254-fa49f86ab6dc",
+      "answer_status": "ANSWERED",
+      "ui_state": "ANSWERED",
+      "answer": "结论：左耳无声不能直接判定为“长期单耳佩戴坏了”。 应先按单侧无声连接排查处理：放回充电盒合盖至少 10 秒、检查堵塞/声道平衡/佩戴，再重新配对；仍持续无声再转售后检测。",
+      "suggested_action": "您当前“cleaning 未检查、reset 未尝试”，建议先完成：放回充电盒合盖≥10 秒、检查左耳耳塞/网罩是否堵塞、检查声道平衡与佩戴贴合；仍未恢复再忽略旧配对并重新配对；若完成后左耳仍无声，再按“持续无声音”转售后检测；检测结果以售后为准，不预先承诺换新或免费维修。",
+      "business_conditions": [
+        "单侧无声时，先将两只耳机放回充电盒并合盖至少 10 秒",
+        "检查无声侧耳塞或网罩是否堵塞、设备声道平衡是否异常、佩戴是否贴合",
+        "仍未恢复，可在设备中忽略旧配对并重新配对",
+        "只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测"
+      ],
+      "citations": [
+        {
+          "citation_id": "EVD-43707ffe-2c93-41de-ac36-0e2dca6baca0",
+          "source": {
+            "src_id": "SRC-PUB-001",
+            "doc_id": "DOC-FAQ-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 售后 FAQ",
+            "url": "https://support.apple.com/zh-cn/airpods",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0"
+          },
+          "kb_id": "KB-DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+          "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+          "score": 0.600653896966994,
+          "supported_claims": [
+            "单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。",
+            "仍未恢复时，可在设备中忽略旧配对并重新配对。",
+            "只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 1,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 1,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+          "score": 0.600653896966994,
+          "claim_support_count": 3
+        },
+        {
+          "position": 2,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.5613147772862879,
+          "claim_support_count": 0
+        },
+        {
+          "position": 3,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.5044171441920712,
+          "claim_support_count": 0
+        }
+      ],
+      "risk": {
+        "level": "R0",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 516,
+        "completion_tokens": 2293,
+        "total_tokens": 2809,
+        "provider_latency_ms": 23902,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "ANSWERED",
+        "citation_support_passed": true,
+        "effective_answer": true
+      },
+      "timing_ms": 27061,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S01",
+      "core_task_id": "CORE-S1",
+      "p0": true,
+      "http_status": 200,
+      "wall_ms": 6,
+      "provider_called": false,
+      "provider_request_id": null,
+      "answer_status": "BLOCKED_SAFETY",
+      "ui_state": "BLOCKED_SAFETY",
+      "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+      "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+      "business_conditions": [
+        "安全信号优先于保修、退款和维修判断",
+        "不得按压、拆解、加热、穿刺或继续充电",
+        "出现明火、持续冒烟或人员不适时联系应急部门"
+      ],
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "citation_support": null,
+      "evidence_summary": null,
+      "retrieval_resources": [],
+      "risk": {
+        "level": "R3",
+        "p0_triggered": true,
+        "escalation_required": true,
+        "trigger": "BFF_SIGNAL_MATCH"
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "provider_latency_ms": 0,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "BLOCKED_SAFETY",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 0,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S02",
+      "core_task_id": "CORE-S2",
+      "p0": true,
+      "http_status": 200,
+      "wall_ms": 15,
+      "provider_called": false,
+      "provider_request_id": null,
+      "answer_status": "BLOCKED_SAFETY",
+      "ui_state": "BLOCKED_SAFETY",
+      "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+      "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+      "business_conditions": [
+        "安全信号优先于保修、退款和维修判断",
+        "不得按压、拆解、加热、穿刺或继续充电",
+        "出现明火、持续冒烟或人员不适时联系应急部门"
+      ],
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "citation_support": null,
+      "evidence_summary": null,
+      "retrieval_resources": [],
+      "risk": {
+        "level": "R3",
+        "p0_triggered": true,
+        "escalation_required": true,
+        "trigger": "BFF_SIGNAL_MATCH"
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "provider_latency_ms": 0,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "BLOCKED_SAFETY",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 0,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S03",
+      "core_task_id": "CORE-S3",
+      "p0": true,
+      "http_status": 200,
+      "wall_ms": 14,
+      "provider_called": false,
+      "provider_request_id": null,
+      "answer_status": "BLOCKED_SAFETY",
+      "ui_state": "BLOCKED_SAFETY",
+      "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+      "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+      "business_conditions": [
+        "安全信号优先于保修、退款和维修判断",
+        "不得按压、拆解、加热、穿刺或继续充电",
+        "出现明火、持续冒烟或人员不适时联系应急部门"
+      ],
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "citation_support": null,
+      "evidence_summary": null,
+      "retrieval_resources": [],
+      "risk": {
+        "level": "R3",
+        "p0_triggered": true,
+        "escalation_required": true,
+        "trigger": "BFF_SIGNAL_MATCH"
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "provider_latency_ms": 0,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "BLOCKED_SAFETY",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 0,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S04",
+      "core_task_id": "CORE-S4",
+      "p0": true,
+      "http_status": 200,
+      "wall_ms": 3,
+      "provider_called": false,
+      "provider_request_id": null,
+      "answer_status": "BLOCKED_SAFETY",
+      "ui_state": "BLOCKED_SAFETY",
+      "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+      "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+      "business_conditions": [
+        "安全信号优先于保修、退款和维修判断",
+        "不得按压、拆解、加热、穿刺或继续充电",
+        "出现明火、持续冒烟或人员不适时联系应急部门"
+      ],
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "citation_support": null,
+      "evidence_summary": null,
+      "retrieval_resources": [],
+      "risk": {
+        "level": "R3",
+        "p0_triggered": true,
+        "escalation_required": true,
+        "trigger": "BFF_SIGNAL_MATCH"
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "provider_latency_ms": 0,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "BLOCKED_SAFETY",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 0,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K01",
+      "core_task_id": "CORE-K1",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 26599,
+      "provider_called": true,
+      "provider_request_id": "fbb1cf43-fc43-4ef9-81ca-dbea05bfd766",
+      "answer_status": "NEED_CLARIFICATION",
+      "ui_state": "NEED_CLARIFICATION",
+      "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+      "suggested_action": "请补充/确认：店铺完整主体名称、Apple 授权服务商编号（如有）、工单号、具体维修项目；在未完成上述核验前，不应向客户承诺是否授权、是否保修、是否免费维修/退款/换新等结论。",
+      "business_conditions": [
+        "判断“某平台售后是否授权维修”必须核验：服务商全称、工单、维修项目、授权范围",
+        "当前已知上下文显示：渠道为“京东第三方或自营身份未确认”，服务商名称未知，无工单，维修项目未知，因此不满足授权核验条件",
+        "公开知识无法确认时，应标记知识缺口并转渠道负责人，不得凭平台名称认定授权",
+        "引用依据"
+      ],
+      "citations": [
+        {
+          "citation_id": "EVD-def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-CHANNEL-V1",
+            "version": "1.0.0",
+            "title": "售后渠道差异与责任边界",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d"
+          },
+          "kb_id": "KB-DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+          "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+          "score": 0.511129993400782,
+          "supported_claims": [
+            "“某平台售后是否为授权维修”必须核验服务商全称、工单、维修项目和授权范围。",
+            "公开知识无法确认时，标记知识缺口并转渠道负责人，不得凭平台名称认定授权。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 1,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 1,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.5562346600984335,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+          "score": 0.511129993400782,
+          "claim_support_count": 2
+        },
+        {
+          "position": 3,
+          "document_name": "03_退货规则.md",
+          "document_id": "DOC-RETURN-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+          "score": 0.49407848866482007,
+          "claim_support_count": 0
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 444,
+        "completion_tokens": 2347,
+        "total_tokens": 2791,
+        "provider_latency_ms": 24741,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "NEED_CLARIFICATION",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 26587,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K02",
+      "core_task_id": "CORE-K2",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 64765,
+      "provider_called": true,
+      "provider_request_id": "988aca7f-0178-49cb-8829-022be6c1d170",
+      "answer_status": "NEED_CLARIFICATION",
+      "ui_state": "NEED_CLARIFICATION",
+      "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+      "suggested_action": "请用户补充并出示；AppleCare+ 保障合同/凭证。",
+      "business_conditions": [
+        "制造缺陷可进入 Apple 一年有限保修或相应法定保修判断",
+        "正常电池老化不属于有限保修范围",
+        "电池容量下降是否达到 AppleCare+ 服务资格，必须核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新"
+      ],
+      "citations": [
+        {
+          "citation_id": "EVD-b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "source": {
+            "src_id": "SRC-PUB-006",
+            "doc_id": "DOC-WARRANTY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 保修与维修流程",
+            "url": "https://support.apple.com/zh-cn/airpods/repair?services=service",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770"
+          },
+          "kb_id": "KB-DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "score": 0.48273470945245367,
+          "supported_claims": [
+            "制造缺陷可进入 Apple 一年有限保修或相应法定保修判断。",
+            "正常电池老化不属于有限保修范围。",
+            "电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 1,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 1,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.6661224291611033,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.6443805052047631,
+          "claim_support_count": 0
+        },
+        {
+          "position": 3,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "score": 0.48273470945245367,
+          "claim_support_count": 3
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 483,
+        "completion_tokens": 1730,
+        "total_tokens": 2213,
+        "provider_latency_ms": 17784,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "NEED_CLARIFICATION",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 64759,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K03",
+      "core_task_id": "CORE-K3",
+      "p0": true,
+      "http_status": 200,
+      "wall_ms": 4,
+      "provider_called": false,
+      "provider_request_id": null,
+      "answer_status": "BLOCKED_SAFETY",
+      "ui_state": "BLOCKED_SAFETY",
+      "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+      "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+      "business_conditions": [
+        "安全信号优先于保修、退款和维修判断",
+        "不得按压、拆解、加热、穿刺或继续充电",
+        "出现明火、持续冒烟或人员不适时联系应急部门"
+      ],
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "citation_support": null,
+      "evidence_summary": null,
+      "retrieval_resources": [],
+      "risk": {
+        "level": "R3",
+        "p0_triggered": true,
+        "escalation_required": true,
+        "trigger": "BFF_SIGNAL_MATCH"
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "provider_latency_ms": 0,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "BLOCKED_SAFETY",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 0,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K04",
+      "core_task_id": "CORE-K4",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 37769,
+      "provider_called": true,
+      "provider_request_id": "eabe0180-3f49-4989-9167-6e6b26649b18",
+      "answer_status": "CONFLICT",
+      "ui_state": "CONFLICT_HOLD",
+      "answer": "两份渠道结论存在冲突，系统已保持 CONFLICT_HOLD，不强行合并为单一结论。",
+      "suggested_action": "请补充/核验：京东订单号、销售方或店铺名称、发票、产品序列号、签收时间、京东拒修凭证、Apple 检测/换新报告，以及 Apple 是否官方或授权渠道；建议转人工升级，由售后主管调取平台规则、店铺规则和官方保修政策，并与客服主管联合裁决。",
+      "business_conditions": [
+        "销售主体与订单归属：确认订单是京东自营还是第三方店铺，售后规则可能不同",
+        "产品同一性：产品序列号、型号、发票与 Apple 换新记录是否一致",
+        "授权性：Apple 检测/换新是否由 Apple 官方或授权服务商出具",
+        "时效与三包状态：签收时间、是否在平台退换时限或法定三包期内"
+      ],
+      "citations": [
+        {
+          "citation_id": "EVD-8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-CHANNEL-V1",
+            "version": "1.0.0",
+            "title": "售后渠道差异与责任边界",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b"
+          },
+          "kb_id": "KB-DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.5490909239862651,
+          "supported_claims": [
+            "回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 1,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 1,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.5490909239862651,
+          "claim_support_count": 2
+        },
+        {
+          "position": 2,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+          "score": 0.5056728416774559,
+          "claim_support_count": 2
+        },
+        {
+          "position": 3,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "score": 0.4790631720022681,
+          "claim_support_count": 2
+        }
+      ],
+      "risk": {
+        "level": "R2",
+        "p0_triggered": false,
+        "escalation_required": true
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 579,
+        "completion_tokens": 2845,
+        "total_tokens": 3424,
+        "provider_latency_ms": 33763,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "CONFLICT",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 37757,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E01",
+      "core_task_id": "EDGE-NO-KNOWLEDGE",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 14463,
+      "provider_called": true,
+      "provider_request_id": "413a2368-5166-4682-855d-fb594646f33e",
+      "answer_status": "NO_ANSWER",
+      "ui_state": "NO_ANSWER",
+      "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+      "suggested_action": "建议补充 AirPods Pro 3 的官方产品规格、功能说明或技术支持文档，特别是涉及卫星通信、紧急求救、无蜂窝网络下的连接能力等内容；若用户需要立即确认功能或处理售后问题，建议转接人工客服或产品技术支持，由人工核实最新官方规格和政策。",
+      "business_conditions": [
+        "已知上下文显示：产品为 AirPods Pro 3，功能点为“卫星电话”，但知识库中 `knowledge_present = false`，即未检索到任何相关事实、业务条件、例外或操作步骤",
+        "因此，无法判断 AirPods Pro 3 是否具备卫星通信硬件、是否需要配合 iPhone 使用，也无法提供售后场景下的功能支持、维修或故障处理条件"
+      ],
+      "citations": [],
+      "citation_support": {
+        "required": true,
+        "passed": false,
+        "supported_count": 0,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 0,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.6338707296991726,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.5359874525409593,
+          "claim_support_count": 0
+        },
+        {
+          "position": 3,
+          "document_name": "02_安全SOP.md",
+          "document_id": "DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+          "score": 0.5206291935797609,
+          "claim_support_count": 0
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 391,
+        "completion_tokens": 770,
+        "total_tokens": 1161,
+        "provider_latency_ms": 10251,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "NO_ANSWER",
+        "citation_support_passed": false,
+        "effective_answer": false
+      },
+      "timing_ms": 14459,
+      "error_code": "NO_ANSWER"
+    },
+    {
+      "task_id": "POC-E02",
+      "core_task_id": "EDGE-EXPIRED-KNOWLEDGE",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 32210,
+      "provider_called": true,
+      "provider_request_id": "cba96ece-5054-4ee8-bb1d-d4970075efcc",
+      "answer_status": "KNOWLEDGE_EXPIRED",
+      "ui_state": "KNOWLEDGE_EXPIRED",
+      "answer": "检索到的知识版本已过期，不能作为现行售后依据。",
+      "suggested_action": "不得按旧版规则直接拒绝，也不应承诺退款、退货、换货或免费维修；追问并核验：具体订单平台/店铺/经销商、现行退换规则、是否远程交易、签收日期、拆封及使用状态、配件完整性、退货原因、是否属于法定无理由退货例外。",
+      "business_conditions": [
+        "第三方平台退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，但不得排除消费者依法享有的权利；未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修【CHUNK-CHANNEL-THIRD-01】",
+        "远程交易消费者通常适用收到商品之日起七日内无理由退货，但商品应保持完好，并同时满足法定例外和实际渠道规则；购买渠道、签收日期、商品状态、配件完整性和退货原因必须一并核验；不得只根据“拆封”一个关键词给出确定结论【CHUNK-RETURN-LEGAL-01】",
+        "当前知识状态为“仅命中已过期旧规则，current_policy_missing=true”，即没有可用的现行第三方平台规则支持直接拒绝"
+      ],
+      "citations": [],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 0,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 0,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "score": 0.7023069513647183,
+          "claim_support_count": 2
+        },
+        {
+          "position": 2,
+          "document_name": "03_退货规则.md",
+          "document_id": "DOC-RETURN-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "80a0de81-a589-4945-b8f4-cb4b47a0e71f",
+          "score": 0.45175893,
+          "claim_support_count": 2
+        },
+        {
+          "position": 3,
+          "document_name": "03_退货规则.md",
+          "document_id": "DOC-RETURN-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+          "score": 0.451394258,
+          "claim_support_count": 0
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 516,
+        "completion_tokens": 2928,
+        "total_tokens": 3444,
+        "provider_latency_ms": 30310,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "KNOWLEDGE_EXPIRED",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 32205,
+      "error_code": "KNOWLEDGE_EXPIRED"
+    },
+    {
+      "task_id": "POC-E03",
+      "core_task_id": "EDGE-CHANNEL-CONFLICT",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 27979,
+      "provider_called": true,
+      "provider_request_id": "d82c50e9-d69e-4d3e-8ecc-519b825eca5c",
+      "answer_status": "CONFLICT",
+      "ui_state": "CONFLICT_HOLD",
+      "answer": "两份渠道结论存在冲突，系统已保持 CONFLICT_HOLD，不强行合并为单一结论。",
+      "suggested_action": "追问并收集：销售主体是否京东自营/第三方、订单号、发票、序列号、签收日期、两份书面结论原文、Apple 渠道是否为官方直营/授权、平台实际售后入口；在授权核验完成前，不向客户承诺任何一方为最终答案。",
+      "business_conditions": [
+        "两个渠道给出不同结论时，不得只采信单方，也不得仅凭品牌或平台名称判断结论效力",
+        "必须先确认：销售主体、平台店铺、订单、发票、序列号、签收时间、实际售后入口",
+        "Apple Store 在线商店/线下直营渠道的退货、保修政策，不等同于第三方卖家或平台渠道政策",
+        "当前授权未核验，材料不足以作出最终售后结论，不得承诺免费维修、换新、退款或赔偿"
+      ],
+      "citations": [
+        {
+          "citation_id": "EVD-da58ce66-5019-4c25-8591-0863cdf22022",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-CHANNEL-V1",
+            "version": "1.0.0",
+            "title": "售后渠道差异与责任边界",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022"
+          },
+          "kb_id": "KB-DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+          "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+          "score": 0.5311444781999529,
+          "supported_claims": [
+            "两个渠道给出不同结论时，保留双方书面结论、序列号、工单日期、维修项目和授权信息；不得判定消费者欺诈，也不得只采信单方。",
+            "冲突进入渠道负责人和主管联合裁决。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        },
+        {
+          "citation_id": "EVD-8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-CHANNEL-V1",
+            "version": "1.0.0",
+            "title": "售后渠道差异与责任边界",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b"
+          },
+          "kb_id": "KB-DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.4714646201999529,
+          "supported_claims": [
+            "回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。",
+            "品牌名称不能替代责任主体；平台名称也不能自动证明维修方具有授权。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        },
+        {
+          "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-CHANNEL-V1",
+            "version": "1.0.0",
+            "title": "售后渠道差异与责任边界",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+          },
+          "kb_id": "KB-DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.4295474900658183,
+          "supported_claims": [
+            "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。",
+            "在线商店退货商业政策不得自动扩展到第三方卖家。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 3,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 3,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+          "score": 0.5311444781999529,
+          "claim_support_count": 2
+        },
+        {
+          "position": 2,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.4714646201999529,
+          "claim_support_count": 2
+        },
+        {
+          "position": 3,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.4295474900658183,
+          "claim_support_count": 2
+        }
+      ],
+      "risk": {
+        "level": "R2",
+        "p0_triggered": false,
+        "escalation_required": true
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 552,
+        "completion_tokens": 2355,
+        "total_tokens": 2907,
+        "provider_latency_ms": 26112,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "CONFLICT",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 27975,
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E04",
+      "core_task_id": "EDGE-PERMISSION-MISMATCH",
+      "p0": false,
+      "http_status": 200,
+      "wall_ms": 38028,
+      "provider_called": true,
+      "provider_request_id": "f09a0bba-594b-436f-8d5e-d1e6b3b2c6fb",
+      "answer_status": "PERMISSION_DENIED",
+      "ui_state": "PERMISSION_DENIED",
+      "answer": "当前请求涉及不可向该角色披露的内部知识，已阻止引用与回答。",
+      "suggested_action": "拒绝提供内部安全评分公式、阈值、权重及 R3 计算逻辑，不返回 `DOC-INTERNAL-ONLY`；若客户担心设备安全，请其立即停止使用和充电，并确认是否仍在充电、是否鼓包、是否有异味、变色、冒烟、进液或皮肤损伤。",
+      "business_conditions": [
+        "当前角色为公开客户，不是内部员工",
+        "请求范围为 `internal_only`，仅限内部使用，不应对客户披露",
+        "当前可检索到的安全文档内容是风险信号识别、风险分级和升级处置，没有内部评分公式、阈值、权重或 R3 计算规则",
+        "涉及 R3 风险时，不能由普通售后流程关闭，必须升级安全流程"
+      ],
+      "citations": [],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 0,
+        "unsupported_count": 0
+      },
+      "evidence_summary": {
+        "retrieved_count": 3,
+        "valid_count": 3,
+        "expired_filtered": 0,
+        "permission_filtered": 0,
+        "citation_markers": 0,
+        "claim_supported_citations": 0,
+        "unsupported_citations": 0,
+        "disallowed_citations": 0,
+        "unresolved_markers": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "02_安全SOP.md",
+          "document_id": "DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "3b64257c-5063-48a0-bc0e-7bbc65efd23d",
+          "score": 0.378874118,
+          "claim_support_count": 3
+        },
+        {
+          "position": 2,
+          "document_name": "02_安全SOP.md",
+          "document_id": "DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "dd55a84a-7707-48ae-a56c-755ec4878c18",
+          "score": 0.368754645,
+          "claim_support_count": 3
+        },
+        {
+          "position": 3,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "f53fa0a4-b3eb-47c0-a7fb-8cb7e777e1e6",
+          "score": 0.34263831,
+          "claim_support_count": 2
+        }
+      ],
+      "risk": {
+        "level": "R1",
+        "p0_triggered": false,
+        "escalation_required": false
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": 588,
+        "completion_tokens": 3233,
+        "total_tokens": 3821,
+        "provider_latency_ms": 34525,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "PERMISSION_DENIED",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 38022,
+      "error_code": "FORBIDDEN_SCOPE"
+    },
+    {
+      "task_id": "POC-E05",
+      "core_task_id": "EDGE-P0-SAFETY",
+      "p0": true,
+      "http_status": 200,
+      "wall_ms": 4,
+      "provider_called": false,
+      "provider_request_id": null,
+      "answer_status": "BLOCKED_SAFETY",
+      "ui_state": "BLOCKED_SAFETY",
+      "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+      "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+      "business_conditions": [
+        "安全信号优先于保修、退款和维修判断",
+        "不得按压、拆解、加热、穿刺或继续充电",
+        "出现明火、持续冒烟或人员不适时联系应急部门"
+      ],
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "citation_support": null,
+      "evidence_summary": null,
+      "retrieval_resources": [],
+      "risk": {
+        "level": "R3",
+        "p0_triggered": true,
+        "escalation_required": true,
+        "trigger": "BFF_SIGNAL_MATCH"
+      },
+      "cost": {
+        "provider": "Dify Cloud",
+        "model": "deepseek-v4-pro",
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "provider_latency_ms": 0,
+        "estimated_input_cost": null,
+        "estimated_output_cost": null,
+        "estimated_total_cost": null,
+        "cost_status": "COST_UNKNOWN",
+        "answer_status": "BLOCKED_SAFETY",
+        "citation_support_passed": true,
+        "effective_answer": false
+      },
+      "timing_ms": 0,
+      "error_code": null
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "task_id": "RET-H07",
+  "core_task_id": "HOLDOUT-SINGLE-TARGET-TROUBLESHOOTING",
+  "sample_type": "REGRESSION",
+  "original_question": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+  "question_context": {
+    "product": "AirPods Pro 3",
+    "symptom": "左耳不充电且指示灯不亮",
+    "cable": "未知",
+    "power": "未知",
+    "cleaning": "未检查"
+  },
+  "answer_status": "ANSWERED",
+  "provider_called": true,
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-FAQ-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+      "左耳放回盒子没有充电提示，换线和换电源都不亮，要先检查哪些位置？",
+      "AirPods Pro 3 单耳不充电，指示灯也不亮，第一步怎么处理？"
+    ],
+    "internal_candidate_pool_size": 14,
+    "displayed_top_k": 3,
+    "candidate_document_count": 4,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_resources": [
+    {
+      "position": 1,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+      "score": 0.67929065,
+      "claim_support_count": 3
+    },
+    {
+      "position": 2,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.658562,
+      "claim_support_count": 3
+    },
+    {
+      "position": 3,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "score": 0.57169056,
+      "claim_support_count": 3
+    }
+  ],
+  "answer": "判断：左耳不充电且指示灯不亮，应按充电盒未正常供电或接触异常排查，并先核验产品身份。 若更换兼容线缆和电源后仍无反应，转服务检测，不承诺免费维修或换新。 下一步：1. 核对产品型号（耳机 A3063/A3064/A3065；充电盒 A3122）、序列号、购买渠道和购买/签收日期；若型号、序列号与购买凭证无法对应，转保修身份核验；2. 确认左耳已放到位，检查充电盒接口及耳机/充电触点是否有碎屑；不要用针、镊子等尖锐物清理，不要在潮湿状态下充电；3. 连接兼容线缆和电源，确认接口无碎屑且连接可靠；若尚未更换线缆/电源，先更换后再观察状态灯。绿色表示耳机已充满，琥珀色表示盒内电量不足以让耳机再次充满；指示灯仍不亮说明未正常供电或未进入充电状态；4. 若更换兼容线缆和电源后仍无反应，转服务检测；售后检测/维修不承诺免费维修或换新；单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。；仍未恢复时，可在设备中忽略旧配对并重新配对。。",
+  "answer_goals": [],
+  "suggested_action": "1. 核对产品型号（耳机 A3063/A3064/A3065；充电盒 A3122）、序列号、购买渠道和购买/签收日期；若型号、序列号与购买凭证无法对应，转保修身份核验；2. 确认左耳已放到位，检查充电盒接口及耳机/充电触点是否有碎屑；不要用针、镊子等尖锐物清理，不要在潮湿状态下充电；3. 连接兼容线缆和电源，确认接口无碎屑且连接可靠；若尚未更换线缆/电源，先更换后再观察状态灯。绿色表示耳机已充满，琥珀色表示盒内电量不足以让耳机再次充满；指示灯仍不亮说明未正常供电或未进入充电状态；4. 若更换兼容线缆和电源后仍无反应，转服务检测；售后检测/维修不承诺免费维修或换新。",
+  "citations": [
+    {
+      "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.658562,
+      "supported_claims": [
+        "AirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。",
+        "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+        "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-157cc321-cf47-44a0-872c-e30d38e5e5ab",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+      "segment_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+      "score": 0.67929065,
+      "supported_claims": [
+        "充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。",
+        "不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。",
+        "状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "score": 0.57169056,
+      "supported_claims": [
+        "单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。",
+        "仍未恢复时，可在设备中忽略旧配对并重新配对。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "citation_support": {
+    "required": true,
+    "passed": true,
+    "supported_count": 3,
+    "multi_objective_passed": true,
+    "unsupported_count": 0
+  },
+  "citation_gate_passed": true,
+  "forbidden_action_match": null,
+  "business_semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [],
+    "passed": true
+  },
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1663,
+  "completion_tokens": 6540,
+  "total_tokens": 8203,
+  "provider_latency_ms": 74189,
+  "bff_latency_ms": 78016,
+  "bff_request_id": "091a8002-0510-46a1-a160-022503afac60",
+  "provider_request_id": "2bdb46d2-c577-4ba8-be8f-f28c607ac8f1",
+  "error_code": null,
+  "cost_status": "COST_UNKNOWN"
+}

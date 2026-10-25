@@ -1,0 +1,105 @@
+{
+  "fixture_notice": "SYNTHETIC CONTRACT FIXTURES ONLY; NOT PROVIDER RESULTS",
+  "responses": [
+    {
+      "request_id": "REQ-FIXTURE-ANSWERED",
+      "answer_status": "ANSWERED",
+      "answer": "需要先确认渠道、签收时间和商品状态，再分别按法定退货与渠道规则判断。",
+      "business_conditions": ["渠道", "签收时间", "商品状态"],
+      "suggested_action": "补齐条件后转对应渠道处理",
+      "citations": [
+        {
+          "citation_id": "CIT-001",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-RETURN-V1",
+            "version": "1.0.0",
+            "title": "AirPods 退货与退款判断",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active"
+          },
+          "supported_claims": ["退货需要核验渠道、时间和商品状态"]
+        }
+      ],
+      "risk": {"level": "R0", "p0_triggered": false, "escalation_required": false},
+      "timing_ms": 0,
+      "provider_trace_id": null
+    },
+    {
+      "request_id": "REQ-FIXTURE-P0",
+      "answer_status": "BLOCKED_SAFETY",
+      "answer": "立即停止充电并断开电源，远离可燃物；不要按压或拆机。",
+      "business_conditions": ["停止使用", "停止充电", "升级安全责任人"],
+      "suggested_action": "创建 R3 风险升级单",
+      "citations": [
+        {
+          "citation_id": "CIT-002",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active"
+          },
+          "supported_claims": ["鼓包或过热时必须停止充电和升级"]
+        }
+      ],
+      "risk": {"level": "R3", "p0_triggered": true, "escalation_required": true},
+      "timing_ms": 0,
+      "provider_trace_id": null
+    },
+    {
+      "request_id": "REQ-FIXTURE-NO-ANSWER",
+      "answer_status": "NO_ANSWER",
+      "answer": "当前公开知识没有该功能说明，不能确认。",
+      "business_conditions": ["保持不确定性"],
+      "suggested_action": "查阅官方规格或转人工",
+      "citations": [],
+      "risk": {"level": "R0", "p0_triggered": false, "escalation_required": false},
+      "timing_ms": 0,
+      "provider_trace_id": null
+    },
+    {
+      "request_id": "REQ-FIXTURE-CONFLICT",
+      "answer_status": "CONFLICT",
+      "answer": "两份结论冲突，需保留双方证据并转渠道负责人和主管裁决。",
+      "business_conditions": ["保留双方书面结论", "核验授权和工单"],
+      "suggested_action": "创建冲突案例并升级",
+      "citations": [
+        {
+          "citation_id": "CIT-003",
+          "source": {
+            "src_id": "SRC-SIM-CONFLICT-001",
+            "doc_id": "DOC-CHANNEL-CONFLICT",
+            "version": "1.0.0",
+            "title": "渠道结论冲突待裁决样本",
+            "url": null,
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-11-30",
+            "status": "review_required"
+          },
+          "supported_claims": ["冲突尚未得到授权核验和联合裁决"]
+        }
+      ],
+      "risk": {"level": "R1", "p0_triggered": false, "escalation_required": true},
+      "timing_ms": 0,
+      "provider_trace_id": null
+    },
+    {
+      "request_id": "REQ-FIXTURE-PERMISSION",
+      "answer_status": "PERMISSION_DENIED",
+      "answer": "内部规则不能提供给公开客户，仅可提供公开安全动作。",
+      "business_conditions": ["拒绝内部数据请求"],
+      "suggested_action": "提供公开止损步骤并转人工",
+      "citations": [],
+      "risk": {"level": "R1", "p0_triggered": false, "escalation_required": true},
+      "timing_ms": 0,
+      "provider_trace_id": null
+    }
+  ]
+}

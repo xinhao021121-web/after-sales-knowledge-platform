@@ -1,0 +1,117 @@
+{
+  "round_id": "FLASH-R2",
+  "task_id": "POC-K04",
+  "core_task_id": "CORE-K4",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 12704,
+  "request": {
+    "question": "原始问题：京东售后说拒修，但 Apple 检测后换新，应该听哪个？\n客户改写：平台拒绝维修而官方检测给了换新结论，以哪个为准？；两份售后结论互相冲突，能不能直接认定平台欺诈？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R2-POC-K04",
+    "knowledge_item_id": "KI-CORE-K4",
+    "product_model": "AirPods Pro 3",
+    "channel": "第三方平台",
+    "customer_context": {
+      "channel": "第三方平台",
+      "document_1": "平台拒修",
+      "document_2": "官方检测后换新",
+      "serial": "未核验",
+      "work_order_dates": "未知",
+      "authorization": "未知"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "第三方平台"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "CONFLICT",
+    "ui_state": "CONFLICT_HOLD",
+    "answer": "两份渠道结论存在冲突，系统已保持 CONFLICT_HOLD，不强行合并为单一结论。",
+    "suggested_action": "不做“以谁为准”或“平台欺诈”的最终定性，先向客户说明需核验设备与两份书面结论；收集并核验：设备序列号、购买凭证、平台拒修工单/书面理由、Apple 检测报告/换新工单、检测日期、服务商授权信息。",
+    "business_conditions": [
+      "两份结论是否针对同一台设备：需核验序列号；当前为“未核验”",
+      "是否针对同一故障/同一检测事项：平台拒修理由与 Apple 换新检测结论需逐项对应",
+      "时间顺序与工单日期：当前“未知”，无法判断后一份结论是否覆盖前一份",
+      "Apple 检测主体与授权：是否为 Apple Store/Apple 授权服务商出具；当前“授权未知”"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R2",
+      "p0_triggered": false,
+      "escalation_required": true
+    },
+    "provider_request_id": "d27892e3-d9b6-48c7-a76d-b277cbe77539",
+    "provider_trace_id": "d27892e3-d9b6-48c7-a76d-b277cbe77539",
+    "provider_called": true,
+    "timing_ms": 12691,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 8,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 8,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 8
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.5954240580437232,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.45281418,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.44517098499999996,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "86ecdbcc-da47-4182-8328-e79a8c49d882",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R2-POC-K04",
+      "knowledge_item_id": "KI-CORE-K4"
+    },
+    "audit_event_id": "4843122a-38c0-4f57-a2e1-89d2bcd35f4e"
+  }
+}

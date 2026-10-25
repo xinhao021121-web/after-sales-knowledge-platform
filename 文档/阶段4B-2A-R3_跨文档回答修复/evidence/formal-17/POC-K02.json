@@ -1,0 +1,236 @@
+{
+  "task_id": "POC-K02",
+  "core_task_id": "CORE-K2",
+  "question_hash": "9d2ecd20586cd0f8b21eaae6bfef8f0aac42e3fb1a51fae02e640ff0d7ee4510",
+  "question_length": 26,
+  "question_summary": {
+    "original": "买了 AppleCare+ 使用两年后能直接换新吗？",
+    "rewrites": [
+      "AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？",
+      "保障快到期了，能不能现在要求直接换一套？"
+    ]
+  },
+  "answer_status": "ANSWERED",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-WARRANTY-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "买了 AppleCare+ 使用两年后能直接换新吗？",
+      "AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？",
+      "保障快到期了，能不能现在要求直接换一套？"
+    ],
+    "internal_candidate_pool_size": 12,
+    "displayed_top_k": 3,
+    "candidate_document_count": 4,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "566c5048-e371-4f36-9fae-f672e9e1948e",
+      "provider_request_id": "76760e24-6294-4be1-b438-3b4642220ef5",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [
+    {
+      "citation_id": "EVD-b5440479-d296-42d2-ae07-eaad8e9ed770",
+      "source": {
+        "src_id": "SRC-PUB-006",
+        "doc_id": "DOC-WARRANTY-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 保修与维修流程",
+        "url": "https://support.apple.com/zh-cn/airpods/repair?services=service",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770"
+      },
+      "kb_id": "KB-DOC-WARRANTY-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+      "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+      "score": 0.6442478,
+      "supported_claims": [
+        "电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.61250246,
+      "supported_claims": [
+        "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+        "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-b1a33913-9ad5-4842-8360-69d88912fd06",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-RETURN-V1",
+        "version": "1.0.0",
+        "title": "AirPods 退货与退款判断",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06"
+      },
+      "kb_id": "KB-DOC-RETURN-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "score": 0.5633486,
+      "supported_claims": [
+        "Apple Store 在线商店符合条件时可在交付后 14 日内申请退货。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "answer_goals": [
+    {
+      "index": "一",
+      "title": "目标一：满两年是否无条件换新",
+      "content": "判断：不是。正文明确不能仅凭“满两年”直接承诺换新；能否换新需核对 AppleCare+ 保障合同、当前电池容量、购买日期和服务历史。用户目前未出示合同、未说明故障，不满足直接换新条件。 下一步：请用户提供 AppleCare+ 合同、AirPods Pro 3 序列号及购买/签收日期；如型号、序列号与购买凭证无法对应，不直接承诺换新或免费维修，转保修身份核验。 依据：[1][2]",
+      "evidence_supported": true
+    },
+    {
+      "index": "二",
+      "title": "目标二：保障快到期能否现在要求直接换一套",
+      "content": "判断：不能直接要求换一套。保障到期前是否可换新取决于故障或电池状态是否达到 AppleCare+ 服务条件，而非“快到期”；Apple 在线商店 14 日退货政策不适用于使用近两年后的换新请求。 下一步：先完成 AppleCare+ 合同与产品身份核验，并进行官方检测，确认当前容量、故障表现、购买日期和服务历史后再判定；不符合条件则不能换新，符合条件则按官方检测结果处理。 依据：[1][3]",
+      "evidence_supported": true
+    }
+  ],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1297,
+  "completion_tokens": 2354,
+  "total_tokens": 3651,
+  "provider_latency_ms": 24001,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "76760e24-6294-4be1-b438-3b4642220ef5",
+  "bff_request_id": "566c5048-e371-4f36-9fae-f672e9e1948e",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-LIMITED-01"
+      },
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+        "score": 0.6442478,
+        "claim_support_count": 3
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "score": 0.61250246,
+        "claim_support_count": 3
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "score": 0.5633486,
+        "claim_support_count": 2
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "买了 AppleCare+ 使用两年后能直接换新吗？",
+        "AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？",
+        "保障快到期了，能不能现在要求直接换一套？"
+      ],
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3,
+      "candidate_document_count": 4,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "目标一：满两年是否无条件换新：判断：不是。正文明确不能仅凭“满两年”直接承诺换新；能否换新需核对 AppleCare+ 保障合同、当前电池容量、购买日期和服务历史。用户目前未出示合同、未说明故障，不满足直接换新条件。 下一步：请用户提供 AppleCare+ 合同、AirPods Pro 3 序列号及购买/签收日期；如型号、序列号与购买凭证无法对应，不直接承诺换新或免费维修，转保修身份核验。 依据：[1][2]\n目标二：保障快到期能否现在要求直接换一套：判断：不能直接要求换一套。保障到期前是否可换新取决于故障或电池状态是否达到 AppleCare+ 服务条件，而非“快到期”；Apple 在线商店 14 日退货政策不适用于使用近两年后的换新请求。 下一步：先完成 AppleCare+ 合同与产品身份核验，并进行官方检测，确认当前容量、故障表现、购买日期和服务历史后再判定；不符合条件则不能换新，符合条件则按官方检测结果处理。 依据：[1][3]",
+    "answer_goals": [
+      {
+        "index": "一",
+        "title": "目标一：满两年是否无条件换新",
+        "content": "判断：不是。正文明确不能仅凭“满两年”直接承诺换新；能否换新需核对 AppleCare+ 保障合同、当前电池容量、购买日期和服务历史。用户目前未出示合同、未说明故障，不满足直接换新条件。 下一步：请用户提供 AppleCare+ 合同、AirPods Pro 3 序列号及购买/签收日期；如型号、序列号与购买凭证无法对应，不直接承诺换新或免费维修，转保修身份核验。 依据：[1][2]",
+        "evidence_supported": true
+      },
+      {
+        "index": "二",
+        "title": "目标二：保障快到期能否现在要求直接换一套",
+        "content": "判断：不能直接要求换一套。保障到期前是否可换新取决于故障或电池状态是否达到 AppleCare+ 服务条件，而非“快到期”；Apple 在线商店 14 日退货政策不适用于使用近两年后的换新请求。 下一步：先完成 AppleCare+ 合同与产品身份核验，并进行官方检测，确认当前容量、故障表现、购买日期和服务历史后再判定；不符合条件则不能换新，符合条件则按官方检测结果处理。 依据：[1][3]",
+        "evidence_supported": true
+      }
+    ],
+    "suggested_action": "请用户提供 AppleCare+ 合同、AirPods Pro 3 序列号及购买/签收日期；如型号、序列号与购买凭证无法对应，不直接承诺换新或免费维修，转保修身份核验；依据：[1][2]。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 3,
+      "multi_objective_passed": true,
+      "unsupported_count": 0
+    }
+  }
+}

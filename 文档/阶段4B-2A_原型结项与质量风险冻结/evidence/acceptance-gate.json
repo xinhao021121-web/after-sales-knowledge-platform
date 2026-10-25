@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-10-25T13:31:35.996Z",
+  "frozen_from_commit": "7feb9d0",
+  "acceptance_layers": {
+    "engineering_and_safety": {
+      "status": "PASSED",
+      "evidence": "R5 validation, unit, E2E, P0, claim, permission, expiry and provider-error gates"
+    },
+    "product_quality": {
+      "status": "FAILED_KNOWN_DEFECT",
+      "reason": "RET-H09 first holdout semantic regression failed"
+    }
+  },
+  "gates": {
+    "formal_17": {
+      "status": "PASSED",
+      "run_id": "EVAL-REAL-658cce03-c558-4e40-b0d7-ca59f96f92e8"
+    },
+    "regression_8": {
+      "status": "PASSED",
+      "passed": 8,
+      "total": 8
+    },
+    "holdout_2": {
+      "status": "FAILED",
+      "passed": 1,
+      "total": 2,
+      "known_defect_task": "RET-H09"
+    }
+  },
+  "prototype_status": "CLOSED_AS_INTERNAL_LEARNING_PROTOTYPE_WITH_KNOWN_DEFECT",
+  "production_release": "FORBIDDEN",
+  "production_release_allowed": false,
+  "release_performed": false,
+  "entered_4b2b": false,
+  "upstream_quality_gate_status": "FAILED",
+  "threshold_unchanged": 0.9167,
+  "cost_status": "COST_UNKNOWN",
+  "evidence_root": "阶段4B-2A-R5_单目标检索与质量收口/evidence"
+}

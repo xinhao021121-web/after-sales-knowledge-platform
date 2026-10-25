@@ -1,0 +1,80 @@
+{
+  "captured_at": "2026-10-25T08:32:08.6669694Z",
+  "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "total": 6,
+  "has_more": false,
+  "documents": [
+    {
+      "id": "25fe0126-502a-4fde-add2-cfcee5bacd32",
+      "name": "01_售后FAQ__4B2A-CANDIDATE-v1.0.0.md",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 1105,
+      "segment_count": null,
+      "hit_count": 42,
+      "created_at": 1792915310,
+      "doc_form": "text_model"
+    },
+    {
+      "id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "name": "05_渠道差异说明.md",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 1004,
+      "segment_count": null,
+      "hit_count": 109,
+      "created_at": 1792829521,
+      "doc_form": "text_model"
+    },
+    {
+      "id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "name": "04_保修与维修流程.md",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 973,
+      "segment_count": null,
+      "hit_count": 309,
+      "created_at": 1792829462,
+      "doc_form": "text_model"
+    },
+    {
+      "id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "name": "03_退货规则.md",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 941,
+      "segment_count": null,
+      "hit_count": 101,
+      "created_at": 1792829353,
+      "doc_form": "text_model"
+    },
+    {
+      "id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "name": "02_安全SOP.md",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 936,
+      "segment_count": null,
+      "hit_count": 129,
+      "created_at": 1792829286,
+      "doc_form": "text_model"
+    },
+    {
+      "id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "name": "01_售后FAQ.md",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 1122,
+      "segment_count": null,
+      "hit_count": 456,
+      "created_at": 1792827344,
+      "doc_form": "text_model"
+    }
+  ]
+}

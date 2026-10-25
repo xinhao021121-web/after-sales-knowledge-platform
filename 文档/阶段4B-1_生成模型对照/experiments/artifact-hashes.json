@@ -1,0 +1,302 @@
+{
+  "manifest_id": "STAGE4B1-ARTIFACT-HASHES-1.0.0",
+  "created_at": "2026-10-24T13:10:53.659Z",
+  "file_count": 59,
+  "files": [
+    {
+      "path": "01_配置与证据边界.md",
+      "sha256": "4b39e8e306424e862309567e2f43fa7371c6c59e96d8ee86313f50a58036fb18",
+      "bytes": 2605
+    },
+    {
+      "path": "02_两轮真实结果.md",
+      "sha256": "f4a76b36acf30783f765ad2ea34072345eeb4758ed66f779ecbe4398b3c1fdb2",
+      "bytes": 3167
+    },
+    {
+      "path": "03_Pro与Flash对照.md",
+      "sha256": "e837f3bdf7879d5b449f621914b66d92ab4992e29937cff8cdc6c93d67a7f48c",
+      "bytes": 1551
+    },
+    {
+      "path": "04_引用与P0复核.md",
+      "sha256": "c6fa25338ba6404d983dc38aaa87df23ebb2aa410618a85ee996303ab8b28970",
+      "bytes": 2209
+    },
+    {
+      "path": "05_决策记录.md",
+      "sha256": "a232e0d71e0d1bedc72f98382af835cb0e94c65a2376dde5b774b4332677f78a",
+      "bytes": 1905
+    },
+    {
+      "path": "06_阶段4B1验收记录.md",
+      "sha256": "7dfd2b74b34050b5811e9b25f0469d7097e6d836bddbc1cd3ebe859371e38b91",
+      "bytes": 1765
+    },
+    {
+      "path": "configs/CFG-RERANK-FLASH.json",
+      "sha256": "508e5d86c667346e1415d1b50659f465ba504f4a6619c4b1b734d640dc66cf3f",
+      "bytes": 967
+    },
+    {
+      "path": "configs/CFG-RERANK-PRO.json",
+      "sha256": "81eac32064e2424dc3390d91415c805dc69632f93eb4b834cb9d5c1497f946d1",
+      "bytes": 1029
+    },
+    {
+      "path": "experiments/comparison.json",
+      "sha256": "e6b9a037ef4891a09724080f8793504a1548fb193b0e714539738ea01d683011",
+      "bytes": 6928
+    },
+    {
+      "path": "experiments/input-and-baseline-lock.json",
+      "sha256": "b105399d511c9d42941aefa4b0f635b4536d632890c85d4fc35404191ef90dda",
+      "bytes": 9253
+    },
+    {
+      "path": "experiments/manual-review-v1.json",
+      "sha256": "1e5ac2f9d1d398189f1059fa8de1a053a60797cfbc34b408325af0e94a1adab3",
+      "bytes": 13962
+    },
+    {
+      "path": "experiments/metrics-summary.md",
+      "sha256": "32c5c28bb76bd5b14b3ddf3d68076b9aee40b67f54a53c37f63c2ebc3e2e5ac5",
+      "bytes": 951
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/normalized.json",
+      "sha256": "bd52158d6c3865ad6598a0981270d2df8dcb17d4005ad4d62eac6f36b661bc56",
+      "bytes": 123860
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-E01.json",
+      "sha256": "be1114294544142c98674233b541a8a01bef08cf74e220944f2ee7c9e89b0148",
+      "bytes": 5797
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-E02.json",
+      "sha256": "cfabd075c7398881a1d49877298d4e2b7a6f15a5987d8d518032907599d2b21f",
+      "bytes": 8375
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-E03.json",
+      "sha256": "1cd9dbfcb6f2a98ffc8a831d30848f65916249169f580d3b38e667c76bd13462",
+      "bytes": 9691
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-E04.json",
+      "sha256": "79b1c3e890de15760ce1188cf0cfd408dbbd4dd67fd579f249d892ff24aaab34",
+      "bytes": 18963
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-E05.json",
+      "sha256": "1d3dd624781a1008c3114f33ec5b972e05133bff8ff7a6fc9a5048771d7ee2b2",
+      "bytes": 883
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-K01.json",
+      "sha256": "dddac65f2b94af69735a7d93e047e1ba7e374903969c14cdfb43bd197e308690",
+      "bytes": 7062
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-K02.json",
+      "sha256": "54dca7f288bfa58076c4792857e8d4c6eeeef05b28ed8f3680b1d349c54bc7b1",
+      "bytes": 9181
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-K03.json",
+      "sha256": "9c9527873d16d7696130d187fc024541ef0f14940b69a5624ca9a6f3e5973db1",
+      "bytes": 898
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-K04.json",
+      "sha256": "6a767fe733cd4ef9a0e4849dcff16d9894dd99533bc57b4bfaaccd3b05bbe0c2",
+      "bytes": 9552
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-R01.json",
+      "sha256": "e27ae284fde72dab45caf5ed1021bca946d4d7c585a83949c4487c7deddda159",
+      "bytes": 15421
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-R02.json",
+      "sha256": "3445866edde423c335887f4a50d6197e67e506df334ded7a7642e1c222b107ee",
+      "bytes": 14272
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-R03.json",
+      "sha256": "b96678009354453776b4b582c4aefa99e1785414c3f6e5753b868f8fa1e32f97",
+      "bytes": 9183
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-R04.json",
+      "sha256": "a695fa1d4635d9d2c68253ddf20065934f98d850726690448c591f48d1bb898d",
+      "bytes": 9708
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-S01.json",
+      "sha256": "c3c2f58a5073afb5255da69f082445e066a972d3c46270ed1ff8c7cd0df77d66",
+      "bytes": 880
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-S02.json",
+      "sha256": "9d778d96886498a27fe3315263f91e82ee90941f1935e5df133812bd208e5c18",
+      "bytes": 877
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-S03.json",
+      "sha256": "f05ba83691c57a47bc5199c1b6f8e9565a79e768194ad352159045bc7bd57f27",
+      "bytes": 868
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R1/raw/POC-S04.json",
+      "sha256": "f925174ead18a0ef34c4d9a6e4ecbc6646a3c653ea88401e267f658e400c8dd6",
+      "bytes": 886
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/normalized.json",
+      "sha256": "f1bf25b15b3b5dfc615ddbae9f294b509f43ab09e3bc8b00f78883179d5ec9c4",
+      "bytes": 121573
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-E01.json",
+      "sha256": "731f00e61c073ebaf180f9fda8f2a7e0e753253e61b9038f4cf129de7d67d945",
+      "bytes": 9581
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-E02.json",
+      "sha256": "319aba8fbd487d56a367b7bf18f0b29d4ebb2f372f771ba1990546e1a3f523a6",
+      "bytes": 10813
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-E03.json",
+      "sha256": "ba70967b9a3847c7fe147665f5dce9fc2e8aa3a1ac613faa6faeeb9aa393117e",
+      "bytes": 13749
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-E04.json",
+      "sha256": "e63d47c045e05e169998a615078d8b9ebdb3fe4574c33c56e6275337b647ff6f",
+      "bytes": 11074
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-E05.json",
+      "sha256": "36591ca13100088ca5783d9702bec9ba91bd6a269a7d6db78a2665f85a65e2d8",
+      "bytes": 883
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-K01.json",
+      "sha256": "476b6bd833941fdf8bad648fe2d5d4249916eea85795a275854d30b6ca1702d8",
+      "bytes": 8114
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-K02.json",
+      "sha256": "1a06f00824442d60e62d8503f20554d672d8a559883ebb1b276811430de8d8a0",
+      "bytes": 8658
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-K03.json",
+      "sha256": "621ada86f79d9dddbb36176c7fdc18e7c897785cd192efcc219ba07155bfbe38",
+      "bytes": 898
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-K04.json",
+      "sha256": "5fbfcbf1fe864978e93aebb5a3578c28631796f41d7c6b9769b274f6ab936e0f",
+      "bytes": 12198
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-R01.json",
+      "sha256": "df91d8f9dd536fc23507a16d825330fcd0aec47bd502c82f713d8746bc06853d",
+      "bytes": 9106
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-R02.json",
+      "sha256": "fa3ea93c2e51eaa9ea65fca681b0770840cbacee8eaffc5e21e8dc93daecabe6",
+      "bytes": 15301
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-R03.json",
+      "sha256": "2d76db89a13253897fdde80cdb43c382b20e59ef6cf0d93ca01f1401e64dbe2c",
+      "bytes": 12014
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-R04.json",
+      "sha256": "9ded9930f446c91e02bb86d59912b5cefeb96a69f7039c7fb8fb93c5f12a01b8",
+      "bytes": 15710
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-S01.json",
+      "sha256": "ed2063b55b2258d54a3b848f491e13e33c9be2ae1ce637871cdd55dbaf5d2863",
+      "bytes": 880
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-S02.json",
+      "sha256": "7394a1e44adcf4706acbe74a2b34891449697544148a8cb85cc6370bd14436de",
+      "bytes": 877
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-S03.json",
+      "sha256": "1bd12f812aecb91971bde54499a87ca7b4fb18f1de5103e378b4c1b84a2fc08f",
+      "bytes": 868
+    },
+    {
+      "path": "experiments/results/CFG-RERANK-FLASH/FLASH-R2/raw/POC-S04.json",
+      "sha256": "22c4c5f0457bba567270a03d549e8ace98facb8a72180da18063b2d9195247f2",
+      "bytes": 886
+    },
+    {
+      "path": "README.md",
+      "sha256": "b8686429ff3c8c4e2d037ca1fbaf0935daa3706fd9d8c2e88aded23d5b37e6f7",
+      "bytes": 1446
+    },
+    {
+      "path": "scripts/build-comparison.mjs",
+      "sha256": "2b7fc786c9700743372a0646b8a61dc00896137b621f54f655a8361099827283",
+      "bytes": 12130
+    },
+    {
+      "path": "scripts/build-input-lock.mjs",
+      "sha256": "76702504e879974cb6da72ceb2696c280fe308d020f091acfa49843f22ae9a44",
+      "bytes": 2530
+    },
+    {
+      "path": "scripts/enrich-normalized-retrieval.mjs",
+      "sha256": "119d7c78926259fd498e147090ddf415818af36de0cce36669638b294b3cbb0c",
+      "bytes": 1964
+    },
+    {
+      "path": "scripts/hash-artifacts.mjs",
+      "sha256": "e1362fe1ceb3a5457677ef6549781f4c5b2cd90b510211bc0623ad3f93a7a35f",
+      "bytes": 1249
+    },
+    {
+      "path": "scripts/lib/citation-policy.mjs",
+      "sha256": "0510f6e85ea31bcfb56209969047c664a8b7dcf1c055f422a00ec870244807e1",
+      "bytes": 563
+    },
+    {
+      "path": "scripts/policy-smoke.mjs",
+      "sha256": "a70276e409047832eff3c8f95d4f9b122b546c112b06be13880807aec802095d",
+      "bytes": 980
+    },
+    {
+      "path": "scripts/preflight-check.mjs",
+      "sha256": "f20b59fd9da345580e899f348a90e761bb244cd14ff1602017863fd3b090fe60",
+      "bytes": 2583
+    },
+    {
+      "path": "scripts/refresh-gated-artifacts.mjs",
+      "sha256": "39c9f007bb824da75fbdd6e0437fe231114264c267a4fc0eafbe1d2ec020672a",
+      "bytes": 2326
+    },
+    {
+      "path": "scripts/run-flash-round.mjs",
+      "sha256": "2b108c2d1344acbdd356c7cc220d94ff8939510c6788863fdc4aaf007a2ed63f",
+      "bytes": 15374
+    },
+    {
+      "path": "tests/validate-stage4b1.ps1",
+      "sha256": "7dd84c143e28b13c2aeda97f6841b1c93ff34a183606b90e693a978804f298e8",
+      "bytes": 11269
+    }
+  ]
+}

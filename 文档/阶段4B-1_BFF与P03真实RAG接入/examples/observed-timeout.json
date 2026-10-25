@@ -1,0 +1,10 @@
+{
+  "notice": "开发过程中使用阶段4A遗留的8秒超时配置时，BFF真实返回的超时样例；未使用缓存或伪造结果。",
+  "observed_at": "2026-10-24",
+  "request_id": "e86475a5-a37e-48c3-876c-44c8ef6e800c",
+  "error_code": "RETRIEVAL_TIMEOUT",
+  "message": "Dify request timed out",
+  "retryable": true,
+  "provider_request_id": null,
+  "resolution": "仅将原型本地 RAG_REQUEST_TIMEOUT_MS 调整为 45000，未修改 Dify 应用或模型配置。"
+}

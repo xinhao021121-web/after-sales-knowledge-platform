@@ -1,0 +1,213 @@
+{
+  "task_id": "POC-R02",
+  "core_task_id": "CORE-R2",
+  "question_hash": "0c8e49d41818917b60a02f867cfc7daea18f704b7fcd5fb64bd1f572a012de49",
+  "question_length": 17,
+  "question_summary": {
+    "original": "AirPods 过保了还能维修吗？",
+    "rewrites": [
+      "用了 14 个月，已经过保，还能付费维修吗？",
+      "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+    ]
+  },
+  "answer_status": "ANSWERED",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-WARRANTY-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods 过保了还能维修吗？",
+      "用了 14 个月，已经过保，还能付费维修吗？",
+      "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+    ],
+    "internal_candidate_pool_size": 13,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "ab4c8664-7f27-4480-bec5-2bfce35e0e96",
+      "provider_request_id": "b6cfe909-eb86-47a7-a525-8a6cd16ca20f",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [
+    {
+      "citation_id": "EVD-e4218282-c57c-453e-a3c9-d4637d794aef",
+      "source": {
+        "src_id": "SRC-PUB-006",
+        "doc_id": "DOC-WARRANTY-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 保修与维修流程",
+        "url": "https://support.apple.com/zh-cn/airpods/repair?services=service",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "e4218282-c57c-453e-a3c9-d4637d794aef"
+      },
+      "kb_id": "KB-DOC-WARRANTY-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "e4218282-c57c-453e-a3c9-d4637d794aef",
+      "segment_id": "e4218282-c57c-453e-a3c9-d4637d794aef",
+      "score": 0.57306945,
+      "supported_claims": [
+        "超过保修期仍可咨询保外维修，费用、零件可用性和库存以检测结果及官方服务页面为准。",
+        "不得在检测前给出固定报价或免费承诺。",
+        "维修服务或更换部件通常提供 90 天质量保证；若原保修剩余期限更长，按较长者计算。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.6461022,
+      "supported_claims": [
+        "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.5699765,
+      "supported_claims": [
+        "AirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。",
+        "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+        "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "answer_goals": [],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1535,
+  "completion_tokens": 2115,
+  "total_tokens": 3650,
+  "provider_latency_ms": 25080,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "b6cfe909-eb86-47a7-a525-8a6cd16ca20f",
+  "bff_request_id": "ab4c8664-7f27-4480-bec5-2bfce35e0e96",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-OOW-01"
+      },
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.6461022,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "e4218282-c57c-453e-a3c9-d4637d794aef",
+        "score": 0.57306945,
+        "claim_support_count": 3
+      },
+      {
+        "position": 3,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "score": 0.5699765,
+        "claim_support_count": 3
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "AirPods 过保了还能维修吗？",
+        "用了 14 个月，已经过保，还能付费维修吗？",
+        "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+      ],
+      "internal_candidate_pool_size": 13,
+      "displayed_top_k": 3,
+      "candidate_document_count": 5,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "判断：AirPods Pro 3 已过保 2 个月，仍可咨询保外维修；但检测前无法确定固定报价、零件可用性或库存，也不承诺免费维修或换新。 费用以检测结果及官方服务页面为准，维修或更换部件通常提供 90 天质量保证，若原保修剩余期限更长则按较长者计算。 下一步：请携带 AirPods Pro 3、充电盒及购买凭证，通过 Apple Store 在线商店或线下直营官方服务入口申请保外检测，并向检测人员说明“充电不稳定”和“无维修历史”。检测时需核对耳机型号 A3063/A3064/A3065 或 MagSafe 充电盒 A3122、序列号、购买渠道和购买/签收日期；若型号、序列号与凭证无法对应，需先完成保修身份核验，不直接承诺退换或免费维修。",
+    "answer_goals": [],
+    "suggested_action": "请携带 AirPods Pro 3、充电盒及购买凭证，通过 Apple Store 在线商店或线下直营官方服务入口申请保外检测，并向检测人员说明“充电不稳定”和“无维修历史”。检测时需核对耳机型号 A3063/A3064/A3065 或 MagSafe 充电盒 A3122、序列号、购买渠道和购买/签收日期；若型号、序列号与凭证无法对应，需先完成保修身份核验，不直接承诺退换或免费维修。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 3,
+      "multi_objective_passed": true,
+      "unsupported_count": 0
+    }
+  }
+}

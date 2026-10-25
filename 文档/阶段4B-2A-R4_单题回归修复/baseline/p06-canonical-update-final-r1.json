@@ -1,0 +1,43 @@
+{
+  "provider": "Dify Dataset API",
+  "checked_at": "2026-10-25T08:46:07.092Z",
+  "dataset_health": {
+    "status": "ok",
+    "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+    "dataset_name": "CANDIDATE",
+    "document_count": 6,
+    "checked_at": "2026-10-25T08:46:00.722Z"
+  },
+  "dataset_health_after": {
+    "status": "ok",
+    "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+    "dataset_name": "CANDIDATE",
+    "document_count": 6,
+    "checked_at": "2026-10-25T08:46:07.091Z"
+  },
+  "ingestion": {
+    "ingestion_id": "ING-e5816be5-d1d9-49c2-83b6-afac4c7bbe64",
+    "doc_id": "DOC-FAQ-V1",
+    "src_id": "SRC-PUB-001",
+    "source_version": "1.0.0",
+    "file_name": "01_售后FAQ.md",
+    "provider_file_name": "01_售后FAQ.md",
+    "source_mode": "REAL_DIFY",
+    "ingestion_mode": "UPDATE_EXISTING",
+    "content_sha256": "f90eb0b0b90a0eb870011769dda17fb4ff554d90a3076bf8ca3e0584e3df9d54",
+    "document_status": "DOCUMENT_READY",
+    "provider_status": "READY",
+    "provider_batch_id": "20261024073543294457",
+    "provider_document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+    "completed_segments": 12,
+    "total_segments": 12,
+    "publishable": true,
+    "error_step": null,
+    "error_code": null,
+    "error_message": null,
+    "retryable": false,
+    "attempt": 1,
+    "created_at": "2026-10-25T08:46:01.092Z",
+    "updated_at": "2026-10-25T08:46:06.608Z"
+  }
+}

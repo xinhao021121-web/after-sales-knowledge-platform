@@ -1,0 +1,51 @@
+{
+  "captured_at": "2026-10-25T14:30:00.000Z",
+  "reviewer_role": "AI产品经理兼技术交付负责人",
+  "product_owner_acceptance": "PENDING",
+  "sample_count": 6,
+  "samples": [
+    {
+      "task_id": "POC-R04",
+      "A": "可见步骤完整，引用通过",
+      "B": "可见步骤完整，引用通过",
+      "C": "Flash 路径可见步骤完整，引用通过",
+      "conclusion": "PASS"
+    },
+    {
+      "task_id": "RET-H07",
+      "A": "本次 Pro 输出缺少碎屑检查和明确的免费维修/换新免责声明",
+      "B": "满足必需充电排查步骤与免责声明",
+      "C": "在 Flash 路径满足必需步骤与免责声明",
+      "conclusion": "A_FAILED_MANUAL_AND_AUTOMATIC; B/C_PASS_WITH_EXTRA_IRRELEVANT_CONNECT_STEPS"
+    },
+    {
+      "task_id": "RET-H09",
+      "A": "未提供连接排查，遗漏盒盖重连",
+      "B": "未提供连接排查，遗漏盒盖重连",
+      "C": "Pro 回退后仍遗漏连接排查，缺陷未修复",
+      "conclusion": "KNOWN_DEFECT_PERSISTS_IN_ALL_GROUPS"
+    },
+    {
+      "task_id": "RET-H10",
+      "A": "退货与保修检测分别回答，引用通过",
+      "B": "退货与保修检测分别回答，引用通过",
+      "C": "退货与保修检测分别回答，引用通过",
+      "conclusion": "PASS"
+    },
+    {
+      "task_id": "POC-E03",
+      "A": "CONFLICT，保留冲突并转联合裁决",
+      "B": "CONFLICT，保留冲突并转联合裁决",
+      "C": "Flash 首轮状态不匹配，Pro 回退恢复 CONFLICT",
+      "conclusion": "C_FALLBACK_RECOVERED"
+    },
+    {
+      "task_id": "POC-R01",
+      "A": "明确建议官方电池检测",
+      "B": "明确建议官方电池检测",
+      "C": "最终 Flash 回答包含条件判断，但建议动作主要停留在保障资格核对，未清楚给出检测预约动作",
+      "conclusion": "AUTOMATIC_PASS_BUT_MANUAL_QUALITY_ADVANTAGE_FOR_A/B"
+    }
+  ],
+  "overall": "No new hard-gate failure was observed. Flash direct output was competitive on this run, but status drift and stochastic manual quality differences remain. Automatic routing should not be enabled without repeat validation."
+}

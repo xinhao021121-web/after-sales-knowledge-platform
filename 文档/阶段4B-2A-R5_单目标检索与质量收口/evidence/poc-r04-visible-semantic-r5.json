@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-10-25T13:14:47.345Z",
+  "source": "evidence/p10-real-r5.json",
+  "run_id": "EVAL-REAL-658cce03-c558-4e40-b0d7-ca59f96f92e8",
+  "task_id": "POC-R04",
+  "status": "ANSWERED",
+  "answer": "判断：单侧无声不能直接归因于“长期单耳佩戴”；应先按连接、声道平衡、堵塞/佩戴贴合、重新配对排查。 只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测。 下一步：1. 将两只耳机放回充电盒，合盖至少 10 秒后取出，重新测试原无声侧；2. 检查无声侧耳塞或网罩是否堵塞，并确认佩戴贴合；在设备声音或辅助功能设置中检查左右声道平衡是否居中；3. 仍未恢复，在设备蓝牙设置中忽略该耳机旧配对，再重新配对；4. 若仍只有一侧持续无声音，或完成重置和清洁后仍反复异常，再转售后检测；转售后前核对耳机型号、序列号、购买渠道、购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。不承诺免费维修或换新；仍未恢复时，可在设备中忽略旧配对并重新配对。。",
+  "suggested_action": "1. 将两只耳机放回充电盒，合盖至少 10 秒后取出，重新测试原无声侧；2. 检查无声侧耳塞或网罩是否堵塞，并确认佩戴贴合；在设备声音或辅助功能设置中检查左右声道平衡是否居中；3. 仍未恢复，在设备蓝牙设置中忽略该耳机旧配对，再重新配对；4. 若仍只有一侧持续无声音，或完成重置和清洁后仍反复异常，再转售后检测；转售后前核对耳机型号、序列号、购买渠道、购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。不承诺免费维修或换新。",
+  "citation_support_passed": true,
+  "provider_request_id": "e3b14e02-4bfc-46be-a3e5-c936378e939a",
+  "bff_request_id": "816a15f5-28b7-4ce9-a4a2-2b8c8d7cf397",
+  "resources": [
+    {
+      "position": 1,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "score": 0.64624465,
+      "claim_support_count": 3
+    },
+    {
+      "position": 2,
+      "document_name": "05_渠道差异说明.md",
+      "document_id": "DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.5974519,
+      "claim_support_count": 2
+    },
+    {
+      "position": 3,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.5899267,
+      "claim_support_count": 3
+    }
+  ],
+  "semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [],
+    "passed": true
+  },
+  "passed": true
+}

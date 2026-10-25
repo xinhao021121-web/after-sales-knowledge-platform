@@ -1,0 +1,757 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "供应商无关 RAG Adapter API",
+    "version": "1.0.0",
+    "description": "企业 BFF 对内部前端暴露的归一化契约。前端不得直接调用 FastGPT、Dify 或 RAGFlow。"
+  },
+  "servers": [
+    {
+      "url": "https://{bff_host}/internal/rag",
+      "variables": {
+        "bff_host": {
+          "default": "localhost:8080",
+          "description": "由部署环境提供；禁止把供应商 Base URL 暴露给浏览器"
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "getRagHealth",
+        "summary": "健康检查",
+        "responses": {
+          "200": {
+            "description": "Adapter 与当前提供方状态",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        }
+      }
+    },
+    "/datasets": {
+      "post": {
+        "operationId": "createDataset",
+        "summary": "创建测试、候选或生产数据集绑定",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDatasetRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "数据集已创建",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dataset"
+                }
+              }
+            }
+          },
+          "409": {
+            "$ref": "#/components/responses/DuplicateRequest"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        }
+      }
+    },
+    "/datasets/{dataset_id}": {
+      "get": {
+        "operationId": "getDataset",
+        "summary": "查询数据集和文档处理摘要",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/DatasetId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "数据集详情",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dataset"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/documents": {
+      "post": {
+        "operationId": "uploadDocument",
+        "summary": "上传知识文档并登记来源快照",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadDocumentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "文档已登记",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "文档超过当前环境限制",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ingestions": {
+      "post": {
+        "operationId": "createIngestionJob",
+        "summary": "创建解析、切片和索引入库任务",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateIngestionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "处理任务已创建",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IngestionJob"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ingestions/{job_id}": {
+      "get": {
+        "operationId": "getIngestionJob",
+        "summary": "查询文档处理任务",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "任务状态",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IngestionJob"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/retrieval/search": {
+      "post": {
+        "operationId": "searchKnowledge",
+        "summary": "按业务版本、权限、来源状态和检索配置返回 Top K 证据",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RetrievalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "归一化检索结果",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetrievalResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "#/components/responses/PermissionDenied"
+          },
+          "504": {
+            "$ref": "#/components/responses/GatewayTimeout"
+          }
+        }
+      }
+    },
+    "/answers": {
+      "post": {
+        "operationId": "answerQuestion",
+        "summary": "执行安全门禁、检索和带引用回答",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "回答、追问、拒答、冲突或安全阻断",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "$ref": "#/components/responses/ProviderFailure"
+          },
+          "504": {
+            "$ref": "#/components/responses/GatewayTimeout"
+          }
+        }
+      }
+    },
+    "/environments/{environment}/activate": {
+      "post": {
+        "operationId": "activateEnvironmentBinding",
+        "summary": "切换 test、candidate 或 production 的数据集与配置绑定",
+        "parameters": [
+          {
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Environment"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvironmentBindingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "环境绑定已切换",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnvironmentBinding"
+                }
+              }
+            }
+          },
+          "409": {
+            "$ref": "#/components/responses/DuplicateRequest"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "仅 BFF 使用；供应商密钥不得与用户令牌等同"
+      }
+    },
+    "parameters": {
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 16,
+          "maxLength": 128
+        },
+        "description": "同一租户、环境、业务域和请求体重复提交时返回原结果"
+      },
+      "DatasetId": {
+        "name": "dataset_id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "responses": {
+      "DuplicateRequest": {
+        "description": "幂等键已用于不同请求，或资源版本冲突",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "对象不存在",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "description": "输入不合法",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PermissionDenied": {
+        "description": "角色、业务域或权限范围不匹配",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ProviderFailure": {
+        "description": "供应商失败已归一化，未返回未验证缓存",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "GatewayTimeout": {
+        "description": "检索或生成超时",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ServiceUnavailable": {
+        "description": "当前环境不可用",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "Environment": {
+        "type": "string",
+        "enum": ["test", "candidate", "production"]
+      },
+      "HealthResponse": {
+        "type": "object",
+        "required": ["status", "adapter_version", "environment", "provider", "checked_at"],
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["ok", "degraded", "unavailable"]
+          },
+          "adapter_version": {
+            "type": "string"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/Environment"
+          },
+          "provider": {
+            "type": "object",
+            "required": ["name", "version"],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            }
+          },
+          "checked_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CreateDatasetRequest": {
+        "type": "object",
+        "required": ["environment", "business_domain", "name", "version"],
+        "properties": {
+          "environment": {
+            "$ref": "#/components/schemas/Environment"
+          },
+          "business_domain": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "frozen": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Dataset": {
+        "type": "object",
+        "required": ["dataset_id", "environment", "business_domain", "version", "status", "document_count"],
+        "properties": {
+          "dataset_id": {
+            "type": "string"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/Environment"
+          },
+          "business_domain": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["creating", "ready", "failed", "archived"]
+          },
+          "document_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "UploadDocumentRequest": {
+        "type": "object",
+        "required": ["dataset_id", "file", "metadata"],
+        "properties": {
+          "dataset_id": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string",
+            "format": "binary"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/SourceMetadata"
+          }
+        }
+      },
+      "SourceMetadata": {
+        "type": "object",
+        "required": ["src_id", "doc_id", "version", "title", "publisher", "verified_at", "scope", "valid_until", "owner_role", "source_status", "permission_scope", "sha256"],
+        "properties": {
+          "src_id": {"type": "string"},
+          "doc_id": {"type": "string"},
+          "version": {"type": "string"},
+          "title": {"type": "string"},
+          "url": {"type": ["string", "null"], "format": "uri"},
+          "file_ref": {"type": ["string", "null"]},
+          "publisher": {"type": "string"},
+          "verified_at": {"type": "string", "format": "date"},
+          "scope": {"type": "string"},
+          "valid_until": {"type": "string", "format": "date"},
+          "owner_role": {"type": "string"},
+          "source_status": {"type": "string", "enum": ["active", "review_required", "expired", "withdrawn"]},
+          "permission_scope": {"type": "string"},
+          "authority": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        },
+        "additionalProperties": true
+      },
+      "Document": {
+        "type": "object",
+        "required": ["document_id", "dataset_id", "metadata", "ingestion_status"],
+        "properties": {
+          "document_id": {"type": "string"},
+          "dataset_id": {"type": "string"},
+          "metadata": {"$ref": "#/components/schemas/SourceMetadata"},
+          "ingestion_status": {"type": "string"}
+        }
+      },
+      "CreateIngestionRequest": {
+        "type": "object",
+        "required": ["dataset_id", "document_id", "chunking"],
+        "properties": {
+          "dataset_id": {"type": "string"},
+          "document_id": {"type": "string"},
+          "chunking": {
+            "type": "object",
+            "required": ["strategy", "chunk_size", "overlap"],
+            "properties": {
+              "strategy": {"type": "string", "enum": ["fixed", "semantic", "template"]},
+              "chunk_size": {"type": "integer", "minimum": 100},
+              "overlap": {"type": "integer", "minimum": 0}
+            }
+          }
+        }
+      },
+      "IngestionJob": {
+        "type": "object",
+        "required": ["job_id", "dataset_id", "document_id", "status", "progress"],
+        "properties": {
+          "job_id": {"type": "string"},
+          "dataset_id": {"type": "string"},
+          "document_id": {"type": "string"},
+          "status": {"type": "string", "enum": ["queued", "parsing", "chunking", "indexing", "ready", "failed", "cancelled"]},
+          "progress": {"type": "integer", "minimum": 0, "maximum": 100},
+          "error": {"$ref": "#/components/schemas/ErrorResponse"}
+        }
+      },
+      "RetrievalRequest": {
+        "type": "object",
+        "required": ["dataset_id", "query", "top_k", "retrieval_mode", "rerank", "metadata_filter", "permission_context"],
+        "properties": {
+          "dataset_id": {"type": "string"},
+          "query": {"type": "string", "minLength": 1},
+          "top_k": {"type": "integer", "enum": [3, 5]},
+          "retrieval_mode": {"type": "string", "enum": ["semantic", "hybrid"]},
+          "rerank": {"type": "boolean"},
+          "metadata_filter": {
+            "type": "object",
+            "properties": {
+              "enabled": {"type": "boolean"},
+              "active_only": {"type": "boolean"},
+              "channels": {"type": "array", "items": {"type": "string"}},
+              "source_statuses": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "permission_context": {
+            "type": "object",
+            "required": ["tenant_id", "business_domain", "role"],
+            "properties": {
+              "tenant_id": {"type": "string"},
+              "business_domain": {"type": "string"},
+              "role": {"type": "string"}
+            }
+          }
+        }
+      },
+      "RetrievalResponse": {
+        "type": "object",
+        "required": ["request_id", "dataset_id", "hits", "timing_ms"],
+        "properties": {
+          "request_id": {"type": "string"},
+          "dataset_id": {"type": "string"},
+          "hits": {"type": "array", "items": {"$ref": "#/components/schemas/RetrievalHit"}},
+          "timing_ms": {"type": "integer", "minimum": 0}
+        }
+      },
+      "RetrievalHit": {
+        "type": "object",
+        "required": ["kb_id", "source", "chunk_id", "text", "score", "metadata", "citation_id"],
+        "properties": {
+          "kb_id": {"type": "string"},
+          "source": {
+            "type": "object",
+            "required": ["src_id", "doc_id", "version", "title", "verified_at", "valid_until", "status"],
+            "properties": {
+              "src_id": {"type": "string"},
+              "doc_id": {"type": "string"},
+              "version": {"type": "string"},
+              "title": {"type": "string"},
+              "url": {"type": ["string", "null"]},
+              "verified_at": {"type": "string", "format": "date"},
+              "valid_until": {"type": "string", "format": "date"},
+              "status": {"type": "string"}
+            }
+          },
+          "chunk_id": {"type": "string"},
+          "text": {"type": "string"},
+          "score": {"type": "number"},
+          "metadata": {"type": "object", "additionalProperties": true},
+          "citation_id": {"type": "string"}
+        }
+      },
+      "AnswerRequest": {
+        "allOf": [
+          {"$ref": "#/components/schemas/RetrievalRequest"},
+          {
+            "type": "object",
+            "required": ["citation_mode", "safety_mode"],
+            "properties": {
+              "citation_mode": {"type": "string", "enum": ["required", "none"]},
+              "safety_mode": {"type": "boolean"}
+            }
+          }
+        ]
+      },
+      "AnswerResponse": {
+        "type": "object",
+        "required": ["request_id", "answer_status", "answer", "citations", "risk", "timing_ms"],
+        "properties": {
+          "request_id": {"type": "string"},
+          "answer_status": {
+            "type": "string",
+            "enum": ["ANSWERED", "NO_ANSWER", "NEED_CLARIFICATION", "BLOCKED_SAFETY", "CONFLICT", "PERMISSION_DENIED", "KNOWLEDGE_EXPIRED"]
+          },
+          "answer": {"type": "string"},
+          "business_conditions": {"type": "array", "items": {"type": "string"}},
+          "suggested_action": {"type": ["string", "null"]},
+          "citations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["citation_id", "source", "supported_claims"],
+              "properties": {
+                "citation_id": {"type": "string"},
+                "source": {"$ref": "#/components/schemas/RetrievalHit/properties/source"},
+                "supported_claims": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "risk": {
+            "type": "object",
+            "required": ["level", "p0_triggered", "escalation_required"],
+            "properties": {
+              "level": {"type": "string", "enum": ["R0", "R1", "R2", "R3"]},
+              "p0_triggered": {"type": "boolean"},
+              "escalation_required": {"type": "boolean"}
+            }
+          },
+          "timing_ms": {"type": "integer", "minimum": 0},
+          "provider_trace_id": {"type": ["string", "null"]}
+        }
+      },
+      "EnvironmentBindingRequest": {
+        "type": "object",
+        "required": ["dataset_id", "configuration_id", "config_version"],
+        "properties": {
+          "dataset_id": {"type": "string"},
+          "configuration_id": {"type": "string"},
+          "config_version": {"type": "string"},
+          "expected_previous_binding_id": {"type": ["string", "null"]}
+        }
+      },
+      "EnvironmentBinding": {
+        "type": "object",
+        "required": ["binding_id", "environment", "dataset_id", "configuration_id", "status"],
+        "properties": {
+          "binding_id": {"type": "string"},
+          "environment": {"$ref": "#/components/schemas/Environment"},
+          "dataset_id": {"type": "string"},
+          "configuration_id": {"type": "string"},
+          "status": {"type": "string", "enum": ["active", "superseded", "failed"]}
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "required": ["error_code", "message", "retryable", "request_id"],
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "enum": ["VALIDATION_ERROR", "UNAUTHORIZED", "FORBIDDEN_SCOPE", "DATASET_NOT_FOUND", "DOCUMENT_NOT_FOUND", "DOCUMENT_TOO_LARGE", "DUPLICATE_REQUEST", "INVALID_STATE", "INGESTION_FAILED", "RETRIEVAL_TIMEOUT", "PROVIDER_UNAVAILABLE", "RATE_LIMITED", "KNOWLEDGE_EXPIRED", "NO_ANSWER", "P0_BLOCKED"]
+          },
+          "message": {"type": "string"},
+          "retryable": {"type": "boolean"},
+          "retry_after_ms": {"type": ["integer", "null"]},
+          "request_id": {"type": "string"},
+          "provider_request_id": {"type": ["string", "null"]},
+          "details": {"type": "object", "additionalProperties": true}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "task_id": "RET-H07",
+  "source": "evidence/probe-RET-H07-user-visible-final.json",
+  "semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [],
+    "passed": true
+  },
+  "passed": true
+}

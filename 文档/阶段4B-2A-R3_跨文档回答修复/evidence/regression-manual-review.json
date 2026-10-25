@@ -1,0 +1,42 @@
+{
+  "run_id": "REGRESSION-REAL-R3-cc3a0162-e81f-473f-ba34-695a9ba4f946",
+  "review_status": "PENDING_PRODUCT_OWNER",
+  "reviewed_by": null,
+  "reviewed_at": null,
+  "tasks": [
+    {
+      "task_id": "RET-H01",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "两条目标是否分别给出条件化判断与下一步动作",
+        "已拆封、收货时间和 Apple Store 渠道是否被正确映射或标注待核验",
+        "是否引用至少两个不同正文切片",
+        "是否未要求用户提供系统已检索的正文"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H02",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否明确当前知识不足",
+        "是否没有编造 Wi-Fi 直连能力",
+        "是否没有把官方规格核验路径包装成确定答案"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H03",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否先执行停止使用和断电",
+        "是否没有继续讨论换新或等待",
+        "是否保留安全检查与升级路径"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    }
+  ]
+}

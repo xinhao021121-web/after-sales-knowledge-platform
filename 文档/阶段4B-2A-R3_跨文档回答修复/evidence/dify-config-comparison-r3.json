@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-10-25T11:38:01.585Z",
+  "before": {
+    "evidence": "baseline/dify-config-r2-final.json",
+    "published_version": 14,
+    "model": "deepseek-v4-pro",
+    "top_k": 10,
+    "prompt_file": "baseline/r2-system-prompt.txt"
+  },
+  "after": {
+    "evidence": "evidence/dify-config-after-r3.json",
+    "published_version": 16,
+    "model": "deepseek-v4-pro",
+    "top_k": 10,
+    "prompt_sha256": "f01226ec961edf49519f270bf642cd867cb3daa80861f72196ae335025e3d093",
+    "prompt_file": "configs/r3-system-prompt.txt"
+  },
+  "changes": [
+    "multi-goal answer sections are mandatory when multiple business objectives exist",
+    "system-retrieved evidence cannot be requested back from the user",
+    "each goal requires its own citation",
+    "material user facts cannot be omitted"
+  ],
+  "business_knowledge_published": false
+}

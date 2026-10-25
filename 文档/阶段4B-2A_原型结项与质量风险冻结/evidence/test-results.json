@@ -1,0 +1,42 @@
+{
+  "captured_at": "2026-10-25T13:44:00.000Z",
+  "status": "PASSED",
+  "commands": [
+    {
+      "command": "node scripts/build-closure-evidence.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "npm run validate:4b2a-r5",
+      "status": "PASSED"
+    },
+    {
+      "command": "npm run validate:4b2a-closure",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r1.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r2.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r3.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r4.ps1",
+      "status": "PASSED"
+    }
+  ],
+  "historical_evidence_file_count": 437,
+  "overall_engineering_status": "PASSED",
+  "overall_product_quality_status": "FAILED_KNOWN_DEFECT",
+  "production_release": "FORBIDDEN"
+}

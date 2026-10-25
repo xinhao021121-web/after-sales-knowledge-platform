@@ -1,0 +1,375 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "P03 本地 BFF 与 Dify Adapter",
+    "version": "1.0.0",
+    "description": "浏览器只访问本地 BFF。Dify API Key 仅存于服务端环境变量。"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8787"
+    }
+  ],
+  "paths": {
+    "/api/health": {
+      "get": {
+        "operationId": "getHealth",
+        "responses": {
+          "200": {
+            "description": "BFF 与 Dify 可用",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        }
+      }
+    },
+    "/api/retrieval/search": {
+      "post": {
+        "operationId": "search",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/DemoRole"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "真实 Dify Advanced Chat 检索元数据已归一化",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetrievalResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "504": {
+            "$ref": "#/components/responses/Timeout"
+          }
+        }
+      }
+    },
+    "/api/answers": {
+      "post": {
+        "operationId": "answer",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/DemoRole"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "安全门禁、检索、生成和质量门禁后的归一化结果",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "$ref": "#/components/responses/Duplicate"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "502": {
+            "$ref": "#/components/responses/ProviderFailure"
+          },
+          "504": {
+            "$ref": "#/components/responses/Timeout"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 16,
+          "maxLength": 128
+        }
+      },
+      "DemoRole": {
+        "name": "X-Demo-Role",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": ["frontline", "aftersales", "supervisor", "business", "knowledge", "evaluation", "legal", "admin", "public_customer"]
+        }
+      }
+    },
+    "schemas": {
+      "HealthResponse": {
+        "type": "object",
+        "required": ["status", "adapter_version", "environment", "provider", "generation_model", "checked_at"],
+        "properties": {
+          "status": {"enum": ["ok", "degraded", "unavailable"]},
+          "adapter_version": {"type": "string"},
+          "environment": {"enum": ["test", "candidate", "production"]},
+          "provider": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "version": {"type": "string"},
+              "mode": {"type": "string"}
+            }
+          },
+          "generation_model": {"type": "string"},
+          "cost_status": {"enum": ["KNOWN", "COST_UNKNOWN"]},
+          "p0_gate": {"const": "BFF_BEFORE_DIFY"},
+          "checked_at": {"type": "string", "format": "date-time"}
+        }
+      },
+      "AnswerRequest": {
+        "type": "object",
+        "required": ["question", "asq_id", "knowledge_item_id", "product_model", "channel", "role", "tenant_id", "environment", "top_k", "retrieval_mode", "rerank", "metadata_filter", "citation_mode"],
+        "properties": {
+          "question": {"type": "string", "minLength": 1, "maxLength": 2000},
+          "asq_id": {"type": "string"},
+          "knowledge_item_id": {"type": "string"},
+          "product_model": {"type": "string"},
+          "channel": {"type": "string"},
+          "role": {"type": "string"},
+          "tenant_id": {"type": "string"},
+          "environment": {"enum": ["test", "candidate"]},
+          "top_k": {"const": 3},
+          "retrieval_mode": {"const": "hybrid"},
+          "rerank": {"const": true},
+          "metadata_filter": {
+            "type": "object",
+            "required": ["enabled", "active_only"],
+            "properties": {
+              "enabled": {"type": "boolean"},
+              "active_only": {"type": "boolean"},
+              "channels": {"type": "array", "items": {"type": "string"}},
+              "source_statuses": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "customer_context": {
+            "type": "object",
+            "description": "结构化模拟上下文；值在 Dify 前执行隐私检查。",
+            "additionalProperties": true
+          },
+          "citation_mode": {"const": "required"}
+        },
+        "additionalProperties": false
+      },
+      "Citation": {
+        "type": "object",
+        "required": ["citation_id", "source", "kb_id", "kb_version_id", "chunk_id", "segment_id", "supported_claims", "traceable"],
+        "properties": {
+          "citation_id": {"type": ["string", "null"]},
+          "source": {
+            "type": "object",
+            "required": ["src_id", "doc_id", "version", "title", "verified_at", "valid_until", "status", "segment_id"],
+            "properties": {
+              "src_id": {"type": "string"},
+              "doc_id": {"type": "string"},
+              "version": {"type": "string"},
+              "title": {"type": "string"},
+              "url": {"type": ["string", "null"]},
+              "verified_at": {"type": "string"},
+              "valid_until": {"type": "string"},
+              "status": {"type": "string"},
+              "segment_id": {"type": "string"}
+            }
+          },
+          "kb_id": {"type": "string"},
+          "kb_version_id": {"type": "string"},
+          "chunk_id": {"type": "string"},
+          "segment_id": {"type": "string"},
+          "score": {"type": "number"},
+          "supported_claims": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 3,
+            "items": {"type": "string"}
+          },
+          "claim_support_status": {"enum": ["SUPPORTED", "NO_CONCRETE_CLAIM"]},
+          "traceable": {"type": "boolean"}
+        }
+      },
+      "AnswerResponse": {
+        "type": "object",
+        "required": ["request_id", "answer_status", "answer", "business_conditions", "citations", "citation_support", "risk", "provider_request_id", "timing_ms", "error_code", "cost"],
+        "properties": {
+          "request_id": {"type": "string"},
+          "answer_status": {
+            "enum": ["ANSWERED", "NO_ANSWER", "NEED_CLARIFICATION", "BLOCKED_SAFETY", "CONFLICT", "PERMISSION_DENIED", "KNOWLEDGE_EXPIRED"]
+          },
+          "ui_state": {"type": "string"},
+          "answer": {"type": "string"},
+          "suggested_action": {"type": ["string", "null"]},
+          "business_conditions": {"type": "array", "items": {"type": "string"}},
+          "citations": {"type": "array", "items": {"$ref": "#/components/schemas/Citation"}},
+          "citation_support": {
+            "type": "object",
+            "properties": {
+              "required": {"type": "boolean"},
+              "passed": {"type": "boolean"},
+              "supported_count": {"type": "integer"},
+              "unsupported_count": {"type": "integer"}
+            }
+          },
+          "retrieval_resources": {"type": "array", "items": {"type": "object"}},
+          "retrieval_diversity": {
+            "type": ["object", "null"],
+            "properties": {
+              "merge_strategy": {"type": "string"},
+              "requested_internal_top_k": {"type": ["integer", "null"]},
+              "subquery_count": {"type": "integer"},
+              "internal_candidate_pool_size": {"type": "integer"},
+              "displayed_top_k": {"type": "integer"},
+              "candidate_document_count": {"type": "integer"},
+              "displayed_document_count": {"type": "integer"}
+            }
+          },
+          "answer_goals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["index", "title", "content", "evidence_supported"],
+              "properties": {
+                "index": {"type": "string"},
+                "title": {"type": "string"},
+                "content": {"type": "string"},
+                "evidence_supported": {"type": "boolean"}
+              }
+            }
+          },
+          "cost": {"$ref": "#/components/schemas/CostRecord"},
+          "risk": {
+            "type": "object",
+            "required": ["level", "p0_triggered", "escalation_required"],
+            "properties": {
+              "level": {"enum": ["R0", "R1", "R2", "R3"]},
+              "p0_triggered": {"type": "boolean"},
+              "escalation_required": {"type": "boolean"}
+            }
+          },
+          "provider_request_id": {"type": ["string", "null"]},
+          "provider_called": {"type": "boolean"},
+          "timing_ms": {"type": "integer"},
+          "error_code": {"type": ["string", "null"]},
+          "idempotency_replayed": {"type": "boolean"},
+          "source_mode": {"enum": ["REAL_RAG", "BFF_SAFETY_GATE", "BFF_CONTEXT_GATE"]}
+        }
+      },
+      "RetrievalResponse": {
+        "type": "object",
+        "required": ["request_id", "status", "hits", "timing_ms", "error_code"],
+        "properties": {
+          "request_id": {"type": "string"},
+          "status": {"enum": ["ANSWERED", "NO_ANSWER", "PERMISSION_DENIED", "KNOWLEDGE_EXPIRED"]},
+          "hits": {"type": "array", "items": {"$ref": "#/components/schemas/Citation"}},
+          "filters": {"type": "object"},
+          "provider_request_id": {"type": ["string", "null"]},
+          "timing_ms": {"type": "integer"},
+          "error_code": {"type": ["string", "null"]},
+          "cost": {"$ref": "#/components/schemas/CostRecord"}
+        }
+      },
+      "CostRecord": {
+        "type": "object",
+        "required": ["provider", "model", "prompt_tokens", "completion_tokens", "total_tokens", "provider_latency_ms", "estimated_input_cost", "estimated_output_cost", "estimated_total_cost", "cost_status", "answer_status", "citation_support_passed", "effective_answer"],
+        "properties": {
+          "provider": {"type": "string"},
+          "model": {"type": "string"},
+          "prompt_tokens": {"type": ["integer", "null"]},
+          "completion_tokens": {"type": ["integer", "null"]},
+          "total_tokens": {"type": ["integer", "null"]},
+          "provider_latency_ms": {"type": ["integer", "null"]},
+          "estimated_input_cost": {"type": ["number", "null"]},
+          "estimated_output_cost": {"type": ["number", "null"]},
+          "estimated_total_cost": {"type": ["number", "null"]},
+          "cost_status": {"enum": ["KNOWN", "COST_UNKNOWN"]},
+          "answer_status": {"type": "string"},
+          "citation_support_passed": {"type": "boolean"},
+          "effective_answer": {"type": "boolean"}
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "required": ["error_code", "message", "retryable", "request_id"],
+        "properties": {
+          "error_code": {"type": "string"},
+          "message": {"type": "string"},
+          "retryable": {"type": "boolean"},
+          "request_id": {"type": "string"},
+          "provider_request_id": {"type": ["string", "null"]},
+          "details": {"type": "object"}
+        }
+      }
+    },
+    "responses": {
+      "Forbidden": {
+        "description": "角色、租户、环境或 Origin 不允许",
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}
+      },
+      "Duplicate": {
+        "description": "幂等键被用于不同请求",
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}
+      },
+      "ValidationError": {
+        "description": "输入或敏感字段校验失败",
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}
+      },
+      "ProviderFailure": {
+        "description": "供应商网络或服务失败，无缓存替代",
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}
+      },
+      "Timeout": {
+        "description": "供应商调用超时",
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}
+      },
+      "ServiceUnavailable": {
+        "description": "BFF 或供应商不可用",
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}
+      }
+    }
+  }
+}

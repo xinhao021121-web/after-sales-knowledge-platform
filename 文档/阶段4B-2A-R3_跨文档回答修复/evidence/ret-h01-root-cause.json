@@ -1,0 +1,176 @@
+{
+  "captured_at": "2026-10-25T11:38:01.584Z",
+  "r2_first_failure": {
+    "evidence": "baseline/RET-H01-first-failure.json",
+    "status": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "请提供上述三份文档中的具体正文节选，尤其是；《AirPods 退货与退款判断》中“在线商店拆封商品退货条件”“退货期限”相关段落。",
+    "provider_request_id": "79f68124-1a82-4877-aa07-03963d4f134a",
+    "bff_request_id": "7cdf8443-bf73-46d8-82d0-e42ec9cedc9d",
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.718538,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+        "score": 0.70920587,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.70667183,
+        "claim_support_count": 0
+      }
+    ]
+  },
+  "diagnostic_before_fix": {
+    "evidence": "evidence/probe-RET-H01-before-fix.json",
+    "status": "NEED_CLARIFICATION",
+    "provider_request_id": "0263bdb4-df34-46f8-baf2-747966833395",
+    "selected_segments": [
+      {
+        "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.718538,
+        "content": "AirPods 退货与退款判断"
+      },
+      {
+        "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+        "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+        "score": 0.70920587,
+        "content": "AirPods Pro 3 售后 FAQ"
+      },
+      {
+        "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.70667183,
+        "content": "AirPods Pro 3 保修与维修流程"
+      }
+    ],
+    "root_cause": "The internal candidate pool contained 13 resources, but document representatives were title or front-matter slices with no extractable business claims. The model correctly refused to invent answers, then the BFF exposed an invalid document-body request."
+  },
+  "final_regression": {
+    "evidence": "evidence/regression/RET-H01.json",
+    "status": "ANSWERED",
+    "answer": "目标一：七天质量故障退货路径：判断：收货3天在交付后0-7日质量故障退货时间口径内；充电不稳定需官方检测确认是否属质量故障，确认后优先适用该退货路径；已拆封状态是否影响该路径正文未明确，需官方核验；Apple Store在线商店为官方渠道，按该渠道退货政策执行，不承诺一定可退。 下一步：先核对型号、序列号、购买凭证及签收日期，通过官方渠道申请质量故障检测/退货；身份或凭证不符时转保修身份核验。 依据：[1] CHUNK-FAQ-IDENTIFY-01；[2] CHUNK-RETURN-QUALITY-01；[3] CHUNK-CHANNEL-OFFICIAL-01\n目标二：保修检测：判断：若退货路径不适用或未进入退货，充电不稳定仍可申请保修检测；当前设备收货3天，仍属三包期内，需官方检测确认故障；Apple Store在线商店作为官方渠道按适用保修入口执行。 下一步：联系Apple Store在线商店或直营渠道，提供序列号、购买凭证和充电不稳定表现，申请保修检测。 依据：[1]；[2]；[3]\n目标三：过保维修条件：判断：正文仅覆盖交付后16日至1年可维修，未提供超过1年或过保后的维修条件；当前设备收货3天，非过保。 下一步：如涉及过保场景，需转人工或官方核验过保维修政策。 依据：[2]",
+    "answer_goals": [
+      {
+        "index": "一",
+        "title": "目标一：七天质量故障退货路径",
+        "content": "判断：收货3天在交付后0-7日质量故障退货时间口径内；充电不稳定需官方检测确认是否属质量故障，确认后优先适用该退货路径；已拆封状态是否影响该路径正文未明确，需官方核验；Apple Store在线商店为官方渠道，按该渠道退货政策执行，不承诺一定可退。 下一步：先核对型号、序列号、购买凭证及签收日期，通过官方渠道申请质量故障检测/退货；身份或凭证不符时转保修身份核验。 依据：[1] CHUNK-FAQ-IDENTIFY-01；[2] CHUNK-RETURN-QUALITY-01；[3] CHUNK-CHANNEL-OFFICIAL-01",
+        "evidence_supported": true
+      },
+      {
+        "index": "二",
+        "title": "目标二：保修检测",
+        "content": "判断：若退货路径不适用或未进入退货，充电不稳定仍可申请保修检测；当前设备收货3天，仍属三包期内，需官方检测确认故障；Apple Store在线商店作为官方渠道按适用保修入口执行。 下一步：联系Apple Store在线商店或直营渠道，提供序列号、购买凭证和充电不稳定表现，申请保修检测。 依据：[1]；[2]；[3]",
+        "evidence_supported": true
+      },
+      {
+        "index": "三",
+        "title": "目标三：过保维修条件",
+        "content": "判断：正文仅覆盖交付后16日至1年可维修，未提供超过1年或过保后的维修条件；当前设备收货3天，非过保。 下一步：如涉及过保场景，需转人工或官方核验过保维修政策。 依据：[2]",
+        "evidence_supported": true
+      }
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+        "source": {
+          "src_id": "SRC-PUB-001",
+          "doc_id": "DOC-FAQ-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 售后 FAQ",
+          "url": "https://support.apple.com/zh-cn/airpods",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+        },
+        "kb_id": "KB-DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "score": 0.68547595,
+        "supported_claims": [
+          "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+          "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      },
+      {
+        "citation_id": "EVD-3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-RETURN-V1",
+          "version": "1.0.0",
+          "title": "AirPods 退货与退款判断",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2"
+        },
+        "kb_id": "KB-DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+        "segment_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+        "score": 0.6239219,
+        "supported_claims": [
+          "商品存在质量故障时，应优先核验中国三包。",
+          "一般时间口径为交付后 0-7 日可退货、8-15 日可换货、16 日至 1 年可维修；与无理由退货是不同路径。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      },
+      {
+        "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-CHANNEL-V1",
+          "version": "1.0.0",
+          "title": "售后渠道差异与责任边界",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        },
+        "kb_id": "KB-DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.5933305,
+        "supported_claims": [
+          "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      }
+    ],
+    "semantic_passed": true,
+    "provider_request_id": "b218be6a-6764-4117-aafb-b110c4e37027",
+    "bff_request_id": "65aca304-889e-46e9-9af3-70ced1e04496"
+  },
+  "r04_difference": {
+    "explanation": "R04 was single-goal and had one directly matching FAQ body slice. RET-H01 was multi-goal and failed before prompt inference because all three displayed resources were title/front-matter slices. The fix therefore combined substantive retrieval with explicit goal-specific answer structure."
+  }
+}

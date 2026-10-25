@@ -1,0 +1,33 @@
+{
+  "task_id": "POC-K02",
+  "core_task_id": "CORE-K2",
+  "question_hash": "9d2ecd20586cd0f8b21eaae6bfef8f0aac42e3fb1a51fae02e640ff0d7ee4510",
+  "answer_status": "ERROR",
+  "provider_called": true,
+  "error_code": "PROVIDER_REQUEST_REJECTED",
+  "error_message": "Dify HTTP 403",
+  "request_id": "90e6dbc2-095e-49d1-bdb5-1f624aaaf1a8",
+  "provider_request_id": null,
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "ERROR",
+      "request_id": "8efdb653-5b95-43bd-a3d9-84615c17d475",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403"
+    },
+    {
+      "attempt": 2,
+      "status": "ERROR",
+      "request_id": "90e6dbc2-095e-49d1-bdb5-1f624aaaf1a8",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403"
+    }
+  ],
+  "retrieval_status": "PROVIDER_ERROR",
+  "cost_status": "COST_UNKNOWN",
+  "p0": false,
+  "p0_passed": null
+}

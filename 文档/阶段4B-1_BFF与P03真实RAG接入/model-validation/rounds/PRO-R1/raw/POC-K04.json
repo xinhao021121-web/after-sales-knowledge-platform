@@ -1,0 +1,158 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-K04",
+  "core_task_id": "CORE-K4",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 37769,
+  "request": {
+    "question": "原始问题：京东售后说拒修，但 Apple 检测后换新，应该听哪个？\n客户改写：平台拒绝维修而官方检测给了换新结论，以哪个为准？；两份售后结论互相冲突，能不能直接认定平台欺诈？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-K04",
+    "knowledge_item_id": "KI-CORE-K4",
+    "product_model": "AirPods Pro 3",
+    "channel": "第三方平台",
+    "customer_context": {
+      "channel": "第三方平台",
+      "document_1": "平台拒修",
+      "document_2": "官方检测后换新",
+      "serial": "未核验",
+      "work_order_dates": "未知",
+      "authorization": "未知"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "第三方平台"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "CONFLICT",
+    "ui_state": "CONFLICT_HOLD",
+    "answer": "两份渠道结论存在冲突，系统已保持 CONFLICT_HOLD，不强行合并为单一结论。",
+    "suggested_action": "请补充/核验：京东订单号、销售方或店铺名称、发票、产品序列号、签收时间、京东拒修凭证、Apple 检测/换新报告，以及 Apple 是否官方或授权渠道；建议转人工升级，由售后主管调取平台规则、店铺规则和官方保修政策，并与客服主管联合裁决。",
+    "business_conditions": [
+      "销售主体与订单归属：确认订单是京东自营还是第三方店铺，售后规则可能不同",
+      "产品同一性：产品序列号、型号、发票与 Apple 换新记录是否一致",
+      "授权性：Apple 检测/换新是否由 Apple 官方或授权服务商出具",
+      "时效与三包状态：签收时间、是否在平台退换时限或法定三包期内"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-CHANNEL-V1",
+          "version": "1.0.0",
+          "title": "售后渠道差异与责任边界",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b"
+        },
+        "kb_id": "KB-DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "score": 0.5490909239862651,
+        "supported_claims": [
+          "回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      }
+    ],
+    "risk": {
+      "level": "R2",
+      "p0_triggered": false,
+      "escalation_required": true
+    },
+    "provider_request_id": "eabe0180-3f49-4989-9167-6e6b26649b18",
+    "provider_trace_id": "eabe0180-3f49-4989-9167-6e6b26649b18",
+    "provider_called": true,
+    "timing_ms": 37757,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 579,
+      "completion_tokens": 2845,
+      "total_tokens": 3424,
+      "provider_latency_ms": 33763,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "CONFLICT",
+      "citation_support_passed": true,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 1,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "score": 0.5490909239862651,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+        "score": 0.5056728416774559,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+        "score": 0.4790631720022681,
+        "claim_support_count": 2
+      }
+    ],
+    "request_id": "66e64d07-3c3c-4632-916f-89ec9ca46634",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-K04",
+      "knowledge_item_id": "KI-CORE-K4"
+    },
+    "audit_event_id": "8ca68f56-cd6f-4ded-8f2e-c7d92b22fdac"
+  }
+}

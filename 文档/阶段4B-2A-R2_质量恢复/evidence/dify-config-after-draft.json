@@ -1,0 +1,137 @@
+{
+  "captured_at": "2026-10-25T09:20:03.908Z",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "source": "Dify Console draft API (read-only)",
+  "draft_http_status": 200,
+  "draft_body_keys": [
+    "conversation_variables",
+    "created_at",
+    "created_by",
+    "environment_variables",
+    "features",
+    "graph",
+    "hash",
+    "id",
+    "marked_comment",
+    "marked_name",
+    "rag_pipeline_variables",
+    "tool_published",
+    "updated_at",
+    "updated_by",
+    "version",
+    "version_number"
+  ],
+  "prompt_nodes": [
+    {
+      "id": "llm",
+      "title": "LLM",
+      "prompt_template_sha256": "9f5fd092714c4a72041660f2f8713db389de65caadfd36e8c32bbf5cdce73fe8",
+      "prompt_text_sha256": "3e6e0a8239d248b1defb4ec0d5f425df1463a8fb6bfac7eb23d8cbcf3a48a0ed",
+      "model": {
+        "provider": "langgenius/deepseek/deepseek",
+        "name": "deepseek-v4-pro",
+        "mode": "chat",
+        "completion_params": {
+          "temperature": 0.7
+        }
+      },
+      "prompt_text": "{{#context#}}\n\n你是企业售后知识助手。请严格基于检索到的正文切片回答：\n\n1. 只有包含具体事实、业务条件、例外或操作步骤的正文切片可以作为证据。\n2. 只有文档标题、章节名、元数据或“本文档介绍……”类内容的切片，不得作为业务证据。\n3. 不得为同一标题型切片重复生成多个引用标记。\n4. 每个结论必须对应至少一个正文切片；引用必须能够定位到具体文档和切片。\n5. 如果正文已经给出可执行的通用排查、核验或止损步骤，应先给出这些步骤，并保留必要追问；不要因为用户尚未报告全部状态，就把整条回答判定为“知识不足”或只回复追问。\n6. 只有在正文缺少作出安全或业务判断所必需的事实、条件或条款时，才明确输出需要补充的信息或建议转人工，不得生成确定售后承诺。\n7. 不得承诺免费维修、退款、换新、赔偿或赔偿金额。\n8. 渠道规则存在冲突时，保留双方结论并建议渠道负责人和客服主管联合裁决。\n\n回答时先给简短结论，再列业务条件、引用依据和下一步动作。下一步动作应具体、可执行，并说明仍无法判断时需要补什么信息。不要仅复述文档标题。"
+    }
+  ],
+  "knowledge_nodes": [
+    {
+      "id": "1792828605452",
+      "title": "知识检索",
+      "dataset_ids": [
+        "0d5a11ce-c017-4376-8099-d8e083243a7d"
+      ],
+      "retrieval_mode": "multiple",
+      "multiple_retrieval_config": {
+        "top_k": 12,
+        "score_threshold": null,
+        "reranking_mode": "reranking_model",
+        "reranking_model": {
+          "provider": "langgenius/tongyi/tongyi",
+          "model": "qwen3-rerank"
+        },
+        "weights": {
+          "weight_type": "customized",
+          "vector_setting": {
+            "vector_weight": 0.7,
+            "embedding_provider_name": "langgenius/tongyi/tongyi",
+            "embedding_model_name": "text-embedding-v4"
+          },
+          "keyword_setting": {
+            "keyword_weight": 0.3
+          }
+        },
+        "reranking_enable": true
+      },
+      "top_k": null
+    }
+  ],
+  "features": {
+    "opening_statement": "",
+    "suggested_questions": [],
+    "suggested_questions_after_answer": {
+      "enabled": false
+    },
+    "text_to_speech": {
+      "enabled": false,
+      "voice": "",
+      "language": ""
+    },
+    "speech_to_text": {
+      "enabled": false
+    },
+    "retriever_resource": {
+      "enabled": true
+    },
+    "sensitive_word_avoidance": {
+      "enabled": false
+    },
+    "file_upload": {
+      "image": {
+        "enabled": false,
+        "number_limits": 3,
+        "transfer_methods": [
+          "local_file",
+          "remote_url"
+        ]
+      },
+      "enabled": false,
+      "allowed_file_types": [
+        "image"
+      ],
+      "allowed_file_extensions": [
+        ".JPG",
+        ".JPEG",
+        ".PNG",
+        ".GIF",
+        ".WEBP",
+        ".SVG"
+      ],
+      "allowed_file_upload_methods": [
+        "local_file",
+        "remote_url"
+      ],
+      "number_limits": 3,
+      "fileUploadConfig": {
+        "file_size_limit": 15,
+        "knowledge_file_size_limit": 15,
+        "batch_count_limit": 5,
+        "file_upload_limit": 50,
+        "image_file_size_limit": 10,
+        "video_file_size_limit": 100,
+        "audio_file_size_limit": 50,
+        "skill_file_size_limit": 50,
+        "workflow_file_upload_limit": 10,
+        "image_file_batch_limit": 10,
+        "single_chunk_attachment_limit": 10,
+        "attachment_image_file_size_limit": 2
+      }
+    }
+  },
+  "environment_variables": [],
+  "conversation_variables": []
+}

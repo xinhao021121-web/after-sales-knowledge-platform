@@ -1,0 +1,4 @@
+configuration,round,average_prompt_tokens,average_completion_tokens,single_request_cost,effective_answer_cost,correct_source_hit_cost,cost_status,effective_answers,fallback_count,manual_escalation_count
+deepseek-v4-pro,PRO-R1,504.4,2063.5,COST_UNKNOWN,COST_UNKNOWN,COST_UNKNOWN,COST_UNKNOWN,17,0,8
+deepseek-v4-flash,FLASH-R1,,,COST_UNKNOWN,COST_UNKNOWN,COST_UNKNOWN,COST_UNKNOWN,17,0,8
+deepseek-v4-flash,FLASH-R2,,,COST_UNKNOWN,COST_UNKNOWN,COST_UNKNOWN,COST_UNKNOWN,17,0,8

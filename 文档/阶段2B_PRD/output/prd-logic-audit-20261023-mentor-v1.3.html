@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业级 RAG 知识库平台 PRD V1.3 导师复检</title>
+  <style>
+    :root { color-scheme:light; --ink:#172033; --muted:#64748b; --line:#dbe3ef; --bg:#f5f7fb; --card:#fff; --block:#b42318; --high:#c2410c; --medium:#a16207; --low:#2563eb; --accent:#4338ca; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font:14px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--bg); }
+    header, main, footer { width:min(1180px,calc(100% - 32px)); margin:auto; }
+    header { padding:48px 0 28px; }
+    h1 { margin:0 0 8px; font-size:clamp(28px,4vw,44px); line-height:1.18; }
+    h2 { margin:0 0 16px; font-size:22px; }
+    h3 { margin:0 0 10px; font-size:17px; }
+    p { margin:8px 0; }
+    .muted { color:var(--muted); }
+    .eyebrow { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    section { margin:0 0 22px; padding:24px; border:1px solid var(--line); border-radius:16px; background:var(--card); box-shadow:0 8px 28px rgba(30,41,59,.05); }
+    .verdict { border-left:7px solid var(--block); background:linear-gradient(135deg,#fff 0,#fff7f6 100%); }
+    .verdict h2 { color:var(--block); }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .stat { padding:16px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    .stat strong { display:block; font-size:28px; line-height:1.2; }
+    .stat span { color:var(--muted); }
+    .risk-scale { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:16px 0 24px; }
+    .risk-card, .blocker-summary { padding:16px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    .risk-card h3 { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+    .blocker-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .blocker-summary { border-left:4px solid var(--block); }
+    .blocker-summary strong { display:block; margin-bottom:6px; color:var(--block); }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; min-width:760px; }
+    th, td { padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#f8fafc; white-space:nowrap; }
+    .badge { display:inline-block; padding:2px 9px; border-radius:999px; color:#fff; font-size:12px; font-weight:800; white-space:nowrap; }
+    .block { background:var(--block); } .high { background:var(--high); } .medium { background:var(--medium); } .low { background:var(--low); }
+    article { margin-top:16px; padding:20px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    article.blocker { border-left:5px solid var(--block); }
+    article.high-risk { border-left:5px solid var(--high); }
+    article.medium-risk { border-left:5px solid var(--medium); }
+    .meta { display:flex; flex-wrap:wrap; gap:7px; margin:8px 0 14px; }
+    .tag { padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; font-weight:700; }
+    dl { display:grid; grid-template-columns:132px minmax(0,1fr); gap:7px 14px; margin:12px 0 0; }
+    dt { font-weight:800; color:#334155; } dd { margin:0; }
+    code { padding:2px 5px; border-radius:5px; background:#eef2f7; }
+    ol, ul { padding-left:22px; }
+    .callout { padding:14px 16px; border-radius:10px; background:#fff8e8; border:1px solid #f6d995; }
+    .side-nav { position:fixed; top:50%; left:24px; z-index:9; width:168px; padding:8px 0; border-left:1px solid var(--line); transform:translateY(-50%); }
+    .side-nav strong { display:block; padding:0 12px 8px 14px; color:var(--muted); font-size:12px; letter-spacing:.12em; }
+    .side-nav a { display:block; padding:7px 12px 7px 14px; border-left:2px solid transparent; color:var(--muted); text-decoration:none; }
+    .side-nav a:hover { border-left-color:var(--accent); color:var(--accent); }
+    section[id] { scroll-margin-top:24px; }
+    @media (min-width:981px) { header,main,footer{width:min(1180px,calc(100% - 260px));margin-left:clamp(220px,calc((100% - 1180px)/2 + 100px),360px);margin-right:24px} }
+    @media (max-width:980px) { .side-nav{display:none} header,main,footer{width:min(1180px,calc(100% - 32px));margin-left:auto;margin-right:auto} }
+    @media (max-width:760px) { .stats{grid-template-columns:repeat(2,1fr)} .risk-scale,.blocker-grid{grid-template-columns:1fr} section{padding:18px} dl{grid-template-columns:1fr;gap:0} dt{margin-top:9px} }
+    @media print { body{background:#fff} header,main,footer{width:100%;margin-left:auto;margin-right:auto} .side-nav{display:none} section,article{break-inside:avoid;box-shadow:none} }
+  </style>
+</head>
+<body>
+  <nav class="side-nav" aria-label="报告目录">
+    <strong>报告目录</strong>
+    <a href="#scope">检查范围</a>
+    <a href="#verdict">复审结论</a>
+    <a href="#risk-guide">风险说明</a>
+    <a href="#summary">问题总览</a>
+    <a href="#details">问题详情</a>
+    <a href="#order">修改路线</a>
+    <a href="#decisions">产品拍板</a>
+    <a href="#impact">改全材料</a>
+    <a href="#coverage">覆盖说明</a>
+  </nav>
+
+  <header>
+    <p class="eyebrow">PRD Logic Recheck</p>
+    <h1>企业级 RAG 知识库平台 PRD V1.3 导师复检</h1>
+    <p class="muted">生成日期：2026-10-23 · 输入：PRD V1.3、追踪矩阵 V1.3、状态总表 V1.3、GTW、异常与权限附录、V1.2 导师报告</p>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>检查范围</h2>
+      <p>已完整检查 30 条功能需求、12 条核心任务、24 条核心 GTW、32 条跨需求验收、52 个自身状态、18 个跨对象事件、U1-U9、8 类角色、单 KB 发布模型、CASE 0..N 关系、来源失效和 ESC 复发路径。</p>
+      <p class="muted">未覆盖：真实客服验证、真实客户数据、部署期合规配置、技术性能、模型与检索参数，以及 Draw.io 像素级渲染。</p>
+    </section>
+
+    <section id="verdict" class="verdict">
+      <h2>结论：修改后再评审</h2>
+      <p>V1.2 的发布和 CASE 基数问题已经关闭，但新增的 CASE_LINK 没有创建、更新和关闭过程。多个事件仍无法确定要更新哪些 CASE，也无法判断一个 CASE 在所有关联修复完成前是否可以关闭。</p>
+      <div class="stats">
+        <div class="stat"><strong>1</strong><span>阻断</span></div>
+        <div class="stat"><strong>0</strong><span>高风险</span></div>
+        <div class="stat"><strong>1</strong><span>中风险</span></div>
+        <div class="stat"><strong>2</strong><span>去重问题总数</span></div>
+      </div>
+    </section>
+
+    <section id="risk-guide">
+      <h2>风险等级怎么理解？</h2>
+      <p><strong>阻断表示知识问题闭环无法唯一实现。</strong> CASE_LINK 已有数据对象，却没有完整生命周期，因此无法作为可靠的业务关联。</p>
+      <div class="risk-scale">
+        <div class="risk-card"><h3><span class="badge block">阻断</span></h3><p>CASE 状态推进和关闭条件无法唯一实现，可能提前关闭或永久卡住。</p></div>
+        <div class="risk-card"><h3><span class="badge high">高风险</span></h3><p>可能造成越权、错误发布或严重流程事故。</p></div>
+        <div class="risk-card"><h3><span class="badge medium">中风险</span></h3><p>字段或边界缺失，可能造成返工和测试分歧。</p></div>
+        <div class="risk-card"><h3><span class="badge low">低风险</span></h3><p>局部表达或交付格式问题。</p></div>
+      </div>
+      <div class="blocker-grid">
+        <div class="blocker-summary">
+          <strong>CASE_LINK 有对象、有唯一键，但没有创建和关闭事件</strong>
+          <p>EV-08、EV-09、EV-11、EV-13、EV-18 依赖 CASE 关联，但没有任何事件创建或更新 CASE_LINK，也无法判断一个 CASE 需要满足多少个关联修复后才能关闭。</p>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>评审放行条件</strong>
+        <p>定义 CASE_LINK 的状态、创建时点、更新时点、关闭条件和相关事件；补齐 CASE 关联多个 KB 的完整验收。</p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>问题总览</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>编号</th><th>风险</th><th>痛苦类型</th><th>结论状态</th><th>问题摘要</th><th>主要位置</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>阻断</td><td>对象生命周期</td><td>确定缺口</td><td>CASE_LINK 无创建/更新/关闭事件，多 KB 关联的 CASE 关闭规则不明确</td><td>PRD 10；EV-08/09/11/13/14/18</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>中</td><td>字段一致性</td><td>确定缺口</td><td>previous_esc_id 已在状态和验收中使用，但未进入 ESC 对象字段</td><td>PRD 10；G-22；AC-G-29</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="details">
+      <h2>问题详情</h2>
+
+      <article id="prd-001" class="blocker">
+        <h3>PRD-001 CASE_LINK 关联对象缺少完整生命周期</h3>
+        <div class="meta"><span class="badge block">阻断</span><span class="tag">对象生命周期</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>PRD 10 新增 <code>CASE_LINK(case_id, kb_version_id)</code>，并声明 CASE 与 KB 是 0..N 关系。但状态总表没有 CASE_LINK 状态和转换；EV-14 创建新 KB_DRAFT 时没有创建关联；EV-08 依赖“关联 CASE”，EV-11 关闭全部关联 CASE，EV-09 和 EV-13 又仍使用单数 CASE；EV-18 新建 CASE 时也没有说明是否关联受影响 KB。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发无法确定 CASE_LINK 何时产生、何时挂到 REL、何时失效。一个 CASE 关联多个待修复 KB 时，只要其中一个 KB 发布，EV-11 就可能关闭整个 CASE；反过来，如果关联没有创建，EV-08 会把关联数视为 0，导致 CASE 永远不被推进。</dd>
+          <dt>触发场景</dt>
+          <dd>CASE-01 需要修复 KB-A、KB-B → EV-14 创建两个 KB_DRAFT 但未创建 CASE_LINK → EVAL 通过后 EV-08 找不到 CASE → CASE-01 停留修复中；另一种场景：两 KB 都已关联 → KB-A 先发布 → EV-11 过早关闭 CASE-01，KB-B 尚未发布。</dd>
+          <dt>影响范围</dt>
+          <dd>CASE、KB、REL、EV-08/09/11/13/14/18、关闭门禁、发布证据和审计。</dd>
+          <dt>待确认问题</dt>
+          <dd>P0 是否允许一个 CASE 同时关联多个待修复 KB？CASE 关闭是否要求所有活动关联都完成发布或明确不发布？</dd>
+          <dt>最小修改建议</dt>
+          <dd>建议为 CASE_LINK 定义 <code>LINK_OPEN</code>、<code>LINK_RELEASED</code>、<code>LINK_ABANDONED</code> 三态；EV-14 创建 LINK_OPEN，EV-08 填充 rel_id，EV-11 只有在 CASE 的全部活动 LINK 均为 RELEASED 或 ABANDONED 时才关闭 CASE。EV-09、EV-13、EV-18 明确处理 0..N 个关联。</dd>
+          <dt>关联修改</dt>
+          <dd>PRD 10、11.1、FR-019/023/024/025、EV-08/09/11/13/14/18、AC-G-27/31、新增 CASE_LINK 验收、状态图。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-002" class="medium-risk">
+        <h3>PRD-002 ESC 关联字段没有进入核心对象定义</h3>
+        <div class="meta"><span class="badge medium">中风险</span><span class="tag">字段一致性</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>G-22、FR-013、EV-01 和 AC-G-29 都要求使用 <code>previous_esc_id</code>，但 PRD 第十章的 ESC 关键字段只列了 <code>paused_from_state</code>，没有列入 <code>previous_esc_id</code>。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发可能只实现状态转换，不持久化历史风险单关联，导致复发风险无法回溯。</dd>
+          <dt>触发场景</dt>
+          <dd>ESC-01 已关闭 → 客户再次报告风险 → 新建 ESC-02 → 系统没有 previous_esc_id 字段 → 无法关联同一客户和历史处置。</dd>
+          <dt>影响范围</dt>
+          <dd>风险复发、审计、案例关联和客户历史。</dd>
+          <dt>待确认问题</dt>
+          <dd>无；应将 previous_esc_id 补入 ESC 对象字段并标记可空唯一关联。</dd>
+          <dt>最小修改建议</dt>
+          <dd>在对象模型和字段校验中补齐 previous_esc_id，并验证其不产生循环和重复追溯。</dd>
+          <dt>关联修改</dt>
+          <dd>PRD 10、FR-013、EV-01、AC-G-29、追踪矩阵和状态图。</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>发现问题后，产品经理怎么处理</h2>
+      <ol>
+        <li>先定义 CASE_LINK 的生命周期和 CASE 关闭不变量。</li>
+        <li>再让所有 CASE 相关事件明确处理 0..N 关联。</li>
+        <li>最后补齐 ESC 字段和跨文件验收，重新执行全量检查。</li>
+      </ol>
+    </section>
+
+    <section id="order">
+      <h2>第 1 步：先看修改路线</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>顺序</th><th>相关问题</th><th>这一轮要解决什么</th><th>为什么先做这一步</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><a href="#prd-001">PRD-001</a></td><td>定义 CASE_LINK 生命周期和 CASE 关闭不变量</td><td>决定知识闭环是否可执行</td></tr>
+            <tr><td>2</td><td><a href="#prd-002">PRD-002</a></td><td>补齐 ESC previous_esc_id 字段</td><td>保证风险复发链路可落地</td></tr>
+            <tr><td>3</td><td>全部</td><td>统一验收、追踪和状态图</td><td>最后做全量一致性复检</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <strong>建议评审门槛</strong>
+        <p>每个 CASE 的关联修复都有唯一生命周期；一个 CASE 不会因部分关联发布而提前关闭；EV-09/13/18 能处理多个关联；previous_esc_id 可追溯。</p>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <h2>第 2 步：轮到该问题时，产品拍板</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>你要拍板的事</th><th>为什么现在必须定</th><th>定完要补进 PRD</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>一个 CASE 是否允许多个并行 KB 修复，还是只允许一个活动修复</td><td>决定 CASE 的关闭条件和所有事件的数量关系</td><td>CASE_LINK 状态、EV-09/11/13/14/18、AC 验收和状态图</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>无需业务选择；补齐 previous_esc_id 数据字段</td><td>否则风险复发不可追溯</td><td>对象模型、字段校验和 AC-G-29</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2>第 3 步：拍板后，把相关材料改全</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>拿着什么结论去改</th><th>还要改哪些地方</th><th>怎样算改完</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>CASE_LINK 生命周期和 CASE 关闭不变量</td><td>PRD 10/11、FR-019/023/024/025、EV-08/09/11/13/14/18、GTW、追踪矩阵、状态图</td><td>任何 CASE 都有明确的关联对象、活动修复和关闭条件</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>previous_esc_id 字段定义</td><td>PRD 10、FR-013、EV-01、AC-G-29、追踪矩阵</td><td>风险复发能稳定关联原风险单且不覆盖历史</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="coverage">
+      <h2>覆盖说明</h2>
+      <p>已确认：V1.2 的发布基数、无 CASE 首次发布、来源失效 EV-18、ESC 新单复发和上一轮文档问题均已修订；30 条 FR、12 条核心任务、52 个状态、18 个事件和 32 条跨需求验收均有引用。</p>
+      <p>当前阻断只来自 CASE_LINK 生命周期与新 CASE 基数没有完全同步；修复后，PRD 可继续进入正式评审。首次 RAG 评测前仍必须完成阶段 1B 专项样本复核。</p>
+      <p class="muted">本报告不替代真实客服验证、真实业务结果或部署合规确认。</p>
+    </section>
+  </main>
+
+  <footer>阶段 2B PRD V1.3 导师复检 · 生成日期：2026-10-23</footer>
+</body>
+</html>

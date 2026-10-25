@@ -1,0 +1,60 @@
+{
+  "status": "OFFICIAL_LIST_PRICE_AVAILABLE_DIFY_BILLING_UNKNOWN",
+  "captured_at": "2026-10-25T13:44:01Z",
+  "currency": "CNY",
+  "unit": "per_1m_tokens",
+  "source": {
+    "url_zh": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "url_en": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "models_url": "https://api-docs.deepseek.com/api/list-models",
+    "last_modified": "2026-10-19T06:05:48Z",
+    "page_sha256_zh": "556097caba8adfeeed6455714bffd731c7f60db520fcee06a922eba5840663a3",
+    "page_sha256_en": "b856a6e93fa4793ecc8f3fd03a01bb7d8f7572f78a4739da8ce6dbdb09328d66",
+    "models_page_sha256": "00007478226661f71064fa0469d096fce6683a9f8d03ba9bff5abd9183936b14"
+  },
+  "models": {
+    "deepseek-v4-flash": {
+      "official_display_model": "deepseek-flash",
+      "official_model_version": "DeepSeek-V4.1-Flash-1017",
+      "alias_note": "官方页面说明旧模型名 deepseek-v4-flash 仍可调用，由 DeepSeek-V4.1-Flash-1017 提供服务并按 Flash 价格计费。",
+      "input_cache_hit_off_peak_cny": 0.02,
+      "input_cache_hit_peak_cny": 0.04,
+      "input_cache_miss_off_peak_cny": 1,
+      "input_cache_miss_peak_cny": 2,
+      "output_off_peak_cny": 4,
+      "output_peak_cny": 8
+    },
+    "deepseek-v4-pro": {
+      "official_display_model": "deepseek-v4-pro",
+      "official_model_version": "DeepSeek-V4-Pro-0813",
+      "alias_note": "官方页面直接列名。",
+      "input_cache_hit_off_peak_cny": 0.15,
+      "input_cache_hit_peak_cny": 0.30,
+      "input_cache_miss_off_peak_cny": 4.5,
+      "input_cache_miss_peak_cny": 9,
+      "output_off_peak_cny": 13.5,
+      "output_peak_cny": 27
+    }
+  },
+  "peak_policy": {
+    "timezone": "Asia/Shanghai",
+    "weekdays": "Monday-Friday excluding Chinese public holidays",
+    "peak_windows": [
+      "09:00-12:00",
+      "14:00-18:00"
+    ],
+    "off_peak_note": "其余时段，包括周末和法定节假日全天，按空闲时段价格。",
+    "capture_day": "2026-10-25 Sunday"
+  },
+  "usage_assumption": {
+    "cache_hit_tokens": "Use per-call usage fields when present. If absent, price all input tokens as cache-miss; this is conservative.",
+    "dify_zero": "Dify usage displaying 0 is not evidence that the underlying model or Dify workspace is free."
+  },
+  "contract_evidence": null,
+  "dify_invoice_evidence": null,
+  "notes": [
+    "官方模型列表价可用于计算底层模型列表价估算。",
+    "当前没有 Dify 实际合同账单或结算单价，因此该估算不等同于实际 Dify 账单。",
+    "不得把 Dify 页面显示的 0 元解释为免费。"
+  ]
+}

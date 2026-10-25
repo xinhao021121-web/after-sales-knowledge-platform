@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-10-25T13:20:18.407Z",
+  "r4_commit": "5ad5467",
+  "status": "FROZEN",
+  "files": {
+    "baseline/p10-real-r4.json": {
+      "sha256": "1a728f3671c8aca21c6dbbb24d99699890bf4ed93869b7dfdfd2e4245a2476e8",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/p10-real-r4.json"
+    },
+    "baseline/regression-v4-real-r4.json": {
+      "sha256": "672a207390c843bdecfcf89b3730b58a31e98c47913cd6254f2c9806b22f6dd9",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/regression-v4-real.json"
+    },
+    "baseline/holdout-v4-first-run-r4.json": {
+      "sha256": "39f299fb55152a06a9fb4b99cefc290caf3b7f2ff724767a3ba42b345395bbbf",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/holdout-v4-first-run.json"
+    },
+    "baseline/RET-H07-first-failure.json": {
+      "sha256": "962d564021bcab0384f0d7b3590cfab8e67f49040e8d0522d3575281754e76e7",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/holdout/RET-H07.json"
+    },
+    "baseline/RET-H08-r4.json": {
+      "sha256": "3a07ae8a462bf592143fd694ac861c4611191c1eec4905a59a964c7948f1808c",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/holdout/RET-H08.json"
+    },
+    "baseline/POC-R04-r4.json": {
+      "sha256": "29ee801d2c733054353672a76b92ee14fa0ce3c969f3cf1c32e41c179c595946",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/formal-17/POC-R04.json"
+    },
+    "baseline/dify-config-r4-final.json": {
+      "sha256": "faab8f0a9a449375d98e06c23bcc0c9ff84adbe76cd85b89d41a466efaa1b3c0",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/dify-config-after-r4.json"
+    },
+    "baseline/candidate-inventory-after-r4.json": {
+      "sha256": "8d3ad854b6fb501a9f62ea99f4926f70ba9fafc64ec64c14bb605d21d5b7ef9e",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/candidate-inventory-after-r4.json"
+    },
+    "baseline/P10_R4_PASSED_320.png": {
+      "sha256": "4db4ecab8856c666a6475e90800eb896c8eace7296cc7a375180eee6f3c996da",
+      "hash_mode": "binary",
+      "source": "阶段4B-2A-R4_单题回归修复/screenshots/P10_R4_PASSED_320.png"
+    },
+    "baseline/P10_R4_PASSED_1440.png": {
+      "sha256": "5c47a8531954319eff8542a1ccd72b61a3b1ccb2f0e47796d787bb3d959d7f8d",
+      "hash_mode": "binary",
+      "source": "阶段4B-2A-R4_单题回归修复/screenshots/P10_R4_PASSED_1440.png"
+    },
+    "baseline/r4-system-prompt.txt": {
+      "sha256": "f943e8c815f2e2067f65a78d66682bb32b683b514da2b0c2430e7a6b76aa2931",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/configs/r4-system-prompt.txt"
+    },
+    "baseline/test-results-r4.json": {
+      "sha256": "e0699909131af27b565042f02c0b940001bcced1233ff973c83755e7ed89abf0",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/test-results.json"
+    },
+    "baseline/quality-gate-r4.json": {
+      "sha256": "61d88ea32784fa73331a7a1255f880110e6f63beb015ffd488f3d06940bbed33",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/evidence/quality-gate-r4.json"
+    },
+    "baseline/regression-set-v4.0.json": {
+      "sha256": "7d3aec2c68a0a4ab394d1a694f38e83cca19e0cb7396cbfd24b8f3000cc10057",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/regression/retention-set-v4.0.json"
+    },
+    "baseline/holdout-set-v4.0.json": {
+      "sha256": "8d9243922d5b4fee52346972a7d96f6e17be6ec58574166e6055cd4e24c47dd8",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/holdout/retention-set-v4.0.json"
+    },
+    "baseline/poc-r04-visible-v1.0.json": {
+      "sha256": "c368db8f2d28ca13fe6f0a56b18915a9eda6a9905c4c4904b0ba4fe968dce101",
+      "hash_mode": "text_lf",
+      "source": "阶段4B-2A-R4_单题回归修复/regression/poc-r04-visible-v1.0.json"
+    }
+  }
+}

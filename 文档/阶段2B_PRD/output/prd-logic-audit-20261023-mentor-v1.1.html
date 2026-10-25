@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业级 RAG 知识库平台 PRD V1.1 导师复检</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --bg: #f5f7fb;
+      --card: #fff;
+      --block: #b42318;
+      --high: #c2410c;
+      --medium: #a16207;
+      --low: #2563eb;
+      --accent: #4338ca;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font: 14px/1.7 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header, main, footer { width: min(1180px, calc(100% - 32px)); margin: auto; }
+    header { padding: 48px 0 28px; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); line-height: 1.18; }
+    h2 { margin: 0 0 16px; font-size: 22px; }
+    h3 { margin: 0 0 10px; font-size: 17px; }
+    p { margin: 8px 0; }
+    .muted { color: var(--muted); }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    section {
+      margin: 0 0 22px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: 0 8px 28px rgba(30, 41, 59, .05);
+    }
+    .verdict { border-left: 7px solid var(--block); background: linear-gradient(135deg, #fff 0, #fff7f6 100%); }
+    .verdict h2 { color: var(--block); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .stat { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .stat strong { display: block; font-size: 28px; line-height: 1.2; }
+    .stat span { color: var(--muted); }
+    .risk-scale { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 16px 0 24px; }
+    .risk-card, .blocker-summary { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .risk-card h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .blocker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .blocker-summary { border-left: 4px solid var(--block); }
+    .blocker-summary strong { display: block; margin-bottom: 6px; color: var(--block); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #f8fafc; white-space: nowrap; }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; color: #fff; font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .block { background: var(--block); }
+    .high { background: var(--high); }
+    .medium { background: var(--medium); }
+    .low { background: var(--low); }
+    article { margin-top: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    article.blocker { border-left: 5px solid var(--block); }
+    article.high-risk { border-left: 5px solid var(--high); }
+    article.medium-risk { border-left: 5px solid var(--medium); }
+    .meta { display: flex; flex-wrap: wrap; gap: 7px; margin: 8px 0 14px; }
+    .tag { padding: 2px 8px; border-radius: 999px; background: #eef2ff; color: #3730a3; font-size: 12px; font-weight: 700; }
+    dl { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 7px 14px; margin: 12px 0 0; }
+    dt { font-weight: 800; color: #334155; }
+    dd { margin: 0; }
+    code { padding: 2px 5px; border-radius: 5px; background: #eef2f7; }
+    ol, ul { padding-left: 22px; }
+    .callout { padding: 14px 16px; border-radius: 10px; background: #fff8e8; border: 1px solid #f6d995; }
+    .side-nav {
+      position: fixed;
+      top: 50%;
+      left: 24px;
+      z-index: 9;
+      width: 168px;
+      padding: 8px 0;
+      border-left: 1px solid var(--line);
+      transform: translateY(-50%);
+    }
+    .side-nav strong { display: block; padding: 0 12px 8px 14px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .side-nav a { display: block; padding: 7px 12px 7px 14px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; }
+    .side-nav a:hover { border-left-color: var(--accent); color: var(--accent); }
+    section[id] { scroll-margin-top: 24px; }
+    @media (min-width: 981px) {
+      header, main, footer {
+        width: min(1180px, calc(100% - 260px));
+        margin-left: clamp(220px, calc((100% - 1180px) / 2 + 100px), 360px);
+        margin-right: 24px;
+      }
+    }
+    @media (max-width: 980px) {
+      .side-nav { display: none; }
+      header, main, footer { width: min(1180px, calc(100% - 32px)); margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 760px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .risk-scale, .blocker-grid { grid-template-columns: 1fr; }
+      section { padding: 18px; }
+      dl { grid-template-columns: 1fr; gap: 0; }
+      dt { margin-top: 9px; }
+    }
+    @media print {
+      body { background: #fff; }
+      header, main, footer { width: 100%; margin-left: auto; margin-right: auto; }
+      .side-nav { display: none; }
+      section, article { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="side-nav" aria-label="报告目录">
+    <strong>报告目录</strong>
+    <a href="#scope">检查范围</a>
+    <a href="#verdict">复审结论</a>
+    <a href="#risk-guide">风险说明</a>
+    <a href="#summary">问题总览</a>
+    <a href="#details">问题详情</a>
+    <a href="#order">修改路线</a>
+    <a href="#decisions">产品拍板</a>
+    <a href="#impact">改全材料</a>
+    <a href="#coverage">覆盖说明</a>
+  </nav>
+
+  <header>
+    <p class="eyebrow">PRD Logic Recheck</p>
+    <h1>企业级 RAG 知识库平台 PRD V1.1 导师复检</h1>
+    <p class="muted">生成日期：2026-10-23 · 输入：PRD V1.1、追踪矩阵 V1.1、状态总表 V1.1、GTW、异常与权限附录、修订与复检记录</p>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>检查范围</h2>
+      <p>已完整检查 30 条功能需求、12 条核心任务、24 条核心 GTW、26 条跨需求验收、52 个对象自身状态、16 个跨对象事件、U1-U9、8 类角色、来源故障传播和回滚流程。</p>
+      <p class="muted">未覆盖：真实客服验证、真实客户数据、部署期合规配置、技术性能、模型与检索参数，以及 Draw.io 像素级渲染。</p>
+    </section>
+
+    <section id="verdict" class="verdict">
+      <h2>结论：修改后再评审</h2>
+      <p>上一轮问题已基本关闭，但知识问题闭环仍缺少“评测通过后推进 CASE”的事件；来源故障自动停用发布版本后，也没有路径创建回滚候选。这两个缺口会让 P0-W3 的闭环卡住。</p>
+      <div class="stats">
+        <div class="stat"><strong>1</strong><span>阻断</span></div>
+        <div class="stat"><strong>2</strong><span>高风险</span></div>
+        <div class="stat"><strong>0</strong><span>中风险</span></div>
+        <div class="stat"><strong>4</strong><span>去重问题总数</span></div>
+      </div>
+    </section>
+
+    <section id="risk-guide">
+      <h2>风险等级怎么理解？</h2>
+      <p><strong>阻断表示 P0 闭环无法唯一实现。</strong> 当前事件表虽然修复了状态混写，但没有覆盖所有必要的跨对象转换。</p>
+      <div class="risk-scale">
+        <div class="risk-card"><h3><span class="badge block">阻断</span></h3><p>核心流程可能卡在中间状态，无法完成发布、关闭或恢复。</p></div>
+        <div class="risk-card"><h3><span class="badge high">高风险</span></h3><p>版本或验收规则存在冲突，可能导致错误版本或漏测。</p></div>
+        <div class="risk-card"><h3><span class="badge medium">中风险</span></h3><p>边界未定，可能导致返工或人工兜底。</p></div>
+        <div class="risk-card"><h3><span class="badge low">低风险</span></h3><p>局部一致性问题，不影响主流程唯一性。</p></div>
+      </div>
+      <div class="blocker-grid">
+        <div class="blocker-summary">
+          <strong>PRD-INDEX 跨对象事件覆盖不完整</strong>
+          <p>EVAL 成功后 CASE 不会进入待发布；REL 因来源失效停用后，EV-12 要求从 ACTIVE 发起回滚，但当前只有 SUSPENDED，回滚候选无法创建。</p>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>评审放行条件</strong>
+        <p>补齐知识闭环和停用回滚所需的跨对象事件；明确 KB 通过审核后的版本可变性；将所有跨对象事件纳入统一幂等验收。</p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>问题总览</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>编号</th><th>风险</th><th>痛苦类型</th><th>结论状态</th><th>问题摘要</th><th>主要位置</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>阻断</td><td>闭环断裂</td><td>确定缺口</td><td>评测成功到 CASE 待发布、停用版本到回滚候选缺少事件</td><td>03 V1.1 第 1.5、1.6、1.7、2 节</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>高风险</td><td>版本冲突</td><td>确定冲突</td><td>KB 不可变与评测失败退回草稿冲突</td><td>10.1；03 第 1.4、2 节 EV-09</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>高风险</td><td>验收遗漏</td><td>确定缺口</td><td>幂等验收只覆盖 EV-01 至 EV-15，遗漏 EV-16</td><td>04 AC-G-26；03 第 2 节</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>低</td><td>文档一致性</td><td>表达问题</td><td>状态数量、章节编号和事件编号存在不一致</td><td>PD-005；PRD 13.3；03 EVAL_PASSED</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="details">
+      <h2>问题详情</h2>
+
+      <article id="prd-001" class="blocker">
+        <h3>PRD-001 跨对象事件仍未覆盖两个核心闭环</h3>
+        <div class="meta"><span class="badge block">阻断</span><span class="tag">闭环断裂</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>FR-024 和 CASE 状态表要求 EVAL 通过后进入 <code>CASE_VERIFIED_PENDING_RELEASE</code>，但 EV-08 的目标只有 KB 和 REL，没有 CASE。另，EV-07 会把来源失效的 ACTIVE REL 改为 <code>REL_SUSPENDED</code>，而 EV-12 只允许从 <code>REL_ACTIVE</code> 创建回滚候选，<code>REL_SUSPENDED</code> 没有回到待批准候选的路径。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发按事件表实现时，评测通过后 CASE 会一直停留在 REGRESSION_PENDING，REL 生效也无法执行 EV-11 关闭案例；来源失效后当前版本已经停用，却无法进入受控回滚，只能永久停用或私自改状态。</dd>
+          <dt>触发场景</dt>
+          <dd>修复 CASE → EVAL 通过 → EV-08 创建 REL → CASE 未变为 VERIFIED_PENDING_RELEASE；另：SRC 失效 → EV-07 停用 REL → 系统尝试回滚 → EV-12 前置条件不满足。</dd>
+          <dt>影响范围</dt>
+          <dd>CASE 闭环、EVAL 结果回流、REL 发布、来源故障恢复、回滚审批、审计与 GTW。</dd>
+          <dt>待确认问题</dt>
+          <dd>评测成功是否应在创建 REL 候选的同一原子事件中把关联 CASE 推进到待发布？停用版本是否允许创建回滚候选？</dd>
+          <dt>最小修改建议</dt>
+          <dd>扩展 EV-08，将关联 CASE 同步更新为 <code>CASE_VERIFIED_PENDING_RELEASE</code>；新增从 <code>REL_SUSPENDED</code> 创建新 <code>REL_PENDING_APPROVAL</code> 的回滚事件，或扩展 EV-12 的来源状态，并明确来源复验、审批和幂等键。</dd>
+          <dt>关联修改</dt>
+          <dd>FR-019、FR-021、FR-024、AC-K4-02、AC-G-03、AC-G-15、状态总表 EV-07/08/12、追踪矩阵 FR-019/021/024 行、状态图。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-002" class="high-risk">
+        <h3>PRD-002 KB 不可变版本与退回草稿存在语义冲突</h3>
+        <div class="meta"><span class="badge high">高风险</span><span class="tag">版本冲突</span><span class="tag">确定冲突</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>PRD 10.1 声明 <code>KB</code> 使用不可变版本；但状态表允许 <code>KB_BUSINESS_REVIEW</code> 和 <code>KB_EVAL_PENDING</code> 回到 <code>KB_DRAFT</code>，EV-09 也会把已进入评测的 KB 直接更新为 <code>KB_DRAFT</code>，而 <code>KB_DRAFT</code> 允许编辑事实和条件。</dd>
+          <dt>漏洞说明</dt>
+          <dd>若研发允许原草稿继续编辑，会改写已有审核/评测证据对应的内容；若坚持不可变，则状态转换无法执行。两种解释都会产生不同版本和审计结果。</dd>
+          <dt>触发场景</dt>
+          <dd>KB-v3 完成业务审核 → EVAL 失败 → EV-09 把 KB-v3 设为 DRAFT → 知识运营修改正文 → 原 EVAL 记录仍指向 KB-v3，但内容已经变化。</dd>
+          <dt>影响范围</dt>
+          <dd>KB 版本、业务审核、EVAL 证据、CASE 修复、发布候选和审计。</dd>
+          <dt>待确认问题</dt>
+          <dd>版本不可变从创建时开始，还是从提交业务审核时开始？</dd>
+          <dt>最小修改建议</dt>
+          <dd>建议提交业务审核后冻结 KB 内容；评测失败将当前 KB 置为只读失败态，并创建新的 KB 草稿版本。若允许评审前编辑，则修正“所有 KB 版本不可变”的表述并明确冻结时点。</dd>
+          <dt>关联修改</dt>
+          <dd>PRD 10.1、KB 状态表、EV-09、FR-017/019/023、AC-K3-02、AC-G-12、PRD 决策记录。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-003" class="high-risk">
+        <h3>PRD-003 新增 EV-16 未进入统一幂等验收</h3>
+        <div class="meta"><span class="badge high">高风险</span><span class="tag">验收遗漏</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>状态总表新增 EV-16，用于激活新 REL 并把同作用域旧 ACTIVE 替代；但 AC-G-26 只要求覆盖 <code>EV-01</code> 至 <code>EV-15</code>。</dd>
+          <dt>漏洞说明</dt>
+          <dd>测试按 AC-G-26 执行时不会验证 EV-16 的重复提交和原子性。重复激活可能造成两个 REL_ACTIVE、旧版本未替代或审计缺失。</dd>
+          <dt>触发场景</dt>
+          <dd>客户端重试“发布”请求 → EV-16 被调用两次 → 第二次再次创建替代/审计或返回不一致状态。</dd>
+          <dt>影响范围</dt>
+          <dd>REL_ACTIVE 唯一性、替代、发布审计、回滚准备和发布验收。</dd>
+          <dt>待确认问题</dt>
+          <dd>EV-16 是否与其余跨对象事件使用同一幂等和原子性验收？</dd>
+          <dt>最小修改建议</dt>
+          <dd>将 AC-G-26 覆盖范围改为 EV-01 至 EV-16，并增加“重复激活新 REL 不产生第二个 ACTIVE”的明确断言。</dd>
+          <dt>关联修改</dt>
+          <dd>AC-G-26、AC-G-22、FR-020、08 验收记录、需求追踪矩阵。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-004">
+        <h3>PRD-004 文档中存在三个局部编号或计数不一致</h3>
+        <div class="meta"><span class="badge low">低风险</span><span class="tag">文档一致性</span><span class="tag">表达问题</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>PD-005 仍写 SRC 为“六态”，V1.1 状态表实际为七态并包含 <code>SRC_REGISTERED</code>；PRD 存在两个 13.3 章节；EVAL_PASSED 状态行写作“E-08”，事件表写作“EV-08”。</dd>
+          <dt>漏洞说明</dt>
+          <dd>不影响状态规则本身，但会造成目录跳转、交叉引用和自动检查误判。</dd>
+          <dt>触发场景</dt>
+          <dd>研发或测试按“六态”实现，遗漏登记态；文档链接到 13.3 时无法确定是发布回滚测试还是在线监控。</dd>
+          <dt>影响范围</dt>
+          <dd>文档可读性、追踪效率和自动检查。</dd>
+          <dt>待确认问题</dt>
+          <dd>无；应统一为七态、13.3/13.4 和 EV-08。</dd>
+          <dt>最小修改建议</dt>
+          <dd>统一状态计数、章节编号和事件前缀，并重新生成目录或复检报告。</dd>
+          <dt>关联修改</dt>
+          <dd>PD-005、PRD 13.3/13.4、状态总表 EVAL_PASSED 行、复检报告。</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>发现问题后，产品经理怎么处理</h2>
+      <ol>
+        <li>先补齐 EVAL→CASE 和 SUSPENDED→回滚候选两个跨对象事件。</li>
+        <li>再明确 KB 内容冻结时点，确保审核与评测证据指向不可变内容。</li>
+        <li>最后统一所有事件验收和文档编号，重新执行全量检查。</li>
+      </ol>
+    </section>
+
+    <section id="order">
+      <h2>第 1 步：先看修改路线</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>顺序</th><th>相关问题</th><th>这一轮要解决什么</th><th>为什么先做这一步</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><a href="#prd-001">PRD-001</a></td><td>补齐 CASE 与停用回滚事件</td><td>决定知识闭环能否真正走通</td></tr>
+            <tr><td>2</td><td><a href="#prd-002">PRD-002</a></td><td>统一 KB 不可变语义</td><td>决定审核和评测证据是否可信</td></tr>
+            <tr><td>3</td><td><a href="#prd-003">PRD-003</a>、<a href="#prd-004">PRD-004</a></td><td>补齐幂等验收并统一文档编号</td><td>最后做全量一致性和可测试性收口</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <strong>建议评审门槛</strong>
+        <p>评测成功后 CASE 自动进入待发布；来源失效停用后可以受控创建回滚候选；同一 KB 版本内容不再变化；EV-01 至 EV-16 均纳入幂等验收。</p>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <h2>第 2 步：轮到该问题时，产品拍板</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>你要拍板的事</th><th>为什么现在必须定</th><th>定完要补进 PRD</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>EVAL 成功是否与 CASE 待发布状态原子更新；停用 REL 是否允许创建回滚候选</td><td>否则 P0-W3 闭环会卡住</td><td>EV-08、EV-12/新增事件、CASE/REL 状态、GTW</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>KB 内容从何时冻结，评测失败是原版本只读还是新建草稿</td><td>决定审计证据是否可追溯</td><td>KB 状态、EV-09、10.1、FR-017/019</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>EV-16 是否与其他事件采用同一幂等标准</td><td>防止重复发布产生两个 ACTIVE</td><td>AC-G-26、AC-G-22、01 同步修改</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>无需业务选择，统一七态、13.3/13.4 和 EV-08</td><td>消除文档与自动检查歧义</td><td>PD-005、PRD、状态表、报告</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2>第 3 步：拍板后，把相关材料改全</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>拿着什么结论去改</th><th>还要改哪些地方</th><th>怎样算改完</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>完整知识闭环和回滚候选事件</td><td>PRD 7.3/7.4/7.5、状态总表、GTW、追踪矩阵、状态图</td><td>每个 CASE 从回归到关闭都有可达路径；SUSPENDED 可进入唯一回滚流程</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>KB 冻结时点和失败处理</td><td>PRD 10.1、KB 表、EV-09、FR-017/019/023、决策记录</td><td>审核或评测后的内容引用不会变化</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>统一幂等验收范围</td><td>AC-G-26、AC-G-22、验收记录</td><td>全量 16 个事件都有重复提交和原子失败断言</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>统一编号和状态计数</td><td>PD-005、PRD 13 节、状态表、复检报告</td><td>无重复章节、无错误事件前缀、SRC 七态一致</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="coverage">
+      <h2>覆盖说明</h2>
+      <p>已确认：上一轮 1 个阻断、3 个高风险和 2 个中风险中的 6 项已按要求修订；自身状态与跨对象事件已物理拆分；SRC 来源登记和失效传播、REL 回滚、CTX 权限、风险恢复和 P1 委托边界均已形成明确规则；30 条 FR 均有追踪和验收引用。</p>
+      <p>剩余阻断只涉及知识闭环事件覆盖，不需要推翻现有产品结构。关闭该阻断和高风险问题后，可进入设计阶段；在此之前不应开始页面原型或 RAG 实现。</p>
+      <p class="muted">本报告不替代阶段 1B 的专项样本人工复核。</p>
+    </section>
+  </main>
+
+  <footer>阶段 2B PRD V1.1 导师复检 · 生成日期：2026-10-23</footer>
+</body>
+</html>

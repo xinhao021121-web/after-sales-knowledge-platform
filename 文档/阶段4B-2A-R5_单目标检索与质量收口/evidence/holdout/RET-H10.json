@@ -1,0 +1,225 @@
+{
+  "task_id": "RET-H10",
+  "core_task_id": "HOLDOUT-CROSS-RETURN-WARRANTY-20D",
+  "sample_type": "HOLDOUT",
+  "original_question": "Apple Store 在线商店购买的 AirPods Pro 3，交付第 20 天出现续航明显下降和充电不稳定，退货和保修检测应该分别怎么判断？",
+  "question_context": {
+    "product": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "received_at": "20 天前",
+    "faults": [
+      "续航明显下降",
+      "充电不稳定"
+    ]
+  },
+  "answer_status": "ANSWERED",
+  "provider_called": true,
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "recall_at_3": 0.5,
+  "source_hit": true,
+  "expected_source_count": 2,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-FAQ-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "MULTI_OBJECTIVE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "Apple Store 在线商店购买的 AirPods Pro 3，交付第 20 天出现续航明显下降和充电不稳定，退货和保修检测应该分别怎么判断？",
+      "收货二十天发现掉电快且充电不稳，应该走退货还是保修检测？",
+      "AirPods Pro 3 第二十天出现电池和充电问题，退货与后续维修分别依据什么？"
+    ],
+    "internal_candidate_pool_size": 14,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_resources": [
+    {
+      "position": 1,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.62481993,
+      "claim_support_count": 3
+    },
+    {
+      "position": 2,
+      "document_name": "03_退货规则.md",
+      "document_id": "DOC-RETURN-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "score": 0.6622269,
+      "claim_support_count": 2
+    },
+    {
+      "position": 3,
+      "document_name": "05_渠道差异说明.md",
+      "document_id": "DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.65126204,
+      "claim_support_count": 2
+    }
+  ],
+  "answer": "目标一：退货判断：判断：Apple Store 在线商店退货商业政策为交付后 14 日内可申请；已交付第 20 天，超过该期限，不满足在线商店退货时间条件，不承诺可退。 下一步：核对订单交付/签收日期和购买凭证；确认已满 20 天后，不应继续按 Apple 在线商店 14 日退货路径申请。 依据：[2] CHUNK-RETURN-APPLE-01\n目标二：保修检测判断：判断：正文未提供 AirPods Pro 3 续航明显下降和充电不稳定对应的具体保修覆盖或检测标准，无法据此直接判断是否保修覆盖。 下一步：核对 AirPods Pro 3 型号（A3063/A3064/A3065）、MagSafe 充电盒型号（A3122）、序列号和购买凭证；无法对应时不承诺免费维修或换新，转 Apple 官方保修身份核验，并通过官方保修和服务入口检测。 依据：[1] CHUNK-FAQ-IDENTIFY-01；[3] CHUNK-CHANNEL-OFFICIAL-01",
+  "answer_goals": [
+    {
+      "index": "一",
+      "title": "目标一：退货判断",
+      "content": "判断：Apple Store 在线商店退货商业政策为交付后 14 日内可申请；已交付第 20 天，超过该期限，不满足在线商店退货时间条件，不承诺可退。 下一步：核对订单交付/签收日期和购买凭证；确认已满 20 天后，不应继续按 Apple 在线商店 14 日退货路径申请。 依据：[2] CHUNK-RETURN-APPLE-01",
+      "evidence_supported": true
+    },
+    {
+      "index": "二",
+      "title": "目标二：保修检测判断",
+      "content": "判断：正文未提供 AirPods Pro 3 续航明显下降和充电不稳定对应的具体保修覆盖或检测标准，无法据此直接判断是否保修覆盖。 下一步：核对 AirPods Pro 3 型号（A3063/A3064/A3065）、MagSafe 充电盒型号（A3122）、序列号和购买凭证；无法对应时不承诺免费维修或换新，转 Apple 官方保修身份核验，并通过官方保修和服务入口检测。 依据：[1] CHUNK-FAQ-IDENTIFY-01；[3] CHUNK-CHANNEL-OFFICIAL-01",
+      "evidence_supported": true
+    }
+  ],
+  "suggested_action": "核对订单交付/签收日期和购买凭证；确认已满 20 天后，不应继续按 Apple 在线商店 14 日退货路径申请；核对 AirPods Pro 3 型号（A3063/A3064/A3065）、MagSafe 充电盒型号（A3122）、序列号和购买凭证；无法对应时不承诺免费维修或换新，转 Apple 官方保修身份核验，并通过官方保修和服务入口检测。",
+  "citations": [
+    {
+      "citation_id": "EVD-b1a33913-9ad5-4842-8360-69d88912fd06",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-RETURN-V1",
+        "version": "1.0.0",
+        "title": "AirPods 退货与退款判断",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06"
+      },
+      "kb_id": "KB-DOC-RETURN-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "score": 0.6622269,
+      "supported_claims": [
+        "Apple Store 在线商店符合条件时可在交付后 14 日内申请退货。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.62481993,
+      "supported_claims": [
+        "AirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。",
+        "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+        "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.65126204,
+      "supported_claims": [
+        "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。",
+        "在线商店退货商业政策不得自动扩展到第三方卖家。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "citation_support": {
+    "required": true,
+    "passed": true,
+    "supported_count": 3,
+    "multi_objective_passed": true,
+    "unsupported_count": 0
+  },
+  "citation_gate_passed": true,
+  "forbidden_action_match": null,
+  "business_semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [
+      "目标一",
+      "目标二"
+    ],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [
+      {
+        "objective_id": "RETURN_GOAL",
+        "label": "退货判断路径",
+        "passed": true,
+        "missing_concept_groups": [],
+        "required_doc_match": true,
+        "evidence_goal_match": true
+      },
+      {
+        "objective_id": "WARRANTY_GOAL",
+        "label": "保修或维修检测路径",
+        "passed": true,
+        "missing_concept_groups": [],
+        "required_doc_match": true,
+        "evidence_goal_match": true
+      }
+    ],
+    "passed": true
+  },
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1496,
+  "completion_tokens": 3623,
+  "total_tokens": 5119,
+  "provider_latency_ms": 38981,
+  "bff_latency_ms": 45963,
+  "bff_request_id": "08345948-22bc-4dc1-9d2b-52ef7dc31387",
+  "provider_request_id": "c6d08271-9112-4f36-8379-cefab19a8295",
+  "error_code": null,
+  "cost_status": "COST_UNKNOWN"
+}

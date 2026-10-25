@@ -1,0 +1,145 @@
+{
+  "notice": "真实本地 BFF → Dify Cloud 检索请求样例；不包含密钥。",
+  "request": {
+    "question": "AirPods Pro 3 电池续航下降，保修期内维修要收费吗？",
+    "asq_id": "ASQ-4B1-RETRIEVAL",
+    "knowledge_item_id": "KI-DEMO-AFTERSALES",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "request_id": "3d731dcf-2d5c-40a3-afe2-192bdd2d1129",
+    "status": "ANSWERED",
+    "hits": [
+      {
+        "kb_id": "KB-DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "source": {
+          "src_id": "SRC-PUB-006",
+          "doc_id": "DOC-WARRANTY-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 保修与维修流程",
+          "url": "https://support.apple.com/zh-cn/airpods/repair?services=service",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124"
+        },
+        "chunk_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "text": "AirPods Pro 3 保修与维修流程",
+        "score": 0.6642205641920712,
+        "metadata": {
+          "document_name": "04_保修与维修流程.md",
+          "dataset_name": "CANDIDATE",
+          "permission_scope": "public_customer_service"
+        },
+        "citation_id": null,
+        "supported_claims": [],
+        "traceable": false
+      },
+      {
+        "kb_id": "KB-DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "source": {
+          "src_id": "SRC-PUB-001",
+          "doc_id": "DOC-FAQ-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 售后 FAQ",
+          "url": "https://support.apple.com/zh-cn/airpods",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87"
+        },
+        "chunk_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "text": "AirPods Pro 3 售后 FAQ",
+        "score": 0.6625423722862879,
+        "metadata": {
+          "document_name": "01_售后FAQ.md",
+          "dataset_name": "CANDIDATE",
+          "permission_scope": "public_customer_service"
+        },
+        "citation_id": null,
+        "supported_claims": [],
+        "traceable": false
+      },
+      {
+        "kb_id": "KB-DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "source": {
+          "src_id": "SRC-PUB-001",
+          "doc_id": "DOC-FAQ-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 售后 FAQ",
+          "url": "https://support.apple.com/zh-cn/airpods",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f"
+        },
+        "chunk_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+        "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+        "text": "CHUNK-FAQ-BATTERY-01 续航下降\n续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。检测前不得承诺免费维修，也不得断言一定收费。",
+        "score": 0.564616853966994,
+        "metadata": {
+          "document_name": "01_售后FAQ.md",
+          "dataset_name": "CANDIDATE",
+          "permission_scope": "public_customer_service"
+        },
+        "citation_id": "EVD-2fd122bb-dba2-4571-8ffd-95f148400c6f",
+        "supported_claims": [
+          "续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。",
+          "Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。",
+          "检测前不得承诺免费维修，也不得断言一定收费。"
+        ],
+        "traceable": true
+      }
+    ],
+    "filters": {
+      "expired": 0,
+      "permission": 0,
+      "unmapped": 0
+    },
+    "provider_request_id": "ca7a9c49-c060-45ad-897d-e868e3e43319",
+    "provider_called": true,
+    "timing_ms": 31091,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 447,
+      "completion_tokens": 2771,
+      "total_tokens": 3218,
+      "provider_latency_ms": 29449,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "ANSWERED",
+      "citation_support_passed": true,
+      "effective_answer": true
+    },
+    "audit_event_id": "263e10f2-3fcf-4002-9103-ba5441f6b991"
+  },
+  "wall_ms": 31101
+}

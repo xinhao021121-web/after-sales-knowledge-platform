@@ -1,0 +1,106 @@
+{
+  "captured_at": "2026-10-25T09:29:41.383Z",
+  "source_mode": "REAL_DIFY_DATASET_RETRIEVE",
+  "dataset": "CANDIDATE",
+  "query": "AirPods 拆封了还能退吗？ 第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？ Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？",
+  "latency_ms": 1806,
+  "internal_candidate_pool_size": 12,
+  "records": [
+    {
+      "position": 1,
+      "score": 0.78983766,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+      "content": "AirPods 退货与退款判断"
+    },
+    {
+      "position": 2,
+      "score": 0.664582,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "10f400d1-219f-478f-a4e0-32bee71b3e9d",
+      "content": "---\ndoc_id: DOC-RETURN-V1\nsrc_ids: [SRC-PUB-003, SRC-PUB-004, SRC-PUB-005, SRC-PUB-010]\nversion: 1.0.0\ntitle: AirPods 退货与退款判断\npublisher: 项目模拟业务与渠道责任组\nverified_at: 2026-10-24\nscope: 中国大陆远程交易与 Apple Store 在线商店\nvalid_until: 2026-12-31\nowner_role: business_channel_owner\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 3,
+      "score": 0.6615521,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+      "content": "AirPods Pro 3 售后 FAQ"
+    },
+    {
+      "position": 4,
+      "score": 0.64457893,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。"
+    },
+    {
+      "position": 5,
+      "score": 0.61861265,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+      "content": "AirPods Pro 3 保修与维修流程"
+    },
+    {
+      "position": 6,
+      "score": 0.58689785,
+      "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "document_name": "05_渠道差异说明.md",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。"
+    },
+    {
+      "position": 7,
+      "score": 0.58333045,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+    },
+    {
+      "position": 8,
+      "score": 0.57138693,
+      "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "document_name": "05_渠道差异说明.md",
+      "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+      "content": "CHUNK-CHANNEL-THIRD-01 第三方平台\n第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。"
+    },
+    {
+      "position": 9,
+      "score": 0.5698377,
+      "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "document_name": "02_安全SOP.md",
+      "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+      "content": "AirPods Pro 3 安全处置 SOP"
+    },
+    {
+      "position": 10,
+      "score": 0.55542004,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "a5da3389-7e07-49ff-ab5a-a979904ba5c8",
+      "content": "---\ndoc_id: DOC-WARRANTY-V1\nsrc_ids: [SRC-PUB-006, SRC-PUB-007, SRC-PUB-008, SRC-PUB-011]\nversion: 1.0.0\ntitle: AirPods Pro 3 保修与维修流程\npublisher: 项目模拟售后责任组\nverified_at: 2026-10-24\nscope: 中国大陆三包、有限保修、AppleCare+ 与保外服务\nvalid_until: 2026-12-31\nowner_role: aftersales_specialist\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 11,
+      "score": 0,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "d03e14e6-f26f-4557-a1d3-d5f7633f6c07",
+      "content": "---\ndoc_id: DOC-FAQ-V1\nsrc_ids: [SRC-PUB-001, SRC-PUB-006, SRC-PUB-013]\nversion: 1.0.0\ntitle: AirPods Pro 3 售后 FAQ\npublisher: 项目模拟企业知识运营\nverified_at: 2026-10-24\nscope: 中国大陆公开售后与产品支持咨询\nvalid_until: 2026-12-31\nowner_role: knowledge_operator\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 12,
+      "score": 0,
+      "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "document_name": "02_安全SOP.md",
+      "segment_id": "91783206-96c1-4603-9c59-410760b50e12",
+      "content": "---\ndoc_id: DOC-SAFETY-V1\nsrc_ids: [SRC-PUB-002, SRC-PUB-006, SRC-PUB-009]\nversion: 1.0.0\ntitle: AirPods Pro 3 安全处置 SOP\npublisher: 项目模拟法务安全责任组\nverified_at: 2026-10-24\nscope: 售后咨询中的 A/B 级安全事件\nvalid_until: 2026-12-31\nowner_role: legal_safety_owner\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    }
+  ]
+}

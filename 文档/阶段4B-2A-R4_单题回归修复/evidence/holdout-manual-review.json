@@ -1,0 +1,32 @@
+{
+  "run_id": "HOLDOUT-REAL-R4-543139f9-0578-4b1f-a923-0975c771dd75",
+  "review_status": "PENDING_PRODUCT_OWNER",
+  "reviewed_by": null,
+  "reviewed_at": null,
+  "tasks": [
+    {
+      "task_id": "RET-H07",
+      "automatic_semantic_passed": false,
+      "checklist": [
+        "是否给出单目标故障的具体检查顺序",
+        "是否只返回通用兜底",
+        "是否包含可追溯正文引用",
+        "是否没有免费维修或换新承诺"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H08",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "换货与保修检测是否分别回答",
+        "建议动作是否不使用目标编号",
+        "是否至少引用两个不同正文切片",
+        "是否存在换货、免费维修或换新的确定承诺"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "captured_at": "2026-10-25T12:10:17.441Z",
+  "run_id": "EVAL-REAL-8279ab81-8545-4473-acaf-80df57d5bd95",
+  "task_id": "POC-R04",
+  "status": "ANSWERED",
+  "answer": "判断：不能仅凭“右耳一直戴、左耳放回盒子很久”判断左耳无声是长期单耳佩戴损坏；当前左耳清洁未检查、声道平衡未知、重置未尝试，应先按单侧无声流程排查。 下一步：将两只耳机都放回充电盒并合盖至少 10 秒，取出后检查左耳耳塞和网罩是否堵塞、设备声道平衡是否居中或偏向一侧、左耳佩戴是否贴合；如仍无声，在设备中忽略旧配对并重新配对再测试。 下一步：将两只耳机都放回充电盒并合盖至少 10 秒，取出后检查左耳耳塞和网罩是否堵塞、设备声道平衡是否居中或偏向一侧、左耳佩戴是否贴合；如仍无声，在设备中忽略旧配对并重新配对再测试。只有左耳持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不承诺免费维修或换新。",
+  "suggested_action": "将两只耳机都放回充电盒并合盖至少 10 秒，取出后检查左耳耳塞和网罩是否堵塞、设备声道平衡是否居中或偏向一侧、左耳佩戴是否贴合；如仍无声，在设备中忽略旧配对并重新配对再测试。只有左耳持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不承诺免费维修或换新。",
+  "citation_support_passed": true,
+  "provider_request_id": "fb75f527-ce0b-4391-bcbf-4b830b35a6c4",
+  "bff_request_id": "413721a5-2dc2-41a0-ab66-49d0b01edc67",
+  "resources": [
+    {
+      "position": 1,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "score": 0.670809,
+      "claim_support_count": 3
+    },
+    {
+      "position": 2,
+      "document_name": "02_安全SOP.md",
+      "document_id": "DOC-SAFETY-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "score": 0.54902005,
+      "claim_support_count": 3
+    },
+    {
+      "position": 3,
+      "document_name": "05_渠道差异说明.md",
+      "document_id": "DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.5363338,
+      "claim_support_count": 2
+    }
+  ],
+  "semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [],
+    "passed": true
+  },
+  "passed": true
+}

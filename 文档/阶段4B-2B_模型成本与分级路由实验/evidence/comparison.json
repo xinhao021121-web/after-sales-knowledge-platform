@@ -1,0 +1,392 @@
+{
+  "comparison_id": "4B2B-MODEL-ROUTING-COMPARISON-1.0.0",
+  "captured_at": "2026-10-25T14:25:07.222Z",
+  "input_lock": "baseline/fixed-regression-used.json",
+  "retrieval_snapshot": "evidence/retrieval-snapshot.json",
+  "task_count": 27,
+  "suites": {
+    "FORMAL_17": 17,
+    "REGRESSION_8": 8,
+    "HOLDOUT_2": 2
+  },
+  "groups": {
+    "A": {
+      "group": "A",
+      "run_id": "ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404",
+      "route_mode": "A_PRO_ONLY",
+      "model_config_version": 22,
+      "task_count": 27,
+      "p0_task_count": 8,
+      "p0_model_calls": 0,
+      "p0_failures": 0,
+      "status_match_count": 27,
+      "semantic_passed_count": 25,
+      "semantic_failed_task_ids": [
+        "RET-H07",
+        "RET-H09"
+      ],
+      "effective_answered_count": 8,
+      "citation_failures": 0,
+      "provider_errors": 0,
+      "preserved_provider_failures": 12,
+      "forbidden_action_failures": 0,
+      "generic_fallback_count": 3,
+      "generic_fallback_ratio": 0.15789473684210525,
+      "source_hit_count": 14,
+      "expected_source_count": 33,
+      "covered_source_count": 16,
+      "recall_at_3": 0.48484848484848486,
+      "human_confirmable_count": 17,
+      "known_defect_task_ids": [
+        "RET-H09"
+      ],
+      "flash_initial_success_count": null,
+      "flash_initial_success_rate": null,
+      "fallback_count": 0,
+      "fallback_rate": 0,
+      "recovery_count": 0,
+      "recovery_rate": null,
+      "fallback_reason_distribution": {
+        "GENERIC_FALLBACK_WITH_EVIDENCE": 3,
+        "NO_ACTIONABLE_NEXT_STEP": 3
+      },
+      "model_call_count": 19,
+      "prompt_tokens_total": 28169,
+      "completion_tokens_total": 52650,
+      "total_tokens_total": 80819,
+      "tokens_per_effective_answer": 10102.375,
+      "tokens_per_source_hit": 5772.785714285715,
+      "provider_latency_average_ms": 38003.78947368421,
+      "provider_latency_p95_ms": 79939,
+      "official_model_list_cost_cny": 0.8375355,
+      "official_model_list_cost_per_model_request_cny": 0.04408081578947368,
+      "official_model_list_cost_per_effective_answer_cny": 0.1046919375,
+      "official_model_list_cost_per_source_hit_cny": 0.059823964285714286,
+      "dify_billed_cost_cny": null,
+      "dify_billing_cost_status": "COST_UNKNOWN",
+      "priced_calls_off_peak": 19,
+      "priced_calls_peak": 0,
+      "retrieval_snapshot_consistent_count": 27,
+      "retrieval_snapshot_consistent": true,
+      "suites": {
+        "FORMAL_17": {
+          "task_count": 17,
+          "status_match_count": 17,
+          "semantic_passed_count": 17,
+          "semantic_failed_task_ids": [],
+          "effective_answered_count": 2,
+          "source_hit_count": 8,
+          "expected_source_count": 21,
+          "covered_source_count": 10,
+          "recall_at_3": 0.47619047619047616,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        },
+        "REGRESSION_8": {
+          "task_count": 8,
+          "status_match_count": 8,
+          "semantic_passed_count": 7,
+          "semantic_failed_task_ids": [
+            "RET-H07"
+          ],
+          "effective_answered_count": 4,
+          "source_hit_count": 4,
+          "expected_source_count": 9,
+          "covered_source_count": 4,
+          "recall_at_3": 0.4444444444444444,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        },
+        "HOLDOUT_2": {
+          "task_count": 2,
+          "status_match_count": 2,
+          "semantic_passed_count": 1,
+          "semantic_failed_task_ids": [
+            "RET-H09"
+          ],
+          "effective_answered_count": 2,
+          "source_hit_count": 2,
+          "expected_source_count": 3,
+          "covered_source_count": 2,
+          "recall_at_3": 0.6666666666666666,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        }
+      },
+      "formal_17_core": {
+        "task_count": 7,
+        "source_hit_count": 7,
+        "expected_source_count": 9,
+        "covered_source_count": 9,
+        "recall_at_3": 1
+      }
+    },
+    "B": {
+      "group": "B",
+      "run_id": "ROUTING-4B2B-B-eba55c56-5942-488f-8fde-b3f86b6b4d39",
+      "route_mode": "B_FLASH_ONLY",
+      "model_config_version": 23,
+      "task_count": 27,
+      "p0_task_count": 8,
+      "p0_model_calls": 0,
+      "p0_failures": 0,
+      "status_match_count": 27,
+      "semantic_passed_count": 26,
+      "semantic_failed_task_ids": [
+        "RET-H09"
+      ],
+      "effective_answered_count": 10,
+      "citation_failures": 0,
+      "provider_errors": 0,
+      "preserved_provider_failures": 0,
+      "forbidden_action_failures": 0,
+      "generic_fallback_count": 3,
+      "generic_fallback_ratio": 0.15789473684210525,
+      "source_hit_count": 14,
+      "expected_source_count": 33,
+      "covered_source_count": 16,
+      "recall_at_3": 0.48484848484848486,
+      "human_confirmable_count": 18,
+      "known_defect_task_ids": [
+        "RET-H09"
+      ],
+      "flash_initial_success_count": 15,
+      "flash_initial_success_rate": 0.7894736842105263,
+      "fallback_count": 0,
+      "fallback_rate": 0,
+      "recovery_count": 0,
+      "recovery_rate": null,
+      "fallback_reason_distribution": {
+        "GENERIC_FALLBACK_WITH_EVIDENCE": 3,
+        "NO_ACTIONABLE_NEXT_STEP": 3,
+        "UNSUPPORTED_CLAIM": 1
+      },
+      "model_call_count": 19,
+      "prompt_tokens_total": 27162,
+      "completion_tokens_total": 33791,
+      "total_tokens_total": 60953,
+      "tokens_per_effective_answer": 6095.3,
+      "tokens_per_source_hit": 4353.785714285715,
+      "provider_latency_average_ms": 14420.526315789473,
+      "provider_latency_p95_ms": 27440,
+      "official_model_list_cost_cny": 0.162326,
+      "official_model_list_cost_per_model_request_cny": 0.008543473684210526,
+      "official_model_list_cost_per_effective_answer_cny": 0.0162326,
+      "official_model_list_cost_per_source_hit_cny": 0.011594714285714286,
+      "dify_billed_cost_cny": null,
+      "dify_billing_cost_status": "COST_UNKNOWN",
+      "priced_calls_off_peak": 19,
+      "priced_calls_peak": 0,
+      "retrieval_snapshot_consistent_count": 27,
+      "retrieval_snapshot_consistent": true,
+      "suites": {
+        "FORMAL_17": {
+          "task_count": 17,
+          "status_match_count": 17,
+          "semantic_passed_count": 17,
+          "semantic_failed_task_ids": [],
+          "effective_answered_count": 5,
+          "source_hit_count": 8,
+          "expected_source_count": 21,
+          "covered_source_count": 10,
+          "recall_at_3": 0.47619047619047616,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        },
+        "REGRESSION_8": {
+          "task_count": 8,
+          "status_match_count": 8,
+          "semantic_passed_count": 8,
+          "semantic_failed_task_ids": [],
+          "effective_answered_count": 4,
+          "source_hit_count": 4,
+          "expected_source_count": 9,
+          "covered_source_count": 4,
+          "recall_at_3": 0.4444444444444444,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        },
+        "HOLDOUT_2": {
+          "task_count": 2,
+          "status_match_count": 2,
+          "semantic_passed_count": 1,
+          "semantic_failed_task_ids": [
+            "RET-H09"
+          ],
+          "effective_answered_count": 1,
+          "source_hit_count": 2,
+          "expected_source_count": 3,
+          "covered_source_count": 2,
+          "recall_at_3": 0.6666666666666666,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        }
+      },
+      "formal_17_core": {
+        "task_count": 7,
+        "source_hit_count": 7,
+        "expected_source_count": 9,
+        "covered_source_count": 9,
+        "recall_at_3": 1
+      }
+    },
+    "C": {
+      "group": "C",
+      "run_id": "ROUTING-4B2B-C-6a7fe443-9e89-414e-aab7-93458a0ba993",
+      "route_mode": "C_FLASH_WITH_PRO_FALLBACK",
+      "model_config_version": 24,
+      "task_count": 27,
+      "p0_task_count": 8,
+      "p0_model_calls": 0,
+      "p0_failures": 0,
+      "status_match_count": 27,
+      "semantic_passed_count": 26,
+      "semantic_failed_task_ids": [
+        "RET-H09"
+      ],
+      "effective_answered_count": 10,
+      "citation_failures": 0,
+      "provider_errors": 0,
+      "preserved_provider_failures": 0,
+      "forbidden_action_failures": 0,
+      "generic_fallback_count": 3,
+      "generic_fallback_ratio": 0.15789473684210525,
+      "source_hit_count": 14,
+      "expected_source_count": 33,
+      "covered_source_count": 16,
+      "recall_at_3": 0.48484848484848486,
+      "human_confirmable_count": 18,
+      "known_defect_task_ids": [
+        "RET-H09"
+      ],
+      "flash_initial_success_count": 14,
+      "flash_initial_success_rate": 0.7368421052631579,
+      "fallback_count": 5,
+      "fallback_rate": 0.2631578947368421,
+      "recovery_count": 2,
+      "recovery_rate": 0.4,
+      "fallback_reason_distribution": {
+        "GENERIC_FALLBACK_WITH_EVIDENCE": 3,
+        "NO_ACTIONABLE_NEXT_STEP": 3,
+        "REQUIRED_STATUS_MISMATCH": 1,
+        "UNSUPPORTED_CLAIM": 1
+      },
+      "model_call_count": 24,
+      "prompt_tokens_total": 34115,
+      "completion_tokens_total": 33945,
+      "total_tokens_total": 68060,
+      "tokens_per_effective_answer": 6806,
+      "tokens_per_source_hit": 4861.428571428572,
+      "provider_latency_average_ms": 15189.791666666666,
+      "provider_latency_p95_ms": 38511,
+      "official_model_list_cost_cny": 0.28924000000000005,
+      "official_model_list_cost_per_model_request_cny": 0.012051666666666669,
+      "official_model_list_cost_per_effective_answer_cny": 0.028924000000000005,
+      "official_model_list_cost_per_source_hit_cny": 0.020660000000000005,
+      "dify_billed_cost_cny": null,
+      "dify_billing_cost_status": "COST_UNKNOWN",
+      "priced_calls_off_peak": 24,
+      "priced_calls_peak": 0,
+      "retrieval_snapshot_consistent_count": 27,
+      "retrieval_snapshot_consistent": true,
+      "suites": {
+        "FORMAL_17": {
+          "task_count": 17,
+          "status_match_count": 17,
+          "semantic_passed_count": 17,
+          "semantic_failed_task_ids": [],
+          "effective_answered_count": 4,
+          "source_hit_count": 8,
+          "expected_source_count": 21,
+          "covered_source_count": 10,
+          "recall_at_3": 0.47619047619047616,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        },
+        "REGRESSION_8": {
+          "task_count": 8,
+          "status_match_count": 8,
+          "semantic_passed_count": 8,
+          "semantic_failed_task_ids": [],
+          "effective_answered_count": 4,
+          "source_hit_count": 4,
+          "expected_source_count": 9,
+          "covered_source_count": 4,
+          "recall_at_3": 0.4444444444444444,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        },
+        "HOLDOUT_2": {
+          "task_count": 2,
+          "status_match_count": 2,
+          "semantic_passed_count": 1,
+          "semantic_failed_task_ids": [
+            "RET-H09"
+          ],
+          "effective_answered_count": 2,
+          "source_hit_count": 2,
+          "expected_source_count": 3,
+          "covered_source_count": 2,
+          "recall_at_3": 0.6666666666666666,
+          "p0_failures": 0,
+          "citation_failures": 0,
+          "provider_errors": 0
+        }
+      },
+      "formal_17_core": {
+        "task_count": 7,
+        "source_hit_count": 7,
+        "expected_source_count": 9,
+        "covered_source_count": 9,
+        "recall_at_3": 1
+      }
+    }
+  },
+  "baseline_relative": {
+    "B_status_match_count": 21,
+    "C_status_match_count": 25,
+    "B_new_semantic_failures_excluding_known_defect": [],
+    "C_new_semantic_failures_excluding_known_defect": []
+  },
+  "hard_gates": {
+    "all_p0_model_calls_zero": true,
+    "all_p0_failures_zero": true,
+    "all_final_provider_errors_zero": true,
+    "all_claim_failures_zero": true,
+    "all_forbidden_action_failures_zero": true
+  },
+  "cost": {
+    "official_price_source": "evidence/pricing-2026-10-25.json",
+    "currency": "CNY",
+    "official_model_list_estimates": {
+      "A": 0.8375355,
+      "B": 0.162326,
+      "C": 0.28924000000000005
+    },
+    "dify_billed_cost_cny": null,
+    "dify_billing_cost_status": "COST_UNKNOWN",
+    "input_cache_assumption": "All prompt tokens priced as cache-miss because per-call cache-hit usage was unavailable.",
+    "average_pro_cost_per_non_p0": 0.04408081578947368,
+    "average_flash_cost_per_non_p0": 0.008543473684210526,
+    "average_pro_fallback_cost": 0.0332604,
+    "estimated_break_even_fallback_rate": 1.068458049369916,
+    "observed_fallback_rate": 0.2631578947368421,
+    "note": "Official DeepSeek list prices are available; Dify invoice/contract charges remain unknown."
+  },
+  "known_defect": {
+    "task_id": "RET-H09",
+    "status": "KNOWN_4B2A_DEFECT",
+    "A_semantic_passed": false,
+    "B_semantic_passed": false,
+    "C_semantic_passed": false,
+    "excluded_from_routing_regression": true
+  }
+}

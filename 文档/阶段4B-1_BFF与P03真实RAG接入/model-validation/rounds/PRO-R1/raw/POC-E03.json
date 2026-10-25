@@ -1,0 +1,212 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-E03",
+  "core_task_id": "EDGE-CHANNEL-CONFLICT",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 27979,
+  "request": {
+    "question": "原始问题：平台拒修和 Apple 换新冲突，客服应该采用哪个答案？\n客户改写：两家售后的书面结论相反，可以用检索分数选一个吗？；冲突证据能不能只引用更权威的一方？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-E03",
+    "knowledge_item_id": "KI-EDGE-CHANNEL-CONFLICT",
+    "product_model": "AirPods Pro 3",
+    "channel": "京东与官方服务",
+    "customer_context": {
+      "channel": "京东与官方服务",
+      "documents": [
+        "平台拒修",
+        "Apple 检测后换新"
+      ],
+      "authorization_verified": false,
+      "work_orders_present": true
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "京东与官方服务"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "CONFLICT",
+    "ui_state": "CONFLICT_HOLD",
+    "answer": "两份渠道结论存在冲突，系统已保持 CONFLICT_HOLD，不强行合并为单一结论。",
+    "suggested_action": "追问并收集：销售主体是否京东自营/第三方、订单号、发票、序列号、签收日期、两份书面结论原文、Apple 渠道是否为官方直营/授权、平台实际售后入口；在授权核验完成前，不向客户承诺任何一方为最终答案。",
+    "business_conditions": [
+      "两个渠道给出不同结论时，不得只采信单方，也不得仅凭品牌或平台名称判断结论效力",
+      "必须先确认：销售主体、平台店铺、订单、发票、序列号、签收时间、实际售后入口",
+      "Apple Store 在线商店/线下直营渠道的退货、保修政策，不等同于第三方卖家或平台渠道政策",
+      "当前授权未核验，材料不足以作出最终售后结论，不得承诺免费维修、换新、退款或赔偿"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-da58ce66-5019-4c25-8591-0863cdf22022",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-CHANNEL-V1",
+          "version": "1.0.0",
+          "title": "售后渠道差异与责任边界",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022"
+        },
+        "kb_id": "KB-DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+        "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+        "score": 0.5311444781999529,
+        "supported_claims": [
+          "两个渠道给出不同结论时，保留双方书面结论、序列号、工单日期、维修项目和授权信息；不得判定消费者欺诈，也不得只采信单方。",
+          "冲突进入渠道负责人和主管联合裁决。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      },
+      {
+        "citation_id": "EVD-8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-CHANNEL-V1",
+          "version": "1.0.0",
+          "title": "售后渠道差异与责任边界",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b"
+        },
+        "kb_id": "KB-DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "score": 0.4714646201999529,
+        "supported_claims": [
+          "回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。",
+          "品牌名称不能替代责任主体；平台名称也不能自动证明维修方具有授权。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      },
+      {
+        "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-CHANNEL-V1",
+          "version": "1.0.0",
+          "title": "售后渠道差异与责任边界",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        },
+        "kb_id": "KB-DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.4295474900658183,
+        "supported_claims": [
+          "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。",
+          "在线商店退货商业政策不得自动扩展到第三方卖家。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      }
+    ],
+    "risk": {
+      "level": "R2",
+      "p0_triggered": false,
+      "escalation_required": true
+    },
+    "provider_request_id": "d82c50e9-d69e-4d3e-8ecc-519b825eca5c",
+    "provider_trace_id": "d82c50e9-d69e-4d3e-8ecc-519b825eca5c",
+    "provider_called": true,
+    "timing_ms": 27975,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 552,
+      "completion_tokens": 2355,
+      "total_tokens": 2907,
+      "provider_latency_ms": 26112,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "CONFLICT",
+      "citation_support_passed": true,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 3,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 3,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+        "score": 0.5311444781999529,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "score": 0.4714646201999529,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.4295474900658183,
+        "claim_support_count": 2
+      }
+    ],
+    "request_id": "12fef3d1-d19c-4763-b08b-8f8c75269507",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-E03",
+      "knowledge_item_id": "KI-EDGE-CHANNEL-CONFLICT"
+    },
+    "audit_event_id": "5f348ad0-ea87-483f-8425-b19fedbb87de"
+  }
+}

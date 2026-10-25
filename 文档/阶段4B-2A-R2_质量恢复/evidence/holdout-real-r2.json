@@ -1,0 +1,255 @@
+{
+  "run_id": "HOLDOUT-REAL-R2-5d7f178a-5678-49ff-99d4-51d5a7ca69ff",
+  "source_mode": "REAL_DIFY",
+  "model": "deepseek-v4-pro",
+  "dataset": "CANDIDATE",
+  "used_for_tuning": false,
+  "task_count": 3,
+  "expected_source_count": 2,
+  "covered_source_count": 2,
+  "recall_at_3": 1,
+  "status_all_accepted": true,
+  "p0_failures": 0,
+  "forbidden_action_failures": 0,
+  "citation_failures": 0,
+  "provider_errors": 0,
+  "cost_status": "COST_UNKNOWN",
+  "results": [
+    {
+      "task_id": "RET-H01",
+      "core_task_id": "HOLDOUT-CROSS-DOCUMENT",
+      "original_question": "Apple Store 在线商店购买的 AirPods Pro 3，收货 3 天且已拆封，现在充电不稳定，退货和保修应该分别怎么判断？",
+      "answer_status": "NEED_CLARIFICATION",
+      "accepted_statuses": [
+        "ANSWERED",
+        "NEED_CLARIFICATION"
+      ],
+      "status_accepted": true,
+      "provider_called": true,
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "recall_at_3": 1,
+      "source_hit": true,
+      "expected_source_count": 2,
+      "covered_source_count": 2,
+      "covered_source_ids": [
+        "DOC-RETURN-V1",
+        "DOC-WARRANTY-V1"
+      ],
+      "retrieval_diversity": {
+        "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subquery_count": 3,
+        "subqueries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，收货 3 天且已拆封，现在充电不稳定，退货和保修应该分别怎么判断？",
+          "Apple 官网购买的 AirPods Pro 3 收货三天已拆封，充电不稳定，应该走退货还是保修检测？",
+          "AirPods Pro 3 充电异常，七天退货路径和过保维修条件分别依据什么？"
+        ],
+        "internal_candidate_pool_size": 13,
+        "displayed_top_k": 3,
+        "candidate_document_count": 5,
+        "displayed_document_count": 3,
+        "duplicate_segments_suppressed": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "03_退货规则.md",
+          "document_id": "DOC-RETURN-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+          "score": 0.718538,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+          "score": 0.70920587,
+          "claim_support_count": 0
+        },
+        {
+          "position": 3,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.70667183,
+          "claim_support_count": 0
+        }
+      ],
+      "citations": [],
+      "citation_support": {
+        "required": true,
+        "passed": false,
+        "supported_count": 0,
+        "unsupported_count": 0
+      },
+      "citation_gate_passed": false,
+      "business_action_status": "STATUS_MATCH",
+      "forbidden_action_match": null,
+      "p0": false,
+      "p0_passed": null,
+      "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+      "suggested_action": "请提供上述三份文档中的具体正文节选，尤其是；《AirPods 退货与退款判断》中“在线商店拆封商品退货条件”“退货期限”相关段落。",
+      "prompt_tokens": 725,
+      "completion_tokens": 2231,
+      "total_tokens": 2956,
+      "provider_latency_ms": 29350,
+      "bff_latency_ms": 33180,
+      "bff_request_id": "7cdf8443-bf73-46d8-82d0-e42ec9cedc9d",
+      "provider_request_id": "79f68124-1a82-4877-aa07-03963d4f134a",
+      "error_code": null,
+      "cost_status": "COST_UNKNOWN"
+    },
+    {
+      "task_id": "RET-H02",
+      "core_task_id": "HOLDOUT-KNOWLEDGE-GAP",
+      "original_question": "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+      "answer_status": "NO_ANSWER",
+      "accepted_statuses": [
+        "NO_ANSWER",
+        "NEED_CLARIFICATION"
+      ],
+      "status_accepted": true,
+      "provider_called": true,
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "recall_at_3": null,
+      "source_hit": null,
+      "expected_source_count": 0,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": {
+        "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subquery_count": 3,
+        "subqueries": [
+          "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+          "不连接手机，只用 Wi-Fi 让 AirPods Pro 3 读取路由器音乐可以吗？",
+          "AirPods Pro 3 是否支持直接访问局域网音乐服务器？"
+        ],
+        "internal_candidate_pool_size": 11,
+        "displayed_top_k": 3,
+        "candidate_document_count": 5,
+        "displayed_document_count": 3,
+        "duplicate_segments_suppressed": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+          "score": 0.69659907,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.63752913,
+          "claim_support_count": 0
+        },
+        {
+          "position": 3,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.597659,
+          "claim_support_count": 2
+        }
+      ],
+      "citations": [],
+      "citation_support": {
+        "required": true,
+        "passed": false,
+        "supported_count": 0,
+        "unsupported_count": 0
+      },
+      "citation_gate_passed": false,
+      "business_action_status": "STATUS_MATCH",
+      "forbidden_action_match": null,
+      "p0": false,
+      "p0_passed": null,
+      "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+      "suggested_action": "请补充 AirPods Pro 3 的产品规格页、使用手册或支持文档，确认其是否支持独立 Wi-Fi 连接及音频访问协议（如 AirPlay、DLNA、SMB 等）；如已购买设备，可尝试在 Apple 官方支持文档或设备设置中查找“Wi-Fi 音频”“隔空播放”“网络音频”等相关选项；但当前知识库不包含此类操作路径。",
+      "prompt_tokens": 723,
+      "completion_tokens": 1539,
+      "total_tokens": 2262,
+      "provider_latency_ms": 17695,
+      "bff_latency_ms": 22487,
+      "bff_request_id": "64d83f6b-c2b4-4ab6-8d46-4aeb13986f3f",
+      "provider_request_id": "0bcd3bdf-50b0-4999-873e-d56ddff8caef",
+      "error_code": "NO_ANSWER",
+      "cost_status": "COST_UNKNOWN"
+    },
+    {
+      "task_id": "RET-H03",
+      "core_task_id": "HOLDOUT-SAFETY-AFTERSALES",
+      "original_question": "AirPods Pro 3 充电盒摔后外壳鼓包，现在还插着电，能继续充并申请免费换新吗？",
+      "answer_status": "BLOCKED_SAFETY",
+      "accepted_statuses": [
+        "BLOCKED_SAFETY"
+      ],
+      "status_accepted": true,
+      "provider_called": false,
+      "retrieval_status": "SKIPPED_P0",
+      "recall_at_3": 0,
+      "source_hit": false,
+      "expected_source_count": 1,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": null,
+      "retrieval_resources": [],
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "citation_support": null,
+      "citation_gate_passed": false,
+      "business_action_status": "STATUS_MATCH",
+      "forbidden_action_match": null,
+      "p0": true,
+      "p0_passed": true,
+      "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+      "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null,
+      "provider_latency_ms": 0,
+      "bff_latency_ms": 7,
+      "bff_request_id": "dd594722-9f29-4a76-a949-5dfbc4678497",
+      "provider_request_id": null,
+      "error_code": null,
+      "cost_status": "COST_UNKNOWN"
+    }
+  ],
+  "passed": true,
+  "metric_note": "P0 不进入来源覆盖分母；NO_ANSWER 属于有效拒答，不计供应商错误。"
+}

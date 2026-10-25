@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-10-25T11:38:01.584Z",
+  "r2": {
+    "run_id": "EVAL-REAL-e4fc0214-0318-412a-ae97-d156f5f92462",
+    "recall_at_3_core": 1,
+    "covered_source_count": 9,
+    "expected_source_count": 9,
+    "correct_source_hits_core": 7,
+    "model_effective_answer_count": 1
+  },
+  "r3": {
+    "run_id": "EVAL-REAL-a6720d86-cd64-4f05-8809-dc4f7be2dd45",
+    "recall_at_3_core": 1,
+    "covered_source_count": 9,
+    "expected_source_count": 9,
+    "correct_source_hits_core": 7,
+    "model_effective_answer_count": 5
+  },
+  "unchanged_threshold": 0.9167,
+  "result": "No formal retrieval or gate regression."
+}

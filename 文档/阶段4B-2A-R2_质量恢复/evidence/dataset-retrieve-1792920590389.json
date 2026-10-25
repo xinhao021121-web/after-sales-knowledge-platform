@@ -1,0 +1,90 @@
+{
+  "captured_at": "2026-10-25T09:29:50.388Z",
+  "source_mode": "REAL_DIFY_DATASET_RETRIEVE",
+  "dataset": "CANDIDATE",
+  "query": "第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？",
+  "latency_ms": 2317,
+  "internal_candidate_pool_size": 10,
+  "records": [
+    {
+      "position": 1,
+      "score": 0.6917878,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+      "content": "CHUNK-RETURN-QUALITY-01 质量故障\n商品存在质量故障时，应优先核验中国三包。一般时间口径为交付后 0-7 日可退货、8-15 日可换货、16 日至 1 年可维修；与无理由退货是不同路径。最终动作需结合检测、销售商和渠道责任判断。"
+    },
+    {
+      "position": 2,
+      "score": 0.6900809,
+      "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "document_name": "05_渠道差异说明.md",
+      "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+      "content": "CHUNK-CHANNEL-THIRD-01 第三方平台\n第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。"
+    },
+    {
+      "position": 3,
+      "score": 0.64880586,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "80a0de81-a589-4945-b8f4-cb4b47a0e71f",
+      "content": "CHUNK-RETURN-LEGAL-01 远程交易无理由退货\n远程交易消费者通常适用收到商品之日起七日内无理由退货，但商品应保持完好，并同时满足法定例外和实际渠道规则。购买渠道、签收日期、商品状态、配件完整性和退货原因必须一并核验；不得只根据“拆封”一个关键词给出确定结论。"
+    },
+    {
+      "position": 4,
+      "score": 0.6299523,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "bcb9c184-a0d7-4c48-817c-fd53afd10ada",
+      "content": "CHUNK-WARRANTY-THREE-01 中国三包时间口径\n质量问题一般按交付时间区分：0-7 日退货、8-15 日换货、16 日至 1 年维修。实际权利仍需结合故障、检测、商品身份和销售渠道。过保不等于不能维修，但也不等于可以免费更换。"
+    },
+    {
+      "position": 5,
+      "score": 0.62377536,
+      "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "document_name": "05_渠道差异说明.md",
+      "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+      "content": "CHUNK-CHANNEL-CHECK-01 先核验履行主体\n回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。品牌名称不能替代责任主体；平台名称也不能自动证明维修方具有授权。"
+    },
+    {
+      "position": 6,
+      "score": 0.62195843,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+      "content": "AirPods 退货与退款判断"
+    },
+    {
+      "position": 7,
+      "score": 0.6215155,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "5776d8f7-bae9-441b-a609-304f4c89448c",
+      "content": "CHUNK-RETURN-CONDITION-01 承诺边界\n渠道和签收日期未确认前，不承诺一定能退或一定不能退。商品有人为损坏、缺少关键配件、超过渠道期限或属于法定例外时，应说明需要复核，并按实际渠道转接。"
+    },
+    {
+      "position": 8,
+      "score": 0.58428323,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+      "content": "CHUNK-WARRANTY-EVIDENCE-01 检测与身份\n免费维修、收费维修或更换均需结合型号、序列号、购买凭证、保障合同、故障现象和历史维修。身份不一致时先转保修核验，不直接认定非正品或欺诈。"
+    },
+    {
+      "position": 9,
+      "score": 0.57468486,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "e4218282-c57c-453e-a3c9-d4637d794aef",
+      "content": "CHUNK-WARRANTY-OOW-01 保外维修\n超过保修期仍可咨询保外维修，费用、零件可用性和库存以检测结果及官方服务页面为准。不得在检测前给出固定报价或免费承诺。维修服务或更换部件通常提供 90 天质量保证；若原保修剩余期限更长，按较长者计算。"
+    },
+    {
+      "position": 10,
+      "score": 0.5610573,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+      "content": "AirPods Pro 3 售后 FAQ"
+    }
+  ]
+}

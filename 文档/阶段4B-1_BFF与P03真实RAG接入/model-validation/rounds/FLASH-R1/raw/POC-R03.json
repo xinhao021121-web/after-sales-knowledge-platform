@@ -1,0 +1,141 @@
+{
+  "round_id": "FLASH-R1",
+  "task_id": "POC-R03",
+  "core_task_id": "CORE-R3",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 23994,
+  "request": {
+    "question": "原始问题：AirPods 拆封了还能退吗？\n客户改写：第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？；Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R1-POC-R03",
+    "knowledge_item_id": "KI-CORE-R3",
+    "product_model": "AirPods Pro 3",
+    "channel": "需区分第三方平台与 Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "channel": "需区分第三方平台与 Apple Store 在线商店",
+      "received_at": "3 天前",
+      "opened": true,
+      "quality_issue": false
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "需区分第三方平台与 Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "先确认购买渠道：是 Apple Store 在线商店，还是具体哪个第三方平台；若为第三方平台：请客户提供平台名称、订单售后页面或平台退货规则；客服应转平台客服/按其规则处理，不要引用 Apple 在线商店政策作承诺。",
+    "business_conditions": [
+      "Apple Store 在线商店渠道：需满足 Apple Store 在线商店渠道、交付后 14 日内、且“符合条件” ；AirPods 具体退货退款判断需依据 AirPods 售后 FAQ，但当前上下文未提供细节",
+      "第三方平台渠道：必须以该第三方平台自身售后/退货政策为准；当前无该平台规则，不能套用 Apple 在线商店政策",
+      "已知事实“3 天前收到、已拆封、无质量问题、配件齐全”本身不足以判定是否符合任一渠道的退货条件"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-b1a33913-9ad5-4842-8360-69d88912fd06",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-RETURN-V1",
+          "version": "1.0.0",
+          "title": "AirPods 退货与退款判断",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06"
+        },
+        "kb_id": "KB-DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "score": 0.573169797198458,
+        "supported_claims": [
+          "Apple Store 在线商店符合条件时可在交付后 14 日内申请退货。",
+          "这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true
+      }
+    ],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "46a3e435-da4b-4ee3-a0a7-da71f26149da",
+    "provider_trace_id": "46a3e435-da4b-4ee3-a0a7-da71f26149da",
+    "provider_called": true,
+    "timing_ms": 23988,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 9,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 3,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 1,
+      "unsupported_count": 3
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "score": 0.573169797198458,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.5572090856205357,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.5400545700940882,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "68d36e76-9032-4b3e-802c-f6d853e77830",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R1-POC-R03",
+      "knowledge_item_id": "KI-CORE-R3"
+    },
+    "audit_event_id": "13102570-06bd-4478-8206-63e4623ac9ba"
+  }
+}

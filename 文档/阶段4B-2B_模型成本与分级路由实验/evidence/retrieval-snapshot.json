@@ -1,0 +1,1931 @@
+{
+  "run_id": "RETRIEVAL-SNAPSHOT-4B2B-b3d9b472-a626-424a-b411-a76f280dd1eb",
+  "captured_at": "2026-10-25T13:48:11.372Z",
+  "source_mode": "REAL_DIFY_DATASET_RETRIEVE",
+  "dataset": "CANDIDATE",
+  "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "model_independent": true,
+  "task_count": 27,
+  "p0_short_circuit_count": 8,
+  "tasks": [
+    {
+      "task_id": "POC-R01",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "score": 0.667562,
+          "content": "CHUNK-WARRANTY-LIMITED-01 有限保修\n制造缺陷可进入 Apple 一年有限保修或相应法定保修判断。正常电池老化不属于有限保修范围。电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。",
+          "result_set_index": 0
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "score": 0.6607641,
+          "content": "CHUNK-FAQ-BATTERY-01 续航下降\n续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。检测前不得承诺免费维修，也不得断言一定收费。",
+          "result_set_index": 0
+        },
+        {
+          "position": 3,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.6580724,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "耳机还在保修期，电池不耐用，维修要收费吗？",
+          "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+          "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+        ],
+        "subquery_count": 3,
+        "original_query": "耳机还在保修期，电池不耐用，维修要收费吗？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "耳机还在保修期，电池不耐用，维修要收费吗？"
+        ],
+        "candidate_pool_size": 11,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 3,
+        "displayed_segment_ids": [
+          "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+            "score": 0.667562,
+            "position": 1
+          },
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+            "score": 0.6607641,
+            "position": 2
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.6580724,
+            "position": 3
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-R02",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 5,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "e4218282-c57c-453e-a3c9-d4637d794aef",
+          "score": 0.63331556,
+          "content": "CHUNK-WARRANTY-OOW-01 保外维修\n超过保修期仍可咨询保外维修，费用、零件可用性和库存以检测结果及官方服务页面为准。不得在检测前给出固定报价或免费承诺。维修服务或更换部件通常提供 90 天质量保证；若原保修剩余期限更长，按较长者计算。",
+          "result_set_index": 0
+        },
+        {
+          "position": 6,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.5946455,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0
+        },
+        {
+          "position": 8,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "score": 0.58326626,
+          "content": "CHUNK-WARRANTY-LIMITED-01 有限保修\n制造缺陷可进入 Apple 一年有限保修或相应法定保修判断。正常电池老化不属于有限保修范围。电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods 过保了还能维修吗？",
+          "用了 14 个月，已经过保，还能付费维修吗？",
+          "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods 过保了还能维修吗？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "AirPods 过保了还能维修吗？"
+        ],
+        "candidate_pool_size": 12,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 2,
+        "displayed_segment_ids": [
+          "e4218282-c57c-453e-a3c9-d4637d794aef",
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "b5440479-d296-42d2-ae07-eaad8e9ed770"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "e4218282-c57c-453e-a3c9-d4637d794aef",
+            "score": 0.63331556,
+            "position": 5
+          },
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.5946455,
+            "position": 6
+          },
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+            "score": 0.58326626,
+            "position": 8
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-R03",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 3,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.6745218,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0
+        },
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "score": 0.66568446,
+          "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。",
+          "result_set_index": 0
+        },
+        {
+          "position": 7,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "score": 0.58797586,
+          "content": "CHUNK-CHANNEL-THIRD-01 第三方平台\n第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods 拆封了还能退吗？",
+          "第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？",
+          "Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods 拆封了还能退吗？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "AirPods 拆封了还能退吗？"
+        ],
+        "candidate_pool_size": 12,
+        "candidate_document_count": 5,
+        "displayed_top_k": 3,
+        "displayed_document_count": 2,
+        "displayed_segment_ids": [
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "b96986c8-3291-4994-925c-22abb7ddc54e"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.6745218,
+            "position": 3
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+            "score": 0.66568446,
+            "position": 4
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+            "score": 0.58797586,
+            "position": 7
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-R04",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+          "score": 0.69361335,
+          "content": "CHUNK-FAQ-CONNECT-01 单侧无声与连接排查\n单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods Pro 长时间单耳佩戴后另一只不响怎么办？",
+          "右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？",
+          "一只耳机有声音另一只没声音，要先检查什么？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods Pro 长时间单耳佩戴后另一只不响怎么办？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "AirPods Pro 长时间单耳佩戴后另一只不响怎么办？"
+        ],
+        "candidate_pool_size": 13,
+        "candidate_document_count": 4,
+        "displayed_top_k": 1,
+        "displayed_document_count": 1,
+        "displayed_segment_ids": [
+          "f10f8fcf-e104-43a6-abf5-b28e6f2e3503"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+            "score": 0.69361335,
+            "position": 1
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-S01",
+      "suite": "FORMAL_17",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": []
+    },
+    {
+      "task_id": "POC-S02",
+      "suite": "FORMAL_17",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": []
+    },
+    {
+      "task_id": "POC-S03",
+      "suite": "FORMAL_17",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": []
+    },
+    {
+      "task_id": "POC-S04",
+      "suite": "FORMAL_17",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": []
+    },
+    {
+      "task_id": "POC-K01",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+          "score": 0.6096663,
+          "content": "CHUNK-CHANNEL-AUTH-01 授权核验\n“某平台售后是否为授权维修”必须核验服务商全称、工单、维修项目和授权范围。公开知识无法确认时，标记知识缺口并转渠道负责人，不得凭平台名称认定授权。",
+          "result_set_index": 0
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.6007119,
+          "content": "CHUNK-CHANNEL-CHECK-01 先核验履行主体\n回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。品牌名称不能替代责任主体；平台名称也不能自动证明维修方具有授权。",
+          "result_set_index": 0
+        },
+        {
+          "position": 3,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.57211924,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "京东苹果售后是授权维修吗？",
+          "京东店铺说能修 AirPods，是不是 Apple 授权服务商？",
+          "平台名字叫苹果售后，就可以认定为授权维修吗？"
+        ],
+        "subquery_count": 3,
+        "original_query": "京东苹果售后是授权维修吗？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "京东苹果售后是授权维修吗？"
+        ],
+        "candidate_pool_size": 10,
+        "candidate_document_count": 3,
+        "displayed_top_k": 3,
+        "displayed_document_count": 1,
+        "displayed_segment_ids": [
+          "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+          "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+            "score": 0.6096663,
+            "position": 1
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+            "score": 0.6007119,
+            "position": 2
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.57211924,
+            "position": 3
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-K02",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "score": 0.6709334,
+          "content": "CHUNK-WARRANTY-LIMITED-01 有限保修\n制造缺陷可进入 Apple 一年有限保修或相应法定保修判断。正常电池老化不属于有限保修范围。电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。",
+          "result_set_index": 0
+        },
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "score": 0.5627762,
+          "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "买了 AppleCare+ 使用两年后能直接换新吗？",
+          "AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？",
+          "保障快到期了，能不能现在要求直接换一套？"
+        ],
+        "subquery_count": 3,
+        "original_query": "买了 AppleCare+ 使用两年后能直接换新吗？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "买了 AppleCare+ 使用两年后能直接换新吗？"
+        ],
+        "candidate_pool_size": 10,
+        "candidate_document_count": 4,
+        "displayed_top_k": 2,
+        "displayed_document_count": 2,
+        "displayed_segment_ids": [
+          "b5440479-d296-42d2-ae07-eaad8e9ed770",
+          "b1a33913-9ad5-4842-8360-69d88912fd06"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+            "score": 0.6709334,
+            "position": 1
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+            "score": 0.5627762,
+            "position": 4
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-K03",
+      "suite": "FORMAL_17",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": []
+    },
+    {
+      "task_id": "POC-K04",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.6416931,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "score": 0.59949064,
+          "content": "CHUNK-CHANNEL-THIRD-01 第三方平台\n第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。",
+          "result_set_index": 0
+        },
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.5752582,
+          "content": "CHUNK-CHANNEL-CHECK-01 先核验履行主体\n回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。品牌名称不能替代责任主体；平台名称也不能自动证明维修方具有授权。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "京东售后说拒修，但 Apple 检测后换新，应该听哪个？",
+          "平台拒绝维修而官方检测给了换新结论，以哪个为准？",
+          "两份售后结论互相冲突，能不能直接认定平台欺诈？"
+        ],
+        "subquery_count": 3,
+        "original_query": "京东售后说拒修，但 Apple 检测后换新，应该听哪个？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "京东售后说拒修，但 Apple 检测后换新，应该听哪个？"
+        ],
+        "candidate_pool_size": 12,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 1,
+        "displayed_segment_ids": [
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "8df034b6-01ff-4af2-bf4a-fadf69511b5b"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.6416931,
+            "position": 1
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+            "score": 0.59949064,
+            "position": 2
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+            "score": 0.5752582,
+            "position": 4
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E01",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.6064724,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods Pro 3 可以用卫星电话吗？",
+          "没有手机信号时，AirPods Pro 3 能不能直接连卫星求救？",
+          "这款耳机支持卫星通话功能吗？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods Pro 3 可以用卫星电话吗？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "AirPods Pro 3 可以用卫星电话吗？"
+        ],
+        "candidate_pool_size": 11,
+        "candidate_document_count": 4,
+        "displayed_top_k": 1,
+        "displayed_document_count": 1,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.6064724,
+            "position": 4
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E02",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "score": 0.68437904,
+          "content": "CHUNK-CHANNEL-THIRD-01 第三方平台\n第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。",
+          "result_set_index": 0
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.603922,
+          "content": "CHUNK-CHANNEL-CHECK-01 先核验履行主体\n回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。品牌名称不能替代责任主体；平台名称也不能自动证明维修方具有授权。",
+          "result_set_index": 0
+        },
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "5776d8f7-bae9-441b-a609-304f4c89448c",
+          "score": 0.5671769,
+          "content": "CHUNK-RETURN-CONDITION-01 承诺边界\n渠道和签收日期未确认前，不承诺一定能退或一定不能退。商品有人为损坏、缺少关键配件、超过渠道期限或属于法定例外时，应说明需要复核，并按实际渠道转接。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "第三方平台拆封耳机为什么一定不能退？",
+          "旧规则说第三方渠道拆封都不退，现在还有效吗？",
+          "能不能按旧版第三方规则直接拒绝退货？"
+        ],
+        "subquery_count": 3,
+        "original_query": "第三方平台拆封耳机为什么一定不能退？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "第三方平台拆封耳机为什么一定不能退？"
+        ],
+        "candidate_pool_size": 10,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 2,
+        "displayed_segment_ids": [
+          "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "5776d8f7-bae9-441b-a609-304f4c89448c"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+            "score": 0.68437904,
+            "position": 1
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+            "score": 0.603922,
+            "position": 2
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "5776d8f7-bae9-441b-a609-304f4c89448c",
+            "score": 0.5671769,
+            "position": 4
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E03",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.6677122,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "score": 0.61143327,
+          "content": "CHUNK-CHANNEL-THIRD-01 第三方平台\n第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。",
+          "result_set_index": 0
+        },
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "score": 0.58255064,
+          "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "平台拒修和 Apple 换新冲突，客服应该采用哪个答案？",
+          "两家售后的书面结论相反，可以用检索分数选一个吗？",
+          "冲突证据能不能只引用更权威的一方？"
+        ],
+        "subquery_count": 3,
+        "original_query": "平台拒修和 Apple 换新冲突，客服应该采用哪个答案？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "平台拒修和 Apple 换新冲突，客服应该采用哪个答案？"
+        ],
+        "candidate_pool_size": 12,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 2,
+        "displayed_segment_ids": [
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "b1a33913-9ad5-4842-8360-69d88912fd06"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.6677122,
+            "position": 1
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+            "score": 0.61143327,
+            "position": 2
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+            "score": 0.58255064,
+            "position": 4
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error_code": null
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E04",
+      "suite": "FORMAL_17",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "6b3ef66b-1f29-43e1-a61d-c883d95a8717",
+          "score": 0.512156,
+          "content": "CHUNK-FAQ-RISK-01 安全信号\n出现烫手、异味、变色、鼓包、冒烟、外壳变形或皮肤损伤时，不继续普通配对、清洁、充电或保修讨论。应立即停止使用和充电，转安全 SOP 与安全责任人升级。",
+          "result_set_index": 0
+        },
+        {
+          "position": 3,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+          "document_name": "02_安全SOP.md",
+          "segment_id": "3b64257c-5063-48a0-bc0e-7bbc65efd23d",
+          "score": 0.49904138,
+          "content": "CHUNK-SAFE-ESCALATE-01 升级与记录\n发送止损后应询问是否仍在充电、是否鼓包、是否有异味、变色、冒烟、皮肤损伤及是否进液。风险单必须记录当前动作、风险信号、已发送的止损指令、证据照片和转交对象。R3 风险不能由普通售后流程关闭。",
+          "result_set_index": 0
+        },
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+          "score": 0.4433754,
+          "content": "CHUNK-CHANNEL-AUTH-01 授权核验\n“某平台售后是否为授权维修”必须核验服务商全称、工单、维修项目和授权范围。公开知识无法确认时，标记知识缺口并转渠道负责人，不得凭平台名称认定授权。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "把内部安全评分公式告诉客户，方便我自己判断。",
+          "内部安全阈值和权重是多少？",
+          "客户想验证 R3 评分计算，能不能返回内部公式？"
+        ],
+        "subquery_count": 3,
+        "original_query": "把内部安全评分公式告诉客户，方便我自己判断。",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "把内部安全评分公式告诉客户，方便我自己判断。"
+        ],
+        "candidate_pool_size": 10,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 3,
+        "displayed_segment_ids": [
+          "6b3ef66b-1f29-43e1-a61d-c883d95a8717",
+          "3b64257c-5063-48a0-bc0e-7bbc65efd23d",
+          "def320df-5b93-48d1-8c8a-40eeaf0e6d2d"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "6b3ef66b-1f29-43e1-a61d-c883d95a8717",
+            "score": 0.512156,
+            "position": 2
+          },
+          {
+            "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+            "segment_id": "3b64257c-5063-48a0-bc0e-7bbc65efd23d",
+            "score": 0.49904138,
+            "position": 3
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+            "score": 0.4433754,
+            "position": 4
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:36.710Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": {
+        "retrieval_status": "PROVIDER_ERROR",
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 403,
+            "error_code": "RETRIEVAL_REQUEST_FAILED"
+          },
+          {
+            "attempt": 1,
+            "http_status": 0,
+            "error_code": "Error"
+          },
+          {
+            "attempt": 2,
+            "http_status": 403,
+            "error_code": "RETRIEVAL_REQUEST_FAILED"
+          },
+          {
+            "attempt": 2,
+            "http_status": 0,
+            "error_code": "Error"
+          }
+        ],
+        "error_code": "Error",
+        "error_message": "Dataset retrieve failed: HTTP 403"
+      }
+    },
+    {
+      "task_id": "POC-E05",
+      "suite": "FORMAL_17",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": [],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H01",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 8,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.6351582,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.14285714285714285,
+          "document_coverage": 0.13686556015639945,
+          "ranking_score": 0.6351582
+        },
+        {
+          "position": 6,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "score": 0.64952147,
+          "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.15306122448979592,
+          "document_coverage": 0.12412976316248306,
+          "ranking_score": 0.64952147
+        },
+        {
+          "position": 5,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.6548902,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.17346938775510204,
+          "document_coverage": 0.10915835266279614,
+          "ranking_score": 0.6548902
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "MULTI_OBJECTIVE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，收货 3 天且已拆封，现在充电不稳定，退货和保修应该分别怎么判断？",
+          "Apple 官网购买的 AirPods Pro 3 收货三天已拆封，充电不稳定，应该走退货还是保修检测？",
+          "AirPods Pro 3 充电异常，七天退货路径和过保维修条件分别依据什么？"
+        ],
+        "subquery_count": 3,
+        "original_query": "Apple Store 在线商店购买的 AirPods Pro 3，收货 3 天且已拆封，现在充电不稳定，退货和保修应该分别怎么判断？",
+        "multi_objective": true,
+        "retrieval_queries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，收货 3 天且已拆封，现在充电不稳定，退货和保修应该分别怎么判断？",
+          "Apple Store 在线商店购买的 AirPods Pro 3，收货 3 天且已拆封，现在充电不稳定，退货和保修应该分别怎么判断？\n意图补充：Apple 官网购买的 AirPods Pro 3 收货三天已拆封，充电不稳定，应该走退货还是保修检测？；AirPods Pro 3 充电异常，七天退货路径和过保维修条件分别依据什么？"
+        ],
+        "candidate_pool_size": 15,
+        "candidate_document_count": 5,
+        "displayed_top_k": 3,
+        "displayed_document_count": 3,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.6351582,
+            "position": 8
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+            "score": 0.64952147,
+            "position": 6
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.6548902,
+            "position": 5
+          },
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "bcb9c184-a0d7-4c48-817c-fd53afd10ada",
+            "score": 0.6001603,
+            "position": 9
+          },
+          {
+            "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+            "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+            "score": 0.5986397,
+            "position": 9
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:38.031Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        },
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:39.608Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H02",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.56992406,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0
+        },
+        {
+          "position": 9,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+          "score": 0.47036052,
+          "content": "CHUNK-FAQ-CONNECT-01 单侧无声与连接排查\n单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+          "不连接手机，只用 Wi-Fi 让 AirPods Pro 3 读取路由器音乐可以吗？",
+          "AirPods Pro 3 是否支持直接访问局域网音乐服务器？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？"
+        ],
+        "candidate_pool_size": 12,
+        "candidate_document_count": 4,
+        "displayed_top_k": 2,
+        "displayed_document_count": 1,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "f10f8fcf-e104-43a6-abf5-b28e6f2e3503"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.56992406,
+            "position": 4
+          },
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+            "score": 0.47036052,
+            "position": 9
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:41.489Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H03",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": [],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H04",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.64940226,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.12149532710280374,
+          "document_coverage": 0.1507168845511628,
+          "ranking_score": 0.64940226
+        },
+        {
+          "position": 10,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "score": 0.56551135,
+          "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.1308411214953271,
+          "document_coverage": 0.11504290632160938,
+          "ranking_score": 0.56551135
+        },
+        {
+          "position": 9,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.582115,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.14018691588785046,
+          "document_coverage": 0.08743926803290536,
+          "ranking_score": 0.582115
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "MULTI_OBJECTIVE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，签收第 10 天发现右耳断续连接，外观无损坏，换货和维修应该分别怎么判断？",
+          "收货十天出现右耳连接断续，没有人为损坏，应该先申请换货还是走维修检测？",
+          "AirPods Pro 3 第十天出现单侧连接故障，换货与后续维修分别依据什么？"
+        ],
+        "subquery_count": 3,
+        "original_query": "Apple Store 在线商店购买的 AirPods Pro 3，签收第 10 天发现右耳断续连接，外观无损坏，换货和维修应该分别怎么判断？",
+        "multi_objective": true,
+        "retrieval_queries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，签收第 10 天发现右耳断续连接，外观无损坏，换货和维修应该分别怎么判断？",
+          "Apple Store 在线商店购买的 AirPods Pro 3，签收第 10 天发现右耳断续连接，外观无损坏，换货和维修应该分别怎么判断？\n意图补充：收货十天出现右耳连接断续，没有人为损坏，应该先申请换货还是走维修检测？；AirPods Pro 3 第十天出现单侧连接故障，换货与后续维修分别依据什么？"
+        ],
+        "candidate_pool_size": 15,
+        "candidate_document_count": 5,
+        "displayed_top_k": 3,
+        "displayed_document_count": 3,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.64940226,
+            "position": 4
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+            "score": 0.56551135,
+            "position": 10
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.582115,
+            "position": 9
+          },
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+            "score": 0,
+            "position": 11
+          },
+          {
+            "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+            "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+            "score": 0.58400893,
+            "position": 8
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:44.418Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        },
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:45.673Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H05",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.5922121,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods Pro 3 能不能通过 NFC 给其他耳机传输实时翻译？",
+          "两只不同品牌耳机碰一碰，可以用 NFC 共享实时翻译吗？",
+          "AirPods Pro 3 是否支持 NFC 把翻译传给附近耳机？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods Pro 3 能不能通过 NFC 给其他耳机传输实时翻译？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "AirPods Pro 3 能不能通过 NFC 给其他耳机传输实时翻译？"
+        ],
+        "candidate_pool_size": 11,
+        "candidate_document_count": 4,
+        "displayed_top_k": 1,
+        "displayed_document_count": 1,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.5922121,
+            "position": 4
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:46.590Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H06",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "SKIPPED_P0",
+      "provider_called": false,
+      "evidence": [],
+      "retrieval_trace": null,
+      "attempts": [],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H07",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+          "score": 0.68707085,
+          "content": "CHUNK-FAQ-POWER-01 充电与状态灯\n充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。更换线缆和电源后仍无反应，转服务检测。",
+          "result_set_index": 0
+        },
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.64408517,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0
+        },
+        {
+          "position": 6,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+          "score": 0.5820404,
+          "content": "CHUNK-FAQ-CONNECT-01 单侧无声与连接排查\n单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。",
+          "result_set_index": 0
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+          "左耳放回盒子没有充电提示，换线和换电源都不亮，要先检查哪些位置？",
+          "AirPods Pro 3 单耳不充电，指示灯也不亮，第一步怎么处理？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+        "multi_objective": false,
+        "retrieval_queries": [
+          "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？"
+        ],
+        "candidate_pool_size": 14,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 1,
+        "displayed_segment_ids": [
+          "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "f10f8fcf-e104-43a6-abf5-b28e6f2e3503"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+            "score": 0.68707085,
+            "position": 2
+          },
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.64408517,
+            "position": 4
+          },
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+            "score": 0.5820404,
+            "position": 6
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:49:47.593Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H08",
+      "suite": "REGRESSION_8",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 4,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.62872434,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.13861386138613863,
+          "document_coverage": 0.1845632530656898,
+          "ranking_score": 0.62872434
+        },
+        {
+          "position": 10,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+          "score": 0.5617793,
+          "content": "CHUNK-WARRANTY-EVIDENCE-01 检测与身份\n免费维修、收费维修或更换均需结合型号、序列号、购买凭证、保障合同、故障现象和历史维修。身份不一致时先转保修核验，不直接认定非正品或欺诈。",
+          "result_set_index": 1,
+          "lexical_coverage": 0.04950495049504951,
+          "document_coverage": 0.07110791605908222,
+          "ranking_score": 0.5617793
+        },
+        {
+          "position": 7,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.59028035,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.15841584158415842,
+          "document_coverage": 0.10080353599839964,
+          "ranking_score": 0.59028035
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "MULTI_OBJECTIVE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？",
+          "收货十二天出现单侧无声和掉电快，应该走换货还是保修检测？",
+          "AirPods Pro 3 第 12 天出现两种故障，换货与后续维修分别依据什么？"
+        ],
+        "subquery_count": 3,
+        "original_query": "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？",
+        "multi_objective": true,
+        "retrieval_queries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？",
+          "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？\n意图补充：收货十二天出现单侧无声和掉电快，应该走换货还是保修检测？；AirPods Pro 3 第 12 天出现两种故障，换货与后续维修分别依据什么？"
+        ],
+        "candidate_pool_size": 15,
+        "candidate_document_count": 5,
+        "displayed_top_k": 3,
+        "displayed_document_count": 3,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.62872434,
+            "position": 4
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.59028035,
+            "position": 7
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+            "score": 0.564137,
+            "position": 10
+          },
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+            "score": 0.5617793,
+            "position": 10
+          },
+          {
+            "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+            "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+            "score": 0.58646286,
+            "position": 8
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:50:03.927Z",
+          "http_status": 403,
+          "error_code": "RETRIEVAL_REQUEST_FAILED",
+          "message": "Sorry, you have reached the knowledge base request rate limit of your subscription."
+        },
+        {
+          "attempt": 2,
+          "attempted_at": "2026-10-25T13:51:05.409Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        },
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:51:07.367Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": {
+        "retrieval_status": "PROVIDER_ERROR",
+        "attempts": [
+          {
+            "attempt": 1,
+            "attempted_at": "2026-10-25T13:49:49.233Z",
+            "http_status": 403,
+            "error_code": "RETRIEVAL_REQUEST_FAILED",
+            "message": "Sorry, you have reached the knowledge base request rate limit of your subscription."
+          }
+        ],
+        "error_code": "TypeError",
+        "error_message": "Cannot read properties of undefined (reading 'push')"
+      }
+    },
+    {
+      "task_id": "RET-H09",
+      "suite": "HOLDOUT_2",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 3,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.6361437,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.1566265060240964,
+          "document_coverage": 0.19196440326726263,
+          "ranking_score": 0.6361437
+        },
+        {
+          "position": 10,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+          "document_name": "02_安全SOP.md",
+          "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+          "score": 0.49424183,
+          "content": "CHUNK-SAFE-WATER-01 进液\n进液后立即停止佩戴和充电，用柔软干燥的无绒布擦干外表，放入充电盒前至少等待 2 小时完全干燥。不得使用加热、压缩空气、甩动或尖锐物清理接口和声学孔。抗汗抗水能力不构成潮湿状态继续充电的许可。",
+          "result_set_index": 1,
+          "lexical_coverage": 0.024096385542168676,
+          "document_coverage": 0.015594685208408137,
+          "ranking_score": 0.49424183
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.68707,
+          "content": "AirPods Pro 3 保修与维修流程",
+          "result_set_index": 0,
+          "lexical_coverage": 0.12048192771084337,
+          "document_coverage": 0.0675803737182273,
+          "ranking_score": 0.68707
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "MULTI_OBJECTIVE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "AirPods Pro 3 右耳连不上手机，放回充电盒有指示但取出后仍然无法连接，应该怎么排查？",
+          "右耳能放进充电盒但取出来连不上，忽略配对后还是失败，要先检查什么？",
+          "AirPods Pro 3 单耳连接失败，充电盒有提示，下一步怎么处理？"
+        ],
+        "subquery_count": 3,
+        "original_query": "AirPods Pro 3 右耳连不上手机，放回充电盒有指示但取出后仍然无法连接，应该怎么排查？",
+        "multi_objective": true,
+        "retrieval_queries": [
+          "AirPods Pro 3 右耳连不上手机，放回充电盒有指示但取出后仍然无法连接，应该怎么排查？",
+          "AirPods Pro 3 右耳连不上手机，放回充电盒有指示但取出后仍然无法连接，应该怎么排查？\n意图补充：右耳能放进充电盒但取出来连不上，忽略配对后还是失败，要先检查什么？；AirPods Pro 3 单耳连接失败，充电盒有提示，下一步怎么处理？"
+        ],
+        "candidate_pool_size": 14,
+        "candidate_document_count": 4,
+        "displayed_top_k": 3,
+        "displayed_document_count": 3,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+          "cbac61a9-83cb-4884-9549-191107a48124"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.6361437,
+            "position": 3
+          },
+          {
+            "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+            "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+            "score": 0.49424183,
+            "position": 10
+          },
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+            "score": 0.68707,
+            "position": 2
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+            "score": 0.53992677,
+            "position": 7
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:51:08.621Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        },
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:51:10.197Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": null
+    },
+    {
+      "task_id": "RET-H10",
+      "suite": "HOLDOUT_2",
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "provider_called": false,
+      "evidence": [
+        {
+          "position": 7,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.62481993,
+          "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.14285714285714285,
+          "document_coverage": 0.15932980242268643,
+          "ranking_score": 0.62481993
+        },
+        {
+          "position": 5,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "score": 0.6622269,
+          "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.14285714285714285,
+          "document_coverage": 0.11027205147405114,
+          "ranking_score": 0.6622269
+        },
+        {
+          "position": 6,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.65126204,
+          "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。",
+          "result_set_index": 0,
+          "lexical_coverage": 0.1619047619047619,
+          "document_coverage": 0.10241970060445925,
+          "ranking_score": 0.65126204
+        }
+      ],
+      "retrieval_trace": {
+        "merge_strategy": "MULTI_OBJECTIVE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subqueries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，交付第 20 天出现续航明显下降和充电不稳定，退货和保修检测应该分别怎么判断？",
+          "收货二十天发现掉电快且充电不稳，应该走退货还是保修检测？",
+          "AirPods Pro 3 第二十天出现电池和充电问题，退货与后续维修分别依据什么？"
+        ],
+        "subquery_count": 3,
+        "original_query": "Apple Store 在线商店购买的 AirPods Pro 3，交付第 20 天出现续航明显下降和充电不稳定，退货和保修检测应该分别怎么判断？",
+        "multi_objective": true,
+        "retrieval_queries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，交付第 20 天出现续航明显下降和充电不稳定，退货和保修检测应该分别怎么判断？",
+          "Apple Store 在线商店购买的 AirPods Pro 3，交付第 20 天出现续航明显下降和充电不稳定，退货和保修检测应该分别怎么判断？\n意图补充：收货二十天发现掉电快且充电不稳，应该走退货还是保修检测？；AirPods Pro 3 第二十天出现电池和充电问题，退货与后续维修分别依据什么？"
+        ],
+        "candidate_pool_size": 14,
+        "candidate_document_count": 5,
+        "displayed_top_k": 3,
+        "displayed_document_count": 3,
+        "displayed_segment_ids": [
+          "489e6131-b959-43ca-8529-c28b6708777b",
+          "b1a33913-9ad5-4842-8360-69d88912fd06",
+          "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+        ],
+        "candidate_representatives": [
+          {
+            "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+            "score": 0.62481993,
+            "position": 7
+          },
+          {
+            "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+            "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+            "score": 0.6622269,
+            "position": 5
+          },
+          {
+            "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+            "score": 0.65126204,
+            "position": 6
+          },
+          {
+            "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+            "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+            "score": 0,
+            "position": 11
+          },
+          {
+            "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+            "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+            "score": 0.58784735,
+            "position": 10
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:51:11.643Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        },
+        {
+          "attempt": 1,
+          "attempted_at": "2026-10-25T13:51:12.936Z",
+          "http_status": 200,
+          "error_code": null,
+          "message": ""
+        }
+      ],
+      "previous_failure": null
+    }
+  ],
+  "rate_limit_failures": [
+    {
+      "task_id": "POC-E04",
+      "captured_at": "2026-10-25T13:50:03.081Z",
+      "attempt": 1,
+      "http_status": 403,
+      "message": "Dify Dataset Retrieve returned HTTP 403",
+      "action": "PRESERVED_AND_RETRIED_AFTER_WAIT"
+    },
+    {
+      "task_id": "RET-H08",
+      "captured_at": "2026-10-25T13:49:49.233Z",
+      "attempt": 1,
+      "http_status": 403,
+      "message": "Sorry, you have reached the knowledge base request rate limit of your subscription.",
+      "action": "PRESERVED_AND_RETRIED_AFTER_WAIT"
+    },
+    {
+      "captured_at": "2026-10-25T13:50:03.927Z",
+      "query": "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？\n购买或售后渠道：Apple Store 在线商店",
+      "attempt": 1,
+      "http_status": 403,
+      "message": "Sorry, you have reached the knowledge base request rate limit of your subscription.",
+      "action": "WAIT_60_SECONDS_AND_RETRY"
+    }
+  ],
+  "completed_at": "2026-10-25T13:51:12.938Z",
+  "sha256_self_excluding_hash": "bfb088de83404e434a4360f6db800da869104aff140e98ccd21c999bf13afe0a"
+}

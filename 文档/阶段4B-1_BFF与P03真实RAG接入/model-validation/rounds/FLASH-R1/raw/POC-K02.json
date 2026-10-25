@@ -1,0 +1,116 @@
+{
+  "round_id": "FLASH-R1",
+  "task_id": "POC-K02",
+  "core_task_id": "CORE-K2",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 12401,
+  "request": {
+    "question": "原始问题：买了 AppleCare+ 使用两年后能直接换新吗？\n客户改写：AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？；保障快到期了，能不能现在要求直接换一套？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R1-POC-K02",
+    "knowledge_item_id": "KI-CORE-K2",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "care_contract": "用户声称有 AppleCare+，未出示合同",
+      "age": "接近两年",
+      "fault": "未说明",
+      "service_history": "未知"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "请客户提供 AppleCare+ 合同/保障凭证、购买凭证或序列号，核实保障状态与到期日；追问具体故障现象、是否意外损坏、是否电池容量问题，并查询服务历史。",
+    "business_conditions": [
+      "AppleCare+ 合同真实有效，并确认保障范围、保障期限和到期日；客户目前仅为“声称有”，尚未出示合同",
+      "需明确具体故障或服务诉求；当前“未说明故障”，无法判断是否属于可服务情形",
+      "若涉及电池容量下降，需核对保障合同、当前容量、购买日期和服务历史，不能仅凭使用接近两年直接承诺换新",
+      "正常电池老化不属于有限保修范围；是否达到 AppleCare+ 服务资格仍需按上述材料核验"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "a568f482-bb0d-40b0-bb69-c47bbcaa72af",
+    "provider_trace_id": "a568f482-bb0d-40b0-bb69-c47bbcaa72af",
+    "provider_called": true,
+    "timing_ms": 12396,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 13,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 13,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 13
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6630450891611034,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.634403790204763,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+        "score": 0.4698962393697712,
+        "claim_support_count": 3
+      }
+    ],
+    "request_id": "a8c6e275-8f6c-4ef7-95d6-6364d5bbde88",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R1-POC-K02",
+      "knowledge_item_id": "KI-CORE-K2"
+    },
+    "audit_event_id": "ae131d0e-96ac-4fba-b347-e797d8d27993"
+  }
+}

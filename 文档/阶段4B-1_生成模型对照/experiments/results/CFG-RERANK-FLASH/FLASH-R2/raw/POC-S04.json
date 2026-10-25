@@ -1,0 +1,15 @@
+{
+  "task_id": "POC-S04",
+  "round_id": "FLASH-R2",
+  "provider_called": false,
+  "gate_order": "BFF_BEFORE_DIFY",
+  "gate_reason": "P0_REDLINE_MATCH",
+  "gate_elapsed_ms": 1,
+  "response": {
+    "answer": "立即停止使用并停止充电，断开电源。将设备远离可燃物并保持观察。当前红线：连接异常与发热并存时先处理热风险。不要按压、拆解、加热或继续连接电源；若出现明火、持续冒烟或人员不适，立即联系应急部门。BFF 已创建 R3 风险升级并转交安全责任人与售后主管。止损后请补充：是否仍连接电源、是否冒烟或出现明火、是否有异味、是否鼓包或变形、是否进液、是否出现皮肤烫伤或人员不适；追问只用于记录，不放宽止损。",
+    "metadata": {
+      "bff_gate": "P0_SAFE_STOP",
+      "provider_model_called": false
+    }
+  }
+}

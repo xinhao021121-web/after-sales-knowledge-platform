@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-10-25T09:48:52.550Z",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "dataset": "CANDIDATE",
+  "before": {
+    "evidence": "evidence/dify-config-before-change.json",
+    "model": "deepseek-v4-pro",
+    "temperature": 0.7,
+    "top_k": 3,
+    "rerank_model": "qwen3-rerank",
+    "prompt_sha256": "69f40a4c1e9ed40900452f893bfa7a4de585fc812b13b745d25a2cdb7e432415",
+    "published_baseline_version": 12
+  },
+  "after": {
+    "evidence": "evidence/dify-config-after-r2.json",
+    "model": "deepseek-v4-pro",
+    "temperature": 0.7,
+    "top_k": 10,
+    "rerank_model": "qwen3-rerank",
+    "prompt_sha256": "3e6e0a8239d248b1defb4ec0d5f425df1463a8fb6bfac7eb23d8cbcf3a48a0ed",
+    "published_version": 14,
+    "marked_name": "R2-CANDIDATE-Q10"
+  },
+  "unchanged": [
+    "generation model deepseek-v4-pro",
+    "temperature 0.7",
+    "hybrid weights 0.7/0.3",
+    "qwen3-rerank",
+    "CANDIDATE dataset binding"
+  ],
+  "internal_candidate_pool": {
+    "requested_top_k": 10,
+    "actual_range_observed": [
+      12,
+      14
+    ],
+    "final_user_visible_top_k": 3,
+    "note": "The internal candidate pool is not Recall@3; Recall@3 uses only the final three document-diverse resources."
+  },
+  "business_knowledge_published": false
+}

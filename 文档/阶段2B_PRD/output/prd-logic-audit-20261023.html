@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业级 RAG 知识库平台 PRD 逻辑检查</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#64748b; --line:#dbe3ef; --bg:#f5f7fb; --card:#fff; --block:#b42318; --high:#c2410c; --medium:#a16207; --low:#2563eb; --accent:#4338ca; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font:14px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--bg); }
+    header, main, footer { width:min(1180px,calc(100% - 32px)); margin:auto; }
+    header { padding:48px 0 28px; }
+    h1 { margin:0 0 8px; font-size:clamp(28px,4vw,44px); line-height:1.18; }
+    h2 { margin:0 0 16px; font-size:22px; }
+    h3 { margin:0 0 10px; font-size:17px; }
+    p { margin:8px 0; }
+    .muted { color:var(--muted); }
+    .eyebrow { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    section { margin:0 0 22px; padding:24px; border:1px solid var(--line); border-radius:16px; background:var(--card); box-shadow:0 8px 28px rgba(30,41,59,.05); }
+    .verdict { border-left:7px solid #15803d; background:linear-gradient(135deg,#fff 0,#f0fdf4 100%); }
+    .verdict h2 { color:#15803d; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .stat { padding:16px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    .stat strong { display:block; font-size:28px; line-height:1.2; }
+    .stat span { color:var(--muted); }
+    .risk-scale { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:16px 0 24px; }
+    .risk-card, .blocker-summary { padding:16px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    .risk-card h3 { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+    .blocker-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .blocker-summary { border-left:4px solid #15803d; }
+    .blocker-summary strong { display:block; margin-bottom:6px; color:#15803d; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; min-width:760px; }
+    th, td { padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#f8fafc; white-space:nowrap; }
+    .badge { display:inline-block; padding:2px 9px; border-radius:999px; color:#fff; font-size:12px; font-weight:800; white-space:nowrap; }
+    .block { background:var(--block); } .high { background:var(--high); } .medium { background:var(--medium); } .low { background:var(--low); }
+    article { margin-top:16px; padding:20px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    article.high-risk { border-left:5px solid var(--high); }
+    article.medium-risk { border-left:5px solid var(--medium); }
+    article.low-risk { border-left:5px solid var(--low); }
+    .meta { display:flex; flex-wrap:wrap; gap:7px; margin:8px 0 14px; }
+    .tag { padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; font-weight:700; }
+    dl { display:grid; grid-template-columns:132px minmax(0,1fr); gap:7px 14px; margin:12px 0 0; }
+    dt { font-weight:800; color:#334155; } dd { margin:0; }
+    code { padding:2px 5px; border-radius:5px; background:#eef2f7; }
+    ol, ul { padding-left:22px; }
+    .callout { padding:14px 16px; border-radius:10px; background:#fff8e8; border:1px solid #f6d995; }
+    .watermark-layer { position:fixed; inset:0; z-index:10; pointer-events:none; overflow:hidden; color:var(--accent); }
+    .watermark { position:absolute; display:block; padding:7px 15px; border:2.5px solid currentColor; border-radius:999px; font-size:24px; font-weight:900; letter-spacing:.08em; white-space:nowrap; opacity:.14; transform:rotate(-18deg); }
+    .wm-1 { top:12%; left:4%; } .wm-2 { top:auto; right:7%; bottom:10%; }
+    .side-nav { position:fixed; top:50%; left:24px; z-index:9; width:168px; padding:8px 0; border-left:1px solid var(--line); transform:translateY(-50%); }
+    .side-nav strong { display:block; padding:0 12px 8px 14px; color:var(--muted); font-size:12px; letter-spacing:.12em; }
+    .side-nav a { display:block; margin-left:-1px; padding:7px 12px 7px 14px; border-left:2px solid transparent; color:var(--muted); text-decoration:none; }
+    .side-nav a:hover { border-left-color:var(--accent); color:var(--accent); }
+    section[id] { scroll-margin-top:24px; }
+    @media (min-width:981px) { header,main,footer{width:min(1180px,calc(100% - 260px));margin-left:clamp(220px,calc((100% - 1180px)/2 + 100px),360px);margin-right:24px} }
+    @media (max-width:760px) { .stats{grid-template-columns:repeat(2,1fr)} .risk-scale,.blocker-grid{grid-template-columns:1fr} section{padding:18px} dl{grid-template-columns:1fr;gap:0} dt{margin-top:9px} .watermark{font-size:18px} }
+    @media (max-width:980px) { .side-nav{display:none} header,main,footer{width:min(1180px,calc(100% - 32px));margin-left:auto;margin-right:auto} }
+    @media print { body{background:#fff} header,main,footer{width:100%;margin-left:auto;margin-right:auto} .side-nav{display:none} section{box-shadow:none;break-inside:avoid} article{break-inside:avoid} .watermark{opacity:.16} }
+  </style>
+</head>
+<body>
+  <div class="watermark-layer" aria-hidden="true"><span class="watermark wm-1">@产品老兵杰哥</span><span class="watermark wm-2">@产品老兵杰哥</span></div>
+  <nav class="side-nav" aria-label="报告一级目录">
+    <strong>报告目录</strong>
+    <a href="#scope">检查范围</a>
+    <a href="#verdict">评审结论</a>
+    <a href="#risk-guide">风险说明</a>
+    <a href="#summary">问题总览</a>
+    <a href="#details">问题详情</a>
+    <a href="#order">修改路线</a>
+    <a href="#decisions">产品拍板</a>
+    <a href="#impact">改全材料</a>
+    <a href="#coverage">覆盖说明</a>
+  </nav>
+  <header>
+    <p class="eyebrow">PRD Logic Check</p>
+    <h1>企业级 RAG 知识库平台 PRD 逻辑检查</h1>
+    <p><strong>作者：@产品老兵杰哥（公众号）</strong></p>
+    <p class="muted">生成日期：2026-10-23 · 输入：阶段 2B PRD、需求追踪矩阵、状态转换总表、GTW 验收、异常附录、权限附录、阶段 1B/2A 基线</p>
+  </header>
+  <main>
+    <section id="scope">
+      <h2>检查范围</h2>
+      <p>已检查 30 条功能需求、12 条正式核心任务、49 个对象状态、U1-U9 拦截规则、角色权限与职责分离、发布与回滚、API 边界和技术参数边界。</p>
+      <p class="muted">未覆盖真实客服观测、真实客户数据、真实业务收益、真实技术性能和 draw.io 像素级渲染。</p>
+    </section>
+
+    <section id="verdict" class="verdict">
+      <h2>结论：可进入评审</h2>
+      <p>未发现阻断级逻辑冲突。需求追踪无断链、依赖无环、核心任务验收完整；剩余问题均为上线前验证依赖或明确待定边界。</p>
+      <div class="stats">
+        <div class="stat"><strong>0</strong><span>阻断</span></div>
+        <div class="stat"><strong>0</strong><span>高风险</span></div>
+        <div class="stat"><strong>2</strong><span>中风险</span></div>
+        <div class="stat"><strong>3</strong><span>去重问题总数</span></div>
+      </div>
+    </section>
+
+    <section id="risk-guide">
+      <h2>风险等级怎么理解？</h2>
+      <p><strong>“阻断”表示核心规则无法唯一实现。</strong>本稿不存在此类问题。现在可以进入产品评审，但真实部署前仍需关闭样本复核、合规保留期限和图表渲染验证。</p>
+      <div class="risk-scale">
+        <div class="risk-card"><h3><span class="badge block">阻断</span></h3><p>核心流程无法实现或产生不可恢复错误。当前 0 项。</p></div>
+        <div class="risk-card"><h3><span class="badge high">高风险</span></h3><p>可能导致安全、越权或发布事故。当前未发现未定义规则。</p></div>
+        <div class="risk-card"><h3><span class="badge medium">中风险</span></h3><p>不阻碍 PRD 评审，但必须先于真实上线完成验证。</p></div>
+        <div class="risk-card"><h3><span class="badge low">低风险</span></h3><p>交付格式或视觉验证限制，不影响业务规则唯一性。</p></div>
+      </div>
+      <div class="blocker-grid">
+        <div class="blocker-summary"><strong>阻断结论</strong><span>没有尚未解决的核心逻辑冲突。</span></div>
+        <div class="blocker-summary"><strong>评审放行条件</strong><span>保持当前状态机、追踪矩阵和 12 条 GTW 为同一版本；后续修改需重新检查。</span></div>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>问题总览</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>编号</th><th>风险</th><th>痛苦类型</th><th>结论状态</th><th>问题摘要</th><th>主要位置</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td><span class="badge medium">中</span></td><td>验证依赖</td><td>潜在风险</td><td>部分 R3 和渠道专项样本尚未逐条人工复核</td><td>PRD 13.1；阶段 1B 07</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td><span class="badge medium">中</span></td><td>条件缺失</td><td>已知待决</td><td>真实数据保留期限和线上告警阈值需要部署环境确认</td><td>PRD 8.2、13.3</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td><span class="badge low">低</span></td><td>交付限制</td><td>信息缺失</td><td>未完成 Draw.io 的像素级渲染检查</td><td>图表说明</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="details">
+      <h2>问题详情</h2>
+      <article id="prd-001" class="medium-risk">
+        <h3>PRD-001 专项样本仍未进入正式评测</h3>
+        <div class="meta"><span class="badge medium">中风险</span><span class="tag">验证依赖</span><span class="tag">潜在风险</span></div>
+        <dl>
+          <dt>位置与证据</dt><dd>《PRD》13.1 明确正式评测只使用 12 条人工确认核心任务；阶段 1B 验收记录仍列有未逐条复核的 R3 和渠道样本。</dd>
+          <dt>漏洞说明</dt><dd>PRD 结构不冲突，但在完成专项复核前，无法证明所有高风险和安全分支覆盖充分；若直接开始 RAG 评测或发布，样本门禁会被绕过。</dd>
+          <dt>触发场景</dt><dd>团队以 12 条核心任务通过为理由直接开放正式 RAG 评测或发布。</dd>
+          <dt>影响范围</dt><dd>安全评测、渠道评测、发布门槛、对外证据。</dd>
+          <dt>待确认问题</dt><dd>项目负责人是否接受先完成专项复核，再进入首次 RAG 评测？</dd>
+          <dt>最小修改建议</dt><dd>把专项复核作为 PRD 评测前置条件；复核通过后升级样本版本并重新登记。</dd>
+          <dt>关联修改</dt><dd>阶段 1B 复核表、PRD 13.1/13.2、阶段 2B 验收记录。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-002" class="medium-risk">
+        <h3>PRD-002 保留期限和告警阈值尚未固定</h3>
+        <div class="meta"><span class="badge medium">中风险</span><span class="tag">条件缺失</span><span class="tag">已知待决</span></div>
+        <dl>
+          <dt>位置与证据</dt><dd>《PRD》8.2 要求由真实组织法务确认保留期限，13.3 要求阈值在基线后配置。</dd>
+          <dt>漏洞说明</dt><dd>当前没有唯一数值，这是有意避免虚构合规和性能参数；但若部署前仍未确定，研发无法完成存储清理、告警任务和验收。</dd>
+          <dt>触发场景</dt><dd>进入真实部署准备时仍没有法务保留策略和运营告警责任人。</dd>
+          <dt>影响范围</dt><dd>数据合规、审计、监控、运维和上线计划。</dd>
+          <dt>待确认问题</dt><dd>真实部署前由谁提供保留期限、告警阈值和接收人？</dd>
+          <dt>最小修改建议</dt><dd>保持在 PRD 中为部署门槛，建立由客户法务/安全、客服主管和 AI 评测共同签署的配置清单。</dd>
+          <dt>关联修改</dt><dd>PRD 8.2、12.3、14.3；06 权限职责分离附录。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-003" class="low-risk">
+        <h3>PRD-003 Draw.io 只完成结构验证</h3>
+        <div class="meta"><span class="badge low">低风险</span><span class="tag">交付限制</span><span class="tag">信息缺失</span></div>
+        <dl>
+          <dt>位置与证据</dt><dd>3 个 Draw.io 文件均通过 XML、节点 ID、边引用和页面边界检查；环境没有 draw.io CLI。</dd>
+          <dt>漏洞说明</dt><dd>业务规则不受影响，但未完成像素级视觉检查，不能声称图表已经视觉验收。</dd>
+          <dt>触发场景</dt><dd>评审者直接在无 draw.io 的查看器中打开源文件，出现布局问题。</dd>
+          <dt>影响范围</dt><dd>图表可读性，不影响 PRD 状态与权限规则。</dd>
+          <dt>待确认问题</dt><dd>评审是否需要 PNG/SVG 预览？</dd>
+          <dt>最小修改建议</dt><dd>在可用 draw.io 环境中打开源文件导出 PNG/SVG 并检查；如无需要，以 `.drawio` 作为交付格式。</dd>
+          <dt>关联修改</dt><dd>图表说明、08 验收记录。</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>发现问题后，产品经理怎么处理</h2>
+      <ol>
+        <li>先完成专项样本复核，避免把验证缺口带入 RAG 评测。</li>
+        <li>由真实部署环境补齐保留期限和告警责任，不自行虚构数值。</li>
+        <li>如评审需要图像，先把 `.drawio` 导出为 PNG/SVG 再做视觉检查。</li>
+      </ol>
+    </section>
+
+    <section id="order">
+      <h2>第 1 步：修改路线</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>顺序</th><th>相关问题</th><th>这一轮要解决什么</th><th>为什么先做</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><a href="#prd-001">PRD-001</a></td><td>补齐专项样本复核门禁</td><td>风险最高，直接影响是否能开始首次 RAG 评测</td></tr>
+            <tr><td>2</td><td><a href="#prd-002">PRD-002</a></td><td>明确部署期合规和监控配置责任</td><td>属真实上线前置，不影响本次 PRD 逻辑评审</td></tr>
+            <tr><td>3</td><td><a href="#prd-003">PRD-003</a></td><td>确认图表交付格式</td><td>不影响业务规则，可最后处理</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <h2>第 2 步：产品拍板</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>要拍板的事</th><th>为什么现在要定</th><th>定完补进 PRD</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>是先复核再评测，还是允许带条件评测</td><td>决定正式评测能否启动</td><td>13.1、13.2、08 验收记录</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>保留期限、告警阈值和责任人由谁批准</td><td>部署前必须能配置存储和告警</td><td>8.2、13.3、真实部署清单</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2>第 3 步：拍板后改全材料</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>拿着什么结论去改</th><th>还要改哪些地方</th><th>怎样算改完</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>样本复核与正式评测门槛</td><td>阶段 1B 复核表、PRD 13、阶段 2B 验收</td><td>复核状态、版本和评测准入一致</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>真实部署配置责任</td><td>PRD 8.2、13.3、权限附录、验收记录</td><td>期限、告警和审批人可唯一追溯</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>是否要求 PNG/SVG</td><td>图表说明、交付清单</td><td>交付格式和验证证据一致</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="coverage">
+      <h2>覆盖说明</h2>
+      <p><strong>已检查：</strong>30 条功能需求均有业务来源、核心任务、对象、状态、验收与错误码；12 条核心任务共 24 个 GTW 场景；15 个跨需求场景；U1-U9 全部定义；49 个对象状态行均有责任角色、进入条件、允许动作、退出状态和失败路径。</p>
+      <p><strong>已修复：</strong>发布审批缺少 `REL_REJECTED` 状态、需求依赖存在循环、追踪矩阵使用非正式状态缩写、权限矩阵中“必要时参与”无法判定。</p>
+      <p><strong>未覆盖：</strong>真实客服访谈、真实客户数据、真实性能与线上指标、模型与检索参数、像素级图表渲染。</p>
+    </section>
+  </main>
+  <footer>由 PRD 逻辑漏洞检查生成 · 作者：@产品老兵杰哥（公众号）</footer>
+</body>
+</html>

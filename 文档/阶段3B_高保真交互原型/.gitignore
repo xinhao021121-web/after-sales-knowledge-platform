@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+data/runtime/*
+!data/runtime/.gitkeep
+*.log
+*.pem
+*.key
+secrets/
+node_modules/

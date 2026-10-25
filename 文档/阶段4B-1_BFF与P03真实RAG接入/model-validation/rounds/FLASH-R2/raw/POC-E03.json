@@ -1,0 +1,144 @@
+{
+  "round_id": "FLASH-R2",
+  "task_id": "POC-E03",
+  "core_task_id": "EDGE-CHANNEL-CONFLICT",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 14921,
+  "request": {
+    "question": "原始问题：平台拒修和 Apple 换新冲突，客服应该采用哪个答案？\n客户改写：两家售后的书面结论相反，可以用检索分数选一个吗？；冲突证据能不能只引用更权威的一方？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R2-POC-E03",
+    "knowledge_item_id": "KI-EDGE-CHANNEL-CONFLICT",
+    "product_model": "AirPods Pro 3",
+    "channel": "京东与官方服务",
+    "customer_context": {
+      "channel": "京东与官方服务",
+      "documents": [
+        "平台拒修",
+        "Apple 检测后换新"
+      ],
+      "authorization_verified": false,
+      "work_orders_present": true
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "京东与官方服务"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "CONFLICT",
+    "ui_state": "CONFLICT_HOLD",
+    "answer": "两份渠道结论存在冲突，系统已保持 CONFLICT_HOLD，不强行合并为单一结论。",
+    "suggested_action": "暂不采用任一结论：不对外最终答复“拒修”或“换新”，不做单方承诺；补齐并固定证据：收集双方书面结论原文/编号、序列号、工单日期、维修项目、授权信息。",
+    "business_conditions": [
+      "触发条件：两个渠道书面结论相反（平台拒修 vs Apple 检测后换新），应按“结论冲突”处理",
+      "材料条件：必须保留双方书面结论、序列号、工单日期、维修项目和授权信息",
+      "裁决条件：冲突由渠道负责人和主管联合裁决，frontline 不应自行选定一方结论",
+      "禁止条件：不得判定消费者欺诈；不得只采信单方；不得用检索分数替代业务裁决"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-da58ce66-5019-4c25-8591-0863cdf22022",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-CHANNEL-V1",
+          "version": "1.0.0",
+          "title": "售后渠道差异与责任边界",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022"
+        },
+        "kb_id": "KB-DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+        "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+        "score": 0.526482215130713,
+        "supported_claims": [
+          "两个渠道给出不同结论时，保留双方书面结论、序列号、工单日期、维修项目和授权信息；不得判定消费者欺诈，也不得只采信单方。",
+          "冲突进入渠道负责人和主管联合裁决。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true
+      }
+    ],
+    "risk": {
+      "level": "R2",
+      "p0_triggered": false,
+      "escalation_required": true
+    },
+    "provider_request_id": "dcdca2d1-d5f2-406a-a4dd-7a37b2d26992",
+    "provider_trace_id": "dcdca2d1-d5f2-406a-a4dd-7a37b2d26992",
+    "provider_called": true,
+    "timing_ms": 14917,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 18,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 6,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 1,
+      "unsupported_count": 6
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+        "score": 0.526482215130713,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.4555596499999999,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.44791676999999996,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "55c3af96-5222-4c61-ae93-8262b1136cdd",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R2-POC-E03",
+      "knowledge_item_id": "KI-EDGE-CHANNEL-CONFLICT"
+    },
+    "audit_event_id": "2452000c-5301-4ed6-931b-0dcf7c83576d"
+  }
+}

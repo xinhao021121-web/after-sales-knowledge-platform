@@ -1,0 +1,114 @@
+{
+  "round_id": "FLASH-R2",
+  "task_id": "POC-E02",
+  "core_task_id": "EDGE-EXPIRED-KNOWLEDGE",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 13218,
+  "request": {
+    "question": "原始问题：第三方平台拆封耳机为什么一定不能退？\n客户改写：旧规则说第三方渠道拆封都不退，现在还有效吗？；能不能按旧版第三方规则直接拒绝退货？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R2-POC-E02",
+    "knowledge_item_id": "KI-EDGE-EXPIRED-KNOWLEDGE",
+    "product_model": "AirPods Pro 3",
+    "channel": "第三方平台",
+    "customer_context": {
+      "channel": "第三方平台",
+      "knowledge_state": "仅命中已过期旧规则",
+      "current_policy_missing": true
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "第三方平台"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "KNOWLEDGE_EXPIRED",
+    "ui_state": "KNOWLEDGE_EXPIRED",
+    "answer": "检索到的知识版本已过期，不能作为现行售后依据。",
+    "suggested_action": "先纠正答复口径：向客户说明旧版第三方规则已过期，不能据此直接拒绝；是否可退需按当前订单所在平台/店铺/经销商规则核实；追问并收集信息：订单号、下单平台/店铺/经销商名称、下单时间、商品页面售后说明截图、当前拆封状态、是否已进入平台售后入口、平台显示的退换时限。",
+    "business_conditions": [
+      "## 2. 可追溯引用",
+      "已知上下文：`channel=第三方平台`；`knowledge_state=仅命中已过期旧规则`；`current_policy_missing=true`",
+      "可引用的规则要点：第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利；未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修",
+      "无现行第三方平台具体退换条款可引用：当前知识缺失，不能提供具体时限、拆封条件或责任主体条款"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "dcdf0022-00ad-4a94-8be7-c8b038e0b104",
+    "provider_trace_id": "dcdf0022-00ad-4a94-8be7-c8b038e0b104",
+    "provider_called": true,
+    "timing_ms": 13213,
+    "error_code": "KNOWLEDGE_EXPIRED",
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 15,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 0,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+        "score": 0.6781722792694128,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.480107782,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.45741842999999993,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "17b49d1f-ac83-4e5e-bbec-c573267ed3c7",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R2-POC-E02",
+      "knowledge_item_id": "KI-EDGE-EXPIRED-KNOWLEDGE"
+    },
+    "audit_event_id": "3e14faaa-c2b8-4130-804e-6553a715a9b4"
+  }
+}

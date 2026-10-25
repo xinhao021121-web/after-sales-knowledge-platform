@@ -1,0 +1,130 @@
+{
+  "notice": "P03经本地BFF真实调用Dify后的归一化结果；不包含密钥。",
+  "request": {
+    "question": "AirPods Pro 3 两只耳机已放回充电盒合盖10秒，也已完成清洁、声道平衡检查、佩戴贴合和重新配对，但仍只有一侧无声，应该转售后检测吗？",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "role": "frontline",
+    "asq_id": "ASQ-2026-1060"
+  },
+  "response": {
+    "answer_status": "ANSWERED",
+    "ui_state": "ANSWERED",
+    "answer": "用户已完成：两只耳机放回充电盒合盖至少 10 秒、清洁、声道平衡检查、佩戴贴合检查、忽略旧配对并重新配对。 完成上述排查后仍只有一侧无声，符合“只有一侧持续无声音”的转售后检测条件。",
+    "suggested_action": "记录用户已完成的排查步骤及结果：合盖≥10 秒、清洁、声道平衡检查、佩戴贴合检查、重新配对后仍单侧无声；按流程转售后检测。",
+    "business_conditions": [
+      "用户已完成：两只耳机放回充电盒合盖至少 10 秒、清洁、声道平衡检查、佩戴贴合检查、忽略旧配对并重新配对",
+      "完成上述排查后仍只有一侧无声，符合“只有一侧持续无声音”的转售后检测条件",
+      "不得直接把原因归为单耳佩戴；也不得向用户承诺换新、免费维修、退款或赔偿"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "source": {
+          "src_id": "SRC-PUB-001",
+          "doc_id": "DOC-FAQ-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 售后 FAQ",
+          "url": "https://support.apple.com/zh-cn/airpods",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0"
+        },
+        "kb_id": "KB-DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "score": 0.6598273091514526,
+        "supported_claims": [
+          "单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。",
+          "仍未恢复时，可在设备中忽略旧配对并重新配对。",
+          "只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      }
+    ],
+    "risk": {
+      "level": "R0",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "fb21f1f7-6eab-4324-a3a7-2a698b64cb8d",
+    "provider_trace_id": "fb21f1f7-6eab-4324-a3a7-2a698b64cb8d",
+    "provider_called": true,
+    "timing_ms": 70814,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 490,
+      "completion_tokens": 2359,
+      "total_tokens": 2849,
+      "provider_latency_ms": 23841,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "ANSWERED",
+      "citation_support_passed": true,
+      "effective_answer": true
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 1,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "score": 0.6598273091514526,
+        "claim_support_count": 3
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6219068264510104,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.5540646335411091,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "418c4c2e-4bdf-4392-89bb-d0100366137d",
+    "request_echo": {
+      "asq_id": "ASQ-2026-1060",
+      "knowledge_item_id": "KI-DEMO-AFTERSALES"
+    },
+    "audit_event_id": "f0e3f229-de49-4753-abb2-4d94c5b14d34"
+  },
+  "asq_status_before_confirmation": "ASQ_CONTEXT_PENDING",
+  "real_answer_attempts": 1
+}

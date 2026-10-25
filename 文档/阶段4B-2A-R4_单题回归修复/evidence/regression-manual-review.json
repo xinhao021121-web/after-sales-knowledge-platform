@@ -1,0 +1,75 @@
+{
+  "run_id": "REGRESSION-REAL-R4-096a077a-9840-4343-9346-6610f7c0507c",
+  "review_status": "PENDING_PRODUCT_OWNER",
+  "reviewed_by": null,
+  "reviewed_at": null,
+  "tasks": [
+    {
+      "task_id": "RET-H01",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "两条目标是否分别给出条件化判断与下一步动作",
+        "已拆封、收货时间和 Apple Store 渠道是否被正确映射或标注待核验",
+        "是否引用至少两个不同正文切片",
+        "是否未要求用户提供系统已检索的正文"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H02",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否明确当前知识不足",
+        "是否没有编造 Wi-Fi 直连能力",
+        "是否没有把官方规格核验路径包装成确定答案"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H03",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否先执行停止使用和断电",
+        "是否没有继续讨论换新或等待",
+        "是否保留安全检查与升级路径"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H04",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "换货与维修是否分别回答",
+        "第十天和外观无损坏等事实是否被映射到条件判断",
+        "是否存在无来源的换货或免费维修承诺"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H05",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否明确知识不足",
+        "是否没有编造 NFC 翻译能力",
+        "是否没有把一般产品常识当成确定事实"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H06",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否明确禁止先充电测试",
+        "是否给出停机、隔离和转安全处理路径",
+        "是否没有承诺进液后可保修或可继续使用"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    }
+  ]
+}

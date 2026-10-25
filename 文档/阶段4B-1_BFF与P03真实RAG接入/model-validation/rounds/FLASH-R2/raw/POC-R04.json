@@ -1,0 +1,143 @@
+{
+  "round_id": "FLASH-R2",
+  "task_id": "POC-R04",
+  "core_task_id": "CORE-R4",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 19965,
+  "request": {
+    "question": "原始问题：AirPods Pro 长时间单耳佩戴后另一只不响怎么办？\n客户改写：右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？；一只耳机有声音另一只没声音，要先检查什么？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R2-POC-R04",
+    "knowledge_item_id": "KI-CORE-R4",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "symptom": "单侧无声",
+      "volume_balance": "未知",
+      "cleaning": "未检查",
+      "reset": "未尝试"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "指导客户先完成上述 1—3 步排查，并记录结果；若左耳持续无声，或清洁/重置后仍反复异常，转售后检测。",
+    "business_conditions": [
+      "先做充电盒重置动作：把两只耳机放回充电盒并合盖至少 10 秒",
+      "检查物理与设置因素：检查左耳耳塞/网罩是否堵塞、设备声道平衡是否正常、佩戴是否贴合",
+      "仍未恢复时再重配对：在设备中忽略旧配对并重新配对",
+      "转售后条件：只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "source": {
+          "src_id": "SRC-PUB-001",
+          "doc_id": "DOC-FAQ-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 售后 FAQ",
+          "url": "https://support.apple.com/zh-cn/airpods",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0"
+        },
+        "kb_id": "KB-DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "score": 0.5939033629669941,
+        "supported_claims": [
+          "单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。",
+          "仍未恢复时，可在设备中忽略旧配对并重新配对。",
+          "只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true
+      }
+    ],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "82d89ba0-3a83-4df3-97e2-2a8707e6f0c6",
+    "provider_trace_id": "82d89ba0-3a83-4df3-97e2-2a8707e6f0c6",
+    "provider_called": true,
+    "timing_ms": 19960,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 12,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 1,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 1,
+      "unsupported_count": 1
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+        "score": 0.5939033629669941,
+        "claim_support_count": 3
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.5812402072862879,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.5135308991920713,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "52071187-841c-47d5-81b1-59e33ad49124",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R2-POC-R04",
+      "knowledge_item_id": "KI-CORE-R4"
+    },
+    "audit_event_id": "380b4816-4839-432a-97e1-b713d63ad6d1"
+  }
+}

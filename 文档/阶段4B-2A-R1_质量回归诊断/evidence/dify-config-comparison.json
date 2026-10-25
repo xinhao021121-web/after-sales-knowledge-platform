@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-25",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "published_baseline_version": 12,
+  "stage4a_configuration": "CFG-RERANK",
+  "comparison": {
+    "generation_model": {"baseline": "deepseek-v4-pro", "current": "deepseek-v4-pro", "match": true},
+    "embedding_model": {"baseline": "text-embedding-v4", "current": "text-embedding-v4", "match": true},
+    "retrieval_mode": {"baseline": "hybrid", "current": "multiple with 0.7 vector / 0.3 keyword", "match": true},
+    "top_k": {"baseline": 3, "current": 3, "match": true},
+    "reranking_model": {"baseline": "qwen3-rerank", "current": "qwen3-rerank", "match": true},
+    "temperature": {"baseline": 0.7, "current": 0.7, "match": true},
+    "dataset_id": {"baseline": "0d5a11ce-c017-4376-8099-d8e083243a7d", "current": "0d5a11ce-c017-4376-8099-d8e083243a7d", "match": true},
+    "prompt_semantics": {"baseline": "DIFY-PROMPT-CLAIM-20261025", "current": "same after placeholder normalization", "match": true}
+  },
+  "changes_made_in_r1": [],
+  "evidence": [
+    "baseline/dify-current-config.json",
+    "baseline/dify-current-prompt.txt",
+    "baseline/dify-current-config.png",
+    "文档/阶段4B-1_BFF与P03真实RAG接入/examples/dify-config-evidence.json"
+  ]
+}

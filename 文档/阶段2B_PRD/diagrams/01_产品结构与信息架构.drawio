@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="产品结构与信息架构">
+    <mxGraphModel dx="1500" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="企业级 RAG 售后知识平台｜产品结构与信息架构" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#1F2937;" vertex="1" parent="1"><mxGeometry x="40" y="20" width="900" height="50" as="geometry"/></mxCell>
+        <mxCell id="l1" value="" style="rounded=1;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;" vertex="1" parent="1"><mxGeometry x="40" y="100" width="1160" height="140" as="geometry"/></mxCell>
+        <mxCell id="l1t" value="服务接入层｜客户与售后角色" style="rounded=1;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="40" y="100" width="1160" height="30" as="geometry"/></mxCell>
+        <mxCell id="u1" value="消费者&#xa;诉求与证据" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1"><mxGeometry x="80" y="150" width="240" height="60" as="geometry"/></mxCell>
+        <mxCell id="u2" value="一线客服&#xa;建单 · 补证 · 确认" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1"><mxGeometry x="350" y="150" width="240" height="60" as="geometry"/></mxCell>
+        <mxCell id="u3" value="售后专员&#xa;检测 · 退换修" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1"><mxGeometry x="620" y="150" width="240" height="60" as="geometry"/></mxCell>
+        <mxCell id="u4" value="客服主管&#xa;风险 · 冲突 · 发布" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1"><mxGeometry x="890" y="150" width="270" height="60" as="geometry"/></mxCell>
+        <mxCell id="l2" value="" style="rounded=1;html=1;fillColor=#FFF3E0;strokeColor=#E65100;" vertex="1" parent="1"><mxGeometry x="40" y="280" width="1160" height="160" as="geometry"/></mxCell>
+        <mxCell id="l2t" value="一线辅助工作面｜当下如何处理" style="rounded=1;html=1;fillColor=#FFE0B2;strokeColor=#E65100;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="40" y="280" width="1160" height="30" as="geometry"/></mxCell>
+        <mxCell id="m1" value="ASQ&#xa;咨询任务" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1"><mxGeometry x="80" y="340" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="m2" value="CTX&#xa;上下文快照" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1"><mxGeometry x="310" y="340" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="m3" value="EVD / ADV&#xa;证据与建议" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1"><mxGeometry x="540" y="340" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="m4" value="ESC&#xa;风险升级" style="rounded=1;html=1;fillColor=#FCE8E6;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="770" y="340" width="180" height="70" as="geometry"/></mxCell>
+        <mxCell id="m5" value="转交与结果&#xa;人工确认" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1"><mxGeometry x="980" y="340" width="180" height="70" as="geometry"/></mxCell>
+        <mxCell id="l3" value="" style="rounded=1;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;" vertex="1" parent="1"><mxGeometry x="40" y="480" width="760" height="260" as="geometry"/></mxCell>
+        <mxCell id="l3t" value="知识治理工作面｜为什么可处理" style="rounded=1;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="40" y="480" width="760" height="30" as="geometry"/></mxCell>
+        <mxCell id="k1" value="SRC&#xa;来源与生命周期" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1"><mxGeometry x="80" y="540" width="210" height="70" as="geometry"/></mxCell>
+        <mxCell id="k2" value="KB&#xa;知识内容版本" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1"><mxGeometry x="320" y="540" width="210" height="70" as="geometry"/></mxCell>
+        <mxCell id="k3" value="业务审核&#xa;口径与责任" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1"><mxGeometry x="80" y="630" width="210" height="70" as="geometry"/></mxCell>
+        <mxCell id="k4" value="CASE&#xa;问题案例闭环" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1"><mxGeometry x="320" y="630" width="210" height="70" as="geometry"/></mxCell>
+        <mxCell id="k5" value="AI 评测&#xa;回归与门禁" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1"><mxGeometry x="550" y="540" width="210" height="70" as="geometry"/></mxCell>
+        <mxCell id="l4" value="" style="rounded=1;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;" vertex="1" parent="1"><mxGeometry x="830" y="480" width="370" height="260" as="geometry"/></mxCell>
+        <mxCell id="l4t" value="发布与治理｜变更如何生效" style="rounded=1;html=1;fillColor=#E1BEE7;strokeColor=#7B1FA2;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="830" y="480" width="370" height="30" as="geometry"/></mxCell>
+        <mxCell id="r1" value="REL&#xa;发布版本" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#7B1FA2;" vertex="1" parent="1"><mxGeometry x="870" y="540" width="290" height="60" as="geometry"/></mxCell>
+        <mxCell id="r2" value="停用 / 回滚" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#7B1FA2;" vertex="1" parent="1"><mxGeometry x="870" y="620" width="290" height="60" as="geometry"/></mxCell>
+        <mxCell id="r3" value="AUD · RBAC · 隐私" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="870" y="700" width="290" height="60" as="geometry"/></mxCell>
+        <mxCell id="note" value="跨工作任务：ASQ/CTX→EVD/ADV；任何时候出现 R2/R3→ESC；问题→CASE→知识修复→EVAL→REL。" style="text;html=1;fontSize=15;align=left;verticalAlign=middle;fontColor=#374151;" vertex="1" parent="1"><mxGeometry x="40" y="780" width="1100" height="50" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

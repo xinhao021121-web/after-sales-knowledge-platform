@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-10-25T13:20:18.416Z",
+  "task_id": "RET-H07",
+  "original_question": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+  "rewrites": [
+    "左耳放回盒子没有充电提示，换线和换电源都不亮，要先检查哪些位置？",
+    "AirPods Pro 3 单耳不充电，指示灯也不亮，第一步怎么处理？"
+  ],
+  "before": {
+    "source": "baseline/RET-H07-first-failure.json",
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "internal_candidate_pool_size": 14,
+    "displayed_top_k": 3,
+    "top3": [
+      {
+        "position": 1,
+        "document_id": "DOC-WARRANTY-V1",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.66856086
+      },
+      {
+        "position": 2,
+        "document_id": "DOC-FAQ-V1",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "score": 0.658562
+      },
+      {
+        "position": 3,
+        "document_id": "DOC-SAFETY-V1",
+        "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+        "score": 0.5546776
+      }
+    ],
+    "answer_status": "ANSWERED",
+    "semantic_passed": false
+  },
+  "after": {
+    "source": "evidence/probe-RET-H07-user-visible-final.json",
+    "provider_request_id": "b18c90fe-212e-4a72-959f-80e02c954b5a",
+    "retrieval_query": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+    "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+    "internal_candidate_pool_size": 14,
+    "displayed_top_k": 3,
+    "top3": [
+      {
+        "position": 1,
+        "document_id": "DOC-FAQ-V1",
+        "segment_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+        "score": 0.67929065
+      },
+      {
+        "position": 2,
+        "document_id": "DOC-FAQ-V1",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "score": 0.658562
+      },
+      {
+        "position": 3,
+        "document_id": "DOC-FAQ-V1",
+        "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+        "score": 0.57169056
+      }
+    ],
+    "answer_status": "ANSWERED",
+    "semantic_passed": true,
+    "citation_gate_passed": true
+  }
+}

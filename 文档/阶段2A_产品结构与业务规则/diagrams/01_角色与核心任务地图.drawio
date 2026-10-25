@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="角色地图">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="角色地图｜一线辅助为主，知识与评测为受控后台" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="400" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1t" value="一线与业务角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cust" value="消费者&#xa;提出诉求 · 提供证据 · 确认结果" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="320" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="一线客服&#xa;识别诉求 · 补齐上下文 · 发送已确认建议" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="as" value="售后专员&#xa;故障 · 退换修 · 检测 · 服务路径" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sup" value="客服主管&#xa;风险升级 · 渠道冲突 · 发布准备" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="490" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="biz" value="业务/渠道负责人&#xa;口径 · 适用范围 · 责任边界" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="460" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2t" value="共享业务对象" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#E65100;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obj1" value="咨询任务 ASQ&#xa;诉求 · 状态 · 负责角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="520" y="170" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="obj2" value="客户上下文 CTX&#xa;商品 · 渠道 · 时间 · 状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="520" y="260" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="obj3" value="证据 EVD&#xa;知识版本 · 适用范围" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="720" y="260" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="obj4" value="处理建议 ADV&#xa;动作 · 条件 · 承诺边界" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="520" y="360" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="obj5" value="风险升级单 ESC&#xa;止损 · 升级 · 独立闭环" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="720" y="360" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="obj6" value="问题案例 CASE&#xa;证据 · 原因 · 修复 · 回归" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="520" y="470" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="obj7" value="审计记录 AUD&#xa;谁 · 何时 · 依据 · 状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="520" y="570" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="980" y="100" width="440" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3t" value="治理与质量角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="100" width="440" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ko" value="知识运营&#xa;来源 · 知识 · 版本 · 案例" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="180" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eval" value="AI 评测人员&#xa;样本 · 标注 · 回归 · 质量证据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="300" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="legal" value="法务/安全责任人&#xa;高风险 · 专业裁决 · 安全确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="420" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="系统管理员&#xa;配置 · 执行 · 不可绕过审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="540" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="cust" target="l1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="l1" target="obj1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="as" target="obj4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="sup" target="obj5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ko" target="obj3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="eval" target="obj6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="biz" target="obj6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="核心任务地图">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title2" value="12 条正式核心任务｜每个验证域 4 条" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="700" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rbox" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="460" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="rt" value="A 售后规则判断" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="CORE-R1&#xa;电池保修费用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="CORE-R2&#xa;过保维修" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="CORE-R3&#xa;拆封退货" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="CORE-R4&#xa;单侧无声" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="sbox" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="520" y="100" width="460" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="st" value="B 安全风险升级" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="100" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="CORE-S1&#xa;进液保修" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="180" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="CORE-S2&#xa;充电盒变形" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="280" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="CORE-S3&#xa;充电合页过热" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="380" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="CORE-S4&#xa;耳机入仓发热" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="480" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="kbox" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="100" width="460" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="kt" value="C 知识更新与问题闭环" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="100" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="CORE-K1&#xa;授权维修确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="180" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="CORE-K2&#xa;AppleCare 换新" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="280" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="CORE-K3&#xa;接口异常与知识缺口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="380" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="CORE-K4&#xa;渠道结论冲突" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="480" width="380" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" value="所有任务均从咨询任务开始；任何时点出现 R2/R3，立即切换至安全风险流程。" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#374151;" vertex="1" parent="1">
+          <mxGeometry x="40" y="650" width="1200" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

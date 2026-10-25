@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "frozen_at": "2026-10-25",
+  "frozen_from_commit": "7feb9d0",
+  "status": "OPEN",
+  "items": [
+    {
+      "id": "Q-01",
+      "priority": "P1",
+      "status": "OPEN",
+      "title": "“还是失败”被误判为多业务目标",
+      "problem": "RET-H09 的改写问法包含“忽略配对后还是失败”，当前规则仅凭“还是”启用多目标检索。",
+      "evidence": "阶段4B-2A-R5_单目标检索与质量收口/evidence/holdout/RET-H09.json",
+      "definition_of_done": "使用结构化任务意图分类，区分业务目标、比较关系和状态描述，不再由单一连接词决定目标数量。"
+    },
+    {
+      "id": "Q-02",
+      "priority": "P1",
+      "status": "OPEN",
+      "title": "单目标连接排查未召回 CHUNK-FAQ-CONNECT-01",
+      "problem": "RET-H09 Top3 为 FAQ 身份、进液安全和保修标题切片，没有包含连接排查正文。",
+      "evidence": "阶段4B-2A-R5_单目标检索与质量收口/evidence/holdout/RET-H09.json",
+      "definition_of_done": "固定集合中的单目标连接问题召回 CHUNK-FAQ-CONNECT-01 或同等真实相关正文，用户可见步骤完整。"
+    },
+    {
+      "id": "Q-03",
+      "priority": "P1",
+      "status": "OPEN",
+      "title": "多目标判断规则过于依赖单一关键词",
+      "problem": "当前由“分别/还是/各自/两种业务/多条路径”的字符串匹配判定多目标，存在疑问和状态语言误判风险。",
+      "evidence": "阶段4B-1_BFF与P03真实RAG接入/server/objective-policy.mjs",
+      "definition_of_done": "意图分类通过结构化字段和回归用例验证，不依赖单一关键词。"
+    },
+    {
+      "id": "Q-04",
+      "priority": "P2",
+      "status": "OPEN",
+      "title": "新样例逐轮增加导致验收目标持续移动",
+      "problem": "R2—R5 每轮增加保留样例，修复目标不断扩展。",
+      "evidence": "阶段4B-2A_原型结项与质量风险冻结/fixed-regression/retention-set-frozen-final-1.0.0.json",
+      "definition_of_done": "后续修复使用固定 27 条集合；同一轮不新增题目；全部通过后才另建最终测试集。"
+    },
+    {
+      "id": "Q-05",
+      "priority": "P2",
+      "status": "OPEN",
+      "title": "语义自动检查仍需要人工抽样复核",
+      "problem": "概念组与关键词规则可能漏判事实有效性、行动可执行性和回答质量问题。",
+      "evidence": "阶段4B-2A-R5_单目标检索与质量收口/evidence/regression-manual-review.json",
+      "definition_of_done": "每轮保留人工抽样清单、评审结论、失败原文和产品验收记录。"
+    }
+  ]
+}

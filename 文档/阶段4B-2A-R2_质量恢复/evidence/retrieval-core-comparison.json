@@ -1,0 +1,151 @@
+{
+  "captured_at": "2026-10-25T09:48:52.550Z",
+  "baseline": [
+    {
+      "task_id": "POC-R01",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-FAQ-V1",
+        "DOC-WARRANTY-V1"
+      ],
+      "covered_source_count": 2,
+      "expected_source_count": 2
+    },
+    {
+      "task_id": "POC-R02",
+      "status": "NO_ANSWER",
+      "covered_source_ids": [
+        "DOC-WARRANTY-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1
+    },
+    {
+      "task_id": "POC-R03",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-RETURN-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 2
+    },
+    {
+      "task_id": "POC-R04",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-FAQ-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1
+    },
+    {
+      "task_id": "POC-K01",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-CHANNEL-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1
+    },
+    {
+      "task_id": "POC-K02",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-WARRANTY-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1
+    },
+    {
+      "task_id": "POC-K04",
+      "status": "CONFLICT",
+      "covered_source_ids": [
+        "DOC-CHANNEL-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1
+    }
+  ],
+  "final": [
+    {
+      "task_id": "POC-R01",
+      "status": "NO_ANSWER",
+      "covered_source_ids": [
+        "DOC-FAQ-V1",
+        "DOC-WARRANTY-V1"
+      ],
+      "covered_source_count": 2,
+      "expected_source_count": 2,
+      "internal_candidate_pool_size": 13,
+      "displayed_top_k": 3
+    },
+    {
+      "task_id": "POC-R02",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-WARRANTY-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1,
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3
+    },
+    {
+      "task_id": "POC-R03",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-RETURN-V1",
+        "DOC-CHANNEL-V1"
+      ],
+      "covered_source_count": 2,
+      "expected_source_count": 2,
+      "internal_candidate_pool_size": 13,
+      "displayed_top_k": 3
+    },
+    {
+      "task_id": "POC-R04",
+      "status": "ANSWERED",
+      "covered_source_ids": [
+        "DOC-FAQ-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1,
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3
+    },
+    {
+      "task_id": "POC-K01",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-CHANNEL-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1,
+      "internal_candidate_pool_size": 14,
+      "displayed_top_k": 3
+    },
+    {
+      "task_id": "POC-K02",
+      "status": "NEED_CLARIFICATION",
+      "covered_source_ids": [
+        "DOC-WARRANTY-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1,
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3
+    },
+    {
+      "task_id": "POC-K04",
+      "status": "CONFLICT",
+      "covered_source_ids": [
+        "DOC-CHANNEL-V1"
+      ],
+      "covered_source_count": 1,
+      "expected_source_count": 1,
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3
+    }
+  ],
+  "conclusion": "R03 gained DOC-CHANNEL-V1; R01, R02, R04, K01, K02, K04 retained at least one expected logical source."
+}

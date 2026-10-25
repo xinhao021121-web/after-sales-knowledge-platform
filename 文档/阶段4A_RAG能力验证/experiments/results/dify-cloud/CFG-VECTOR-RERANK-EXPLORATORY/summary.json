@@ -1,0 +1,1115 @@
+{
+  "provider": "Dify Cloud",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "base_url": "https://api.dify.ai/v1",
+  "config_id": "CFG-RERANK",
+  "configuration": {
+    "retrieval_mode": "hybrid",
+    "top_k": 3,
+    "rerank": "true",
+    "chunk_size": 700,
+    "overlap": 100,
+    "citation_mode": "required"
+  },
+  "provider_info": {
+    "name": "Stage4A-RAG-CANDIDATE",
+    "mode": "advanced-chat"
+  },
+  "parameters_received": 12,
+  "started_at": "2026-10-24T09:02:05.366Z",
+  "task_count": 17,
+  "success_count": 17,
+  "p0_count": 6,
+  "p0_rule_failures": 4,
+  "citation_present_count": 8,
+  "correct_source_hit_count": 10,
+  "average_recall_at_3": 0.6071,
+  "average_latency_ms": 33748,
+  "manual_review_required": true,
+  "results": [
+    {
+      "task_id": "POC-R01",
+      "core_task_id": "CORE-R1",
+      "http_status": 200,
+      "elapsed_ms": 49467,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "结论：**检测前不能确定免费换电池，也无法确定维修是否收费** [citation:1]。\n\n已知条件：\n- 产品：AirPods Pro 3，购买渠道为 Apple Store 在线商店，购买日期为 2026-02-10，用户自述使用约 8 个月 [citation:1]。\n- 当前状态：**未检测**，症状为续航约 2.5 小时 [citation:1]。\n\n无法判断的原因：\n- 续航下降是否属于保修范围内的电池缺陷，需要官方检测后确认 [citation:1]。\n- 当前上下文没有提供 Apple 关于 AirPods Pro 3 电池保修、电池更换标准或维修收费的具体规则，因此不能仅凭“续航缩短”得出免费或收费结论 [citation:1]。\n\n下一步动作：\n1. 联系 Apple 支持或前往 Apple Store / Apple 授权服务商预约检测。\n2. 提供购买凭证、耳机序列号，并说明已使用约 8 个月、续航约 2.5 小时。\n3. 由技术人员检测电池健康度、循环次数或是否存在硬件故障。\n4. 根据检测结果和 Apple 官方保修政策判断费用。\n\n需要补充的信息：\n- Apple 官方电池服务/保修条款；或检测后的电池健康度、循环次数和诊断结论。提供后我可继续协助判断。\n\n注：[citation:1] 为当前对话提供的上下文信息，其中不包含 Apple 官方电池维修政策条款，因此无法标注政策来源。",
+      "expected_doc_names": [
+        "01_售后FAQ.md",
+        "04_保修与维修流程.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.7648888,
+          "content": "AirPods Pro 3 保修与维修流程"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.73092115,
+          "content": "AirPods Pro 3 售后 FAQ"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "0a8ddc1a-2890-44b4-a5c3-11071a80b860",
+        "message_id": "1bfa764e-ddd8-49c6-be85-ff05395a63fe",
+        "conversation_id": "140837c2-b2ad-4acd-8be0-5cf714d66240",
+        "usage": {
+          "prompt_tokens": 284,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 3849,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 4133,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 48.119,
+          "time_to_first_token": 2.647,
+          "time_to_generate": 46.292
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-R02",
+      "core_task_id": "CORE-R2",
+      "http_status": 200,
+      "elapsed_ms": 10445,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "条件：  \n- 产品：AirPods Pro 3  \n- 保修状态：已过保 2 个月  \n- 故障：充电不稳定  \n- 维修历史：无  \n\n引用：  \n当前上下文未提供任何关于过保维修服务、付费维修可行性或价格标准的条款，因此没有可标注的引用来源。\n\n下一步动作：  \n依据给定上下文，无法确认 AirPods Pro 3 过保后是否还能付费维修，也无法预先确定维修价格。建议补充官方过保维修政策、费用标准，或联系 Apple 官方售后/授权服务商并提供序列号进一步确认。",
+      "expected_doc_names": [
+        "04_保修与维修流程.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.79557043,
+          "content": "AirPods Pro 3 保修与维修流程"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.73986113,
+          "content": "AirPods Pro 3 售后 FAQ"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "0188cf9d-7054-4ae1-957a-74c8b0454dbb",
+        "message_id": "662d7a8f-018e-4706-a42c-0ff51e648f15",
+        "conversation_id": "fc9e9779-a232-4500-b8fe-70b53a0fd64b",
+        "usage": {
+          "prompt_tokens": 258,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 662,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 920,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 9.27,
+          "time_to_first_token": 2.151,
+          "time_to_generate": 7.788
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-R03",
+      "core_task_id": "CORE-R3",
+      "http_status": 200,
+      "elapsed_ms": 34704,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "根据当前上下文，我无法直接判断“能退”或“不能退”。已知条件仅说明：商品为 AirPods Pro 3；收货 3 天前；已拆封；配件齐全；无质量问题；渠道需区分第三方平台与 Apple Store 在线商店。但上下文中未包含具体的退货/退款条款，因此无法给出确定结论（当前无可用引用来源）。\n\n分渠道说明：\n\n- **第三方平台购买**：3 天内拆封、配件齐全且无质量问题，是否可退取决于该第三方平台/商家的退货政策，尤其是是否接受已拆封商品。当前上下文未提供该政策，无法判断。\n- **Apple 官网 / Apple Store 在线商店购买**：拆封试戴后是否仍适用 14 天退货，需以 Apple 官方退货政策为准。当前上下文未提供具体条款，无法确认。\n\n下一步动作：\n\n1. 请提供第三方平台名称，以及商品页/订单页公示的退货规则；  \n2. 如是 Apple 官方渠道购买，请提供订单号或购买凭证，并说明是申请“14 天退货”还是“质量问题退货”；  \n3. 也可以直接联系购买渠道客服或 Apple 官方客服，核实“已拆封无质量问题”场景下的退货政策。",
+      "expected_doc_names": [
+        "03_退货规则.md",
+        "05_渠道差异说明.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+          "score": 0.73627937,
+          "content": "AirPods 退货与退款判断"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.69188726,
+          "content": "AirPods Pro 3 售后 FAQ"
+        }
+      ],
+      "recall_at_3": 0.5,
+      "correct_source_hit": true,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "08d9daaf-3f50-43ae-a532-37ffc845ea9c",
+        "message_id": "41b2fcbd-d155-4936-9332-e15a3ef2682d",
+        "conversation_id": "6797bcd1-edf1-429f-8725-98abdaff8429",
+        "usage": {
+          "prompt_tokens": 263,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2804,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 3067,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 33.419,
+          "time_to_first_token": 1.813,
+          "time_to_generate": 32.245
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-R04",
+      "core_task_id": "CORE-R4",
+      "http_status": 200,
+      "elapsed_ms": 27698,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "根据已知信息，目前**不能直接判断为“长期单耳佩戴坏了”**，也不能承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。  \n当前存在未确认项：**声道平衡未知、清洁未检查、重置未尝试**，所以先按单侧无声标准排查。\n\n### 下一步动作（按顺序）\n\n1. **重新放回充电盒**  \n   将两只耳机都放回充电盒，合盖至少 **10 秒**后再取出连接 [citation:CHUNK-FAQ-CONNECT-01]。\n\n2. **检查基础项**  \n   检查左耳耳塞/网罩是否堵塞，设备声道平衡是否居中，佩戴是否贴合 [citation:CHUNK-FAQ-CONNECT-01]。\n\n3. **仍未恢复时重新配对**  \n   在设备蓝牙设置中**忽略旧配对**，然后重新配对 [citation:CHUNK-FAQ-CONNECT-01]。\n\n4. **什么情况才转售后**  \n   只有一侧持续无声音，或完成重置和清洁后仍反复异常，才建议转售后检测 [citation:CHUNK-FAQ-CONNECT-01]。\n\n如需继续判断，请补充：  \n- 设备声道平衡是否检查过？  \n- 耳塞/网罩是否已清洁？  \n- 是否已尝试重新配对或重置？",
+      "expected_doc_names": [
+        "01_售后FAQ.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+          "score": 0.74905205,
+          "content": "CHUNK-FAQ-CONNECT-01 单侧无声与连接排查\n单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.6358861,
+          "content": "AirPods Pro 3 售后 FAQ"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "e12969d8-e208-4e94-b081-027b8f5acb70",
+        "message_id": "41762084-756c-4748-b2d3-b03f3442017b",
+        "conversation_id": "dfe9e88a-3ad1-44c5-a2e1-74971d540b0f",
+        "usage": {
+          "prompt_tokens": 361,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2540,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 2901,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 26.477,
+          "time_to_first_token": 3.031,
+          "time_to_generate": 24.136
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S01",
+      "core_task_id": "CORE-S1",
+      "http_status": 200,
+      "elapsed_ms": 25171,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "根据当前上下文，无法就“AirPods 进水是否还能保修”以及“进液后能否直接放回充电盒继续使用”给出确定结论。\n\n**已知条件：**  \n- 产品：AirPods Pro 3  \n- 液体事件：整机入水  \n- 充电状态：未充电  \n- 发热、膨胀、异味：均未知  \n\n**缺失信息/原因：**  \n当前上下文未提供 AirPods Pro 3 的液体损坏保修条款、进液后的官方处理指引、是否可放入充电盒继续使用的操作规范或售后政策来源。因此无法判断该情况是否属于保修范围，也无法确认能否继续放入充电盒使用。\n\n**引用：**  \n无可用引用来源，因此无法标注 [citation:序号]。\n\n**下一步动作：**  \n1. 请补充 AirPods Pro 3 的保修政策中关于液体损坏/进液的具体条款，或官方进液处理指引。  \n2. 建议联系 Apple 官方客服或授权服务商，提供“整机入水、当前未充电”等信息，按官方指导处理，不要仅凭现有信息自行判断是否保修或继续使用。",
+      "expected_doc_names": [
+        "02_安全SOP.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.7200241,
+          "content": "AirPods Pro 3 保修与维修流程"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.6601101,
+          "content": "AirPods Pro 3 售后 FAQ"
+        }
+      ],
+      "recall_at_3": 0,
+      "correct_source_hit": false,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": true,
+      "p0_rule_pass": false,
+      "provider_metadata": {
+        "task_id": "a564c127-c2b4-4ff3-95ed-c4285f124526",
+        "message_id": "f9a943fe-d0e0-4308-b7ac-d35b2963343f",
+        "conversation_id": "b06cd34d-0e2a-4512-8e33-a6d5e587fe11",
+        "usage": {
+          "prompt_tokens": 252,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 1873,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 2125,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 23.862,
+          "time_to_first_token": 2.122,
+          "time_to_generate": 22.495
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S02",
+      "core_task_id": "CORE-S2",
+      "http_status": 200,
+      "elapsed_ms": 27993,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "条件：已知产品为 AirPods Pro 3，当前外壳鼓起/变形，正在充电，轻微发热，气味未知。\n\n可引用信息：当前知识库仅涉及充电与状态灯说明。充电盒不充电时可检查兼容线缆、电源、接口碎屑和耳机是否放到位；不得指导客户使用尖锐物清理接口，也不得在潮湿状态下充电；绿灯表示耳机已充满，琥珀色表示盒内电量不足以让耳机再次充满；更换线缆和电源后仍无反应，转服务检测 [citation:1]。\n\n结论：知识库中没有“外壳鼓起/变形但仍能亮灯、充电中轻微发热”能否继续充电或继续使用的安全判断依据，因此不能判断是否安全，也不能建议继续使用。\n\n下一步动作/追问：请补充是否出现异味、是否曾跌落/受挤压/进液、是否使用原装或经认证的充电配件。涉及外壳变形/鼓包且正在充电的情况，建议暂停使用并联系售后服务检测确认。",
+      "expected_doc_names": [
+        "02_安全SOP.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "98578aeb-31e3-48ce-9781-b573cccd102b",
+          "score": 0.6716789,
+          "content": "CHUNK-FAQ-POWER-01 充电与状态灯\n充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。更换线缆和电源后仍无反应，转服务检测。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.62320256,
+          "content": "AirPods Pro 3 售后 FAQ"
+        }
+      ],
+      "recall_at_3": 0,
+      "correct_source_hit": false,
+      "citation_ids": [
+        1
+      ],
+      "citation_present": true,
+      "p0": true,
+      "p0_rule_pass": false,
+      "provider_metadata": {
+        "task_id": "8a078645-1596-4f43-95f8-2f48efd630aa",
+        "message_id": "cdafd15e-ca85-4a3e-8ae0-a91c5b491b75",
+        "conversation_id": "65c0e125-3e97-43ec-ab9e-b36023f42219",
+        "usage": {
+          "prompt_tokens": 325,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2248,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 2573,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 26.815,
+          "time_to_first_token": 1.615,
+          "time_to_generate": 25.803
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S03",
+      "core_task_id": "CORE-S3",
+      "http_status": 200,
+      "elapsed_ms": 35267,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "现有上下文不足，无法判断“还能继续充吗”或“先观察可以吗”。\n\n已知的 FAQ 片段仅覆盖“充电盒不充电”的排查和状态灯含义，未包含 AirPods Pro 3 无线充电时“合页非常烫”的判定标准、停充条件或售后处理流程；同时已知信息中异味、鼓胀、皮肤受伤均为未知，因此不能给出有依据的下一步动作，也不能提供引用来源。\n\n请补充以下关键信息后再判断：\n1. 是否有异味、外壳变形/鼓胀、或皮肤被烫伤？  \n2. 使用的是否为原装/合规无线充电器？是否戴了保护壳？充电环境温度是否较高？  \n3. 当前充电盒状态灯是什么颜色？耳机是否仍能正常连接和充电？\n\n获得这些信息及对应的 AirPods Pro 3 售后规则后，才能给出可引用的处理建议。",
+      "expected_doc_names": [
+        "02_安全SOP.md",
+        "01_售后FAQ.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "98578aeb-31e3-48ce-9781-b573cccd102b",
+          "score": 0.61716473,
+          "content": "CHUNK-FAQ-POWER-01 充电与状态灯\n充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。更换线缆和电源后仍无反应，转服务检测。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.6152884,
+          "content": "AirPods Pro 3 售后 FAQ"
+        }
+      ],
+      "recall_at_3": 0.5,
+      "correct_source_hit": true,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": true,
+      "p0_rule_pass": false,
+      "provider_metadata": {
+        "task_id": "11267a1e-62d9-42c3-abc8-41767c79370c",
+        "message_id": "85d5b8a8-72f3-4658-9230-2d21a229d42f",
+        "conversation_id": "d6e3dbd1-2a06-4718-95df-7bab65fa5954",
+        "usage": {
+          "prompt_tokens": 341,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2689,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 3030,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 33.921,
+          "time_to_first_token": 1.535,
+          "time_to_generate": 32.936
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-S04",
+      "core_task_id": "CORE-S4",
+      "http_status": 200,
+      "elapsed_ms": 55686,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "**条件确认：**\n- 产品：AirPods 2  \n- 现象：右耳无法连接；放回充电盒后外壳发热  \n- 未知信息：是否正在充电、发热程度、有无异味/鼓包/变形  \n\n**可依据的结论：**\n- 单侧无声/无法连接时，可先尝试：将两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合；仍异常时在设备中忽略旧配对并重新配对。若只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接归因为单耳佩戴，也不得承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。\n- 充电盒常规检查仅适用于不充电问题：检查兼容线缆、电源、接口碎屑和耳机是否放到位；不得使用尖锐物清理接口，不得在潮湿状态充电；绿灯表示耳机已充满，琥珀色表示盒内电量不足以让耳机再次充满 [citation:CHUNK-FAQ-POWER-01]。  \n- 但上述资料没有覆盖“充电盒/外壳发热”的安全处理规则，也没有提供硬件“重置”的具体步骤，只提到“重新配对” [citation:CHUNK-FAQ-CONNECT-01]。\n\n**知识不足与追问：**\n- 关于“外壳发热/盒子变热”是否能继续重置、是否应先停用，当前上下文不足，无法判断。  \n- 需要补充：  \n  1. 发热是在充电中还是未充电时发生？  \n  2. 是否烫手/局部明显发热？  \n  3. 是否有异味、鼓包、变形或液体进入？  \n  4. 使用的是原装还是兼容充电线和电源？\n\n**下一步动作建议：**\n1. 在补充发热信息前，无法给出“先修连接”还是“先停用”的确切排序。  \n2. 若只是右耳无法连接，且确认无异常发热、异味、鼓包，可参照连接排查步骤操作：合盖至少 10 秒 → 检查堵塞/声道平衡/佩戴 → 忽略旧配对重新配对；仍异常转售后检测 [citation:CHUNK-FAQ-CONNECT-01]。  \n3. 若充电盒明显发热/烫手，或伴随异味、鼓包，因当前知识库未覆盖发热处理，建议优先转售后检测，确认安全后再处理连接问题。",
+      "expected_doc_names": [
+        "02_安全SOP.md",
+        "01_售后FAQ.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+          "score": 0.6423603,
+          "content": "CHUNK-FAQ-CONNECT-01 单侧无声与连接排查\n单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "98578aeb-31e3-48ce-9781-b573cccd102b",
+          "score": 0.60147285,
+          "content": "CHUNK-FAQ-POWER-01 充电与状态灯\n充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。更换线缆和电源后仍无反应，转服务检测。"
+        }
+      ],
+      "recall_at_3": 0.5,
+      "correct_source_hit": true,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": true,
+      "p0_rule_pass": false,
+      "provider_metadata": {
+        "task_id": "df5e28d1-9cd0-49fe-8f92-8ed9ea0f5b55",
+        "message_id": "5aed36f3-dfb4-4b5c-8865-85166ddb1149",
+        "conversation_id": "330c59e7-fb75-4e82-80f4-b7ebf31bea5e",
+        "usage": {
+          "prompt_tokens": 446,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 4548,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 4994,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 54.397,
+          "time_to_first_token": 1.841,
+          "time_to_generate": 53.189
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K01",
+      "core_task_id": "CORE-K1",
+      "http_status": 200,
+      "elapsed_ms": 29229,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "【结论】  \n当前上下文不足，无法确认以下问题：  \n- “京东苹果售后”是否属于 Apple 授权维修；  \n- 该京东店铺是否确为 Apple 授权服务商；  \n- 平台名称叫“苹果售后”是否可认定为授权维修。  \n\n【原因】  \n已知上下文仅显示：渠道为“京东第三方或自营身份未确认”，服务商名称未知，无工单信息，维修项目未知；未提供任何 Apple 授权规则、授权名单或可核验凭证。因此暂不能作出授权认定，也无法标注可引用的规则来源。  \n\n【下一步/需补充信息】  \n请补充以下信息后再判断：  \n1. 店铺全称或企业主体，是否为京东自营；  \n2. Apple 授权服务商证书编号，或可在 Apple 官网查询到的授权服务商名称；  \n3. 维修项目是否包含 AirPods 及具体型号。  \n\n在收到上述可核验信息前，不能将该店铺认定为 Apple 授权维修服务商。",
+      "expected_doc_names": [
+        "05_渠道差异说明.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.62907314,
+          "content": "AirPods Pro 3 保修与维修流程"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+          "score": 0.61511314,
+          "content": "AirPods 退货与退款判断"
+        }
+      ],
+      "recall_at_3": 0,
+      "correct_source_hit": false,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "e54497f1-707a-40ba-b4f8-fbcab823ac22",
+        "message_id": "a6d1febc-6368-441a-bb74-a34d58eb09aa",
+        "conversation_id": "25cc96ae-8c0b-4c76-8e96-1612aeb15d1d",
+        "usage": {
+          "prompt_tokens": 241,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2125,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 2366,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 26.52,
+          "time_to_first_token": 1.818,
+          "time_to_generate": 25.34
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K02",
+      "core_task_id": "CORE-K2",
+      "http_status": 200,
+      "elapsed_ms": 23492,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "【条件】  \n根据当前已知信息，无法确认“满两年是否可无条件换新”或“保障快到期能否直接要求换一套”。需要同时满足以下条件才能进一步判断：\n\n1. 需要核实您的 AppleCare+ 合同条款，确认是否包含“到期换新”“无故障换新”或类似权益；当前您未出示合同。  \n2. 需要说明设备是否存在故障或损坏；当前故障情况未说明。  \n3. 需要确认服务历史，例如是否已使用过维修/换新服务；当前服务历史未知。  \n4. 需要确认保障即将到期是否触发可换新权益，这必须以合同条款为准。  \n\n【引用】  \n当前上下文未提供可引用的具体条款或流程，因此本回复无法标注 [citation:序号]。\n\n【下一步动作】  \n1. 请提供 AppleCare+ 合同/凭证或产品序列号，以便核实保障范围、有效期限及是否包含换新权益。  \n2. 请说明 AirPods Pro 3 当前是否有故障或损坏，以及具体现象。  \n3. 如设备无故障，仅因保障即将到期要求换新，需以合同条款为准，建议转由人工或官方售后协助核实，不建议在未核实前承诺可换新。",
+      "expected_doc_names": [
+        "04_保修与维修流程.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.7192539,
+          "content": "AirPods Pro 3 售后 FAQ"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.71437645,
+          "content": "AirPods Pro 3 保修与维修流程"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "8ab780d9-549a-4ff4-96cc-d5935117cd22",
+        "message_id": "da4f803a-3491-40ea-85fb-864084e3e5dd",
+        "conversation_id": "5ace58d4-5e27-475c-ba0d-bb9a911cac19",
+        "usage": {
+          "prompt_tokens": 264,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 1652,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 1916,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 21.079,
+          "time_to_first_token": 3.409,
+          "time_to_generate": 19.49
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K03",
+      "core_task_id": "CORE-K3",
+      "http_status": 200,
+      "elapsed_ms": 54662,
+      "answer_status": "BLOCKED_SAFETY",
+      "answer": "根据现有信息，接口异常是脏污还是硬件损坏无法判断，因此不能直接确认是否可以继续充电。请先按下面条件处理：\n\n1. **不要用针挑**：不建议也不得使用针、镊子等尖锐物清理或挑充电接口 [citation:1]。\n\n2. **能否充电，先排除潮湿/进液**：如果接口或充电盒有液体、怀疑进液或处于潮湿状态，请立即停止充电，用柔软干燥的无绒布擦干外表，至少等待 2 小时完全干燥后再放入充电盒；抗汗抗水能力不构成潮湿状态继续充电的许可 [citation:2]。\n\n3. **确认干燥后再尝试**：如果确认接口无液体、无进液，可以检查是否使用兼容线缆和电源、接口是否有碎屑、耳机是否放到位；更换线缆和电源后仍无反应，转服务检测 [citation:1]。\n\n**下一步建议**  \n- 先停止用针挑接口。  \n- 确认接口是否有水渍/液体痕迹；若有或不确定，不要充电，按进液处理 [citation:2]。  \n- 若确认干燥，可尝试更换兼容线缆和电源；仍异常或不确定是否硬件损坏，转服务检测 [citation:1]。  \n\n当前缺少照片、是否进液/受潮、接口是否物理变形等信息，如需进一步判断，请补充：接口是否有水渍/液体、是否变形/松动、是否有异味或发热。",
+      "expected_doc_names": [
+        "01_售后FAQ.md",
+        "02_安全SOP.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "98578aeb-31e3-48ce-9781-b573cccd102b",
+          "score": 0.67565423,
+          "content": "CHUNK-FAQ-POWER-01 充电与状态灯\n充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。更换线缆和电源后仍无反应，转服务检测。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+          "document_name": "02_安全SOP.md",
+          "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+          "score": 0.5828626,
+          "content": "CHUNK-SAFE-WATER-01 进液\n进液后立即停止佩戴和充电，用柔软干燥的无绒布擦干外表，放入充电盒前至少等待 2 小时完全干燥。不得使用加热、压缩空气、甩动或尖锐物清理接口和声学孔。抗汗抗水能力不构成潮湿状态继续充电的许可。"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "citation_present": true,
+      "p0": true,
+      "p0_rule_pass": true,
+      "provider_metadata": {
+        "task_id": "68f862b8-8bd3-43af-8743-82721321e81a",
+        "message_id": "f755a83f-f166-43c1-9b05-9840e9e647be",
+        "conversation_id": "277c5bee-922f-4e2b-b0be-2a74d305d394",
+        "usage": {
+          "prompt_tokens": 405,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 4176,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 4581,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 50.284,
+          "time_to_first_token": 1.902,
+          "time_to_generate": 49.089
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-K04",
+      "core_task_id": "CORE-K4",
+      "http_status": 200,
+      "elapsed_ms": 60163,
+      "answer_status": "NEED_CLARIFICATION",
+      "answer": "暂不能判断“应该听哪个”，也不能仅凭两份结论冲突直接认定平台欺诈。\n\n引用说明：[citation:1] 平台拒修；[citation:2] 官方检测后换新；[citation:3] CHUNK-WARRANTY-EVIDENCE-01；[citation:4] CHUNK-CHANNEL-CHECK-01。\n\n当前上下文显示：平台拒修 [citation:1] 与官方检测后换新 [citation:2] 并存，但“serial 未核验”“work_order_dates 未知”“authorization 未知”，因此无法确认两份结论是否针对同一设备、同一故障、同一售后申请，也无法确认官方结论的真实性及平台拒修的具体理由 [citation:3][citation:4]。\n\n需核验的条件：\n\n1. 履行主体：销售方是平台自营还是第三方店铺；订单、发票、实际售后入口、签收时间是否一致 [citation:4]。\n2. 设备身份：型号、序列号、购买凭证、保障合同/AppleCare+；官方换新凭证是否与同一序列号对应 [citation:3]。\n3. 争议同一性：平台拒修与 Apple 换新是否针对同一故障现象、同一时间段的同一设备；有无历史维修记录影响 [citation:3]。\n4. 授权及真实性：平台是否为 Apple 授权服务商；Apple 检测换新是否由官方或授权渠道出具并可查证 [citation:4]。\n\n下一步动作：\n\n1. 请用户补充平台拒修单据、Apple 换新工单/凭证，包含序列号、日期、故障描述、处理机构。\n2. 核验销售主体、订单和序列号；若身份不一致，先转保修核验，不直接认定非正品或欺诈 [citation:3][citation:4]。\n3. 核验 Apple 换新结论的真实性和平台拒修理据；在序列号、工单日期、授权状态未核实前，暂不下“以哪份为准”的结论。\n4. 若核验后确认两份结论均真实且针对同一设备、同一故障，再按保修/售后责任判断处理依据；仅凭冲突本身不能直接认定平台欺诈。\n\n需要补充的信息：平台拒修的具体理由和依据；Apple 换新的工单号、序列号、日期；购买凭证、订单和发票；销售主体是京东自营还是第三方店铺。",
+      "expected_doc_names": [
+        "05_渠道差异说明.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+          "score": 0.6319041,
+          "content": "CHUNK-WARRANTY-EVIDENCE-01 检测与身份\n免费维修、收费维修或更换均需结合型号、序列号、购买凭证、保障合同、故障现象和历史维修。身份不一致时先转保修核验，不直接认定非正品或欺诈。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+          "score": 0.596854,
+          "content": "CHUNK-CHANNEL-CHECK-01 先核验履行主体\n回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。品牌名称不能替代责任主体；平台名称也不能自动证明维修方具有授权。"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [
+        1,
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        4,
+        4,
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "171509aa-9a91-4e64-9aee-bc92dd0ee65b",
+        "message_id": "e874e2cb-8d7d-4094-be1a-688fb8ea3411",
+        "conversation_id": "ff5f47e5-639b-4254-bf77-a5ef32b9f982",
+        "usage": {
+          "prompt_tokens": 369,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 5062,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 5431,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 58.496,
+          "time_to_first_token": 2.397,
+          "time_to_generate": 57.23
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E01",
+      "core_task_id": "EDGE-NO-KNOWLEDGE",
+      "http_status": 200,
+      "elapsed_ms": 7232,
+      "answer_status": "NO_ANSWER",
+      "answer": "根据已知上下文，知识库中没有关于 AirPods Pro 3 是否支持卫星电话、卫星求救或卫星通话功能的信息，因此无法确认该产品是否具备相关能力。\n\n下一步建议：  \n- 如需准确信息，请提供 AirPods Pro 3 的官方技术规格或联系 Apple 官方支持确认。  \n- 我也可以帮你查询其他已知功能或售后保修问题。",
+      "expected_doc_names": [],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.67261195,
+          "content": "AirPods Pro 3 售后 FAQ"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.5814991,
+          "content": "AirPods Pro 3 保修与维修流程"
+        }
+      ],
+      "recall_at_3": null,
+      "correct_source_hit": null,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "4f1da1b7-5fb7-4dac-a29e-fd935e62f60c",
+        "message_id": "93647db5-8dd9-4bcc-add0-f3d0cca76eeb",
+        "conversation_id": "ff584e62-af72-4940-b65c-13cedf8b0bbe",
+        "usage": {
+          "prompt_tokens": 237,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 355,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 592,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 5.192,
+          "time_to_first_token": 2.784,
+          "time_to_generate": 3.958
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E02",
+      "core_task_id": "EDGE-EXPIRED-KNOWLEDGE",
+      "http_status": 200,
+      "elapsed_ms": 32396,
+      "answer_status": "KNOWLEDGE_EXPIRED",
+      "answer": "【结论】  \n当前上下文不能确认“第三方渠道拆封耳机一定不能退”，也不能按已过期的旧版第三方规则直接拒绝退货。当前知识状态显示仅命中已过期旧规则、现行政策缺失，因此旧规则现在是否仍有效无法确认，不能作为处理依据。\n\n【条件】  \n1. 第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利；未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修[citation:1]。  \n2. 若该交易属于远程交易，消费者通常适用收到商品之日起七日内无理由退货，但商品应保持完好，并同时满足法定例外和实际渠道规则；购买渠道、签收日期、商品状态、配件完整性和退货原因必须一并核验，不得只根据“拆封”一个关键词给出确定结论[citation:2]。\n\n【下一步动作】  \n请客户补充：具体第三方平台/店铺/经销商、订单信息或购买链接、签收日期、耳机是否仅拆封未使用或已使用、配件发票包装是否完整、退货原因。取得这些信息后，需调取并核对该渠道现行退换货规则，再判断是否支持退货/换货/维修；在此之前不按旧规则直接拒绝，也不承诺可退或不可退。",
+      "expected_doc_names": [],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+          "score": 0.7487705,
+          "content": "CHUNK-CHANNEL-THIRD-01 第三方平台\n第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+          "document_name": "03_退货规则.md",
+          "segment_id": "80a0de81-a589-4945-b8f4-cb4b47a0e71f",
+          "score": 0.6453699,
+          "content": "CHUNK-RETURN-LEGAL-01 远程交易无理由退货\n远程交易消费者通常适用收到商品之日起七日内无理由退货，但商品应保持完好，并同时满足法定例外和实际渠道规则。购买渠道、签收日期、商品状态、配件完整性和退货原因必须一并核验；不得只根据“拆封”一个关键词给出确定结论。"
+        }
+      ],
+      "recall_at_3": null,
+      "correct_source_hit": null,
+      "citation_ids": [
+        1,
+        2
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "7a57ccc8-a86a-4e1a-ad21-928c83eb40e0",
+        "message_id": "3208c46a-8efa-459e-a3f6-8fa71dbbf3af",
+        "conversation_id": "6487dad7-474f-4597-9fd5-ec8c4221e7f2",
+        "usage": {
+          "prompt_tokens": 364,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2697,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 3061,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 30.848,
+          "time_to_first_token": 2.217,
+          "time_to_generate": 29.7
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E03",
+      "core_task_id": "EDGE-CHANNEL-CONFLICT",
+      "http_status": 200,
+      "elapsed_ms": 30284,
+      "answer_status": "CONFLICT",
+      "answer": "不能采用任一单方答案，也不能用检索分数或“更权威一方”来选择。当前两家售后书面结论相反，属于结论冲突，应按冲突处理规则执行 [citation:1]。\n\n**结论：**\n- 不得只采信“平台拒修”或“Apple 检测后换新”中的单方结论 [citation:1]。\n- 当前 `authorization_verified=false`，授权状态尚未核验，因此更不足以直接判定应采信哪一方 [citation:2]。\n\n**引用规则：**\n- 两个渠道给出不同结论时，应保留双方书面结论、序列号、工单日期、维修项目和授权信息；不得判定消费者欺诈，也不得只采信单方；冲突进入渠道负责人和主管联合裁决 [citation:1]。\n- 免费维修、收费维修或更换均需结合型号、序列号、购买凭证、保障合同、故障现象和历史维修；身份不一致时先转保修核验，不直接认定非正品或欺诈 [citation:2]。\n\n**下一步动作：**\n1. 追问并核验：型号、序列号、购买凭证、保障合同、授权信息 [citation:2]。\n2. 收集并保留：双方书面结论、工单编号、工单日期、维修项目、故障现象、历史维修；当前已有工单，应一并保留 [citation:1]。\n3. 升级处理：将冲突提交渠道负责人和主管联合裁决，在裁决完成前不对外给出最终采用结论 [citation:1]。\n\n**知识不足说明：**  \n当前上下文未包含序列号、授权信息、购买凭证、保障合同及双方具体书面内容和工单细节，无法判断应采信“平台拒修”还是“Apple 换新”。如无法补充以上信息，则不能给出最终采用答案。",
+      "expected_doc_names": [
+        "05_渠道差异说明.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+          "document_name": "05_渠道差异说明.md",
+          "segment_id": "da58ce66-5019-4c25-8591-0863cdf22022",
+          "score": 0.66077554,
+          "content": "CHUNK-CHANNEL-CONFLICT-01 结论冲突\n两个渠道给出不同结论时，保留双方书面结论、序列号、工单日期、维修项目和授权信息；不得判定消费者欺诈，也不得只采信单方。冲突进入渠道负责人和主管联合裁决。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "segment_id": "3fb295a6-e5e0-4076-988b-1f3a3a1d5850",
+          "score": 0.60046005,
+          "content": "CHUNK-WARRANTY-EVIDENCE-01 检测与身份\n免费维修、收费维修或更换均需结合型号、序列号、购买凭证、保障合同、故障现象和历史维修。身份不一致时先转保修核验，不直接认定非正品或欺诈。"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "592a01a7-9bd0-4c40-a196-3af745a962cd",
+        "message_id": "d41aafb5-964c-4b71-b6dd-843da8cc3e47",
+        "conversation_id": "c22327ea-9854-4c89-b06e-205db43a5be1",
+        "usage": {
+          "prompt_tokens": 357,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2353,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 2710,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 25.899,
+          "time_to_first_token": 3.042,
+          "time_to_generate": 24.433
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E04",
+      "core_task_id": "EDGE-PERMISSION-MISMATCH",
+      "http_status": 200,
+      "elapsed_ms": 31662,
+      "answer_status": "PERMISSION_DENIED",
+      "answer": "条件：请求方角色为 public_customer；请求范围为 internal_only；可用文档为 DOC-INTERNAL-ONLY。\n\n结论：不能向客户返回内部安全评分公式、内部安全阈值、权重，也不能返回 R3 评分计算的内部公式。当前上下文未包含可公开的公式细节，且该信息属于仅内部可用文档 [citation:1]。\n\n引用：已知上下文显示可用文档为 DOC-INTERNAL-ONLY，范围标记为 internal_only，属于内部信息，不向客户公开 [citation:1]。\n\n下一步动作：拒答并明确不提供内部算法；不猜测、不推算公式。如客户有具体安全风险或对 R3 评分有争议，可记录问题并转安全流程或人工复核，但复核过程不应向客户披露内部公式或权重。",
+      "expected_doc_names": [],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+          "document_name": "02_安全SOP.md",
+          "segment_id": "3b64257c-5063-48a0-bc0e-7bbc65efd23d",
+          "score": 0.54124874,
+          "content": "CHUNK-SAFE-ESCALATE-01 升级与记录\n发送止损后应询问是否仍在充电、是否鼓包、是否有异味、变色、冒烟、皮肤损伤及是否进液。风险单必须记录当前动作、风险信号、已发送的止损指令、证据照片和转交对象。R3 风险不能由普通售后流程关闭。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+          "document_name": "02_安全SOP.md",
+          "segment_id": "dd55a84a-7707-48ae-a56c-755ec4878c18",
+          "score": 0.52679235,
+          "content": "CHUNK-SAFE-CLASS-01 风险分级\nA 级紧急信号包括冒烟、明火、爆裂、刺鼻异味、外壳鼓包、熔化和明显烫伤。B 级高风险包括可见液体进入、跌落变形、接口异常发热、皮肤持续红肿或灼痛。出现 A/B 信号时，普通售后判断暂停，先记录风险并转安全流程。"
+        }
+      ],
+      "recall_at_3": null,
+      "correct_source_hit": null,
+      "citation_ids": [
+        1,
+        1
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "e18ef8b3-acfd-4d49-a7dd-fa5e99f9fc10",
+        "message_id": "b7c8628f-cbef-4a2c-a29c-ef96a1d0b3ae",
+        "conversation_id": "9d3a010c-8ce5-43ee-a0c4-03446d4b709d",
+        "usage": {
+          "prompt_tokens": 383,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2286,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 2669,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 29.006,
+          "time_to_first_token": 4.049,
+          "time_to_generate": 26.971
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E05",
+      "core_task_id": "EDGE-P0-SAFETY",
+      "http_status": 200,
+      "elapsed_ms": 38162,
+      "answer_status": "BLOCKED_SAFETY",
+      "answer": "**条件确认**：已描述充电盒冒烟、有焦味、仍连接电源、未见明火；人员是否受伤未知。\n\n**引用**：当前知识库 [citation:1] 仅包含充电盒不充电时的排查、禁止尖锐物清理接口、禁止潮湿状态充电、状态灯含义，以及“更换线缆和电源后仍无反应转服务检测”。其中**未覆盖冒烟、焦味、热失控或明火等安全处理规则**。\n\n**结论**：依据现有知识库，**无法判断继续充电会怎样，也无法确认能否等到明天**；没有可引用的安全等待条件或售后时效说明。\n\n**下一步动作**：请**不要继续充电，也不要等到明天**。在确保安全的前提下立即断开电源，并联系售后检测；如冒烟持续、出现明火或人员不适，请立即远离并按紧急方式处理。  \n上述安全动作属于通用紧急建议，当前知识库未提供对应条款。",
+      "expected_doc_names": [
+        "02_安全SOP.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "score": 0.66054046,
+          "content": "AirPods Pro 3 售后 FAQ"
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "segment_id": "98578aeb-31e3-48ce-9781-b573cccd102b",
+          "score": 0.6161526,
+          "content": "CHUNK-FAQ-POWER-01 充电与状态灯\n充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。更换线缆和电源后仍无反应，转服务检测。"
+        }
+      ],
+      "recall_at_3": 0,
+      "correct_source_hit": false,
+      "citation_ids": [
+        1
+      ],
+      "citation_present": true,
+      "p0": true,
+      "p0_rule_pass": true,
+      "provider_metadata": {
+        "task_id": "b93652d3-476e-45b5-89a7-c38484c287bf",
+        "message_id": "f3640e91-ae00-4b45-b77b-9358145b2969",
+        "conversation_id": "542138de-1f79-4a0a-bed9-ea802092d5a7",
+        "usage": {
+          "prompt_tokens": 343,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 2625,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 2968,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 36.66,
+          "time_to_first_token": 5.715,
+          "time_to_generate": 31.95
+        }
+      },
+      "error_code": null
+    }
+  ]
+}

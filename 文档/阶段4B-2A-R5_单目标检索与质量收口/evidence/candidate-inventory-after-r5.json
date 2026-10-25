@@ -1,0 +1,83 @@
+{
+  "captured_at": "2026-10-25T13:15:02.189Z",
+  "source_mode": "REAL_DIFY_DATASET_API",
+  "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+  "dataset_name": "CANDIDATE",
+  "active_document_count": 5,
+  "logical_active_document_count": 5,
+  "duplicate_active_logical_documents": [],
+  "documents": [
+    {
+      "document_id": "25fe0126-502a-4fde-add2-cfcee5bacd32",
+      "document_name": "01_售后FAQ__4B2A-CANDIDATE-v1.0.0.md",
+      "logical_doc_id": null,
+      "canonical_file_name": null,
+      "manifest_sha256": null,
+      "indexing_status": "completed",
+      "enabled": false,
+      "archived": false,
+      "word_count": 1105,
+      "segment_count": null
+    },
+    {
+      "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "document_name": "05_渠道差异说明.md",
+      "logical_doc_id": "DOC-CHANNEL-V1",
+      "canonical_file_name": "05_渠道差异说明.md",
+      "manifest_sha256": "a24d343ba2d9738d2e99799f0e4af4f1e75503426f46ae64f2d5619f057cc1e7",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 1004,
+      "segment_count": null
+    },
+    {
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "logical_doc_id": "DOC-WARRANTY-V1",
+      "canonical_file_name": "04_保修与维修流程.md",
+      "manifest_sha256": "691118dfdfe7bd2304f703e731ca6b77104c9f5e57ea1b2c2e88cab7cc3bf8dc",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 973,
+      "segment_count": null
+    },
+    {
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "logical_doc_id": "DOC-RETURN-V1",
+      "canonical_file_name": "03_退货规则.md",
+      "manifest_sha256": "c8a29b52b0ef9171408f359516b01d57598ada174a45f54ea83ea17810719c24",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 941,
+      "segment_count": null
+    },
+    {
+      "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "document_name": "02_安全SOP.md",
+      "logical_doc_id": "DOC-SAFETY-V1",
+      "canonical_file_name": "02_安全SOP.md",
+      "manifest_sha256": "1d0d8ada1fd8c9d0369b9ea4668d8b3b7d9c9575a5973931af6b3812bedfa692",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 936,
+      "segment_count": null
+    },
+    {
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "logical_doc_id": "DOC-FAQ-V1",
+      "canonical_file_name": "01_售后FAQ.md",
+      "manifest_sha256": "f90eb0b0b90a0eb870011769dda17fb4ff554d90a3076bf8ca3e0584e3df9d54",
+      "indexing_status": "completed",
+      "enabled": true,
+      "archived": false,
+      "word_count": 1122,
+      "segment_count": null
+    }
+  ]
+}

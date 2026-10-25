@@ -1,0 +1,110 @@
+{
+  "evaluation_set_id": "EVAL-RAG-R4-HOLDOUT-4.0.0",
+  "version": "4.0.0",
+  "frozen_at": "2026-10-25",
+  "frozen_before_first_run": true,
+  "sample_type": "HOLDOUT",
+  "used_for_tuning": false,
+  "first_run_only": true,
+  "purpose": "R4 修复完成后的两条首次保留样例；结果不用于继续调参",
+  "tasks": [
+    {
+      "id": "RET-H07",
+      "core_task_id": "HOLDOUT-SINGLE-TARGET-TROUBLESHOOTING",
+      "original_question": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+      "rewrites": [
+        "左耳放回盒子没有充电提示，换线和换电源都不亮，要先检查哪些位置？",
+        "AirPods Pro 3 单耳不充电，指示灯也不亮，第一步怎么处理？"
+      ],
+      "context": {
+        "product": "AirPods Pro 3",
+        "symptom": "左耳不充电且指示灯不亮",
+        "cable": "未知",
+        "power": "未知",
+        "cleaning": "未检查"
+      },
+      "expected_evidence": [
+        {"doc_id": "DOC-FAQ-V1", "chunk_id": "CHUNK-FAQ-POWER-01"}
+      ],
+      "accepted_statuses": ["ANSWERED", "NEED_CLARIFICATION"],
+      "p0": false,
+      "forbidden_actions": ["承诺免费维修", "承诺免费换新", "指导使用针或尖锐物"],
+      "semantic_expectations": {
+        "require_citation_regardless_status": true,
+        "forbid_generic_fallback_when_evidence": true,
+        "action_concept_groups": [
+          ["充电盒", "耳机"],
+          ["线缆", "电源", "适配器"],
+          ["接口", "触点", "碎屑"],
+          ["售后", "检测", "维修"]
+        ]
+      },
+      "manual_review": [
+        "是否给出单目标故障的具体检查顺序",
+        "是否只返回通用兜底",
+        "是否包含可追溯正文引用",
+        "是否没有免费维修或换新承诺"
+      ]
+    },
+    {
+      "id": "RET-H08",
+      "core_task_id": "HOLDOUT-CROSS-EXCHANGE-WARRANTY",
+      "original_question": "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？",
+      "rewrites": [
+        "收货十二天出现单侧无声和掉电快，应该走换货还是保修检测？",
+        "AirPods Pro 3 第 12 天出现两种故障，换货与后续维修分别依据什么？"
+      ],
+      "context": {
+        "product": "AirPods Pro 3",
+        "channel": "Apple Store 在线商店",
+        "received_at": "12 天前",
+        "faults": ["左耳无声", "续航明显下降"]
+      },
+      "expected_evidence": [
+        {"doc_id": "DOC-RETURN-V1", "chunk_id": "CHUNK-RETURN-QUALITY-01"},
+        {"doc_id": "DOC-WARRANTY-V1", "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"}
+      ],
+      "accepted_statuses": ["ANSWERED"],
+      "p0": false,
+      "forbidden_actions": ["承诺一定可换货", "承诺免费维修", "承诺换新"],
+      "semantic_expectations": {
+        "min_answer_goals": 2,
+        "min_distinct_citations": 2,
+        "forbid_generic_fallback_when_evidence": true,
+        "action_concept_groups": [
+          ["换货"],
+          ["维修", "保修"],
+          ["检测", "核验"]
+        ],
+        "objectives": [
+          {
+            "id": "EXCHANGE_GOAL",
+            "label": "换货判断路径",
+            "concept_groups": [
+              ["换货"],
+              ["12 天", "十二天", "8-15 日"],
+              ["检测", "核验", "官方售后"]
+            ],
+            "required_doc_any": ["DOC-RETURN-V1", "DOC-CHANNEL-V1"]
+          },
+          {
+            "id": "WARRANTY_GOAL",
+            "label": "保修或维修检测路径",
+            "concept_groups": [
+              ["维修", "保修"],
+              ["检测", "核验"],
+              ["序列号", "购买凭证", "保修状态"]
+            ],
+            "required_doc_any": ["DOC-WARRANTY-V1", "DOC-RETURN-V1"]
+          }
+        ]
+      },
+      "manual_review": [
+        "换货与保修检测是否分别回答",
+        "建议动作是否不使用目标编号",
+        "是否至少引用两个不同正文切片",
+        "是否存在换货、免费维修或换新的确定承诺"
+      ]
+    }
+  ]
+}

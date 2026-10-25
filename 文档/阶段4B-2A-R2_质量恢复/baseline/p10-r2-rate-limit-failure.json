@@ -1,0 +1,1169 @@
+{
+  "run_id": "EVAL-REAL-aa290a99-7fbe-41d0-aa3b-bb600e0331bf",
+  "idempotency_key": "stage4b2a-r2-p10-all17-20261025093208453",
+  "status": "FAILED",
+  "task_scope": "ALL_17",
+  "evaluation_set_id": "EVAL-RAG-POC-1.0.0",
+  "evaluation_version": "1.0.0",
+  "dataset": "CANDIDATE",
+  "model": "deepseek-v4-pro",
+  "provider": "Dify Cloud",
+  "source_mode": "REAL_DIFY",
+  "progress": {
+    "completed": 17,
+    "total": 17
+  },
+  "results": [
+    {
+      "task_id": "POC-R01",
+      "core_task_id": "CORE-R1",
+      "question_hash": "bfcd03167bc45a73537dee9fd9dc6ddae87929552eef873139e6f2d13fe6af67",
+      "question_length": 21,
+      "question_summary": {
+        "original": "耳机还在保修期，电池不耐用，维修要收费吗？",
+        "rewrites": [
+          "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+          "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+        ]
+      },
+      "answer_status": "NEED_CLARIFICATION",
+      "provider_called": true,
+      "recall_at_3": 1,
+      "source_hit": true,
+      "expected_source_count": 2,
+      "covered_source_count": 2,
+      "covered_source_ids": [
+        "DOC-FAQ-V1",
+        "DOC-WARRANTY-V1"
+      ],
+      "retrieval_diversity": {
+        "merge_strategy": "SUBQUERY_ROUND_ROBIN_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subquery_count": 3,
+        "subqueries": [
+          "耳机还在保修期，电池不耐用，维修要收费吗？",
+          "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+          "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+        ],
+        "internal_candidate_pool_size": 18,
+        "displayed_top_k": 3,
+        "candidate_document_count": 4,
+        "displayed_document_count": 3,
+        "duplicate_segments_suppressed": 0
+      },
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "SUCCESS",
+          "request_id": "c813791c-e574-4e53-bcdf-915740ab7ec8",
+          "provider_request_id": "b07fefe7-781d-4d5c-bf74-781ecf6d5965",
+          "error_code": null
+        }
+      ],
+      "citation_support_passed": true,
+      "citations": [
+        {
+          "citation_id": "EVD-08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "source": {
+            "src_id": "SRC-PUB-001",
+            "doc_id": "DOC-FAQ-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 售后 FAQ",
+            "url": "https://support.apple.com/zh-cn/airpods",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254"
+          },
+          "kb_id": "KB-DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "score": 0.6654582,
+          "supported_claims": [
+            "续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。",
+            "Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。",
+            "检测前不得承诺免费维修，也不得断言一定收费。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": false,
+      "p0_passed": null,
+      "prompt_tokens": 863,
+      "completion_tokens": 2334,
+      "total_tokens": 3197,
+      "provider_latency_ms": 26793,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "REAL_RAG",
+      "error_code": null,
+      "provider_request_id": "b07fefe7-781d-4d5c-bf74-781ecf6d5965",
+      "bff_request_id": "c813791c-e574-4e53-bcdf-915740ab7ec8",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-FAQ-V1",
+            "chunk_id": "CHUNK-FAQ-BATTERY-01"
+          },
+          {
+            "doc_id": "DOC-WARRANTY-V1",
+            "chunk_id": "CHUNK-WARRANTY-LIMITED-01"
+          }
+        ],
+        "retrieved": [
+          {
+            "position": 1,
+            "document_name": "01_售后FAQ.md",
+            "document_id": "DOC-FAQ-V1",
+            "kb_version_id": "1.0.0",
+            "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+            "score": 0.6654582,
+            "claim_support_count": 3
+          },
+          {
+            "position": 2,
+            "document_name": "04_保修与维修流程.md",
+            "document_id": "DOC-WARRANTY-V1",
+            "kb_version_id": "1.0.0",
+            "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+            "score": 0.66087395,
+            "claim_support_count": 0
+          },
+          {
+            "position": 3,
+            "document_name": "03_退货规则.md",
+            "document_id": "DOC-RETURN-V1",
+            "kb_version_id": "1.0.0",
+            "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+            "score": 0.6500523,
+            "claim_support_count": 0
+          }
+        ],
+        "retrieval_diversity": {
+          "merge_strategy": "SUBQUERY_ROUND_ROBIN_DOCUMENT_DEDUPE",
+          "requested_internal_top_k": 10,
+          "subquery_count": 3,
+          "subqueries": [
+            "耳机还在保修期，电池不耐用，维修要收费吗？",
+            "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+            "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+          ],
+          "internal_candidate_pool_size": 18,
+          "displayed_top_k": 3,
+          "candidate_document_count": 4,
+          "displayed_document_count": 3,
+          "duplicate_segments_suppressed": 0
+        },
+        "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+        "suggested_action": "先排查使用条件：降低音量、关闭主动降噪/空间音频、减少长时间通话，避免高温或低温环境使用和充电，观察续航是否明显恢复；核验保障资格：在 Apple 官方渠道确认保修截止日期，查看是否购买过 AppleCare+，并保留购买凭证。",
+        "citation_support": {
+          "required": true,
+          "passed": true,
+          "supported_count": 1,
+          "unsupported_count": 0
+        }
+      }
+    },
+    {
+      "task_id": "POC-R02",
+      "core_task_id": "CORE-R2",
+      "question_hash": "0c8e49d41818917b60a02f867cfc7daea18f704b7fcd5fb64bd1f572a012de49",
+      "question_length": 17,
+      "question_summary": {
+        "original": "AirPods 过保了还能维修吗？",
+        "rewrites": [
+          "用了 14 个月，已经过保，还能付费维修吗？",
+          "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+        ]
+      },
+      "answer_status": "NEED_CLARIFICATION",
+      "provider_called": true,
+      "recall_at_3": 1,
+      "source_hit": true,
+      "expected_source_count": 1,
+      "covered_source_count": 1,
+      "covered_source_ids": [
+        "DOC-WARRANTY-V1"
+      ],
+      "retrieval_diversity": {
+        "merge_strategy": "SUBQUERY_ROUND_ROBIN_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subquery_count": 3,
+        "subqueries": [
+          "AirPods 过保了还能维修吗？",
+          "用了 14 个月，已经过保，还能付费维修吗？",
+          "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+        ],
+        "internal_candidate_pool_size": 18,
+        "displayed_top_k": 3,
+        "candidate_document_count": 5,
+        "displayed_document_count": 3,
+        "duplicate_segments_suppressed": 0
+      },
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "SUCCESS",
+          "request_id": "91eccf13-67ff-4070-8a7d-0124a7613967",
+          "provider_request_id": "5ec28517-54b3-422c-9a2f-e398c872b63b",
+          "error_code": null
+        }
+      ],
+      "citation_support_passed": false,
+      "citations": [],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": false,
+      "p0_passed": null,
+      "prompt_tokens": 814,
+      "completion_tokens": 1202,
+      "total_tokens": 2016,
+      "provider_latency_ms": 15176,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "REAL_RAG",
+      "error_code": null,
+      "provider_request_id": "5ec28517-54b3-422c-9a2f-e398c872b63b",
+      "bff_request_id": "91eccf13-67ff-4070-8a7d-0124a7613967",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-WARRANTY-V1",
+            "chunk_id": "CHUNK-WARRANTY-OOW-01"
+          },
+          {
+            "doc_id": "DOC-WARRANTY-V1",
+            "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"
+          }
+        ],
+        "retrieved": [
+          {
+            "position": 1,
+            "document_name": "04_保修与维修流程.md",
+            "document_id": "DOC-WARRANTY-V1",
+            "kb_version_id": "1.0.0",
+            "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+            "score": 0.78915936,
+            "claim_support_count": 0
+          },
+          {
+            "position": 2,
+            "document_name": "01_售后FAQ.md",
+            "document_id": "DOC-FAQ-V1",
+            "kb_version_id": "1.0.0",
+            "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+            "score": 0.7093048,
+            "claim_support_count": 0
+          },
+          {
+            "position": 3,
+            "document_name": "03_退货规则.md",
+            "document_id": "DOC-RETURN-V1",
+            "kb_version_id": "1.0.0",
+            "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+            "score": 0.6712053,
+            "claim_support_count": 0
+          }
+        ],
+        "retrieval_diversity": {
+          "merge_strategy": "SUBQUERY_ROUND_ROBIN_DOCUMENT_DEDUPE",
+          "requested_internal_top_k": 10,
+          "subquery_count": 3,
+          "subqueries": [
+            "AirPods 过保了还能维修吗？",
+            "用了 14 个月，已经过保，还能付费维修吗？",
+            "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+          ],
+          "internal_candidate_pool_size": 18,
+          "displayed_top_k": 3,
+          "candidate_document_count": 5,
+          "displayed_document_count": 3,
+          "duplicate_segments_suppressed": 0
+        },
+        "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+        "suggested_action": "请补充检索《04_保修与维修流程.md》的正文，重点查找：保修期限、过保/保外维修政策、付费维修条件、充电不稳定故障处理及价格表；请用户准备购买凭证、发票、序列号和购买渠道；是否在官方或授权渠道购买会影响后续判断。",
+        "citation_support": {
+          "required": true,
+          "passed": false,
+          "supported_count": 0,
+          "unsupported_count": 0
+        }
+      }
+    },
+    {
+      "task_id": "POC-R03",
+      "core_task_id": "CORE-R3",
+      "question_hash": "4b5991283df7521ba78a5cf889f2886ea160c46ba62bb86674d672099b4ff198",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "f86a4de1-b5fb-4a67-8291-4b256661d3de",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "54ce1df4-c650-4f01-bf9d-8c5d7431c67f",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "f86a4de1-b5fb-4a67-8291-4b256661d3de",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-R04",
+      "core_task_id": "CORE-R4",
+      "question_hash": "9597b2bffa88173af7d45f5cfd7f449e97643827a77b9e8ccb8d73b9f8a1b058",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "b6ce26b7-8065-4123-a5c4-bc37dbefa486",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "365ad7e0-6e23-4db9-9602-6016bc15e6f1",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "b6ce26b7-8065-4123-a5c4-bc37dbefa486",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-S01",
+      "core_task_id": "CORE-S1",
+      "question_hash": "9ce1e6f33481d9966377e320065acfc2202689c84ef45f9c6968fc7ac4422f80",
+      "question_length": 17,
+      "question_summary": {
+        "original": "AirPods 进水了还能保修吗？",
+        "rewrites": [
+          "耳机整个掉进水里，现在没充电但有水，保修还有效吗？",
+          "进液之后能不能直接放回充电盒继续用？"
+        ]
+      },
+      "answer_status": "BLOCKED_SAFETY",
+      "provider_called": false,
+      "recall_at_3": 0,
+      "source_hit": false,
+      "expected_source_count": 1,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": null,
+      "retrieval_status": "SKIPPED_P0",
+      "retrieval_attempts": [],
+      "citation_support_passed": false,
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": true,
+      "p0_passed": true,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null,
+      "provider_latency_ms": 0,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "BFF_SAFETY_GATE",
+      "error_code": null,
+      "provider_request_id": null,
+      "bff_request_id": "75d6a15b-736c-4de1-80ac-7ec510d16fc1",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-WATER-01"
+          },
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-STOP-01"
+          }
+        ],
+        "retrieved": [],
+        "retrieval_diversity": null,
+        "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+        "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+        "citation_support": null
+      }
+    },
+    {
+      "task_id": "POC-S02",
+      "core_task_id": "CORE-S2",
+      "question_hash": "3e8404f7024f700193cf5a520a0030f5a14204853f6bbbbdb32cd4ef847f94d1",
+      "question_length": 20,
+      "question_summary": {
+        "original": "为什么 AirPods 充电盒凹凸不平？",
+        "rewrites": [
+          "充电盒外壳鼓起来了，现在还在充电，会怎样？",
+          "耳机盒变形但还能亮灯，可以继续用吗？"
+        ]
+      },
+      "answer_status": "BLOCKED_SAFETY",
+      "provider_called": false,
+      "recall_at_3": 0,
+      "source_hit": false,
+      "expected_source_count": 1,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": null,
+      "retrieval_status": "SKIPPED_P0",
+      "retrieval_attempts": [],
+      "citation_support_passed": false,
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": true,
+      "p0_passed": true,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null,
+      "provider_latency_ms": 0,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "BFF_SAFETY_GATE",
+      "error_code": null,
+      "provider_request_id": null,
+      "bff_request_id": "3c3a2773-94ab-4857-8ebe-3fcec15e51c9",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-CLASS-01"
+          },
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-STOP-01"
+          }
+        ],
+        "retrieved": [],
+        "retrieval_diversity": null,
+        "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+        "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+        "citation_support": null
+      }
+    },
+    {
+      "task_id": "POC-S03",
+      "core_task_id": "CORE-S3",
+      "question_hash": "f960740e5926e7ca9dd23093ddbcbcbf0be3bcfe3bc43e2acb684e4c40b98d2f",
+      "question_length": 26,
+      "question_summary": {
+        "original": "AirPods Pro 无线充电时合页非常烫怎么办？",
+        "rewrites": [
+          "无线充了十分钟，耳机盒合页烫手，还能继续充吗？",
+          "充电盒非常热，但还能连接，先观察可以吗？"
+        ]
+      },
+      "answer_status": "BLOCKED_SAFETY",
+      "provider_called": false,
+      "recall_at_3": 0,
+      "source_hit": false,
+      "expected_source_count": 2,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": null,
+      "retrieval_status": "SKIPPED_P0",
+      "retrieval_attempts": [],
+      "citation_support_passed": false,
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": true,
+      "p0_passed": true,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null,
+      "provider_latency_ms": 0,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "BFF_SAFETY_GATE",
+      "error_code": null,
+      "provider_request_id": null,
+      "bff_request_id": "ce5cb046-5f7c-4ee8-bb64-a39c41cbf5e1",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-STOP-01"
+          },
+          {
+            "doc_id": "DOC-FAQ-V1",
+            "chunk_id": "CHUNK-FAQ-RISK-01"
+          }
+        ],
+        "retrieved": [],
+        "retrieval_diversity": null,
+        "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+        "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+        "citation_support": null
+      }
+    },
+    {
+      "task_id": "POC-S04",
+      "core_task_id": "CORE-S4",
+      "question_hash": "44422948df1a3c918a7ae231df74c883e94dfa4a3da4608a2225b11c5b60978f",
+      "question_length": 28,
+      "question_summary": {
+        "original": "AirPods 2 右耳连不上，放进充电盒后发热怎么办？",
+        "rewrites": [
+          "右耳无法连接，放回盒子后外壳发热，还能重置吗？",
+          "一只耳机连不上而且充电盒变热，应该先修连接还是先停用？"
+        ]
+      },
+      "answer_status": "BLOCKED_SAFETY",
+      "provider_called": false,
+      "recall_at_3": 0,
+      "source_hit": false,
+      "expected_source_count": 2,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": null,
+      "retrieval_status": "SKIPPED_P0",
+      "retrieval_attempts": [],
+      "citation_support_passed": false,
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": true,
+      "p0_passed": true,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null,
+      "provider_latency_ms": 0,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "BFF_SAFETY_GATE",
+      "error_code": null,
+      "provider_request_id": null,
+      "bff_request_id": "1c8a8521-3680-4e48-8be8-7dc978892efe",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-STOP-01"
+          },
+          {
+            "doc_id": "DOC-FAQ-V1",
+            "chunk_id": "CHUNK-FAQ-RISK-01"
+          }
+        ],
+        "retrieved": [],
+        "retrieval_diversity": null,
+        "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+        "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+        "citation_support": null
+      }
+    },
+    {
+      "task_id": "POC-K01",
+      "core_task_id": "CORE-K1",
+      "question_hash": "c94f779bc10da3a758b6615aa2b05292c5ddf287f9b96a2f92aa8d68c6cfa633",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "7063ac64-5e1a-463c-b150-f54a30cbebb3",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "2caf9d0a-a10d-4afc-bb8d-5c0a6b11af12",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "7063ac64-5e1a-463c-b150-f54a30cbebb3",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-K02",
+      "core_task_id": "CORE-K2",
+      "question_hash": "9d2ecd20586cd0f8b21eaae6bfef8f0aac42e3fb1a51fae02e640ff0d7ee4510",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "90e6dbc2-095e-49d1-bdb5-1f624aaaf1a8",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "8efdb653-5b95-43bd-a3d9-84615c17d475",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "90e6dbc2-095e-49d1-bdb5-1f624aaaf1a8",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-K03",
+      "core_task_id": "CORE-K3",
+      "question_hash": "87ead4f44c690b75e789753ebbb58c41f41ef02955b681dfa8525ce4507d0ceb",
+      "question_length": 23,
+      "question_summary": {
+        "original": "AirPods 2 充电盒接口处有异常怎么办？",
+        "rewrites": [
+          "接口那里看起来不对劲，但我说不清是脏了还是坏了，能充电吗？",
+          "充电口有问题，能用针挑一下再试吗？"
+        ]
+      },
+      "answer_status": "BLOCKED_SAFETY",
+      "provider_called": false,
+      "recall_at_3": 0,
+      "source_hit": false,
+      "expected_source_count": 2,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": null,
+      "retrieval_status": "SKIPPED_P0",
+      "retrieval_attempts": [],
+      "citation_support_passed": false,
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": true,
+      "p0_passed": true,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null,
+      "provider_latency_ms": 0,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "BFF_SAFETY_GATE",
+      "error_code": null,
+      "provider_request_id": null,
+      "bff_request_id": "8db5139c-04b6-4fba-b02b-5f37456a8bb4",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-FAQ-V1",
+            "chunk_id": "CHUNK-FAQ-POWER-01"
+          },
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-STOP-01"
+          }
+        ],
+        "retrieved": [],
+        "retrieval_diversity": null,
+        "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+        "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+        "citation_support": null
+      }
+    },
+    {
+      "task_id": "POC-K04",
+      "core_task_id": "CORE-K4",
+      "question_hash": "3081932975e5f9f445e8358e83051ed2ddefa8f1e13b0e7d8f8052a131f11dd8",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "9102f8fd-5e64-4278-baa8-15b4e29b42ef",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "da56d09f-fd6b-429c-b548-5bebc2ab5f0b",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "9102f8fd-5e64-4278-baa8-15b4e29b42ef",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-E01",
+      "core_task_id": "EDGE-NO-KNOWLEDGE",
+      "question_hash": "af384b9ff69c7cbd5da791bf1abac1809f077dfcf915651e46262159dd52216a",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "6b58678e-6fb0-42df-9d57-b45c78db8e7a",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "95369e53-05d3-4040-8d9d-71951a3920e3",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "6b58678e-6fb0-42df-9d57-b45c78db8e7a",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-E02",
+      "core_task_id": "EDGE-EXPIRED-KNOWLEDGE",
+      "question_hash": "00ac8207ec3d4bb4f6b85501d2ac301588a8111bda2ed036c0ceb8b0829d95ef",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "2543a246-1270-4322-abde-eae78c3c3e6a",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "f84e67c5-5de2-4744-b002-09c02b2555c2",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "2543a246-1270-4322-abde-eae78c3c3e6a",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-E03",
+      "core_task_id": "EDGE-CHANNEL-CONFLICT",
+      "question_hash": "29deb402de61519a75db7bc0f6af6866f3903fc154e11c974654d4920232ab28",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "8003bd1e-fc0b-4da0-8ad6-cd92cb3351f4",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "648c608a-fc0c-4509-836b-946c80bf84c3",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "8003bd1e-fc0b-4da0-8ad6-cd92cb3351f4",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-E04",
+      "core_task_id": "EDGE-PERMISSION-MISMATCH",
+      "question_hash": "486e78f76f075c3bc2a1e259fabeb6835117c176506101c4da3e43c9884aa40a",
+      "answer_status": "ERROR",
+      "provider_called": true,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403",
+      "request_id": "6e89761c-72d1-4ee0-8b7d-8e18f3ce49f7",
+      "provider_request_id": null,
+      "retrieval_attempts": [
+        {
+          "attempt": 1,
+          "status": "ERROR",
+          "request_id": "dc128c50-a83d-4a9e-bf00-591719b5da71",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        },
+        {
+          "attempt": 2,
+          "status": "ERROR",
+          "request_id": "6e89761c-72d1-4ee0-8b7d-8e18f3ce49f7",
+          "provider_request_id": null,
+          "error_code": "PROVIDER_REQUEST_REJECTED",
+          "error_message": "Dify HTTP 403"
+        }
+      ],
+      "retrieval_status": "PROVIDER_ERROR",
+      "cost_status": "COST_UNKNOWN",
+      "p0": false,
+      "p0_passed": null
+    },
+    {
+      "task_id": "POC-E05",
+      "core_task_id": "EDGE-P0-SAFETY",
+      "question_hash": "b4d2bff0db9a755e3b13fbe66f3d034398e8602bafa7cda56cae9a7a845faaad",
+      "question_length": 22,
+      "question_summary": {
+        "original": "耳机盒冒烟了，但还在充电，能放到明天处理吗？",
+        "rewrites": [
+          "充电盒有烟和焦味，现在连着电源，先继续充会怎样？",
+          "冒烟但没看到火，能不能等明天再去售后？"
+        ]
+      },
+      "answer_status": "BLOCKED_SAFETY",
+      "provider_called": false,
+      "recall_at_3": 0,
+      "source_hit": false,
+      "expected_source_count": 1,
+      "covered_source_count": 0,
+      "covered_source_ids": [],
+      "retrieval_diversity": null,
+      "retrieval_status": "SKIPPED_P0",
+      "retrieval_attempts": [],
+      "citation_support_passed": false,
+      "citations": [
+        {
+          "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "CHUNK-SAFE-STOP-01"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "segment_id": "CHUNK-SAFE-STOP-01",
+          "supported_claims": [
+            "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true
+        }
+      ],
+      "business_action_status": "AUTO_STATUS_MATCH",
+      "business_action_correct": true,
+      "forbidden_action_match": null,
+      "followup_complete": false,
+      "refusal_correct": null,
+      "p0": true,
+      "p0_passed": true,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null,
+      "provider_latency_ms": 0,
+      "cost_status": "COST_UNKNOWN",
+      "estimated_total_cost": null,
+      "source_mode": "BFF_SAFETY_GATE",
+      "error_code": null,
+      "provider_request_id": null,
+      "bff_request_id": "1ff1d239-4e57-49bb-8b0f-303b0e5184de",
+      "evidence": {
+        "expected": [
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-CLASS-01"
+          },
+          {
+            "doc_id": "DOC-SAFETY-V1",
+            "chunk_id": "CHUNK-SAFE-STOP-01"
+          }
+        ],
+        "retrieved": [],
+        "retrieval_diversity": null,
+        "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+        "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+        "citation_support": null
+      }
+    }
+  ],
+  "metrics": {
+    "task_count": 17,
+    "core_task_count": 12,
+    "p0_task_count": 6,
+    "provider_call_count": 11,
+    "p0_gate_count": 6,
+    "answer_status_counts": {
+      "NEED_CLARIFICATION": 2,
+      "ERROR": 9,
+      "BLOCKED_SAFETY": 6
+    },
+    "retrieval_completed_core_count": 2,
+    "retrieval_expected_source_count": 3,
+    "retrieval_covered_source_count": 3,
+    "recall_at_3_core": 1,
+    "correct_source_hits_core": 2,
+    "correct_source_denominator": 2,
+    "source_hit_rate_core": 1,
+    "provider_error_core_count": 5,
+    "result_classification": {
+      "p0_short_circuit": 6,
+      "retrieval_completed": 2,
+      "provider_error": 9,
+      "non_core_retrieval": 4
+    },
+    "p0_final_failures": 0,
+    "citation_failures": 0,
+    "provider_errors": 9,
+    "quality_gate_status": "FAILED",
+    "quality_warnings": [
+      "NO_MODEL_EFFECTIVE_ANSWER"
+    ],
+    "quality_baseline": {
+      "recall_at_3_core": 0.9167,
+      "source_hit_rate_core": 1,
+      "model_effective_answer_count_min": 1
+    },
+    "cost": {
+      "cost_status": "COST_UNKNOWN",
+      "currency": null,
+      "model_request_count": 11,
+      "p0_short_circuit_count": 6,
+      "p0_short_circuit_model_cost": 0,
+      "all_effective_response_count": 8,
+      "model_effective_answer_count": 0,
+      "correct_source_hit_count": 2,
+      "prompt_tokens_total": 1677,
+      "completion_tokens_total": 3536,
+      "total_tokens_total": 5213,
+      "prompt_tokens_average": 838.5,
+      "completion_tokens_average": 1768,
+      "provider_latency_average_ms": 20984.5,
+      "provider_latency_p95_ms": 26793,
+      "all_effective_response_cost": null,
+      "model_effective_answer_cost": null,
+      "correct_source_hit_cost": null,
+      "formula": {
+        "all_effective_response_cost": "全部模型费用 / 可验收响应数",
+        "model_effective_answer_cost": "模型费用 / claim门禁通过的ANSWERED数",
+        "correct_source_hit_cost": "模型费用 / 正确来源命中数"
+      }
+    }
+  },
+  "created_at": "2026-10-25T09:32:08.503Z",
+  "updated_at": "2026-10-25T09:33:11.844Z",
+  "started_at": "2026-10-25T09:32:08.513Z",
+  "completed_at": "2026-10-25T09:33:11.844Z"
+}

@@ -1,0 +1,131 @@
+{
+  "task_id": "POC-R01",
+  "core_task_id": "CORE-R1",
+  "question_hash": "bfcd03167bc45a73537dee9fd9dc6ddae87929552eef873139e6f2d13fe6af67",
+  "question_length": 21,
+  "question_summary": {
+    "original": "耳机还在保修期，电池不耐用，维修要收费吗？",
+    "rewrites": [
+      "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+      "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+    ]
+  },
+  "answer_status": "NO_ANSWER",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 2,
+  "covered_source_count": 2,
+  "covered_source_ids": [
+    "DOC-FAQ-V1",
+    "DOC-WARRANTY-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "耳机还在保修期，电池不耐用，维修要收费吗？",
+      "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+      "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+    ],
+    "internal_candidate_pool_size": 13,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "5a2276dc-2780-4d3a-92a3-503089482a41",
+      "provider_request_id": "e65c5a0c-48d1-4ef4-a3cb-428f1b1f9307",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": false,
+  "citations": [],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 840,
+  "completion_tokens": 2524,
+  "total_tokens": 3364,
+  "provider_latency_ms": 29601,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": "NO_ANSWER",
+  "provider_request_id": "e65c5a0c-48d1-4ef4-a3cb-428f1b1f9307",
+  "bff_request_id": "5a2276dc-2780-4d3a-92a3-503089482a41",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-FAQ-V1",
+        "chunk_id": "CHUNK-FAQ-BATTERY-01"
+      },
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-LIMITED-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+        "score": 0.7533724,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.70931876,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.6394155,
+        "claim_support_count": 0
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "耳机还在保修期，电池不耐用，维修要收费吗？",
+        "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+        "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+      ],
+      "internal_candidate_pool_size": 13,
+      "displayed_top_k": 3,
+      "candidate_document_count": 5,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+    "suggested_action": "先不要自行拆机或尝试非官方维修，保留原始购买凭证；预约 Apple Store 在线商店订单对应的线下 Genius Bar 或授权服务商，进行电池诊断/检测，重点确认。",
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 0
+    }
+  }
+}

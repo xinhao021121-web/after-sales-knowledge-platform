@@ -1,0 +1,143 @@
+{
+  "round_id": "FLASH-R1",
+  "task_id": "POC-R01",
+  "core_task_id": "CORE-R1",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 20896,
+  "request": {
+    "question": "原始问题：耳机还在保修期，电池不耐用，维修要收费吗？\n客户改写：AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？；官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R1-POC-R01",
+    "knowledge_item_id": "KI-CORE-R1",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "channel": "Apple Store 在线商店",
+      "purchased_at": "2026-02-10",
+      "diagnostic": "未检测",
+      "symptom": "续航约 2.5 小时"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "ANSWERED",
+    "ui_state": "ANSWERED",
+    "answer": "结论：检测前不能确定“免费换电池”，也不能确定“一定收费”。 续航下降可能来自音量、降噪、空间音频、通话、温度以及电池正常老化。",
+    "suggested_action": "请客户提供订单号/发票，核对准确购买日期、渠道及保修/AppleCare+ 状态；预约 Apple 检测或授权服务商检测，先排除音量、降噪、空间音频、通话、温度等影响因素。",
+    "business_conditions": [
+      "先核验保障资格：购买日期、渠道、有效保修/AppleCare+ 合同及当前资格。上下文未提供具体保修剩余期限、AppleCare+ 是否购买及条款，不能判断费用",
+      "再做检测：当前“未检测”，仅知“续航约 2.5 小时”，不足以判断是正常老化、硬件故障还是设置/环境影响",
+      "检测后分类处理",
+      "若为正常电池老化：Apple 有限保修不覆盖"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-2fd122bb-dba2-4571-8ffd-95f148400c6f",
+        "source": {
+          "src_id": "SRC-PUB-001",
+          "doc_id": "DOC-FAQ-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 售后 FAQ",
+          "url": "https://support.apple.com/zh-cn/airpods",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f"
+        },
+        "kb_id": "KB-DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+        "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+        "score": 0.634355815945841,
+        "supported_claims": [
+          "续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。",
+          "Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。",
+          "检测前不得承诺免费维修，也不得断言一定收费。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true
+      }
+    ],
+    "risk": {
+      "level": "R0",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "8abb0d76-044b-409d-9193-799779ac43b3",
+    "provider_trace_id": "8abb0d76-044b-409d-9193-799779ac43b3",
+    "provider_called": true,
+    "timing_ms": 20884,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 11,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 1,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "2fd122bb-dba2-4571-8ffd-95f148400c6f",
+        "score": 0.634355815945841,
+        "claim_support_count": 3
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.6038116670031858,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.5977407166519484,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "d741f542-82ad-46b6-a5d6-f93b593c582a",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R1-POC-R01",
+      "knowledge_item_id": "KI-CORE-R1"
+    },
+    "audit_event_id": "bc23601b-b3c4-42ff-be46-7f1e231e602a"
+  }
+}

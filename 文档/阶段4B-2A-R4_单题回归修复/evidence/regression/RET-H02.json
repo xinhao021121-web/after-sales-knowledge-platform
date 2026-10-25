@@ -1,0 +1,116 @@
+{
+  "task_id": "RET-H02",
+  "core_task_id": "HOLDOUT-KNOWLEDGE-GAP",
+  "sample_type": "REGRESSION",
+  "original_question": "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+  "question_context": {
+    "product": "AirPods Pro 3",
+    "feature": "Wi-Fi 直连局域网音乐服务器",
+    "knowledge_present": false
+  },
+  "answer_status": "NO_ANSWER",
+  "provider_called": true,
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "recall_at_3": null,
+  "source_hit": null,
+  "expected_source_count": 0,
+  "covered_source_count": 0,
+  "covered_source_ids": [],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods Pro 3 能不能通过 Wi-Fi 直接播放路由器里的无损音乐？",
+      "不连接手机，只用 Wi-Fi 让 AirPods Pro 3 读取路由器音乐可以吗？",
+      "AirPods Pro 3 是否支持直接访问局域网音乐服务器？"
+    ],
+    "internal_candidate_pool_size": 11,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_resources": [
+    {
+      "position": 1,
+      "document_name": "04_保修与维修流程.md",
+      "document_id": "DOC-WARRANTY-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+      "score": 0.63752913,
+      "claim_support_count": 0
+    },
+    {
+      "position": 2,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.60266364,
+      "claim_support_count": 3
+    },
+    {
+      "position": 3,
+      "document_name": "05_渠道差异说明.md",
+      "document_id": "DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.597659,
+      "claim_support_count": 2
+    }
+  ],
+  "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+  "answer_goals": [
+    {
+      "index": "一",
+      "title": "目标一：AirPods Pro 3 通过 Wi-Fi 直接访问路由器/局域网音乐服务器",
+      "content": "判断：现有检索证据未包含 AirPods Pro 3 是否支持“不连接手机、仅通过 Wi-Fi 直接读取路由器或局域网音乐服务器”的功能说明或连接条件，无法据此判断该操作可行。 下一步：请使用耳机型号 A3063/A3064/A3065 向 Apple 官方支持核对是否支持 Wi-Fi 音频播放与局域网音乐服务器访问；在官方确认支持前，不要按此场景配置或承诺可以实现。 依据：[1]（仅提供产品身份与型号核对，未覆盖 Wi-Fi 局域网音乐功能）",
+      "evidence_supported": true
+    }
+  ],
+  "suggested_action": "请使用耳机型号 A3063/A3064/A3065 向 Apple 官方支持核对是否支持 Wi-Fi 音频播放与局域网音乐服务器访问；在官方确认支持前，不要按此场景配置或承诺可以实现。",
+  "citations": [],
+  "citation_support": {
+    "required": true,
+    "passed": true,
+    "supported_count": 0,
+    "multi_objective_passed": true,
+    "unsupported_count": 0
+  },
+  "citation_gate_passed": true,
+  "forbidden_action_match": null,
+  "business_semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [
+      "目标一"
+    ],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [],
+    "passed": true
+  },
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1213,
+  "completion_tokens": 2389,
+  "total_tokens": 3602,
+  "provider_latency_ms": 28027,
+  "bff_latency_ms": 34532,
+  "bff_request_id": "863df7e1-6166-4452-b214-9a62dad19a8b",
+  "provider_request_id": "98c27681-5745-4529-a52b-111112a9e7aa",
+  "error_code": "NO_ANSWER",
+  "cost_status": "COST_UNKNOWN"
+}

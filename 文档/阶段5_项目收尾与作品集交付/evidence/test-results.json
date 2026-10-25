@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-10-25T14:56:00.000Z",
+  "status": "PASSED",
+  "commands": [
+    {
+      "command": "node scripts/validate-portfolio.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage5.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段2B_PRD/tests/validate_prd_v1_4.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段3B_高保真交互原型/tests/validate-stage3b-full.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "npm run validate:4b2b",
+      "status": "PASSED"
+    }
+  ],
+  "portfolio": {
+    "desktop_1440": "PASSED",
+    "mobile_390": "PASSED",
+    "print_a4": "PASSED",
+    "print_page_count": 11,
+    "manual_visual_review": "PASSED"
+  },
+  "markdown_file_count": 10,
+  "html_local_link_count": 16,
+  "production_release": "FORBIDDEN"
+}

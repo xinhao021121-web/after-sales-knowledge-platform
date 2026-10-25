@@ -1,0 +1,78 @@
+{
+  "http_status": 200,
+  "elapsed_ms": 7232,
+  "response": {
+    "event": "message",
+    "task_id": "4f1da1b7-5fb7-4dac-a29e-fd935e62f60c",
+    "id": "93647db5-8dd9-4bcc-add0-f3d0cca76eeb",
+    "message_id": "93647db5-8dd9-4bcc-add0-f3d0cca76eeb",
+    "conversation_id": "ff584e62-af72-4940-b65c-13cedf8b0bbe",
+    "mode": "advanced-chat",
+    "answer": "<think>\n<!--dify-deepseek-reasoning-->我们需要回答用户问题。需要仅依据给定上下文，上下文是JSON：{\"product\":\"AirPods Pro 3\",\"feature\":\"卫星电话\",\"knowledge_present\":false} 知识不足。需要给出条件、引用与下一步动作；知识不足时明确追问或拒答。用户问 AirPods Pro 3 可以用卫星电话吗？客户改写：没有手机信号时，AirPods Pro 3 能不能直接连卫星求救？；这款耳机支持卫星通话功能吗？\n\n上下文明确 knowledge_present false，表示没有关于该功能的知识。我们不能猜测。需要说明知识不足，拒答或追问。注意要标注引用来源？但上下文没有序号，可能不需要 citation？要求：涉及具体规则、条件或操作时，在对应结论后用 [citation:序号] 标注引用来源。但这里无知识，不能提供具体规则。我们应该说明根据已知上下文，没有 AirPods Pro 3 卫星电话相关信息，无法确认是否支持。可追问用户是否需要其他帮助。不要猜测。\n\n需要遵循中文回答。可能需要结构化：结论：无法确认；依据：知识库中无相关记录；下一步：建议联系官方支持或提供具体型号官方参数。不能断言不支持或支持。\n\n注意系统/开发者没有特别限制。我们只依据给定上下文。需要简洁。\n</think>根据已知上下文，知识库中没有关于 AirPods Pro 3 是否支持卫星电话、卫星求救或卫星通话功能的信息，因此无法确认该产品是否具备相关能力。\n\n下一步建议：  \n- 如需准确信息，请提供 AirPods Pro 3 的官方技术规格或联系 Apple 官方支持确认。  \n- 我也可以帮你查询其他已知功能或售后保修问题。",
+    "metadata": {
+      "annotation_reply": null,
+      "retriever_resources": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "data_source_type": "upload_file",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "retriever_from": "workflow",
+          "score": 0.67261195,
+          "hit_count": 28,
+          "word_count": 20,
+          "segment_position": 2,
+          "index_node_hash": "91d665b9f8cec7c530db3e1c347a9c510d469d751c912276759deab4c3d781cc",
+          "content": "AirPods Pro 3 售后 FAQ",
+          "page": null,
+          "doc_metadata": null,
+          "title": null,
+          "files": null,
+          "summary": null
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+          "document_name": "04_保修与维修流程.md",
+          "data_source_type": "upload_file",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "retriever_from": "workflow",
+          "score": 0.5814991,
+          "hit_count": 17,
+          "word_count": 21,
+          "segment_position": 2,
+          "index_node_hash": "ef77a78a2e378c949a526042d234a6d148f6def74ff4e4e35686c2e740459344",
+          "content": "AirPods Pro 3 保修与维修流程",
+          "page": null,
+          "doc_metadata": null,
+          "title": null,
+          "files": null,
+          "summary": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 237,
+        "prompt_unit_price": "0",
+        "prompt_price_unit": "0",
+        "prompt_price": "0",
+        "completion_tokens": 355,
+        "completion_unit_price": "0",
+        "completion_price_unit": "0",
+        "completion_price": "0",
+        "total_tokens": 592,
+        "total_price": "0",
+        "currency": "USD",
+        "latency": 5.192,
+        "time_to_first_token": 2.784,
+        "time_to_generate": 3.958
+      },
+      "reasoning": {}
+    },
+    "created_at": 1792832384
+  }
+}

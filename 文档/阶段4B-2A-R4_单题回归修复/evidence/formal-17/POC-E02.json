@@ -1,0 +1,127 @@
+{
+  "task_id": "POC-E02",
+  "core_task_id": "EDGE-EXPIRED-KNOWLEDGE",
+  "question_hash": "00ac8207ec3d4bb4f6b85501d2ac301588a8111bda2ed036c0ceb8b0829d95ef",
+  "question_length": 18,
+  "question_summary": {
+    "original": "第三方平台拆封耳机为什么一定不能退？",
+    "rewrites": [
+      "旧规则说第三方渠道拆封都不退，现在还有效吗？",
+      "能不能按旧版第三方规则直接拒绝退货？"
+    ]
+  },
+  "answer_status": "KNOWLEDGE_EXPIRED",
+  "provider_called": true,
+  "recall_at_3": 0,
+  "source_hit": false,
+  "expected_source_count": 1,
+  "covered_source_count": 0,
+  "covered_source_ids": [],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "第三方平台拆封耳机为什么一定不能退？",
+      "旧规则说第三方渠道拆封都不退，现在还有效吗？",
+      "能不能按旧版第三方规则直接拒绝退货？"
+    ],
+    "internal_candidate_pool_size": 10,
+    "displayed_top_k": 3,
+    "candidate_document_count": 4,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "5a8d594c-cf56-444a-af46-80548b1bf5f6",
+      "provider_request_id": "32006717-5d8a-4909-ab6d-bb4e4587830d",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [],
+  "answer_goals": [],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": true,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1325,
+  "completion_tokens": 6099,
+  "total_tokens": 7424,
+  "provider_latency_ms": 63457,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": "KNOWLEDGE_EXPIRED",
+  "provider_request_id": "32006717-5d8a-4909-ab6d-bb4e4587830d",
+  "bff_request_id": "5a8d594c-cf56-444a-af46-80548b1bf5f6",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-EXPIRED-CHANNEL",
+        "chunk_id": "CHUNK-EXPIRED-CHANNEL-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+        "score": 0.76132816,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5776d8f7-bae9-441b-a609-304f4c89448c",
+        "score": 0.6550647,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "bcb9c184-a0d7-4c48-817c-fd53afd10ada",
+        "score": 0.57734406,
+        "claim_support_count": 3
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "第三方平台拆封耳机为什么一定不能退？",
+        "旧规则说第三方渠道拆封都不退，现在还有效吗？",
+        "能不能按旧版第三方规则直接拒绝退货？"
+      ],
+      "internal_candidate_pool_size": 10,
+      "displayed_top_k": 3,
+      "candidate_document_count": 4,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "检索到的知识版本已过期，不能作为现行售后依据。",
+    "answer_goals": [],
+    "suggested_action": "核验并补充：销售主体、平台店铺、订单、发票、序列号、签收时间、已拆封情况、故障表现、是否人为损坏、是否缺少关键配件、是否超过渠道期限；调取并依据实际第三方平台、店铺或经销商的现行规则和售后入口处理；不要仅凭已过期旧规则拒绝。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 0,
+      "multi_objective_passed": true,
+      "unsupported_count": 0
+    }
+  }
+}

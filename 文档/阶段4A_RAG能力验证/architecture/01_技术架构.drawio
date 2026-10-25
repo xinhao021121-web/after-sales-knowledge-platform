@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="RAG技术架构" id="rag-architecture">
+    <mxGraphModel dx="1600" dy="1270" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1270" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="layer-ui" value="" style="rounded=0;dashed=1;fillColor=#E3F2FD;strokeColor=#1565C0;container=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="1480" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-ui-title" value="接入层｜客服与治理工作台（不持有供应商密钥）" style="rounded=0;fillColor=#BBDEFB;strokeColor=#1565C0;fontStyle=1;align=left;spacingLeft=12;container=0;pointerEvents=0;" vertex="1" parent="layer-ui">
+          <mxGeometry x="0" y="0" width="1480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-task" value="P03 售后协作任务&#xa;问题 + CTX + 风险前置" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565C0;" vertex="1" parent="layer-ui">
+          <mxGeometry x="50" y="55" width="300" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-source" value="P06 知识来源&#xa;SRC 状态 / 有效期 / 权限" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565C0;" vertex="1" parent="layer-ui">
+          <mxGeometry x="430" y="55" width="300" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-eval" value="P10 评测中心&#xa;任务集 / 配置 / 结果" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565C0;" vertex="1" parent="layer-ui">
+          <mxGeometry x="810" y="55" width="300" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-release" value="P11 发布与回滚&#xa;REL 绑定 / 监控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565C0;" vertex="1" parent="layer-ui">
+          <mxGeometry x="1190" y="55" width="250" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-bff" value="" style="rounded=0;dashed=1;fillColor=#FFF3E0;strokeColor=#E65100;container=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="270" width="1480" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-bff-title" value="企业 BFF｜鉴权、环境、安全门禁、归一化与审计" style="rounded=0;fillColor=#FFE0B2;strokeColor=#E65100;fontStyle=1;align=left;spacingLeft=12;container=0;pointerEvents=0;" vertex="1" parent="layer-bff">
+          <mxGeometry x="0" y="0" width="1480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bff-auth" value="身份与权限&#xa;租户 / 角色 / 业务域" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#E65100;" vertex="1" parent="layer-bff">
+          <mxGeometry x="45" y="55" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bff-safety" value="安全前置门禁&#xa;P0 / R2 / R3 / 冲突" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="layer-bff">
+          <mxGeometry x="315" y="55" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bff-adapter" value="RAG Adapter API&#xa;环境绑定 / 幂等 / 超时 / 重试" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCBC;strokeColor=#E65100;fontStyle=1;" vertex="1" parent="layer-bff">
+          <mxGeometry x="585" y="55" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bff-normalizer" value="供应商响应归一化&#xa;KB / SRC / chunk / score / citation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#E65100;" vertex="1" parent="layer-bff">
+          <mxGeometry x="895" y="55" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bff-audit" value="审计与凭证代理&#xa;request_id / provider_request_id" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#E65100;" vertex="1" parent="layer-bff">
+          <mxGeometry x="1205" y="55" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bff-vault" value="服务端密钥库&#xa;RAG_API_KEY 不入前端/Git" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;dashed=1;" vertex="1" parent="layer-bff">
+          <mxGeometry x="585" y="145" width="260" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-control" value="" style="rounded=0;dashed=1;fillColor=#E8F5E9;strokeColor=#2E7D32;container=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="540" width="1480" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-control-title" value="企业控制平面｜业务版本、审核、发布与闭环的唯一事实源" style="rounded=0;fillColor=#C8E6C9;strokeColor=#2E7D32;fontStyle=1;align=left;spacingLeft=12;container=0;pointerEvents=0;" vertex="1" parent="layer-control">
+          <mxGeometry x="0" y="0" width="1480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="control-src" value="来源与知识版本&#xa;SRC / KB / SRC state" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2E7D32;" vertex="1" parent="layer-control">
+          <mxGeometry x="45" y="55" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="control-workflow" value="业务与安全审批&#xa;职责分离 / 业务规则" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2E7D32;" vertex="1" parent="layer-control">
+          <mxGeometry x="345" y="55" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="control-eval" value="评测任务与发布版本&#xa;EVAL / REL / CASE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2E7D32;" vertex="1" parent="layer-control">
+          <mxGeometry x="645" y="55" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="control-ledger" value="审计与回滚账本&#xa;不可变历史 / binding_id" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2E7D32;" vertex="1" parent="layer-control">
+          <mxGeometry x="945" y="55" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="control-env" value="环境作用域&#xa;TEST / CANDIDATE / PRODUCTION" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="layer-control">
+          <mxGeometry x="1245" y="55" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="control-note" value="企业平台决定“哪一版知识可以引用、发布和审计”；提供方不得成为业务事实源。" style="text;html=1;whiteSpace=wrap;align=left;fontColor=#2E7D32;" vertex="1" parent="layer-control">
+          <mxGeometry x="45" y="145" width="1390" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-rag" value="" style="rounded=0;dashed=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;container=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="800" width="1480" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-rag-title" value="RAG 提供方｜仅负责解析、切片、索引、检索与生成" style="rounded=0;fillColor=#E1BEE7;strokeColor=#7B1FA2;fontStyle=1;align=left;spacingLeft=12;container=0;pointerEvents=0;" vertex="1" parent="layer-rag">
+          <mxGeometry x="0" y="0" width="1480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-provider" value="候选提供方&#xa;FastGPT / Dify / RAGFlow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7B1FA2;fontStyle=1;" vertex="1" parent="layer-rag">
+          <mxGeometry x="45" y="55" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-ingest" value="文档处理流水线&#xa;解析 / 切片 / 元数据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7B1FA2;" vertex="1" parent="layer-rag">
+          <mxGeometry x="385" y="55" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-index" value="索引与检索&#xa;语义 / 混合 / Rerank / TopK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7B1FA2;" vertex="1" parent="layer-rag">
+          <mxGeometry x="665" y="55" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-answer" value="带引用生成&#xa;证据 → 答案 / 拒答 / 追问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7B1FA2;" vertex="1" parent="layer-rag">
+          <mxGeometry x="985" y="55" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-limits" value="不拥有业务审批、权限真相或发布状态" style="text;html=1;whiteSpace=wrap;align=left;fontColor=#7B1FA2;" vertex="1" parent="layer-rag">
+          <mxGeometry x="1285" y="55" width="150" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-model" value="" style="rounded=0;dashed=1;fillColor=#ECEFF1;strokeColor=#455A64;container=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1040" width="1480" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-model-title" value="模型与数据基础设施｜可替换、可观测、可隔离" style="rounded=0;fillColor=#CFD8DC;strokeColor=#455A64;fontStyle=1;align=left;spacingLeft=12;container=0;pointerEvents=0;" vertex="1" parent="layer-model">
+          <mxGeometry x="0" y="0" width="1480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="model-embed" value="Embedding 模型" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#455A64;" vertex="1" parent="layer-model">
+          <mxGeometry x="55" y="55" width="240" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="model-rerank" value="Reranker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#455A64;" vertex="1" parent="layer-model">
+          <mxGeometry x="345" y="55" width="240" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="model-llm" value="生成模型" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#455A64;" vertex="1" parent="layer-model">
+          <mxGeometry x="635" y="55" width="240" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="model-store" value="向量 / 全文索引" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#455A64;" vertex="1" parent="layer-model">
+          <mxGeometry x="925" y="55" width="240" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="model-observe" value="日志 / 指标 / Trace" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#455A64;" vertex="1" parent="layer-model">
+          <mxGeometry x="1215" y="55" width="205" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-front-bff" value="只调用企业 BFF" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#1565C0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ui-task" target="bff-auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-bff-control" value="绑定审核/发布/权限版本" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#E65100;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bff-normalizer" target="control-eval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-adapter-rag" value="HTTPS / 服务端密钥 / 归一化" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#7B1FA2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bff-adapter" target="rag-provider">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-vault" value="仅服务端读取" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;dashed=1;strokeColor=#9673A6;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="bff-vault" target="bff-adapter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-rag-model" value="调用可替换模型" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#455A64;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rag-index" target="model-rerank">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-answer-llm" value="引用约束生成" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#455A64;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rag-answer" target="model-llm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-audit" value="写入审计" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;dashed=1;strokeColor=#455A64;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bff-audit" target="model-observe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

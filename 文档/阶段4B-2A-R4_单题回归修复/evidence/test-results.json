@@ -1,0 +1,54 @@
+{
+  "captured_at": "2026-10-25",
+  "status": "PASSED",
+  "product_quality_status": "FAILED",
+  "product_quality_reason": "RET-H07 first holdout semantic check failed and its result was preserved without retuning.",
+  "tests": [
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/server-unit.mjs",
+      "status": "PASSED",
+      "coverage": "BFF API, P0, privacy, idempotency, provider errors and safety signals"
+    },
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/stage4b2-unit.mjs",
+      "status": "PASSED",
+      "coverage": "single-target preservation, visible action cleanup, internal-label guards and semantic evaluation"
+    },
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/e2e-stage4b2.mjs",
+      "status": "PASSED",
+      "coverage": "P06/P10 browser flow, refresh recovery, P0, cost and responsive layouts"
+    },
+    {
+      "command": "npm run validate:4b2a-r4",
+      "status": "PASSED",
+      "coverage": "R3 freeze, R4 formal gates, POC-R04 visibility, regression, first-run holdout and secret hygiene"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a.ps1",
+      "status": "PASSED",
+      "coverage": "base 4B-2A regression"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a-r1.ps1",
+      "status": "PASSED",
+      "coverage": "R1 evidence and canonical ingestion"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a-r2.ps1",
+      "status": "PASSED",
+      "coverage": "R2 evidence and uniqueness"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a-r3.ps1",
+      "status": "PASSED",
+      "coverage": "R3 evidence and cross-document semantics"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b1.ps1",
+      "status": "PASSED",
+      "coverage": "4B-1 archived real evidence, stage 3B and stage 4A regressions"
+    }
+  ],
+  "secrets_exposed": false
+}

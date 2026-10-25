@@ -1,0 +1,111 @@
+{
+  "captured_at": "2026-10-25T14:25:07.230Z",
+  "source": "阶段3B_高保真交互原型/data/runtime/audit.ndjson",
+  "errors": [
+    {
+      "at": "2026-10-25T13:55:00.541Z",
+      "request_id": "11a71c81-44d8-4820-9e34-31b0a3a2ca99",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-POC-K02-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:55:03.864Z",
+      "request_id": "9499c54a-c11a-4e41-ada3-f9795103a412",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-POC-K04-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:55:06.967Z",
+      "request_id": "70f5e326-45a4-4024-8f9b-8c1ee539283b",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-POC-E01-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:55:52.675Z",
+      "request_id": "5f8254eb-05c2-4553-9a91-859e362d06b1",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-POC-E03-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:55:57.184Z",
+      "request_id": "a88d7e95-ef00-424d-8f07-cd2ebb0ac74d",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-POC-E04-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:56:00.576Z",
+      "request_id": "faf2c99f-07d5-4fd8-8f9b-94c7917e0003",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-RET-H01-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:56:04.684Z",
+      "request_id": "40a0447e-5957-47ac-9503-1b860be6713c",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-RET-H02-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:56:08.565Z",
+      "request_id": "de894e2d-f79c-4963-bcfe-6c3dc4fa9132",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-RET-H04-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:56:29.886Z",
+      "request_id": "9df2667f-c047-4f1f-a44c-cafece256a42",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-RET-H07-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:56:33.910Z",
+      "request_id": "7173ed38-8a44-40c6-a969-b7348f15d542",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-RET-H08-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:56:36.557Z",
+      "request_id": "2e5a63de-8021-4039-b2da-6dda2ced6a54",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-RET-H09-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:56:41.422Z",
+      "request_id": "a2b0d360-0d06-4f35-96ca-1dfb98b439ae",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-RET-H10-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "provider_called": false
+    },
+    {
+      "at": "2026-10-25T13:58:24.970Z",
+      "request_id": "25a5365f-f80e-4859-9712-e8fbf0d662f8",
+      "asq_id": "ASQ-ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404-POC-K02-1",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_UNAVAILABLE",
+      "provider_called": false
+    }
+  ],
+  "note": "Provider failures are retained as infrastructure records and are not treated as model-quality results."
+}

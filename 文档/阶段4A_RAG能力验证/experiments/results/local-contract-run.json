@@ -1,0 +1,538 @@
+{
+  "status": "LOCAL_CONTRACT_SIMULATION_ONLY",
+  "notice": "这不是 FastGPT、Dify 或 RAGFlow 的真实检索/问答结果，不得用于供应商能力排序。",
+  "run_id": "LOCAL-2026-10-24-CFG-BASE",
+  "dataset_ids": {
+    "TEST": "DS-TEST-2026-10-24",
+    "CANDIDATE": "DS-CANDIDATE-2026-10-24"
+  },
+  "dataset_versions": {
+    "TEST": "1.0.0",
+    "CANDIDATE": "1.0.0"
+  },
+  "eval_set_id": "EVAL-RAG-POC-1.0.0",
+  "eval_set_version": "1.0.0",
+  "configuration": "CFG-BASE local lexical preview; no LLM; no provider call",
+  "checks": {
+    "task_count": 17,
+    "core_task_count": 12,
+    "edge_case_count": 5,
+    "p0_task_count": 6,
+    "p0_gate_failures": 0,
+    "expected_source_preview_misses": 0,
+    "internal_document_excluded_from_public_index": true,
+    "dataset_hashes_valid": true
+  },
+  "results": [
+    {
+      "task_id": "POC-R01",
+      "expected_action": "追问检测结果和保障资格，说明正常老化、故障、有限保修和 AppleCare+ 的区别，必要时转售后检测",
+      "local_gate_result": "ANSWERABLE_PREVIEW",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-FAQ-BATTERY-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 31.9259,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-WARRANTY-OOW-01",
+          "doc_id": "DOC-WARRANTY-V1",
+          "score": 22.9564,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-OFFICIAL-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 19.7188,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-R02",
+      "expected_action": "确认故障并建议检测，说明保外维修和费用以检测、库存为准",
+      "local_gate_result": "ANSWERABLE_PREVIEW",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-WARRANTY-OOW-01",
+          "doc_id": "DOC-WARRANTY-V1",
+          "score": 17.9199,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-WARRANTY-THREE-01",
+          "doc_id": "DOC-WARRANTY-V1",
+          "score": 17.4887,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01",
+          "doc_id": "DOC-WARRANTY-V1",
+          "score": 8.3439,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-R03",
+      "expected_action": "按渠道分别说明 7 日法定路径与 Apple 在线商店 14 日商业政策，核对商品状态后转对应渠道",
+      "local_gate_result": "ANSWERABLE_PREVIEW",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-RETURN-APPLE-01",
+          "doc_id": "DOC-RETURN-V1",
+          "score": 40.9361,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-OFFICIAL-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 25.8035,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-THIRD-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 23.837,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-R04",
+      "expected_action": "追问左右耳和设置状态，指导清洁、重配和重置；持续异常转售后",
+      "local_gate_result": "ANSWERABLE_PREVIEW",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-FAQ-CONNECT-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 44.2441,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-POWER-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 8.3809,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-SAFE-WATER-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 5.9671,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-S01",
+      "expected_action": "立即停止使用和充电并指导干燥，追问危险信号，再安排服务与安全判断",
+      "local_gate_result": "BLOCKED_SAFETY",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-FAQ-CONNECT-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 11.7008,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-SAFE-WATER-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 11.2721,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-IDENTIFY-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 10.757,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-S02",
+      "expected_action": "先发送停止使用和充电指令，隔离风险并创建 R3 风险升级",
+      "local_gate_result": "BLOCKED_SAFETY",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-FAQ-RISK-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 16.4509,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-SAFE-CLASS-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 16.1991,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-POWER-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 12.5435,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-S03",
+      "expected_action": "立即停止无线充电并移开电源，追问危险信号并升级安全责任人",
+      "local_gate_result": "BLOCKED_SAFETY",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-FAQ-POWER-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 12.1159,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-SAFE-WATER-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 10.8838,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-RISK-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 10.7485,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-S04",
+      "expected_action": "先停止充电和连接排查，记录发热位置与危险信号，再升级服务",
+      "local_gate_result": "BLOCKED_SAFETY",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-FAQ-CONNECT-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 20.7269,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-IDENTIFY-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 12.9406,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-POWER-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 10.1597,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-K01",
+      "expected_action": "追问服务商、工单和维修项目，未确认则转渠道负责人并标记知识缺口",
+      "local_gate_result": "ANSWERABLE_PREVIEW",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-CHANNEL-AUTH-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 38.9294,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-CHECK-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 19.8967,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-THIRD-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 13.5032,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-K02",
+      "expected_action": "追问合同和故障，说明需核验资格与服务历史并转售后",
+      "local_gate_result": "ANSWERABLE_PREVIEW",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-WARRANTY-LIMITED-01",
+          "doc_id": "DOC-WARRANTY-V1",
+          "score": 30.7726,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-BATTERY-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 11.4074,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01",
+          "doc_id": "DOC-WARRANTY-V1",
+          "score": 8.9897,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-K03",
+      "expected_action": "追问照片与危险信号；发现风险先停止充电并转售后，同时创建知识缺口",
+      "local_gate_result": "NEED_CLARIFICATION",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-FAQ-POWER-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 15.0878,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-SAFE-WATER-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 11.3209,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-IDENTIFY-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 7.8538,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-K04",
+      "expected_action": "收集两份书面结论与工单证据，保留冲突并升级联合裁决",
+      "local_gate_result": "ANSWERABLE_PREVIEW",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-CHANNEL-THIRD-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 21.7265,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-AUTH-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 16.6354,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-RETURN-APPLE-01",
+          "doc_id": "DOC-RETURN-V1",
+          "score": 16.3628,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E01",
+      "expected_action": "说明公开知识中没有该能力，不生成确定功能结论，提供官方规格核验路径",
+      "local_gate_result": "NO_ANSWER",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-SAFE-CLASS-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 7.9261,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-IDENTIFY-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 6.8861,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-WARRANTY-THREE-01",
+          "doc_id": "DOC-WARRANTY-V1",
+          "score": 6.6605,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E02",
+      "expected_action": "拒绝引用过期规则，说明知识失效并要求渠道负责人复核",
+      "local_gate_result": "KNOWLEDGE_EXPIRED",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-EXPIRED-CHANNEL-01",
+          "doc_id": "DOC-EXPIRED-CHANNEL",
+          "score": 54.1001,
+          "status": "expired",
+          "valid_until": "2026-08-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-THIRD-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 43.465,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-RETURN-APPLE-01",
+          "doc_id": "DOC-RETURN-V1",
+          "score": 25.9429,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E03",
+      "expected_action": "返回 CONFLICT，列出两份证据并转渠道负责人与主管",
+      "local_gate_result": "CONFLICT",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-CONFLICT-01",
+          "doc_id": "DOC-CHANNEL-CONFLICT",
+          "score": 37.3169,
+          "status": "review_required",
+          "valid_until": "2026-11-30"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-CONFLICT-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 15.1144,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-CHANNEL-OFFICIAL-01",
+          "doc_id": "DOC-CHANNEL-V1",
+          "score": 10.6891,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E04",
+      "expected_action": "返回 PERMISSION_DENIED，仅提供公开安全止损和转人工路径",
+      "local_gate_result": "PERMISSION_DENIED",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-SAFE-ESCALATE-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 7.2961,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-EXPIRED-CHANNEL-01",
+          "doc_id": "DOC-EXPIRED-CHANNEL",
+          "score": 6.2761,
+          "status": "expired",
+          "valid_until": "2026-08-31"
+        },
+        {
+          "chunk_id": "CHUNK-SAFE-CLASS-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 5.4783,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "task_id": "POC-E05",
+      "expected_action": "立即发送停止充电、断电、远离可燃物和必要应急指令，创建 R3 升级",
+      "local_gate_result": "BLOCKED_SAFETY",
+      "p0_safe": true,
+      "expected_source_visible_in_preview_top3": true,
+      "retrieval_preview_top3": [
+        {
+          "chunk_id": "CHUNK-SAFE-STOP-01",
+          "doc_id": "DOC-SAFETY-V1",
+          "score": 16.8825,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-POWER-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 14.8527,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "chunk_id": "CHUNK-FAQ-RISK-01",
+          "doc_id": "DOC-FAQ-V1",
+          "score": 11.1397,
+          "status": "active",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    }
+  ]
+}

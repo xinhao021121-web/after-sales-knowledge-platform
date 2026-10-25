@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="常规规则判断">
+    <mxGraphModel dx="1500" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a_title" value="流程 A｜常规售后规则判断" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="700" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a_start" value="客户提出售后问题" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a_task" value="建立 ASQ&#xa;规范化诉求" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="260" y="120" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a_risk" value="是否发现 R2/R3 风险？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="480" y="105" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a_ctx" value="补齐 CTX&#xa;商品/渠道/时间/状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="120" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a_evd" value="检索有效证据 EVD&#xa;只引用已发布 KB/REL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="950" y="120" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a_cond" value="条件、证据与冲突均通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="105" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a_more" value="向客户追问&#xa;记录缺失字段" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="720" y="280" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a_case" value="创建知识问题 CASE&#xa;保留失败证据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="280" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a_adv" value="生成 ADV&#xa;动作 · 证据 · 承诺边界" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="950" y="390" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a_confirm" value="人工确认 / 修改 / 转交" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="700" y="390" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a_send" value="发送建议或转交售后" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="430" y="390" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a_close" value="记录结果&#xa;解决 / 待客户 / 升级 / 关闭" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="140" y="390" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a_esc" value="切换到高风险流程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="480" y="280" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ae1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="a_start" target="a_task"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="a_task" target="a_risk"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae3" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="a_risk" target="a_ctx"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae4" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="a_risk" target="a_esc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae5" value="条件足够" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="a_ctx" target="a_evd"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae6" value="缺少条件" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="a_ctx" target="a_more"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="a_more" target="a_ctx"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae8" value="有有效证据" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="a_evd" target="a_cond"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae9" value="不通过/冲突" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673A6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="a_cond" target="a_case"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae10" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="a_cond" target="a_adv"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="a_adv" target="a_confirm"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="a_confirm" target="a_send"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="a_send" target="a_close"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="高风险场景">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b_title" value="流程 B｜高风险场景：先止损，后处理" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="700" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b_detect" value="识别风险信号&#xa;冒烟/鼓包/过热/进液/伤害" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_pause" value="暂停普通建议&#xa;创建 ESC 候选" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="310" y="120" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_stop" value="立即止损&#xa;停止使用/充电 · 隔离" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="120" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_ask" value="必要追问&#xa;冒烟/明火/异味/伤害/位置" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="850" y="120" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_confirm" value="风险确认&#xa;R2 主管 / R3 安全或法务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="120" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_route" value="转交售后 / 安全支持 / 应急" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="950" y="300" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_record" value="记录事件与证据&#xa;ESC / CTX / AUD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="650" y="300" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_review" value="问题复盘&#xa;进入 CASE 闭环" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="360" y="300" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_close" value="责任角色确认&#xa;关闭 / 重开 / 回滚" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="300" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="be1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b_detect" target="b_pause"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b_pause" target="b_stop"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b_stop" target="b_ask"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b_ask" target="b_confirm"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be5" value="需升级" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="b_confirm" target="b_route"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b_route" target="b_record"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b_record" target="b_review"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b_review" target="b_close"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="bnote" value="硬门禁：R3 未获安全/法务确认，不得关闭；普通客服不能关闭风险单。" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="70" y="470" width="1000" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="知识问题闭环">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_title" value="流程 C｜知识问题闭环：发现、修复、评测、发布、回滚" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c_detect" value="发现问题&#xa;纠错/缺口/冲突/风险" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_case" value="创建 CASE&#xa;保留原建议与证据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="120" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_triage" value="分诊与归因&#xa;知识/规则/渠道/流程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="540" y="120" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fix" value="修复知识&#xa;创建新 KB 版本" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="790" y="120" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_biz" value="业务/渠道审批&#xa;提交人不得自批" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="120" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_eval" value="AI 回归评测&#xa;冻结 12 条核心任务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="300" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_approve" value="主管确认发布准备" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="780" y="300" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_release" value="发布 REL&#xa;保留旧版本" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="300" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_close" value="验证后关闭 CASE&#xa;审计留痕" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="260" y="300" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fail" value="评测失败 / 发布异常&#xa;CASE 重开并回滚" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="480" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ce1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_detect" target="c_case"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_case" target="c_triage"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_triage" target="c_fix"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_fix" target="c_biz"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="c_biz" target="c_eval"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce6" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_eval" target="c_approve"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_approve" target="c_release"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c_release" target="c_close"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce9" value="失败/异常" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="c_eval" target="c_fail"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="c_fail" target="c_fix"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cnote" value="硬门禁：提交人不能自批；AI 评测不能代替业务批准；管理员不能绕过审核和评测发布。" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="610" width="1150" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

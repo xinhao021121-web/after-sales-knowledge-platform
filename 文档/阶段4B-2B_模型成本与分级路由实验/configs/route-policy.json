@@ -1,0 +1,39 @@
+{
+  "policy_id": "4B2B-FLASH-PRO-FALLBACK-1.0.0",
+  "enabled_by_default": false,
+  "production_enabled": false,
+  "default_model": "deepseek-v4-pro",
+  "experiment_models": {
+    "flash": "deepseek-v4-flash",
+    "pro": "deepseek-v4-pro"
+  },
+  "p0": {
+    "model_eligible": false,
+    "gate_order": "BFF_BEFORE_MODEL",
+    "required_status": "BLOCKED_SAFETY"
+  },
+  "route_flow": [
+    "BFF completes input and P0 gates",
+    "Use the frozen retrieval snapshot and evidence gate",
+    "Call Flash once",
+    "Apply deterministic routing checks",
+    "Call Pro once only if at least one fallback reason is present",
+    "If Pro still fails, retain failure or human escalation"
+  ],
+  "fallback_reasons": [
+    "PROVIDER_ERROR",
+    "UNPARSEABLE_ANSWER",
+    "REQUIRED_STATUS_MISMATCH",
+    "CLAIM_CITATION_FAILED",
+    "UNSUPPORTED_CLAIM",
+    "GENERIC_FALLBACK_WITH_EVIDENCE",
+    "NO_ACTIONABLE_NEXT_STEP",
+    "FORBIDDEN_COMMITMENT"
+  ],
+  "limits": {
+    "max_pro_fallbacks_per_task": 1,
+    "same_segment_repeat_allowed": false,
+    "quality_gates_may_be_relaxed": false,
+    "task_specific_rules_allowed": false
+  }
+}

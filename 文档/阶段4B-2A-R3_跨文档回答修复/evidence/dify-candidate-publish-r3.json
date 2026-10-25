@@ -1,0 +1,36 @@
+{
+  "stage": "PUBLISHED",
+  "status": 200,
+  "body": "{\"result\":\"success\",\"created_at\":1792927416}\n",
+  "versions_status": 200,
+  "versions": [
+    {
+      "version_number": null,
+      "marked_name": "",
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 16,
+      "marked_name": "R3-CANDIDATE-MULTI",
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 15,
+      "marked_name": "R3-CANDIDATE-MULTI",
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 14,
+      "marked_name": "R2-CANDIDATE-Q10",
+      "knowledge_top_k": [
+        10
+      ]
+    }
+  ]
+}

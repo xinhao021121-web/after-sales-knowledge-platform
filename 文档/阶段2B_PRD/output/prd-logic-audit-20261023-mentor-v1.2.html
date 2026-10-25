@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业级 RAG 知识库平台 PRD V1.2 导师复检</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --bg: #f5f7fb;
+      --card: #fff;
+      --block: #b42318;
+      --high: #c2410c;
+      --medium: #a16207;
+      --low: #2563eb;
+      --accent: #4338ca;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font: 14px/1.7 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header, main, footer { width: min(1180px, calc(100% - 32px)); margin: auto; }
+    header { padding: 48px 0 28px; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); line-height: 1.18; }
+    h2 { margin: 0 0 16px; font-size: 22px; }
+    h3 { margin: 0 0 10px; font-size: 17px; }
+    p { margin: 8px 0; }
+    .muted { color: var(--muted); }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    section {
+      margin: 0 0 22px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: 0 8px 28px rgba(30, 41, 59, .05);
+    }
+    .verdict { border-left: 7px solid var(--block); background: linear-gradient(135deg, #fff 0, #fff7f6 100%); }
+    .verdict h2 { color: var(--block); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .stat { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .stat strong { display: block; font-size: 28px; line-height: 1.2; }
+    .stat span { color: var(--muted); }
+    .risk-scale { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 16px 0 24px; }
+    .risk-card, .blocker-summary { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .risk-card h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .blocker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .blocker-summary { border-left: 4px solid var(--block); }
+    .blocker-summary strong { display: block; margin-bottom: 6px; color: var(--block); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #f8fafc; white-space: nowrap; }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; color: #fff; font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .block { background: var(--block); }
+    .high { background: var(--high); }
+    .medium { background: var(--medium); }
+    .low { background: var(--low); }
+    article { margin-top: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    article.blocker { border-left: 5px solid var(--block); }
+    article.high-risk { border-left: 5px solid var(--high); }
+    article.medium-risk { border-left: 5px solid var(--medium); }
+    .meta { display: flex; flex-wrap: wrap; gap: 7px; margin: 8px 0 14px; }
+    .tag { padding: 2px 8px; border-radius: 999px; background: #eef2ff; color: #3730a3; font-size: 12px; font-weight: 700; }
+    dl { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 7px 14px; margin: 12px 0 0; }
+    dt { font-weight: 800; color: #334155; }
+    dd { margin: 0; }
+    code { padding: 2px 5px; border-radius: 5px; background: #eef2f7; }
+    ol, ul { padding-left: 22px; }
+    .callout { padding: 14px 16px; border-radius: 10px; background: #fff8e8; border: 1px solid #f6d995; }
+    .side-nav {
+      position: fixed;
+      top: 50%;
+      left: 24px;
+      z-index: 9;
+      width: 168px;
+      padding: 8px 0;
+      border-left: 1px solid var(--line);
+      transform: translateY(-50%);
+    }
+    .side-nav strong { display: block; padding: 0 12px 8px 14px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .side-nav a { display: block; padding: 7px 12px 7px 14px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; }
+    .side-nav a:hover { border-left-color: var(--accent); color: var(--accent); }
+    section[id] { scroll-margin-top: 24px; }
+    @media (min-width: 981px) {
+      header, main, footer {
+        width: min(1180px, calc(100% - 260px));
+        margin-left: clamp(220px, calc((100% - 1180px) / 2 + 100px), 360px);
+        margin-right: 24px;
+      }
+    }
+    @media (max-width: 980px) {
+      .side-nav { display: none; }
+      header, main, footer { width: min(1180px, calc(100% - 32px)); margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 760px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .risk-scale, .blocker-grid { grid-template-columns: 1fr; }
+      section { padding: 18px; }
+      dl { grid-template-columns: 1fr; gap: 0; }
+      dt { margin-top: 9px; }
+    }
+    @media print {
+      body { background: #fff; }
+      header, main, footer { width: 100%; margin-left: auto; margin-right: auto; }
+      .side-nav { display: none; }
+      section, article { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="side-nav" aria-label="报告目录">
+    <strong>报告目录</strong>
+    <a href="#scope">检查范围</a>
+    <a href="#verdict">复审结论</a>
+    <a href="#risk-guide">风险说明</a>
+    <a href="#summary">问题总览</a>
+    <a href="#details">问题详情</a>
+    <a href="#order">修改路线</a>
+    <a href="#decisions">产品拍板</a>
+    <a href="#impact">改全材料</a>
+    <a href="#coverage">覆盖说明</a>
+  </nav>
+
+  <header>
+    <p class="eyebrow">PRD Logic Recheck</p>
+    <h1>企业级 RAG 知识库平台 PRD V1.2 导师复检</h1>
+    <p class="muted">生成日期：2026-10-23 · 输入：PRD V1.2、追踪矩阵 V1.2、状态总表 V1.2、GTW、异常与权限附录、V1.1 导师报告</p>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>检查范围</h2>
+      <p>已完整检查 30 条功能需求、12 条核心任务、24 条核心 GTW、28 条跨需求验收、53 个对象自身状态、17 个跨对象事件、U1-U9、8 类角色、知识版本与发布版本关系、来源失效传播和回滚流程。</p>
+      <p class="muted">未覆盖：真实客服验证、真实客户数据、真实部署合规、技术性能、模型与检索参数，以及 Draw.io 像素级渲染。</p>
+    </section>
+
+    <section id="verdict" class="verdict">
+      <h2>结论：修改后再评审</h2>
+      <p>V1.1 的问题已关闭，但知识发布仍缺少一个基础定义：一次 REL 表示一个知识条目，还是一个业务域内多个知识版本的快照。该基数未确定，导致首次发布、多知识发布和关联 CASE 的闭环均无法唯一实现。</p>
+      <div class="stats">
+        <div class="stat"><strong>2</strong><span>阻断</span></div>
+        <div class="stat"><strong>1</strong><span>高风险</span></div>
+        <div class="stat"><strong>0</strong><span>中风险</span></div>
+        <div class="stat"><strong>4</strong><span>去重问题总数</span></div>
+      </div>
+    </section>
+
+    <section id="risk-guide">
+      <h2>风险等级怎么理解？</h2>
+      <p><strong>阻断表示知识发布或安全重开无法得到唯一结果。</strong> 当前主体规则明确，但对象基数和事件覆盖仍不足。</p>
+      <div class="risk-scale">
+        <div class="risk-card"><h3><span class="badge block">阻断</span></h3><p>核心发布链路无法唯一实现，可能误删有效知识、阻断首次发布或丢失问题闭环。</p></div>
+        <div class="risk-card"><h3><span class="badge high">高风险</span></h3><p>异常状态无法合法恢复，可能导致安全记录不可重开或历史记录混淆。</p></div>
+        <div class="risk-card"><h3><span class="badge medium">中风险</span></h3><p>边界未定，可能造成返工或人工兜底。</p></div>
+        <div class="risk-card"><h3><span class="badge low">低风险</span></h3><p>局部文档一致性问题，不影响主流程唯一性。</p></div>
+      </div>
+      <div class="blocker-grid">
+        <div class="blocker-summary">
+          <strong>PRD-001 发布版本与知识条目的基数不唯一</strong>
+          <p>REL 被定义为 KB 集合，并按业务域唯一；但 EV-08 由单次 EVAL 直接创建 REL。无法确定如何保留其他有效知识。</p>
+        </div>
+        <div class="blocker-summary">
+          <strong>PRD-002 CASE 关联与来源失效闭环不完整</strong>
+          <p>EV-08 要求 CASE 必须存在，首次知识发布无对应事件；来源失效链声称重开 CASE，但没有对应跨对象事件。</p>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>评审放行条件</strong>
+        <p>明确发布会话的组成规则、KB 与 CASE 的可选/复数关系以及来源失效到 CASE 的事件链，并补齐相应验收。</p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>问题总览</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>编号</th><th>风险</th><th>痛苦类型</th><th>结论状态</th><th>问题摘要</th><th>主要位置</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>阻断</td><td>对象基数</td><td>确定缺口</td><td>REL 是 KB 集合但 EV-08 按单次 EVAL 创建，无法确定发布组成</td><td>PRD 10；G-17；03 EV-08</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>阻断</td><td>闭环断裂</td><td>确定缺口</td><td>首次发布无 CASE 路径；来源失效没有 CASE 重开/新建事件</td><td>FR-024；11.2；03 EV-04 至 EV-08</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>高风险</td><td>状态不可达</td><td>确定冲突</td><td>ESC_CLOSED/DISMISSED 描述可重开，但状态表没有重开转换</td><td>03 第 1.2 节</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>低</td><td>文档一致性</td><td>表达问题</td><td>V1.2变更记录和事件前缀仍有个别遗漏</td><td>PRD 16；03 ESC_DISMISSED</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="details">
+      <h2>问题详情</h2>
+
+      <article id="prd-001" class="blocker">
+        <h3>PRD-001 REL 是知识快照还是单条知识发布，尚未唯一确定</h3>
+        <div class="meta"><span class="badge block">阻断</span><span class="tag">对象基数</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>PRD 10 将 REL 的关键字段定义为“KB 集合”；G-17 要求同一租户、环境、业务域仅有一个 REL_ACTIVE。但 EV-08 由一次 EVAL_PASSED 创建新的 REL_PENDING_APPROVAL，且每个 EVAL 只对应一个 KB 候选。</dd>
+          <dt>漏洞说明</dt>
+          <dd>如果 REL 是业务域快照，研发必须先把当前 ACTIVE REL 的其他 KB 集合复制到新候选；当前事件没有这一步，更新一个知识可能让其他有效知识消失。如果 REL 只对应一个 KB，则“KB 集合”和“业务域唯一 ACTIVE”又会阻止同域多个知识同时在线。</dd>
+          <dt>触发场景</dt>
+          <dd>REL-A 在线并包含 KB-1、KB-2 → KB-1 新版本 EVAL 通过 → EV-08 创建 REL-B → 若 REL-B 只装 KB-1 新版本 → 激活后 KB-2 失去在线版本。</dd>
+          <dt>影响范围</dt>
+          <dd>知识检索、REL 组成、发布替代、回滚、关联 CASE、唯一 ACTIVE、审计和所有知识任务。</dd>
+          <dt>待确认问题</dt>
+          <dd>P0 的一次 REL 是一个业务域快照，还是只对应一个知识条目？</dd>
+          <dt>最小修改建议</dt>
+          <dd>若采用快照：引入发布候选组成事件，EVAL 通过只把 KB 加入候选；候选从当前 ACTIVE REL 复制其余 KB，再统一审批和激活。若采用单 KB 发布：将 REL 的“KB 集合”改为单一 KB 版本，并把唯一性作用域改为对应知识条目。</dd>
+          <dt>关联修改</dt>
+          <dd>PRD 10、G-16/G-17、FR-019/020/021、EV-08/EV-11/EV-13/EV-16/EV-17、AC-G-17 至 AC-G-27、追踪矩阵和状态图。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-002" class="blocker">
+        <h3>PRD-002 CASE 关联被强制且来源失效未产生 CASE 事件</h3>
+        <div class="meta"><span class="badge block">阻断</span><span class="tag">闭环断裂</span><span class="tag">确定缺口</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>EV-08 的前置条件明确要求“关联 CASE 存在”，但 FR-017/018/019 允许从知识草稿直接进入审核、评测和发布，没有说明必须先生成 CASE。PRD 11.2 又声明来源失效最终应“CASE 重开或新建”，但 EV-04 至 EV-07 只更新 KB、EVAL、REL，没有目标 CASE 的事件。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发无法实现首次知识发布，因为可能没有 CASE；也无法实现来源失效后的知识治理闭环，因为案例状态不会自动恢复或创建。若强行创建 CASE，则每次正常知识发布都会产生一个虚假“问题案例”。</dd>
+          <dt>触发场景</dt>
+          <dd>新知识从草稿进入审核并通过 EVAL → 没有关联 CASE → EV-08 前置条件失败 → 无法发布；另一场景：在线 SRC 被撤回 → REL 被停用 → 没有事件重开关联 CASE → 问题治理清单遗漏。</dd>
+          <dt>影响范围</dt>
+          <dd>首次知识发布、正常版本更新、来源失效、CASE 生命周期、发布证据和 U9。</dd>
+          <dt>待确认问题</dt>
+          <dd>正常知识发布是否允许没有 CASE？一个 REL 或 KB 是否可能关联多个 CASE？</dd>
+          <dt>最小修改建议</dt>
+          <dd>将 CASE 定义为可选 0..N：有 CASE 时 EV-08 推进全部关联 CASE，无 CASE 时仍可创建 REL。另新增来源失效到 CASE 的事件：已关联 CASE 进入 `CASE_REOPENED` 或 `CASE_FIXING`，无 CASE 时按规则创建治理案例。</dd>
+          <dt>关联修改</dt>
+          <dd>PRD 10、FR-019/020/024、G-09、11.2、EV-04 至 EV-08、新增事件、AC-G-24/27、AC-K4-02、追踪矩阵。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-003" class="high-risk">
+        <h3>PRD-003 已关闭或已排除的 ESC 无法重新打开</h3>
+        <div class="meta"><span class="badge high">高风险</span><span class="tag">状态不可达</span><span class="tag">确定冲突</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>ESC 状态说明中，`ESC_CLOSED` 和 `ESC_DISMISSED` 的失败/回滚路径都写了“新风险重开”，但两者的“下一自身状态”仍是终态或恢复 ASQ；从这两个状态到 `ESC_REOPENED` 没有转换，`ESC_REOPENED` 仅能从 `ESC_MONITORING` 到达。</dd>
+          <dt>漏洞说明</dt>
+          <dd>研发按状态表实现时，已关闭或已排除的风险出现新证据后无法重开；若直接新建 ESC，又与文档中“重开”的语义不一致。</dd>
+          <dt>触发场景</dt>
+          <dd>风险单 ESC-01 已关闭 → 客户报告同型号冒烟 → 系统按文字应重开 ESC-01 → 状态表不允许 CLOSED/ DISMISSED 到 REOPENED → 只能绕过或卡死。</dd>
+          <dt>影响范围</dt>
+          <dd>安全风险复发、责任追溯、客户历史、案例关联和 U1。</dd>
+          <dt>待确认问题</dt>
+          <dd>复发风险应重开原风险单，还是创建新的风险单并关联旧单？</dd>
+          <dt>最小修改建议</dt>
+          <dd>建议复发创建新 ESC，并保留 `previous_esc_id` 关联；若要求重开原单，则在 ESC_CLOSED 和 ESC_DISMISSED 增加合法到 ESC_REOPENED 的转换、权限和验收。</dd>
+          <dt>关联修改</dt>
+          <dd>ESC 对象字段、03 第 1.2 节、FR-013/014、AC-G-10、风险状态图。</dd>
+        </dl>
+      </article>
+
+      <article id="prd-004">
+        <h3>PRD-004 V1.2 仍有少量版本记录和事件前缀不一致</h3>
+        <div class="meta"><span class="badge low">低风险</span><span class="tag">文档一致性</span><span class="tag">表达问题</span></div>
+        <dl>
+          <dt>位置与证据</dt>
+          <dd>PRD 顶部的版本表包含 V1.2.0，但第十六章变更记录只列 V1.0.0 和 V1.1.0；V1.2 状态表中 `ESC_DISMISSED` 仍引用 `E-02`，其余事件使用 `EV-` 前缀。</dd>
+          <dt>漏洞说明</dt>
+          <dd>不影响业务规则，但版本追溯和自动引用检查无法保持一致。</dd>
+          <dt>触发场景</dt>
+          <dd>评审者按第十六章确认 V1.2 变更时找不到记录；自动搜索 EV-02 时遗漏一次引用。</dd>
+          <dt>影响范围</dt>
+          <dd>PRD 版本审计、文档检索和复检报告。</dd>
+          <dt>待确认问题</dt>
+          <dd>无；应统一为 V1.2.0 和 EV-02。</dd>
+          <dt>最小修改建议</dt>
+          <dd>补齐 V1.2.0 变更记录，统一事件前缀，并重新执行文档引用检查。</dd>
+          <dt>关联修改</dt>
+          <dd>PRD 第十六章、03 第 1.2 节、复检报告和验收记录。</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>发现问题后，产品经理怎么处理</h2>
+      <ol>
+        <li>先由产品负责人确定发布版本是业务域快照还是单知识条目。</li>
+        <li>再明确 CASE 的 0..N 关系，补齐首次发布和来源失效的事件。</li>
+        <li>最后修复风险重开和文档一致性，重新执行全量逻辑检查。</li>
+      </ol>
+    </section>
+
+    <section id="order">
+      <h2>第 1 步：先看修改路线</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>顺序</th><th>相关问题</th><th>这一轮要解决什么</th><th>为什么先做这一步</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><a href="#prd-001">PRD-001</a></td><td>确定 REL 的组成和唯一性对象</td><td>决定所有发布、回滚和检索规则</td></tr>
+            <tr><td>2</td><td><a href="#prd-002">PRD-002</a></td><td>定义 CASE 可选/复数关系及来源失效回流</td><td>决定首次发布和知识闭环能否完成</td></tr>
+            <tr><td>3</td><td><a href="#prd-003">PRD-003</a>、<a href="#prd-004">PRD-004</a></td><td>补齐风险重开与文档一致性</td><td>完成安全状态和审计收口</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <strong>建议评审门槛</strong>
+        <p>正常首次发布不依赖 CASE；更新一个 KB 不会导致其他有效 KB 下线；来源失效可追踪到 CASE；风险单复发有唯一路径；全部事件和版本记录一致。</p>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <h2>第 2 步：轮到该问题时，产品拍板</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>你要拍板的事</th><th>为什么现在必须定</th><th>定完要补进 PRD</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>P0 采用业务域知识快照，还是单 KB 独立发布</td><td>决定 REL/KB/CASE 的数量关系</td><td>对象模型、唯一作用域、EV-08、回滚和 GTW</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>正常发布是否允许无 CASE；一个 REL 关联多少 CASE</td><td>当前首次发布无法通过 EV-08</td><td>FR-024、EV-08、CASE 关系、来源失效事件</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>风险复发是重开旧 ESC，还是新建 ESC 关联旧单</td><td>当前状态图不可达</td><td>ESC 状态、字段、FR-013、AC-G-10</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>无需业务选择；统一版本记录与事件前缀</td><td>避免审计和自动检索歧义</td><td>PRD 第十六章、03、验收记录</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2>第 3 步：拍板后，把相关材料改全</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>拿着什么结论去改</th><th>还要改哪些地方</th><th>怎样算改完</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-001">PRD-001</a></td><td>REL 组成规则与唯一作用域</td><td>PRD 10、G-16/G-17、FR-019/020/021、EV-08/11/13/16/17、AC-G-17 至 G-27、状态图</td><td>任何一次发布都能说明包含哪些 KB，且不会意外丢失其他有效知识</td></tr>
+            <tr><td><a href="#prd-002">PRD-002</a></td><td>CASE 的 0..N 关系和来源失效事件</td><td>FR-019/020/024、11.2、EV-04 至 EV-08、新增 EV、AC-G-24/27、AC-K4-02</td><td>无 CASE 的首次发布可完成；来源失效后 CASE 可自动重开或新建</td></tr>
+            <tr><td><a href="#prd-003">PRD-003</a></td><td>ESC 复发策略</td><td>ESC 对象、状态表、FR-013/014、AC-G-10、状态图</td><td>任何已关闭或已排除的风险都有唯一复发路径</td></tr>
+            <tr><td><a href="#prd-004">PRD-004</a></td><td>统一版本记录和前缀</td><td>PRD 第十六章、03、复检报告</td><td>所有章节和事件引用一致且可检索</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="coverage">
+      <h2>覆盖说明</h2>
+      <p>已确认：V1.1 报告的 EVAL→CASE、SUSPENDED 回滚、KB 冻结、EV-16/EV-17 幂等和文档编号问题均已修订；53 个自身状态、17 个事件、30 条需求、12 条核心任务和 28 个跨需求验收均有基础定义；U1-U9 与角色边界未发现新的直接冲突。</p>
+      <p>剩余阻断集中在对象基数和 CASE 关系，不需要推翻产品方向。完成修复并复审后，才可进入信息架构和高保真原型。</p>
+      <p class="muted">本报告不替代阶段 1B 的专项样本人工复核。</p>
+    </section>
+  </main>
+
+  <footer>阶段 2B PRD V1.2 导师复检 · 生成日期：2026-10-23</footer>
+</body>
+</html>

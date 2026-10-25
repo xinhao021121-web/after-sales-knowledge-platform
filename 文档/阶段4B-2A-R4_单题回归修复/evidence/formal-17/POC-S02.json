@@ -1,0 +1,85 @@
+{
+  "task_id": "POC-S02",
+  "core_task_id": "CORE-S2",
+  "question_hash": "3e8404f7024f700193cf5a520a0030f5a14204853f6bbbbdb32cd4ef847f94d1",
+  "question_length": 20,
+  "question_summary": {
+    "original": "为什么 AirPods 充电盒凹凸不平？",
+    "rewrites": [
+      "充电盒外壳鼓起来了，现在还在充电，会怎样？",
+      "耳机盒变形但还能亮灯，可以继续用吗？"
+    ]
+  },
+  "answer_status": "BLOCKED_SAFETY",
+  "provider_called": false,
+  "recall_at_3": 0,
+  "source_hit": false,
+  "expected_source_count": 1,
+  "covered_source_count": 0,
+  "covered_source_ids": [],
+  "retrieval_diversity": null,
+  "retrieval_status": "SKIPPED_P0",
+  "retrieval_attempts": [],
+  "citation_support_passed": false,
+  "citations": [
+    {
+      "citation_id": "BFF-SAFETY-CHUNK-SAFE-STOP-01",
+      "source": {
+        "src_id": "SRC-PUB-002",
+        "doc_id": "DOC-SAFETY-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 安全处置 SOP",
+        "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "CHUNK-SAFE-STOP-01"
+      },
+      "kb_id": "KB-DOC-SAFETY-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "CHUNK-SAFE-STOP-01",
+      "segment_id": "CHUNK-SAFE-STOP-01",
+      "supported_claims": [
+        "安全信号下必须先停止使用、停止充电、隔离危险并提示应急条件"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true
+    }
+  ],
+  "answer_goals": [],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": true,
+  "p0_passed": true,
+  "prompt_tokens": null,
+  "completion_tokens": null,
+  "total_tokens": null,
+  "provider_latency_ms": 0,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "BFF_SAFETY_GATE",
+  "error_code": null,
+  "provider_request_id": null,
+  "bff_request_id": "3db60a76-c84e-42c6-8deb-62886a7bf2d2",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-SAFETY-V1",
+        "chunk_id": "CHUNK-SAFE-CLASS-01"
+      },
+      {
+        "doc_id": "DOC-SAFETY-V1",
+        "chunk_id": "CHUNK-SAFE-STOP-01"
+      }
+    ],
+    "retrieved": [],
+    "retrieval_diversity": null,
+    "answer": "立即停止使用并停止充电，断开电源。将设备远离纸张、织物和其他可燃物并保持观察。若出现明火、持续冒烟、爆裂声或人员不适，先撤离并联系当地应急部门。",
+    "answer_goals": [],
+    "suggested_action": "停止使用和充电、隔离设备、记录风险信号，并转安全责任人与售后主管；未经安全确认不得继续普通售后判断。",
+    "citation_support": null
+  }
+}

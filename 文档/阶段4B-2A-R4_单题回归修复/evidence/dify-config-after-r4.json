@@ -1,0 +1,96 @@
+{
+  "captured_at": "2026-10-25T12:10:49.321Z",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "source": "Dify Console draft and version APIs (read-only)",
+  "model": {
+    "provider": "langgenius/deepseek/deepseek",
+    "name": "deepseek-v4-pro",
+    "mode": "chat",
+    "completion_params": {
+      "temperature": 0.7
+    }
+  },
+  "prompt_text": "{{#context#}}\n\n你是企业售后知识助手。请严格基于系统提供的检索正文回答：\n\n1. 只有包含具体事实、业务条件、例外或操作步骤的正文切片可以作为证据。\n2. 文档标题、章节名、元数据或“本文档介绍……”类内容不得作为业务证据。\n3. 系统提供的 Top3 检索证据就是回答依据。不得要求用户提供、粘贴或补充已检索文档的正文、切片或条款；缺少信息时只追问用户侧事实或官方处理状态。\n4. 如果正文已给出可执行的判断路径或核验步骤，应先给出这些内容，再补充必要追问；不要因为个别用户状态未知而只回复追问。\n5. 当问题包含多个独立业务目标时，必须分别处理每个目标，并使用严格格式：\n   ## 目标一：<目标名称>\n   **判断**：基于正文的条件化判断。\n   **下一步**：可执行动作。\n   **依据**：[引用标记]\n   ## 目标二：<目标名称>\n   **判断**：基于正文的条件化判断。\n   **下一步**：可执行动作。\n   **依据**：[引用标记]\n   每个目标最多四行，均须有正文依据，不得用一个引用概括所有目标。\n6. 如果不同目标由不同文档支持，应分别引用对应切片；引用标记保留 `[1]`、`[2]`、`[3]` 或 `CHUNK-...` 编号。\n7. 只有正文缺少作出安全或业务判断所必需的事实、条件或条款时，才明确说明知识不足并转人工。\n8. 不得承诺一定可退、免费维修、换新、退款、赔偿或赔偿金额。\n9. 渠道规则存在冲突时，保留双方结论并建议渠道负责人和客服主管联合裁决。\n10. 对用户明确给出的关键事实（如时间、渠道、已拆封、故障表现）不得遗漏；能由正文映射时写入对应目标，正文没有覆盖时明确标注该条件仍待官方核验，不得转而要求用户提供检索文档。\n11. 只对用户明确提出的独立业务目标分节；改写问法中的补充条件应归入相应目标，不要额外制造无关目标。\n12. 同一业务问题的“原因判断”“先检查什么”“下一步怎么做”属于同一目标，不得拆成多个目标；只有用户明确要求处理多个独立业务规则或后果时才分节。\n13. “下一步”必须自包含，写明具体动作，不得引用“目标一/目标二”“上述步骤”等内部结构或上下文指代。\n14. 涉及维修、检测、换货或换新的售后路径时，必须在用户可见回答中明确写出“不承诺免费维修或换新”。\n\n回答应简洁、条件化、可执行，不要复述文档标题，不要输出分析过程。",
+  "knowledge_nodes": [
+    {
+      "id": "1792828605452",
+      "dataset_ids": [
+        "0d5a11ce-c017-4376-8099-d8e083243a7d"
+      ],
+      "top_k": 10,
+      "reranking_model": {
+        "provider": "langgenius/tongyi/tongyi",
+        "model": "qwen3-rerank"
+      },
+      "weights": {
+        "weight_type": "customized",
+        "vector_setting": {
+          "vector_weight": 0.7,
+          "embedding_provider_name": "langgenius/tongyi/tongyi",
+          "embedding_model_name": "text-embedding-v4"
+        },
+        "keyword_setting": {
+          "keyword_weight": 0.3
+        }
+      }
+    }
+  ],
+  "versions_http_status": 200,
+  "workflow_versions": [
+    {
+      "version_number": null,
+      "marked_name": "",
+      "marked_comment": "",
+      "created_at": 1792828568,
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 18,
+      "marked_name": "R4-CANDIDATE-VISIBLE",
+      "marked_comment": "R4: single-target preservation and self-contained visible actions",
+      "created_at": 1792929363,
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 17,
+      "marked_name": "R4-CANDIDATE-VISIBLE",
+      "marked_comment": "R4: single-target preservation and self-contained visible actions",
+      "created_at": 1792929199,
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 16,
+      "marked_name": "R3-CANDIDATE-MULTI",
+      "marked_comment": "R3: cross-document answer structure and substantiated retrieval",
+      "created_at": 1792927416,
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 15,
+      "marked_name": "R3-CANDIDATE-MULTI",
+      "marked_comment": "R3: cross-document answer structure and substantiated retrieval",
+      "created_at": 1792927120,
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 14,
+      "marked_name": "R2-CANDIDATE-Q10",
+      "marked_comment": "R2: document-diverse retrieval candidate and actionable-answer prompt",
+      "created_at": 1792920468,
+      "knowledge_top_k": [
+        10
+      ]
+    }
+  ],
+  "prompt_sha256": "46e7e45caa996b3ae6238cebfa4ba356b4a9dc944d792407b96e97977a593d59"
+}

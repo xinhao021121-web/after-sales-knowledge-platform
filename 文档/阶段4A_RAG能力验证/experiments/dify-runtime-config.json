@@ -1,0 +1,37 @@
+{
+  "provider": "Dify Cloud",
+  "provider_version": "Cloud managed; application API does not expose server version. Public release baseline checked: 1.18.0",
+  "api_base_url": "https://api.dify.ai/v1",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "app_mode": "advanced-chat",
+  "dataset_ids": {
+    "TEST": "493efff9-568f-4e57-82ba-288a811c0200",
+    "CANDIDATE": "0d5a11ce-c017-4376-8099-d8e083243a7d"
+  },
+  "models": {
+    "generation": "deepseek-v4-pro",
+    "embedding": "text-embedding-v4",
+    "rerank": "qwen3-rerank"
+  },
+  "chunking": {
+    "strategy": "general",
+    "separator": "\\n\\n",
+    "max_length": 700,
+    "overlap": 100
+  },
+  "published_app_versions": {
+    "CFG-BASE": 2,
+    "CFG-HYBRID": 5,
+    "CFG-RERANK": 6,
+    "TEST-EDGE": 7,
+    "FINAL-CANDIDATE": 8
+  },
+  "final_binding": {
+    "dataset": "CANDIDATE",
+    "retrieval_mode": "hybrid",
+    "weight_mode": "rerank",
+    "rerank_model": "qwen3-rerank",
+    "top_k": 3,
+    "citation_mode": "required"
+  }
+}

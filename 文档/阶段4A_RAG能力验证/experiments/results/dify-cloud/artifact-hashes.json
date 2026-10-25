@@ -1,0 +1,501 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-10-24",
+  "files": [
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-E01.json",
+      "bytes": 7123,
+      "sha256": "3d43a754a14823cdb62d722b201a4d78716a827fe3b59f65791c6fb5fff74980"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-E02.json",
+      "bytes": 20810,
+      "sha256": "dcff1fdfefde0c3d0eacad40a7169a6b22ce57b080035b3cb084244160aaac60"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-E03.json",
+      "bytes": 19469,
+      "sha256": "939aaf079d9c8a529eff6747c2018462e8ddb4b07c00b1ec82b77e21b62c93df"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-E04.json",
+      "bytes": 19278,
+      "sha256": "1adaec6fb23ac7c8797b32016a7bde19d7090f85adc48dd53b793240b28eb279"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-E05.json",
+      "bytes": 21657,
+      "sha256": "674e4dfdc640a6559d042cb8856412c99d21d690602c4c6430ddb5f8c6e8d538"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-K01.json",
+      "bytes": 6363,
+      "sha256": "ef2dd79e4e8cd05fe223ce6871c739bdc5ee2639628fa868e4131abf1da14ac4"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-K02.json",
+      "bytes": 7820,
+      "sha256": "5840af5523f3b0f5bd220f13563b1ea30dbe50d6c629604ffbbb0cee780117bf"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-K03.json",
+      "bytes": 22697,
+      "sha256": "1f7489eae239df216c44108dd9714295b454367531b0c023878b1a10a3012371"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-K04.json",
+      "bytes": 22831,
+      "sha256": "f5e239176c41ab5cd63360206b0307976f3ab7db291233f1d7ab57be97426e9e"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-R01.json",
+      "bytes": 11661,
+      "sha256": "633f4a25f05423f471300f63a629035cc9aacbf06148ad0cd0393e8c2ded4641"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-R02.json",
+      "bytes": 15780,
+      "sha256": "6bf4dbbe4cd5df10d65d483bfd1407ed7032a10813f948301b6bfbb054785865"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-R03.json",
+      "bytes": 11684,
+      "sha256": "5b0ae9d3c806b7ad4fdd7b525aa6fd1760c46f5d66c4876a99edd9e736b78aad"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-R04.json",
+      "bytes": 9808,
+      "sha256": "76aa2cb50e42cdb8df45c1bab05b83ed1e74c97bccf9cc04bcd34f352d24b9b4"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-S01.json",
+      "bytes": 12841,
+      "sha256": "ce2338712ef5a2b6689c0cd21c4001814b4d1e946f28a8b2cb406340aab86143"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-S02.json",
+      "bytes": 12173,
+      "sha256": "386e420b4b29432bae35dae7df3145a0885fea08657770584487a6d72d88bd78"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-S03.json",
+      "bytes": 9932,
+      "sha256": "d55b436dce24d1c8537ecf792768225e36059c95e003e9dc276d072cf45664e3"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/raw/POC-S04.json",
+      "bytes": 24631,
+      "sha256": "08b46bfde39a444cce5880c3b3341bb31538f6f872668bb2b51b0c3fcec0f0e3"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-BASE/summary.json",
+      "bytes": 62437,
+      "sha256": "ee479ca8b5cdc9dbea3c934b1d96819b2194147f34bb23c026f0601c29e4ac06"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-E01.json",
+      "bytes": 8607,
+      "sha256": "418656173117ac135d5d53d8dc595f15c8c9c2215c85a1e7b579d768bb8ba154"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-E02.json",
+      "bytes": 13539,
+      "sha256": "c4c8abac4b5676b4160ec1929bcc2807790f34ce963c3e1e390ce72edd08020d"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-E03.json",
+      "bytes": 18305,
+      "sha256": "ed856ff414dfa7b56c4d36b114614ea73a798931d96e8f2213ca3eae64838e8e"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-E04.json",
+      "bytes": 22079,
+      "sha256": "4deedca2163d7563856b44068c246920b9ec5a451629e534e99a3a34aba61455"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-E05.json",
+      "bytes": 14892,
+      "sha256": "23d9c225719d8b47fe0a6cedfa2f3efa597025912c56baca75c7be9c92009cef"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-K01.json",
+      "bytes": 12474,
+      "sha256": "8b50ee8822e2cd0d4bd4a14303320092a9e97896dc44b2e7634bc18cea56f3e6"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-K02.json",
+      "bytes": 9081,
+      "sha256": "f36d5131992060f8e64f2e11bfc77a69c8523cf370f54a83a0e0f5907aac33d4"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-K03.json",
+      "bytes": 16014,
+      "sha256": "0b8ee9f9c2329a76717974774c6c2e1b1a4a3739dd008af6b49b188f4f88fae2"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-K04.json",
+      "bytes": 33994,
+      "sha256": "f3755402b1344d4df99475178903e4ec2c2113875765aad39840acf2ad9dc4f4"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-R01.json",
+      "bytes": 17026,
+      "sha256": "d3e77f664d178a66cb6a5d3ced655e564cd31750473b96381567708e6a08d7f0"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-R02.json",
+      "bytes": 8485,
+      "sha256": "9e6b68c8d914e8588b90086ef1264a0ea83759fe7c34788ad25dd602bf672a72"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-R03.json",
+      "bytes": 11230,
+      "sha256": "e5ad7a50dc0356bc066a4b4f2c3f8ce4b219377b0c241b771f8ba1b23f49cda2"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-R04.json",
+      "bytes": 14271,
+      "sha256": "78ad780309ce97bfb4f09fb7f18f2bffe6391bd8a3f6cfdc94744ca3d9c3ac34"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-S01.json",
+      "bytes": 10964,
+      "sha256": "9e516cc8a710450480701c6b4f58121ed6cf84a57aac1e8e66c0eb382d8be9c3"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-S02.json",
+      "bytes": 20496,
+      "sha256": "0d0ca82e3278ff951c8e14a11987df2034cc871c2cc0184830df29ecc532c0f9"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-S03.json",
+      "bytes": 20161,
+      "sha256": "0befa2b906e4ca4d04fd165d8445ae4e13f5f4f78eaf6b98e450aff06ae12ab3"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/raw/POC-S04.json",
+      "bytes": 23443,
+      "sha256": "abad542e574c1ba0de153099ce7149e2b756124ad88e07b1fb165912f4327600"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-HYBRID/summary.json",
+      "bytes": 72653,
+      "sha256": "18cec15e41f8ef7d6514a478f984d0c478eb990ec45b291cd9e270513e7fb5d0"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK-TEST/raw/POC-E01.json",
+      "bytes": 6087,
+      "sha256": "6481ff538d9deed88516bf3ffaa3b8c6f77172ff4da8e5a4ca402b6f51807a23"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK-TEST/raw/POC-E02.json",
+      "bytes": 9936,
+      "sha256": "a933b0069b360d0cc9a646331f6a365844c4abac4ab843c8074205a7362fda7b"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK-TEST/raw/POC-E03.json",
+      "bytes": 22540,
+      "sha256": "c0c5853e050c40f5796cf3fb960222b5e763dbae544421195e1643fb60d3494a"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK-TEST/raw/POC-E04.json",
+      "bytes": 11684,
+      "sha256": "f6cd7ebc06478bb3f63fd40a9d7faf3e3eca70454cfcdcbd4d33ab635fd89560"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK-TEST/raw/POC-E05.json",
+      "bytes": 17985,
+      "sha256": "2f9c98d998cc30801f947e28500b731f50d4fdda9cc7199b78d7a95278829ae3"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK-TEST/summary.json",
+      "bytes": 23208,
+      "sha256": "9362e687ebcf8838c1538bf56b85991444639b93e799d4c27fbe8f20b5bb072f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-E01.json",
+      "bytes": 7225,
+      "sha256": "86ae2ba217f768b74b64b4899e01fc7083d75c22682d50a3da2036f7e6de2c21"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-E02.json",
+      "bytes": 19369,
+      "sha256": "3a2f5395e015423411d3e87cba52cd8ea50938e6fab92a6087c1de7b0dd08024"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-E03.json",
+      "bytes": 24581,
+      "sha256": "72525b3d60565045f70ff31cf9f65151186122cb33c9f4f76c634b1d7a3f986b"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-E04.json",
+      "bytes": 11039,
+      "sha256": "59a5429661879e0164e04ef766cd57a15b025c1ef0d47d17077ace7c5452f72e"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-E05.json",
+      "bytes": 14405,
+      "sha256": "aaf1130df15e5646165a109e1f47de042ce022021a8d50aac3796a95dd337e76"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-K01.json",
+      "bytes": 18048,
+      "sha256": "1365ec01f5196a8682c1299da32690964280f1bc6a7cbbd218fc06c5cf5d9e9c"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-K02.json",
+      "bytes": 12209,
+      "sha256": "a528e873eb59d69a017aa1a454d67be0590a4a7503c92a999ed66408c8122080"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-K03.json",
+      "bytes": 19313,
+      "sha256": "6b6664b43d4bff17c4fa0136dc78b6634197975bc2e56f09d64410554208be7d"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-K04.json",
+      "bytes": 17605,
+      "sha256": "992ffc4700829e72789a7f274715be7ca815bdfb94c488efd534dd23b20e3f26"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-R01.json",
+      "bytes": 17605,
+      "sha256": "eb11792f7b5e57708d4866ab858fcd4bd4c17ce961f4ca06628aa412d0e87d4f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-R02.json",
+      "bytes": 10360,
+      "sha256": "9e5fc25c9032f1e26d25ac7031c59d76da7646edc8e09ecb04f1ded9f6bd0dc5"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-R03.json",
+      "bytes": 12866,
+      "sha256": "7b01ceae55535f9ca68ba14fab7d136935afb162a81ad1ef6226aa45deae2131"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-R04.json",
+      "bytes": 17432,
+      "sha256": "bb4183f6ebfe9a86771c20d2e4d3b413dd9bab1f8ff887be97b3fbd28a4f265f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-S01.json",
+      "bytes": 17649,
+      "sha256": "dfe7a1c0b7f9d1441217b00e1329fb67479a6644b16f080956a85661da3ad461"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-S02.json",
+      "bytes": 18984,
+      "sha256": "9c5770b20a39d3cd1f513206da90245a0594e2d6ec2f01c01769c2a70071060e"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-S03.json",
+      "bytes": 11926,
+      "sha256": "a8793e105fd3e9324b5642f6762c24b8318f26a7d87602466ceeec613b120639"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/raw/POC-S04.json",
+      "bytes": 19481,
+      "sha256": "2918846c5e284c6ae509e05d632bb105335d939322cb89d744ad8a96eace278e"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-RERANK/summary.json",
+      "bytes": 73755,
+      "sha256": "5603c9edef3ab43c5b4d5e68a1119d769fc4691e9b9ee535548aac5921be889a"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-E01.json",
+      "bytes": 4410,
+      "sha256": "e9685edead04238c4a53c62e0c0dda8d0947d17319e788ed29da2e6bf955e6d0"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-E02.json",
+      "bytes": 16228,
+      "sha256": "1c294af98521fb278a79baf1fe6157fffaaf38db689ccd843f394e6415d3feaa"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-E03.json",
+      "bytes": 13640,
+      "sha256": "780600dee0056a5b12771be617471dd819b9c731b9873fbcd165a0b672180cef"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-E04.json",
+      "bytes": 14138,
+      "sha256": "091fcc4178fc34f5a28a7c040bea5d50db068722bffb737ae180915b079fea94"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-E05.json",
+      "bytes": 15397,
+      "sha256": "650372e810af74d10f7d7a56e91d8783d5e8c34e4c71834d60ed2ddb159b9f35"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-K01.json",
+      "bytes": 13188,
+      "sha256": "ca44c61fb011a5a2d51c15dd383f53b8c0228d32d237c48f33432f75f83dd364"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-K02.json",
+      "bytes": 10310,
+      "sha256": "54069337ee02dafc88ecdd940cc1aca4271c9639b48d88ad377c913f52347de6"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-K03.json",
+      "bytes": 22076,
+      "sha256": "4c7f684d1a82070773ff2284e6b89d3f9f4e5d2b44a68149d9ddf3c50494c0aa"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-K04.json",
+      "bytes": 24823,
+      "sha256": "67c323472bdffd6577c3406a96f7dfd0438f0d04cac80d7f3a9456d23b346938"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-R01.json",
+      "bytes": 20667,
+      "sha256": "ec5abeadb4c8eb978f19baf0abccc8aeb3755fd05ce44061a2455f4267bc062c"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-R02.json",
+      "bytes": 5860,
+      "sha256": "2370cb68b017afb2be8cc7e630defc761a8d316a3d5e79cf3352378229c711f3"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-R03.json",
+      "bytes": 16029,
+      "sha256": "870040addc9e9f06d709e7842dfb2e9df886072e953b1fe6bb43618f022bedab"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-R04.json",
+      "bytes": 13924,
+      "sha256": "99b1425e59ed979dee8e63457e0ec26b7eaf7fd637ef1f305c351fb0e21b788f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-S01.json",
+      "bytes": 11454,
+      "sha256": "909c6cc412d033892f9447b9ce7318e65674870c37e7725b9093644f7ba88d80"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-S02.json",
+      "bytes": 13567,
+      "sha256": "25cf71c75b2f16eb8ad56f02779110559b26bddb833b646f46cb1b3efd6c60fe"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-S03.json",
+      "bytes": 15725,
+      "sha256": "27e44fae88a790d8a6e42d4281f8f0b8cc3ba8bc40f9be8412c438b81a26270e"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/raw/POC-S04.json",
+      "bytes": 23556,
+      "sha256": "baaee19ed5bd4fa47ac26a69046eaa02913a82e106992886a36efb2dbeca581d"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-RERANK-EXPLORATORY/summary.json",
+      "bytes": 61231,
+      "sha256": "00ed1dd9b6a2d79dabbaa6d316fc5bf22c9d19ceac1db7a77ed0c19bc2381bc9"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-E01.json",
+      "bytes": 5493,
+      "sha256": "f2216f5ea905cfc2295de2f1a7cbc6507f788ad6eb2c23af285493503f8f8ad9"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-E02.json",
+      "bytes": 19333,
+      "sha256": "f26eb225af2d7f4281b8ed8de4ce85a5131c588c58b8d13b7d004238347dcb53"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-E03.json",
+      "bytes": 5604,
+      "sha256": "2de642283a5dfcc49d99c344429aa4fc7562e3d1fd4e9b5e2aa01c07b8adcd8a"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-E04.json",
+      "bytes": 17851,
+      "sha256": "955bf80497df73f49077756c04e36aa4e1ac5ea18674ffdc09d0124f2ca5324f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-E05.json",
+      "bytes": 19001,
+      "sha256": "63655578fd6996e111fa143a35c247e2dfff3f3b501632c055d37c44831c44de"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-K01.json",
+      "bytes": 8939,
+      "sha256": "ab10fa9eec27c58ad9b6522793a9c0511db22d4c14daf62b3cfbbfc2b9794113"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-K02.json",
+      "bytes": 8164,
+      "sha256": "d4305c33d0940ba65d26a9abcc8ce21a93305c184c6b5a54966aa32c42c42567"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-K03.json",
+      "bytes": 13688,
+      "sha256": "b04ed7c1e6ce9aad82a1610d7dac84589beadacf47dbb63db6bf9ca8d8e8e61f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-K04.json",
+      "bytes": 20361,
+      "sha256": "e01bb5967628ab558b279b7352ff1caceee54f1b77ea478dbcfe3e4e3e96f822"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-R01.json",
+      "bytes": 14886,
+      "sha256": "6d7d917b7b4de470dbd87fb44ccb07d6676fea207814d2a9a92014fd78decb0f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-R02.json",
+      "bytes": 9396,
+      "sha256": "e06d2e138ccbe90295a100f1250b76c055206e02fa3aa9bab48013b842439751"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-R03.json",
+      "bytes": 12155,
+      "sha256": "975bad2843cacbfe88ad6f3a07fe99028463a817e5d320d7043f8bcedea6b022"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-R04.json",
+      "bytes": 15586,
+      "sha256": "758045debdc0e8ed6a9d44e6ba2201d50163beb499d70104c022d265bbf6fab6"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-S01.json",
+      "bytes": 9629,
+      "sha256": "46efe04cd28907ba201cdd31ad7a8baaa2784cf07d0c4f1f179f05aa789ff0b4"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-S02.json",
+      "bytes": 11928,
+      "sha256": "00d3c6b5c6377ac11f276e921ed1b3c932a7c34ff9c3fedf8be6236e7f917c8f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-S03.json",
+      "bytes": 11663,
+      "sha256": "e65a6d37bf2bbd7edc491ad8852dc9569dbeaa422a364440fa6911b27a86ef0d"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/raw/POC-S04.json",
+      "bytes": 18597,
+      "sha256": "8f6f00a9bd99fc875c82e436930667b60d4e65c28494c04e39a41b96bc4cd375"
+    },
+    {
+      "path": "experiments/results/dify-cloud/CFG-VECTOR-WEIGHTED-EXPLORATORY/summary.json",
+      "bytes": 62144,
+      "sha256": "5ffdf95518397f830175393c079232311740df5aa207cff1c0af671433ea0a5e"
+    },
+    {
+      "path": "experiments/results/dify-cloud/comparison.json",
+      "bytes": 303015,
+      "sha256": "2a096d751e555a7f37e3a59e0131b8c33b6fbbd616215e5c8186a59ab457f8c6"
+    },
+    {
+      "path": "experiments/results/dify-cloud/evidence/dify-final-config.png",
+      "bytes": 82514,
+      "sha256": "cad1e45095347479ef0d54305d0cd54b20968ee57fed2230baea22aa0c20b75f"
+    },
+    {
+      "path": "experiments/results/dify-cloud/README.md",
+      "bytes": 1043,
+      "sha256": "db64f9c954ff8f3d408473040258a789d4a1c925459316398df0be80a703f602"
+    }
+  ]
+}

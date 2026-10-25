@@ -1,0 +1,39 @@
+{
+  "experiment_id": "4B2B-MODEL-COST-ROUTING-1.0.0",
+  "baseline_commit": "e663689",
+  "fixed_task_set": "baseline/fixed-regression-used.json",
+  "fixed_task_count": 27,
+  "fixed_prompt": "configs/r5-prompt-frozen.txt",
+  "retrieval_snapshot": "evidence/retrieval-snapshot.json",
+  "dataset": "CANDIDATE",
+  "retrieval_top_k_internal": 10,
+  "displayed_top_k": 3,
+  "groups": {
+    "A": {
+      "name": "Pro only",
+      "model": "deepseek-v4-pro",
+      "config_version": 22,
+      "route_mode": "A_PRO_ONLY"
+    },
+    "B": {
+      "name": "Flash only",
+      "model": "deepseek-v4-flash",
+      "config_version": 23,
+      "route_mode": "B_FLASH_ONLY"
+    },
+    "C": {
+      "name": "Flash first, Pro fallback",
+      "first_model": "deepseek-v4-flash",
+      "fallback_model": "deepseek-v4-pro",
+      "flash_config_version": 23,
+      "pro_fallback_config_version": 24,
+      "route_mode": "C_FLASH_WITH_PRO_FALLBACK"
+    }
+  },
+  "p0_policy": "BFF short circuit before any model call",
+  "known_defect_policy": "RET-H09 is retained and excluded from new routing-regression attribution only",
+  "default_after_experiment": {
+    "model": "deepseek-v4-pro",
+    "active_version": 24
+  }
+}

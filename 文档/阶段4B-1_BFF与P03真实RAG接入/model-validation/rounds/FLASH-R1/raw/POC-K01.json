@@ -1,0 +1,115 @@
+{
+  "round_id": "FLASH-R1",
+  "task_id": "POC-K01",
+  "core_task_id": "CORE-K1",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 21706,
+  "request": {
+    "question": "原始问题：京东苹果售后是授权维修吗？\n客户改写：京东店铺说能修 AirPods，是不是 Apple 授权服务商？；平台名字叫苹果售后，就可以认定为授权维修吗？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R1-POC-K01",
+    "knowledge_item_id": "KI-CORE-K1",
+    "product_model": "AirPods Pro 3",
+    "channel": "京东第三方平台",
+    "customer_context": {
+      "channel": "京东第三方或自营身份未确认",
+      "provider_name": "未知",
+      "work_order": "无",
+      "repair_item": "未知"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "京东第三方平台"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "先追问客户/店铺；京东是自营还是第三方？店铺/服务商全称是什么？。",
+    "business_conditions": [
+      "### 下一步动作",
+      "先追问客户/店铺",
+      "京东是自营还是第三方？店铺/服务商全称是什么？",
+      "是否有工单号、检测单、维修报价？"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "57c5bbd4-4ea4-4a9e-b2c9-5f80620649c2",
+    "provider_trace_id": "57c5bbd4-4ea4-4a9e-b2c9-5f80620649c2",
+    "provider_called": true,
+    "timing_ms": 21692,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 5,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 5,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 5
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.6268038258203772,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6053571217663277,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "a5da3389-7e07-49ff-ab5a-a979904ba5c8",
+        "score": 0.42596677199999994,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "55720ae8-e954-4450-a50a-1fd808bda3db",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R1-POC-K01",
+      "knowledge_item_id": "KI-CORE-K1"
+    },
+    "audit_event_id": "e604ac2a-33ca-4c87-8fec-61691033236c"
+  }
+}

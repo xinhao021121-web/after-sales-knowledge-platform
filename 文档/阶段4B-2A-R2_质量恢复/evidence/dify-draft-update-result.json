@@ -1,0 +1,28 @@
+{
+  "stage": "VERIFIED",
+  "status": 200,
+  "update_status": 200,
+  "prompt_sha256_matches": true,
+  "top_k": [
+    10
+  ],
+  "draft_body_keys": [
+    "conversation_variables",
+    "created_at",
+    "created_by",
+    "environment_variables",
+    "features",
+    "graph",
+    "hash",
+    "id",
+    "marked_comment",
+    "marked_name",
+    "rag_pipeline_variables",
+    "tool_published",
+    "updated_at",
+    "updated_by",
+    "version",
+    "version_number"
+  ],
+  "screenshot": "screenshots/DIFY_R2_DRAFT_1440.png"
+}

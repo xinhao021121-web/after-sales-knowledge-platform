@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-10-25T12:11:04.931Z",
+  "r3": {
+    "run_id": "EVAL-REAL-a6720d86-cd64-4f05-8809-dc4f7be2dd45",
+    "recall_at_3_core": 1,
+    "source_hits_core": 7,
+    "answered": 5,
+    "provider_errors": 0
+  },
+  "r4": {
+    "run_id": "EVAL-REAL-8279ab81-8545-4473-acaf-80df57d5bd95",
+    "recall_at_3_core": 1,
+    "source_hits_core": 7,
+    "answered": 3,
+    "provider_errors": 0
+  },
+  "result": "Formal aggregate gates remain PASSED; POC-R04 user-visible regression is repaired."
+}

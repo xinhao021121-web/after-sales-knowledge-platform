@@ -1,0 +1,59 @@
+{
+  "decided_at": "2026-10-25T14:31:00.000Z",
+  "decision": "KEEP_PRO_DEFAULT_NO_AUTOMATIC_FLASH_ROUTING",
+  "production_release": "FORBIDDEN",
+  "selected_option": "Keep deepseek-v4-pro as the default; allow Flash only in explicit offline/internal low-risk experiments after repeat validation.",
+  "rejected_options": [
+    {
+      "option": "Replace Pro with Flash",
+      "reason": "Flash direct showed no new semantic failure on this run, but exact status differed from Pro on 6/27 tasks and the manual POC-R01 sample was less actionable. One 27-task run is insufficient for automatic replacement."
+    },
+    {
+      "option": "Enable Flash-first with automatic Pro fallback",
+      "reason": "C produced no semantic gain over direct Flash, needed 5/19 fallbacks, recovered only 2/5 route gates, and used 11.7% more total tokens than B. Its routing gate also missed a weaker POC-R01 next step."
+    }
+  ],
+  "quality_basis": {
+    "semantic_passed": {
+      "A": "25/27",
+      "B": "26/27",
+      "C": "26/27"
+    },
+    "new_semantic_failures_excluding_RET_H09": {
+      "B": [],
+      "C": []
+    },
+    "formal_17_core_recall": "9/9 in all groups",
+    "p0_model_calls": 0,
+    "claim_failures": 0,
+    "provider_errors_in_final_results": 0
+  },
+  "efficiency_basis": {
+    "B_vs_A_total_tokens_percent": -24.58,
+    "B_vs_A_average_latency_percent": -62.05,
+    "C_vs_A_total_tokens_percent": -15.79,
+    "C_vs_A_average_latency_percent": -60.03,
+    "C_vs_B_total_tokens_percent": 11.66,
+    "C_vs_B_average_latency_percent": 5.33,
+    "C_fallback_rate": 0.2631578947368421,
+    "C_recovery_rate": 0.4
+  },
+  "cost_basis": {
+    "currency": "CNY",
+    "official_list_price_estimate": {
+      "A": 0.8375355,
+      "B": 0.162326,
+      "C": 0.28924
+    },
+    "dify_billed_cost_cny": null,
+    "dify_billing_cost_status": "COST_UNKNOWN",
+    "limitation": "Official underlying-model list prices are known; Dify contract/invoice charges are not."
+  },
+  "known_defect": "RET-H09 remains failed in A, B and C and is not counted as a new routing regression.",
+  "next_steps": [
+    "Keep the default model as Pro.",
+    "Do not activate automatic Flash/Pro routing.",
+    "If experiments continue, repeat the same frozen 27 tasks without adding tasks in the same round.",
+    "Obtain Dify actual billing evidence before any monetary savings claim."
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "lock_id": "INPUT-PRO-LOCK-4B1-1.0.0",
+  "created_at": "2026-10-24T13:00:53.554Z",
+  "canonical_evaluation_set": "EVAL-RAG-POC-1.0.0",
+  "notice": "输入与 Pro 基线只读锁定；路径相对本阶段目录，原始文件仍位于阶段4A。",
+  "files": [
+    {
+      "category": "evaluation_set",
+      "path": "../阶段4A_RAG能力验证/evaluation/eval-set-v1.0.json",
+      "sha256": "1809e40b30948f19070f5cbd330dec416126d2ca1f5c429e65e71bd8d098c799",
+      "bytes": 21682
+    },
+    {
+      "category": "candidate_manifest",
+      "path": "../阶段4A_RAG能力验证/datasets/CANDIDATE/manifest.json",
+      "sha256": "83869986444b88862d26c55c34aab80022e3306119712b39770db707166dd415",
+      "bytes": 3814
+    },
+    {
+      "category": "test_manifest",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/manifest.json",
+      "sha256": "59da215ee9a50937e53f869c0f36f6c059c86b9589b0776bf6da4f412605b941",
+      "bytes": 5772
+    },
+    {
+      "category": "pro_formal_comparison",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/comparison.json",
+      "sha256": "2a096d751e555a7f37e3a59e0131b8c33b6fbbd616215e5c8186a59ab457f8c6",
+      "bytes": 303015
+    },
+    {
+      "category": "pro_manual_review",
+      "path": "../阶段4A_RAG能力验证/experiments/manual-review.json",
+      "sha256": "a35245256477770a5e9ab21aefa63c5d65fbca96fada82f385ef9ad031961eb9",
+      "bytes": 4393
+    },
+    {
+      "category": "candidate_document",
+      "path": "../阶段4A_RAG能力验证/datasets/CANDIDATE/docs/01_售后FAQ.md",
+      "sha256": "f90eb0b0b90a0eb870011769dda17fb4ff554d90a3076bf8ca3e0584e3df9d54",
+      "bytes": 2333
+    },
+    {
+      "category": "candidate_document",
+      "path": "../阶段4A_RAG能力验证/datasets/CANDIDATE/docs/02_安全SOP.md",
+      "sha256": "1d0d8ada1fd8c9d0369b9ea4668d8b3b7d9c9575a5973931af6b3812bedfa692",
+      "bytes": 1903
+    },
+    {
+      "category": "candidate_document",
+      "path": "../阶段4A_RAG能力验证/datasets/CANDIDATE/docs/03_退货规则.md",
+      "sha256": "c8a29b52b0ef9171408f359516b01d57598ada174a45f54ea83ea17810719c24",
+      "bytes": 1780
+    },
+    {
+      "category": "candidate_document",
+      "path": "../阶段4A_RAG能力验证/datasets/CANDIDATE/docs/04_保修与维修流程.md",
+      "sha256": "691118dfdfe7bd2304f703e731ca6b77104c9f5e57ea1b2c2e88cab7cc3bf8dc",
+      "bytes": 1836
+    },
+    {
+      "category": "candidate_document",
+      "path": "../阶段4A_RAG能力验证/datasets/CANDIDATE/docs/05_渠道差异说明.md",
+      "sha256": "a24d343ba2d9738d2e99799f0e4af4f1e75503426f46ae64f2d5619f057cc1e7",
+      "bytes": 2015
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/01_售后FAQ.md",
+      "sha256": "f90eb0b0b90a0eb870011769dda17fb4ff554d90a3076bf8ca3e0584e3df9d54",
+      "bytes": 2333
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/02_安全SOP.md",
+      "sha256": "1d0d8ada1fd8c9d0369b9ea4668d8b3b7d9c9575a5973931af6b3812bedfa692",
+      "bytes": 1903
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/03_退货规则.md",
+      "sha256": "c8a29b52b0ef9171408f359516b01d57598ada174a45f54ea83ea17810719c24",
+      "bytes": 1780
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/04_保修与维修流程.md",
+      "sha256": "691118dfdfe7bd2304f703e731ca6b77104c9f5e57ea1b2c2e88cab7cc3bf8dc",
+      "bytes": 1836
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/05_渠道差异说明.md",
+      "sha256": "a24d343ba2d9738d2e99799f0e4af4f1e75503426f46ae64f2d5619f057cc1e7",
+      "bytes": 2015
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/06_过期渠道规则.md",
+      "sha256": "5fa55a42a4b8646a64adfc1844e6805e9702b0097fd741198735a243a5a3c961",
+      "bytes": 764
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/07_渠道冲突样本.md",
+      "sha256": "240f02a9c016ea9e705b0cefaa5cd10cf07f5c6d064765fe0cfe00a10610bcd6",
+      "bytes": 882
+    },
+    {
+      "category": "test_document",
+      "path": "../阶段4A_RAG能力验证/datasets/TEST/docs/08_内部权限样本.md",
+      "sha256": "a0115dfdee3f53393dcc1c5188f18dadaa9d344c6f1bf22e5d9d420c53ce3e2d",
+      "bytes": 761
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-E01.json",
+      "sha256": "86ae2ba217f768b74b64b4899e01fc7083d75c22682d50a3da2036f7e6de2c21",
+      "bytes": 7225
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-E02.json",
+      "sha256": "3a2f5395e015423411d3e87cba52cd8ea50938e6fab92a6087c1de7b0dd08024",
+      "bytes": 19369
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-E03.json",
+      "sha256": "72525b3d60565045f70ff31cf9f65151186122cb33c9f4f76c634b1d7a3f986b",
+      "bytes": 24581
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-E04.json",
+      "sha256": "59a5429661879e0164e04ef766cd57a15b025c1ef0d47d17077ace7c5452f72e",
+      "bytes": 11039
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-E05.json",
+      "sha256": "aaf1130df15e5646165a109e1f47de042ce022021a8d50aac3796a95dd337e76",
+      "bytes": 14405
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-K01.json",
+      "sha256": "1365ec01f5196a8682c1299da32690964280f1bc6a7cbbd218fc06c5cf5d9e9c",
+      "bytes": 18048
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-K02.json",
+      "sha256": "a528e873eb59d69a017aa1a454d67be0590a4a7503c92a999ed66408c8122080",
+      "bytes": 12209
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-K03.json",
+      "sha256": "6b6664b43d4bff17c4fa0136dc78b6634197975bc2e56f09d64410554208be7d",
+      "bytes": 19313
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-K04.json",
+      "sha256": "992ffc4700829e72789a7f274715be7ca815bdfb94c488efd534dd23b20e3f26",
+      "bytes": 17605
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-R01.json",
+      "sha256": "eb11792f7b5e57708d4866ab858fcd4bd4c17ce961f4ca06628aa412d0e87d4f",
+      "bytes": 17605
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-R02.json",
+      "sha256": "9e5fc25c9032f1e26d25ac7031c59d76da7646edc8e09ecb04f1ded9f6bd0dc5",
+      "bytes": 10360
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-R03.json",
+      "sha256": "7b01ceae55535f9ca68ba14fab7d136935afb162a81ad1ef6226aa45deae2131",
+      "bytes": 12866
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-R04.json",
+      "sha256": "bb4183f6ebfe9a86771c20d2e4d3b413dd9bab1f8ff887be97b3fbd28a4f265f",
+      "bytes": 17432
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-S01.json",
+      "sha256": "dfe7a1c0b7f9d1441217b00e1329fb67479a6644b16f080956a85661da3ad461",
+      "bytes": 17649
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-S02.json",
+      "sha256": "9c5770b20a39d3cd1f513206da90245a0594e2d6ec2f01c01769c2a70071060e",
+      "bytes": 18984
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-S03.json",
+      "sha256": "a8793e105fd3e9324b5642f6762c24b8318f26a7d87602466ceeec613b120639",
+      "bytes": 11926
+    },
+    {
+      "category": "pro_raw_response",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/raw/POC-S04.json",
+      "sha256": "2918846c5e284c6ae509e05d632bb105335d939322cb89d744ad8a96eace278e",
+      "bytes": 19481
+    },
+    {
+      "category": "pro_summary",
+      "path": "../阶段4A_RAG能力验证/experiments/results/dify-cloud/CFG-RERANK/summary.json",
+      "sha256": "5603c9edef3ab43c5b4d5e68a1119d769fc4691e9b9ee535548aac5921be889a",
+      "bytes": 73755
+    }
+  ]
+}

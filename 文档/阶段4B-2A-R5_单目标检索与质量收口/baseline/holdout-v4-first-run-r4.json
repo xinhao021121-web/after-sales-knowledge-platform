@@ -1,0 +1,424 @@
+{
+  "run_id": "HOLDOUT-REAL-R4-543139f9-0578-4b1f-a923-0975c771dd75",
+  "suite": "holdout",
+  "source_mode": "REAL_DIFY",
+  "model": "deepseek-v4-pro",
+  "dataset": "CANDIDATE",
+  "evaluation_set_id": "EVAL-RAG-R4-HOLDOUT-4.0.0",
+  "used_for_tuning": false,
+  "task_count": 2,
+  "expected_source_count": 3,
+  "covered_source_count": 2,
+  "recall_at_3": 0.6666666666666666,
+  "semantic_passed_count": 1,
+  "status_all_accepted": true,
+  "p0_failures": 0,
+  "citation_failures": 0,
+  "provider_errors": 0,
+  "forbidden_action_failures": 0,
+  "document_request_failures": 0,
+  "cost_status": "COST_UNKNOWN",
+  "results": [
+    {
+      "task_id": "RET-H07",
+      "core_task_id": "HOLDOUT-SINGLE-TARGET-TROUBLESHOOTING",
+      "sample_type": "HOLDOUT",
+      "original_question": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+      "question_context": {
+        "product": "AirPods Pro 3",
+        "symptom": "左耳不充电且指示灯不亮",
+        "cable": "未知",
+        "power": "未知",
+        "cleaning": "未检查"
+      },
+      "answer_status": "ANSWERED",
+      "provider_called": true,
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "recall_at_3": 1,
+      "source_hit": true,
+      "expected_source_count": 1,
+      "covered_source_count": 1,
+      "covered_source_ids": [
+        "DOC-FAQ-V1"
+      ],
+      "retrieval_diversity": {
+        "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subquery_count": 3,
+        "subqueries": [
+          "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+          "左耳放回盒子没有充电提示，换线和换电源都不亮，要先检查哪些位置？",
+          "AirPods Pro 3 单耳不充电，指示灯也不亮，第一步怎么处理？"
+        ],
+        "internal_candidate_pool_size": 14,
+        "displayed_top_k": 3,
+        "candidate_document_count": 4,
+        "displayed_document_count": 3,
+        "duplicate_segments_suppressed": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "04_保修与维修流程.md",
+          "document_id": "DOC-WARRANTY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+          "score": 0.66856086,
+          "claim_support_count": 0
+        },
+        {
+          "position": 2,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.658562,
+          "claim_support_count": 3
+        },
+        {
+          "position": 3,
+          "document_name": "02_安全SOP.md",
+          "document_id": "DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+          "score": 0.5546776,
+          "claim_support_count": 3
+        }
+      ],
+      "answer": "核对产品身份：确认耳机型号是否为 A3063/A3064/A3065，充电盒是否为 A3122，并核对序列号、购买渠道和购买或签收日期。 若型号、序列号与购买凭证无法对应，不直接承诺退换或免费维修，转保修身份核验。",
+      "answer_goals": [],
+      "suggested_action": "由有权限角色复核引用与承诺边界后确认。",
+      "citations": [
+        {
+          "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+          "source": {
+            "src_id": "SRC-PUB-001",
+            "doc_id": "DOC-FAQ-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 售后 FAQ",
+            "url": "https://support.apple.com/zh-cn/airpods",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+          },
+          "kb_id": "KB-DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+          "score": 0.658562,
+          "supported_claims": [
+            "AirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。",
+            "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+            "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        },
+        {
+          "citation_id": "EVD-c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+          "source": {
+            "src_id": "SRC-PUB-002",
+            "doc_id": "DOC-SAFETY-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 安全处置 SOP",
+            "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f"
+          },
+          "kb_id": "KB-DOC-SAFETY-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+          "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+          "score": 0.5546776,
+          "supported_claims": [
+            "进液后立即停止佩戴和充电，用柔软干燥的无绒布擦干外表，放入充电盒前至少等待 2 小时完全干燥。",
+            "不得使用加热、压缩空气、甩动或尖锐物清理接口和声学孔。",
+            "抗汗抗水能力不构成潮湿状态继续充电的许可。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 2,
+        "multi_objective_passed": true,
+        "unsupported_count": 0
+      },
+      "citation_gate_passed": true,
+      "forbidden_action_match": null,
+      "business_semantics": {
+        "status_accepted": true,
+        "objectives_passed": true,
+        "knowledge_gap_passed": true,
+        "safety_concepts_passed": true,
+        "visible_goal_labels": [],
+        "unseen_goal_labels": [],
+        "action_internal_references": [],
+        "visible_action_missing_groups": [
+          [
+            "线缆",
+            "电源",
+            "适配器"
+          ],
+          [
+            "接口",
+            "触点",
+            "碎屑"
+          ]
+        ],
+        "generic_fallback_only": false,
+        "forbidden_assertions": [],
+        "document_request_matches": [],
+        "forbidden_action_match": null,
+        "citation_gate_passed": true,
+        "goal_count_passed": true,
+        "provider_call_gate_passed": true,
+        "p0_gate_passed": true,
+        "objectives": [],
+        "passed": false
+      },
+      "p0": false,
+      "p0_passed": null,
+      "prompt_tokens": 1267,
+      "completion_tokens": 2647,
+      "total_tokens": 3914,
+      "provider_latency_ms": 26335,
+      "bff_latency_ms": 30598,
+      "bff_request_id": "e0c39b95-4a83-46b2-8297-70bab2d5f39f",
+      "provider_request_id": "a1a2745c-2682-4661-88c9-a707ba20438b",
+      "error_code": null,
+      "cost_status": "COST_UNKNOWN"
+    },
+    {
+      "task_id": "RET-H08",
+      "core_task_id": "HOLDOUT-CROSS-EXCHANGE-WARRANTY",
+      "sample_type": "HOLDOUT",
+      "original_question": "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？",
+      "question_context": {
+        "product": "AirPods Pro 3",
+        "channel": "Apple Store 在线商店",
+        "received_at": "12 天前",
+        "faults": [
+          "左耳无声",
+          "续航明显下降"
+        ]
+      },
+      "answer_status": "ANSWERED",
+      "provider_called": true,
+      "retrieval_status": "RETRIEVAL_COMPLETED",
+      "recall_at_3": 0.5,
+      "source_hit": true,
+      "expected_source_count": 2,
+      "covered_source_count": 1,
+      "covered_source_ids": [
+        "DOC-RETURN-V1"
+      ],
+      "retrieval_diversity": {
+        "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+        "requested_internal_top_k": 10,
+        "subquery_count": 3,
+        "subqueries": [
+          "Apple Store 在线商店购买的 AirPods Pro 3，第 12 天发现左耳无声且续航明显下降，换货和保修检测应该分别怎么判断？",
+          "收货十二天出现单侧无声和掉电快，应该走换货还是保修检测？",
+          "AirPods Pro 3 第 12 天出现两种故障，换货与后续维修分别依据什么？"
+        ],
+        "internal_candidate_pool_size": 19,
+        "displayed_top_k": 3,
+        "candidate_document_count": 5,
+        "displayed_document_count": 3,
+        "duplicate_segments_suppressed": 0
+      },
+      "retrieval_resources": [
+        {
+          "position": 1,
+          "document_name": "01_售后FAQ.md",
+          "document_id": "DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "score": 0.65694547,
+          "claim_support_count": 3
+        },
+        {
+          "position": 2,
+          "document_name": "05_渠道差异说明.md",
+          "document_id": "DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.6211912,
+          "claim_support_count": 2
+        },
+        {
+          "position": 3,
+          "document_name": "03_退货规则.md",
+          "document_id": "DOC-RETURN-V1",
+          "kb_version_id": "1.0.0",
+          "segment_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+          "score": 0.6156956,
+          "claim_support_count": 3
+        }
+      ],
+      "answer": "目标一：换货判断：判断：第12天处于三包“8-15日可换货”窗口；左耳无声可能构成质量故障，续航下降是否属于三包故障需检测确认；最终结合官方检测、销售商和渠道责任判断。 下一步：联系Apple Store在线商店售后，说明第12天出现左耳无声和续航明显下降，提供购买凭证，申请质量故障换货核验；不承诺免费维修或换新。 依据：[3] CHUNK-RETURN-QUALITY-01；[2] CHUNK-CHANNEL-OFFICIAL-01；[1] CHUNK-FAQ-BATTERY-01\n目标二：保修检测/维修判断：判断：左耳无声可按质量故障方向检测；续航下降若被认定为正常电池损耗，Apple有限保修不覆盖；第12天未到“16日至1年可维修”窗口，后续维修需检测和保障资格判断。 下一步：预约Apple官方检测，说明第12天同时出现左耳无声和续航下降，提供购买日期、渠道、保障合同信息，由检测确定故障属性及适用换货或维修；不承诺免费维修或换新。 依据：[1] CHUNK-FAQ-BATTERY-01；[3] CHUNK-RETURN-QUALITY-01",
+      "answer_goals": [
+        {
+          "index": "一",
+          "title": "目标一：换货判断",
+          "content": "判断：第12天处于三包“8-15日可换货”窗口；左耳无声可能构成质量故障，续航下降是否属于三包故障需检测确认；最终结合官方检测、销售商和渠道责任判断。 下一步：联系Apple Store在线商店售后，说明第12天出现左耳无声和续航明显下降，提供购买凭证，申请质量故障换货核验；不承诺免费维修或换新。 依据：[3] CHUNK-RETURN-QUALITY-01；[2] CHUNK-CHANNEL-OFFICIAL-01；[1] CHUNK-FAQ-BATTERY-01",
+          "evidence_supported": true
+        },
+        {
+          "index": "二",
+          "title": "目标二：保修检测/维修判断",
+          "content": "判断：左耳无声可按质量故障方向检测；续航下降若被认定为正常电池损耗，Apple有限保修不覆盖；第12天未到“16日至1年可维修”窗口，后续维修需检测和保障资格判断。 下一步：预约Apple官方检测，说明第12天同时出现左耳无声和续航下降，提供购买日期、渠道、保障合同信息，由检测确定故障属性及适用换货或维修；不承诺免费维修或换新。 依据：[1] CHUNK-FAQ-BATTERY-01；[3] CHUNK-RETURN-QUALITY-01",
+          "evidence_supported": true
+        }
+      ],
+      "suggested_action": "预约Apple官方检测，说明第12天同时出现左耳无声和续航下降，提供购买日期、渠道、保障合同信息，由检测确定故障属性及适用换货或维修；不承诺免费维修或换新；下一步：预约Apple官方检测，说明第12天同时出现左耳无声和续航下降，提供购买日期、渠道、保障合同信息，由检测确定故障属性及适用换货或维修。",
+      "citations": [
+        {
+          "citation_id": "EVD-3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-RETURN-V1",
+            "version": "1.0.0",
+            "title": "AirPods 退货与退款判断",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2"
+          },
+          "kb_id": "KB-DOC-RETURN-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+          "segment_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+          "score": 0.6156956,
+          "supported_claims": [
+            "一般时间口径为交付后 0-7 日可退货、8-15 日可换货、16 日至 1 年可维修；与无理由退货是不同路径。",
+            "最终动作需结合检测、销售商和渠道责任判断。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        },
+        {
+          "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "source": {
+            "src_id": "SRC-PUB-003",
+            "doc_id": "DOC-CHANNEL-V1",
+            "version": "1.0.0",
+            "title": "售后渠道差异与责任边界",
+            "url": "https://www.apple.com.cn/shop/help/returns_refund",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+          },
+          "kb_id": "KB-DOC-CHANNEL-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+          "score": 0.6211912,
+          "supported_claims": [
+            "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        },
+        {
+          "citation_id": "EVD-08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "source": {
+            "src_id": "SRC-PUB-001",
+            "doc_id": "DOC-FAQ-V1",
+            "version": "1.0.0",
+            "title": "AirPods Pro 3 售后 FAQ",
+            "url": "https://support.apple.com/zh-cn/airpods",
+            "verified_at": "2026-10-24",
+            "valid_until": "2026-12-31",
+            "status": "active",
+            "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254"
+          },
+          "kb_id": "KB-DOC-FAQ-V1",
+          "kb_version_id": "1.0.0",
+          "chunk_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+          "score": 0.65694547,
+          "supported_claims": [
+            "Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。"
+          ],
+          "claim_support_status": "SUPPORTED",
+          "traceable": true,
+          "grounding_mode": "BFF_CLAIM_MATCH"
+        }
+      ],
+      "citation_support": {
+        "required": true,
+        "passed": true,
+        "supported_count": 3,
+        "multi_objective_passed": true,
+        "unsupported_count": 0
+      },
+      "citation_gate_passed": true,
+      "forbidden_action_match": null,
+      "business_semantics": {
+        "status_accepted": true,
+        "objectives_passed": true,
+        "knowledge_gap_passed": true,
+        "safety_concepts_passed": true,
+        "visible_goal_labels": [
+          "目标一",
+          "目标二"
+        ],
+        "unseen_goal_labels": [],
+        "action_internal_references": [],
+        "visible_action_missing_groups": [],
+        "generic_fallback_only": false,
+        "forbidden_assertions": [],
+        "document_request_matches": [],
+        "forbidden_action_match": null,
+        "citation_gate_passed": true,
+        "goal_count_passed": true,
+        "provider_call_gate_passed": true,
+        "p0_gate_passed": true,
+        "objectives": [
+          {
+            "objective_id": "EXCHANGE_GOAL",
+            "label": "换货判断路径",
+            "passed": true,
+            "missing_concept_groups": [],
+            "required_doc_match": true,
+            "evidence_goal_match": true
+          },
+          {
+            "objective_id": "WARRANTY_GOAL",
+            "label": "保修或维修检测路径",
+            "passed": true,
+            "missing_concept_groups": [],
+            "required_doc_match": true,
+            "evidence_goal_match": true
+          }
+        ],
+        "passed": true
+      },
+      "p0": false,
+      "p0_passed": null,
+      "prompt_tokens": 1281,
+      "completion_tokens": 6087,
+      "total_tokens": 7368,
+      "provider_latency_ms": 62741,
+      "bff_latency_ms": 70085,
+      "bff_request_id": "fa1e8bd1-1035-4c25-9362-f14fe962eb62",
+      "provider_request_id": "22a7d5e9-b5b3-4cbb-9774-62d708c6729d",
+      "error_code": null,
+      "cost_status": "COST_UNKNOWN"
+    }
+  ],
+  "passed": false
+}

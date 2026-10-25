@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "label": "home",
+      "status": 200,
+      "title": "李昕昊｜AI 产品经理作品集",
+      "h1": "李昕昊",
+      "width": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "label": "case",
+      "status": 200,
+      "title": "售后知识协作平台｜项目详情",
+      "h1": "让每一次售后建议，都能被验证。",
+      "width": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "label": "askneed",
+      "status": 200,
+      "title": "问需｜项目详情",
+      "h1": "把装修需求问全、问清、问定。",
+      "width": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "label": "other-practice",
+      "status": 200,
+      "title": "其他实践｜李昕昊作品集",
+      "h1": "验证流程编排，也验证产品分析。",
+      "width": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "label": "ad-demo",
+      "status": 200,
+      "title": "AI 跨境广告创意工作台 · 单文件演示",
+      "h1": "AI 跨境广告创意工作台",
+      "width": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "label": "prototype",
+      "status": 200,
+      "title": "澄明服务科技 · 售后知识协作",
+      "h1": "今日工作台",
+      "width": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    }
+  ],
+  "homeLinks": {
+    "askneed": "问需案例.html",
+    "direct": "https://zhipin.rainylli02xin11hao21.dpdns.org",
+    "archive": [
+      "其他实践.html#ad-workbench",
+      "其他实践.html#mi-home"
+    ]
+  },
+  "prototypeHref": "https://xinhao-after-sales.pages.dev/",
+  "pageErrors": []
+}

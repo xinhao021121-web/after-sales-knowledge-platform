@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="P01 今日工作台">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P01  今日工作台" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：一线客服视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="咨询任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="风险队列" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="我的待办" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="风险/失败与阻断" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="今日完成与质量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="数据完整性与下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="角色与范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="待处理风险" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一条建议" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="审计/降级提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P02 咨询任务队列">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P02  咨询任务队列" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：售后专员视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="咨询任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="风险队列" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="案例只读" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="筛选与创建 ASQ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="任务队列" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="并发领取/重复请求反馈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="空态与重置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="责任范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="任务状态分布" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="建议入口" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="最近事件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P03 售后协作任务">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P03  售后协作任务" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：一线客服视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="咨询任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="风险队列" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="原诉求 + CTX 版本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="缺失字段 / 证据 / 条件例外" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="ADV、承诺边界与风险提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="确认发送 / 转交 / 创建 CASE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="风险暂停" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="主管 CTX 只读" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="隐私与审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P04 风险队列">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P04  风险队列" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：法务/安全视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="风险处置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="案例只读" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="来源证据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="范围审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-4" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="315" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="R3 优先与筛选" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="风险待办列表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="无接收人/过期数据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="空态与关闭风险只读" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="我的风险范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="等级统计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="处置入口" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="升级规则" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P05 风险升级单">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P05  风险升级单" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：法务/安全视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="风险处置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="案例只读" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="来源证据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="范围审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-4" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="315" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="停止危险动作（首要）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="风险信号与必要追问" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="止损、转交、监控、关闭" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="previous_esc_id 与关联 CASE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="R 等级" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="paused_from_state" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="审计时间线" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P06 知识来源台账">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P06  知识来源台账" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：知识运营视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="知识来源" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="知识版本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="问题案例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="评测中心" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-4" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="315" height="50" x="20" />
+        </mxCell>
+        <mxCell value="发布/回滚" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-5" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="380" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="来源筛选与登记" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="五项核验清单" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="有效期/撤回/不可访问" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="影响对象分层清单" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="来源范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="责任与状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="历史版本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P07 知识与业务审核">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P07  知识与业务审核" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：业务/渠道审批视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="待审口径" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="发布审批" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="案例影响" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="范围内审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="KB 版本与适用条件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="来源引用与差异" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="业务审核意见" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="独立批准 / 拒绝 / 新版本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="KB 状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="提交/批准分离" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="评测资格" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P08 问题案例队列">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P08  问题案例队列" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：知识运营视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="知识来源" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="知识版本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="问题案例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="评测中心" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-4" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="315" height="50" x="20" />
+        </mxCell>
+        <mxCell value="发布/回滚" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-5" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="380" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="筛选与分诊" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="CASE 队列" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="活动 LINK / 最新失败" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="空态与责任空位" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="我的责任范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="CASE 状态分布" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="部分闭环提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P09 案例与修复链路">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P09  案例与修复链路" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：知识运营视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="知识来源" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="知识版本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="问题案例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="评测中心" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-4" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="315" height="50" x="20" />
+        </mxCell>
+        <mxCell value="发布/回滚" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-5" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="380" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="CASE 根因与证据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="CASE_LINK 0/1/N 轨道" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="previous_link_id 历史链" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="聚合关闭门禁 / 后继修复" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="聚合状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="活动 LINK" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="双角色批准" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P10 评测中心">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P10  评测中心" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：AI 评测视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="评测中心" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="问题案例只读" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="发布证据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="候选与冻结样本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="EVAL 执行进度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="通过/失败分类" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="关联 LINK/CASE 回退" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="样本完整性" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="运行状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="证据与审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P11 发布与回滚">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P11  发布与回滚" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：客服主管视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="今日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="咨询任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="风险" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="案例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-3" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="250" height="50" x="20" />
+        </mxCell>
+        <mxCell value="发布与回滚" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-4" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="315" height="50" x="20" />
+        </mxCell>
+        <mxCell value="审计运行" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-5" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="380" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="待发布候选与影响" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="批准 / 拒绝" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="当前 ACTIVE 与 LINK 释放" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="停用、历史目标、回滚" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="唯一 ACTIVE 范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="REL 状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="回滚风险" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P12 权限与职责">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P12  权限与职责" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：系统管理员视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="权限" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="审计与运行" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="集成状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="用户与活动角色" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="权限矩阵" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="职责分离冲突" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="角色空位与变更" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="组织范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="限制说明" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="下一步" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="变更审计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P13 审计与运行监控">
+    <mxGraphModel pageHeight="920" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#888888;container=1;pointerEvents=0;" id="top" vertex="1" parent="1">
+          <mxGeometry width="1520" as="geometry" y="30" height="60" x="40" />
+        </mxCell>
+        <mxCell value="P13  审计与运行监控" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="top">
+          <mxGeometry width="700" as="geometry" y="5" height="50" x="20" />
+        </mxCell>
+        <mxCell value="角色视图：系统管理员视图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="role" vertex="1" parent="top">
+          <mxGeometry width="360" as="geometry" y="5" height="50" x="940" />
+        </mxCell>
+        <mxCell value="返回 / 切角色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="return" vertex="1" parent="top">
+          <mxGeometry width="170" as="geometry" y="5" height="50" x="1320" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="left" vertex="1" parent="1">
+          <mxGeometry width="250" as="geometry" y="120" height="760" x="40" />
+        </mxCell>
+        <mxCell value="一级导航" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="left-title" vertex="1" parent="left">
+          <mxGeometry width="250" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="权限" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-0" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="55" height="50" x="20" />
+        </mxCell>
+        <mxCell value="审计与运行" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-1" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="120" height="50" x="20" />
+        </mxCell>
+        <mxCell value="集成状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="nav-2" vertex="1" parent="left">
+          <mxGeometry width="210" as="geometry" y="185" height="50" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="main" vertex="1" parent="1">
+          <mxGeometry width="880" as="geometry" y="120" height="760" x="330" />
+        </mxCell>
+        <mxCell value="主工作区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="main-title" vertex="1" parent="main">
+          <mxGeometry width="880" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="关键动作检索" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-55" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="55" height="120" x="20" />
+        </mxCell>
+        <mxCell value="审计时间线" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-200" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="200" height="120" x="20" />
+        </mxCell>
+        <mxCell value="数据完整性与降级" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-345" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="345" height="120" x="20" />
+        </mxCell>
+        <mxCell value="对象深链与只读详情" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-490" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="490" height="120" x="20" />
+        </mxCell>
+        <mxCell value="页面内主操作条：当前唯一主操作 + 取消/返回 + 状态提示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="main-action" vertex="1" parent="main">
+          <mxGeometry width="840" as="geometry" y="620" height="70" x="20" />
+        </mxCell>
+        <mxCell value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#888888;container=1;collapsible=0;fontColor=#222222;" id="side" vertex="1" parent="1">
+          <mxGeometry width="310" as="geometry" y="120" height="760" x="1250" />
+        </mxCell>
+        <mxCell value="上下文与状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#888888;fontStyle=1;fontColor=#111111;" id="side-title" vertex="1" parent="side">
+          <mxGeometry width="310" as="geometry" y="0" height="40" x="0" />
+        </mxCell>
+        <mxCell value="查询范围" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-55" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="55" height="135" x="20" />
+        </mxCell>
+        <mxCell value="异常摘要" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-210" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="210" height="135" x="20" />
+        </mxCell>
+        <mxCell value="恢复责任人" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-365" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="365" height="135" x="20" />
+        </mxCell>
+        <mxCell value="导出/权限" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-520" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="520" height="135" x="20" />
+        </mxCell>
+        <mxCell value="低保真：仅信息分组与层级。&#xA;不使用品牌颜色、图标或精细视觉。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#222222;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" id="side-note" vertex="1" parent="side">
+          <mxGeometry width="270" as="geometry" y="680" height="50" x="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

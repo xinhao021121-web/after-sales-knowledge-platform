@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-10-25",
+  "status": "PASSED",
+  "tests": [
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/server-unit.mjs",
+      "status": "PASSED",
+      "coverage": "BFF API, P0, privacy, idempotency, timeout/network, rate-limit classification, safety-signal extension"
+    },
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/stage4b2-unit.mjs",
+      "status": "PASSED",
+      "coverage": "substantive retrieval, compound retrieval, goal parsing, multi-goal claims, semantic evaluator and metrics"
+    },
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/e2e-stage4b2.mjs",
+      "status": "PASSED",
+      "coverage": "P06/P10 browser flow, refresh recovery, P0 short circuit, cost unknown, responsive layout"
+    },
+    {
+      "command": "npm run validate:4b2a-r3",
+      "status": "PASSED",
+      "coverage": "R3 17-task evidence, semantic regression, first-run holdout, unique versions, gates and secret hygiene"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a.ps1",
+      "status": "PASSED",
+      "coverage": "base 4B-2A service, browser, contract, cost and test hygiene"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a-r1.ps1",
+      "status": "PASSED",
+      "coverage": "R1 FAILED baseline and canonical ingestion evidence"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a-r2.ps1",
+      "status": "PASSED",
+      "coverage": "R2 17-task PASSED baseline, original holdout evidence and uniqueness"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b1.ps1",
+      "status": "PASSED",
+      "coverage": "4B-1 archived live evidence, stage 3B 13 pages/15 flows and stage 4A contracts"
+    }
+  ],
+  "live_provider_evidence": "evidence/p10-real-r3.json",
+  "secrets_exposed": false
+}

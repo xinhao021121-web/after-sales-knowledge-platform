@@ -1,0 +1,158 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-K02",
+  "core_task_id": "CORE-K2",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 64765,
+  "request": {
+    "question": "原始问题：买了 AppleCare+ 使用两年后能直接换新吗？\n客户改写：AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？；保障快到期了，能不能现在要求直接换一套？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-K02",
+    "knowledge_item_id": "KI-CORE-K2",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "care_contract": "用户声称有 AppleCare+，未出示合同",
+      "age": "接近两年",
+      "fault": "未说明",
+      "service_history": "未知"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "请用户补充并出示；AppleCare+ 保障合同/凭证。",
+    "business_conditions": [
+      "制造缺陷可进入 Apple 一年有限保修或相应法定保修判断",
+      "正常电池老化不属于有限保修范围",
+      "电池容量下降是否达到 AppleCare+ 服务资格，必须核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-b5440479-d296-42d2-ae07-eaad8e9ed770",
+        "source": {
+          "src_id": "SRC-PUB-006",
+          "doc_id": "DOC-WARRANTY-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 保修与维修流程",
+          "url": "https://support.apple.com/zh-cn/airpods/repair?services=service",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770"
+        },
+        "kb_id": "KB-DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+        "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+        "score": 0.48273470945245367,
+        "supported_claims": [
+          "制造缺陷可进入 Apple 一年有限保修或相应法定保修判断。",
+          "正常电池老化不属于有限保修范围。",
+          "电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true,
+        "grounding_mode": "BFF_CLAIM_MATCH"
+      }
+    ],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "988aca7f-0178-49cb-8829-022be6c1d170",
+    "provider_trace_id": "988aca7f-0178-49cb-8829-022be6c1d170",
+    "provider_called": true,
+    "timing_ms": 64759,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 483,
+      "completion_tokens": 1730,
+      "total_tokens": 2213,
+      "provider_latency_ms": 17784,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "NEED_CLARIFICATION",
+      "citation_support_passed": true,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 1,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6661224291611033,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.6443805052047631,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+        "score": 0.48273470945245367,
+        "claim_support_count": 3
+      }
+    ],
+    "request_id": "b99e85c9-c199-44d8-a468-af418569e2e5",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-K02",
+      "knowledge_item_id": "KI-CORE-K2"
+    },
+    "audit_event_id": "6adffcd7-dae6-4596-8843-42c1a6b8c924"
+  }
+}

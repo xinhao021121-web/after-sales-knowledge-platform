@@ -1,0 +1,69 @@
+{
+  "captured_at": "2026-10-25T14:40:00.000Z",
+  "status": "PASSED",
+  "commands": [
+    {
+      "command": "node tests/server-unit.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "node tests/stage4b2-unit.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "node tests/e2e-stage4b2.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "npm run validate:4b2a-closure",
+      "status": "PASSED"
+    },
+    {
+      "command": "npm run validate:4b2b",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r1.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r2.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r3.ps1",
+      "status": "PASSED"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/validate-stage4b2a-r4.ps1",
+      "status": "PASSED"
+    }
+  ],
+  "group_runs": {
+    "A": "ROUTING-4B2B-A-e93d2987-0ca0-4cef-8ed6-6ee5ce23b404",
+    "B": "ROUTING-4B2B-B-eba55c56-5942-488f-8fde-b3f86b6b4d39",
+    "C": "ROUTING-4B2B-C-6a7fe443-9e89-414e-aab7-93458a0ba993"
+  },
+  "infrastructure_failures_preserved": {
+    "a_provider_failures": 12,
+    "a_retry_network_failure": 1,
+    "retrieval_rate_limit_events": 3,
+    "dify_console_timeouts": 3
+  },
+  "final_provider_errors": 0,
+  "semantic_passed": {
+    "A": "25/27",
+    "B": "26/27",
+    "C": "26/27"
+  },
+  "fallback": {
+    "count": 5,
+    "rate": 0.2631578947368421,
+    "recovery_rate": 0.4
+  },
+  "production_release": "FORBIDDEN"
+}

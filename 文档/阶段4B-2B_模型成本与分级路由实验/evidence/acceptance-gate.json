@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-10-25T14:32:00.000Z",
+  "status": "EXPERIMENT_PASSED_WITH_RECOMMENDATION",
+  "experiment_scope": "Internal model selection and fallback routing only",
+  "task_set": "EVAL-RAG-4B2A-FIXED-FINAL-1.0.0",
+  "task_count": 27,
+  "same_retrieval_snapshot": true,
+  "p0_model_calls": 0,
+  "p0_failures": 0,
+  "final_provider_errors": 0,
+  "claim_failures": 0,
+  "forbidden_action_failures": 0,
+  "retrieval_snapshot_consistent_all_groups": true,
+  "new_semantic_failures_excluding_known_defect": {
+    "B": [],
+    "C": []
+  },
+  "known_defect": {
+    "task_id": "RET-H09",
+    "status": "FAILED_IN_ALL_GROUPS",
+    "fixed_by_this_stage": false
+  },
+  "recommendation": "KEEP_PRO_DEFAULT_NO_AUTOMATIC_FLASH_ROUTING",
+  "default_model_after_experiment": "deepseek-v4-pro",
+  "automatic_experiment_route_enabled_by_default": false,
+  "production_release": "FORBIDDEN",
+  "production_release_allowed": false,
+  "knowledge_base_published": false,
+  "entered_stage5": false
+}

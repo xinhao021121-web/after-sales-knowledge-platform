@@ -1,0 +1,347 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "P06/P10 本地 BFF 扩展契约",
+    "version": "4B2A-1.0.0",
+    "description": "Dataset API Key、App Key 与评测运行均只由服务端 BFF 使用。"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8787"
+    }
+  ],
+  "paths": {
+    "/api/dataset/health": {
+      "get": {
+        "operationId": "getDatasetHealth",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"}
+        ],
+        "responses": {
+          "200": {"description": "Dataset API 可用"},
+          "503": {"$ref": "#/components/responses/DatasetUnavailable"}
+        }
+      }
+    },
+    "/api/candidate-documents": {
+      "get": {
+        "operationId": "listCandidateDocuments",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"}
+        ],
+        "responses": {
+          "200": {
+            "description": "冻结的 CANDIDATE 文档清单",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/CandidateDocumentList"}
+              }
+            }
+          },
+          "403": {"$ref": "#/components/responses/Forbidden"}
+        }
+      }
+    },
+    "/api/ingestions": {
+      "post": {
+        "operationId": "createIngestion",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"},
+          {"$ref": "#/components/parameters/IdempotencyKey"}
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {"$ref": "#/components/schemas/IngestionRequest"}
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "已创建真实 Dify 入库任务",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/IngestionJob"}
+              }
+            }
+          },
+          "403": {"$ref": "#/components/responses/Forbidden"},
+          "409": {"$ref": "#/components/responses/Duplicate"}
+        }
+      }
+    },
+    "/api/ingestions/{ingestion_id}": {
+      "get": {
+        "operationId": "getIngestion",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"},
+          {"$ref": "#/components/parameters/IngestionId"}
+        ],
+        "responses": {
+          "200": {
+            "description": "文档状态与 Dify 索引状态分开返回",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/IngestionJob"}
+              }
+            }
+          },
+          "404": {"$ref": "#/components/responses/NotFound"}
+        }
+      }
+    },
+    "/api/ingestions/{ingestion_id}/retry": {
+      "post": {
+        "operationId": "retryIngestion",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"},
+          {"$ref": "#/components/parameters/IdempotencyKey"},
+          {"$ref": "#/components/parameters/IngestionId"}
+        ],
+        "responses": {
+          "202": {"description": "更新原 Dify 文档并重新索引"},
+          "409": {"$ref": "#/components/responses/Conflict"}
+        }
+      }
+    },
+    "/api/evaluations": {
+      "post": {
+        "operationId": "createEvaluation",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"},
+          {"$ref": "#/components/parameters/IdempotencyKey"}
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {"$ref": "#/components/schemas/EvaluationRequest"}
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "异步评测已创建",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/EvaluationRun"}
+              }
+            }
+          },
+          "409": {"$ref": "#/components/responses/Conflict"}
+        }
+      }
+    },
+    "/api/evaluations/{run_id}": {
+      "get": {
+        "operationId": "getEvaluation",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"},
+          {"$ref": "#/components/parameters/RunId"}
+        ],
+        "responses": {
+          "200": {
+            "description": "逐任务结果、进度、指标和成本状态",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/EvaluationRun"}
+              }
+            }
+          },
+          "404": {"$ref": "#/components/responses/NotFound"}
+        }
+      }
+    },
+    "/api/evaluations/meta": {
+      "get": {
+        "operationId": "getEvaluationMetadata",
+        "parameters": [
+          {"$ref": "#/components/parameters/DemoRole"}
+        ],
+        "responses": {
+          "200": {"description": "冻结任务集版本、17 条总数和 Pro 模型"}
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "DemoRole": {
+        "name": "X-Demo-Role",
+        "in": "header",
+        "required": true,
+        "schema": {"type": "string"}
+      },
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": true,
+        "schema": {"type": "string", "minLength": 16, "maxLength": 128}
+      },
+      "IngestionId": {
+        "name": "ingestion_id",
+        "in": "path",
+        "required": true,
+        "schema": {"type": "string"}
+      },
+      "RunId": {
+        "name": "run_id",
+        "in": "path",
+        "required": true,
+        "schema": {"type": "string"}
+      }
+    },
+    "schemas": {
+      "CandidateDocumentList": {
+        "type": "object",
+        "required": ["dataset", "documents"],
+        "properties": {
+          "dataset": {"type": "string", "const": "CANDIDATE"},
+          "manifest_version": {"type": "string"},
+          "documents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["doc_id", "title", "file", "version", "src_ids", "sha256"],
+              "properties": {
+                "doc_id": {"type": "string"},
+                "title": {"type": "string"},
+                "file": {"type": "string"},
+                "version": {"type": "string"},
+                "src_ids": {"type": "array", "items": {"type": "string"}},
+                "sha256": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "IngestionRequest": {
+        "type": "object",
+        "required": ["doc_id", "src_id", "source_version"],
+        "properties": {
+          "doc_id": {"type": "string"},
+          "src_id": {"type": "string"},
+          "source_version": {"type": "string"}
+        }
+      },
+      "IngestionJob": {
+        "type": "object",
+        "required": [
+          "ingestion_id",
+          "doc_id",
+          "document_status",
+          "provider_status",
+          "publishable"
+        ],
+        "properties": {
+          "ingestion_id": {"type": "string"},
+          "doc_id": {"type": "string"},
+          "src_id": {"type": "string"},
+          "source_version": {"type": "string"},
+          "file_name": {"type": "string"},
+          "provider_file_name": {"type": "string"},
+          "ingestion_mode": {
+            "type": "string",
+            "enum": ["CREATE_NEW", "UPDATE_EXISTING"]
+          },
+          "content_sha256": {"type": "string"},
+          "document_status": {
+            "type": "string",
+            "enum": [
+              "DOCUMENT_UPLOADING",
+              "DOCUMENT_INDEXING",
+              "DOCUMENT_RETRYING",
+              "DOCUMENT_READY",
+              "DOCUMENT_FAILED"
+            ]
+          },
+          "provider_status": {
+            "type": "string",
+            "enum": ["QUEUED", "PARSING", "CHUNKING", "INDEXING", "READY", "FAILED"]
+          },
+          "provider_batch_id": {"type": ["string", "null"]},
+          "provider_document_id": {"type": ["string", "null"]},
+          "completed_segments": {"type": "integer"},
+          "total_segments": {"type": "integer"},
+          "publishable": {"type": "boolean"},
+          "error_step": {"type": ["string", "null"]},
+          "error_code": {"type": ["string", "null"]},
+          "retryable": {"type": "boolean"}
+        }
+      },
+      "EvaluationRequest": {
+        "type": "object",
+        "required": ["task_scope", "model"],
+        "properties": {
+          "task_scope": {"type": "string", "enum": ["ALL_17", "CORE_12"]},
+          "model": {"type": "string", "const": "deepseek-v4-pro"}
+        }
+      },
+      "EvaluationRun": {
+        "type": "object",
+        "required": ["run_id", "status", "model", "progress", "results"],
+        "properties": {
+          "run_id": {"type": "string"},
+          "status": {
+            "type": "string",
+            "enum": ["QUEUED", "RUNNING", "PASSED", "FAILED", "BLOCKED", "COMPLETED_WITH_ERRORS"]
+          },
+          "model": {"type": "string"},
+          "progress": {
+            "type": "object",
+            "required": ["completed", "total"],
+            "properties": {
+              "completed": {"type": "integer"},
+              "total": {"type": "integer"}
+            }
+          },
+          "results": {
+            "type": "array",
+            "items": {"$ref": "#/components/schemas/EvaluationTaskResult"}
+          },
+          "metrics": {"type": ["object", "null"]}
+        }
+      },
+      "EvaluationTaskResult": {
+        "type": "object",
+        "required": [
+          "task_id",
+          "question_hash",
+          "answer_status",
+          "provider_called",
+          "source_hit",
+          "citation_support_passed",
+          "business_action_correct",
+          "followup_complete",
+          "p0",
+          "p0_passed",
+          "cost_status"
+        ],
+        "properties": {
+          "task_id": {"type": "string"},
+          "question_hash": {"type": "string"},
+          "answer_status": {"type": "string"},
+          "provider_called": {"type": "boolean"},
+          "source_hit": {"type": ["boolean", "null"]},
+          "citation_support_passed": {"type": "boolean"},
+          "business_action_correct": {"type": "boolean"},
+          "followup_complete": {"type": "boolean"},
+          "p0": {"type": "boolean"},
+          "p0_passed": {"type": ["boolean", "null"]},
+          "prompt_tokens": {"type": ["integer", "null"]},
+          "completion_tokens": {"type": ["integer", "null"]},
+          "provider_latency_ms": {"type": ["integer", "null"]},
+          "cost_status": {"type": "string", "const": "COST_UNKNOWN"}
+        }
+      }
+    },
+    "responses": {
+      "Forbidden": {"description": "角色无权限"},
+      "NotFound": {"description": "对象不存在"},
+      "Duplicate": {"description": "幂等键被用于不同请求"},
+      "Conflict": {"description": "当前对象状态不允许操作"},
+      "DatasetUnavailable": {"description": "Dataset Key 未配置、鉴权失败或服务不可用"}
+    }
+  }
+}

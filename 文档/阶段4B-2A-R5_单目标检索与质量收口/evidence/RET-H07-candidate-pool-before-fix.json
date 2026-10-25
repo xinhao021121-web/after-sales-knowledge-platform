@@ -1,0 +1,121 @@
+{
+  "captured_at": "2026-10-25T12:24:09.268Z",
+  "source_mode": "REAL_DIFY_DATASET_RETRIEVE",
+  "query": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+  "requested_top_k": 10,
+  "actual_candidate_count": 14,
+  "records": [
+    {
+      "position": 1,
+      "score": 0.73837316,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+      "content": "AirPods Pro 3 售后 FAQ"
+    },
+    {
+      "position": 2,
+      "score": 0.67929065,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "157cc321-cf47-44a0-872c-e30d38e5e5ab",
+      "content": "CHUNK-FAQ-POWER-01 充电与状态灯\n充电盒不充电时，可检查兼容线缆、电源、接口碎屑和耳机是否放到位。不得指导客户使用针、镊子等尖锐物清理接口，也不得在潮湿状态充电。状态灯绿色表示耳机已充满；琥珀色表示盒内电量不足以让耳机再次充满。更换线缆和电源后仍无反应，转服务检测。"
+    },
+    {
+      "position": 3,
+      "score": 0.66856086,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+      "content": "AirPods Pro 3 保修与维修流程"
+    },
+    {
+      "position": 4,
+      "score": 0.658562,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+    },
+    {
+      "position": 5,
+      "score": 0.61992764,
+      "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "document_name": "02_安全SOP.md",
+      "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+      "content": "AirPods Pro 3 安全处置 SOP"
+    },
+    {
+      "position": 6,
+      "score": 0.60477054,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+      "content": "AirPods 退货与退款判断"
+    },
+    {
+      "position": 7,
+      "score": 0.58250797,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "d03e14e6-f26f-4557-a1d3-d5f7633f6c07",
+      "content": "---\ndoc_id: DOC-FAQ-V1\nsrc_ids: [SRC-PUB-001, SRC-PUB-006, SRC-PUB-013]\nversion: 1.0.0\ntitle: AirPods Pro 3 售后 FAQ\npublisher: 项目模拟企业知识运营\nverified_at: 2026-10-24\nscope: 中国大陆公开售后与产品支持咨询\nvalid_until: 2026-12-31\nowner_role: knowledge_operator\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 8,
+      "score": 0.57169056,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "f10f8fcf-e104-43a6-abf5-b28e6f2e3503",
+      "content": "CHUNK-FAQ-CONNECT-01 单侧无声与连接排查\n单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。"
+    },
+    {
+      "position": 9,
+      "score": 0.5546776,
+      "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "document_name": "02_安全SOP.md",
+      "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "content": "CHUNK-SAFE-WATER-01 进液\n进液后立即停止佩戴和充电，用柔软干燥的无绒布擦干外表，放入充电盒前至少等待 2 小时完全干燥。不得使用加热、压缩空气、甩动或尖锐物清理接口和声学孔。抗汗抗水能力不构成潮湿状态继续充电的许可。"
+    },
+    {
+      "position": 10,
+      "score": 0.5356078,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+      "content": "CHUNK-FAQ-BATTERY-01 续航下降\n续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。检测前不得承诺免费维修，也不得断言一定收费。"
+    },
+    {
+      "position": 11,
+      "score": 0,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "eae84f28-1a3f-48cd-95b0-93ab46fd8138",
+      "content": "来源：SRC-PUB-001。"
+    },
+    {
+      "position": 12,
+      "score": 0,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "10f400d1-219f-478f-a4e0-32bee71b3e9d",
+      "content": "---\ndoc_id: DOC-RETURN-V1\nsrc_ids: [SRC-PUB-003, SRC-PUB-004, SRC-PUB-005, SRC-PUB-010]\nversion: 1.0.0\ntitle: AirPods 退货与退款判断\npublisher: 项目模拟业务与渠道责任组\nverified_at: 2026-10-24\nscope: 中国大陆远程交易与 Apple Store 在线商店\nvalid_until: 2026-12-31\nowner_role: business_channel_owner\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 13,
+      "score": 0,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "a5da3389-7e07-49ff-ab5a-a979904ba5c8",
+      "content": "---\ndoc_id: DOC-WARRANTY-V1\nsrc_ids: [SRC-PUB-006, SRC-PUB-007, SRC-PUB-008, SRC-PUB-011]\nversion: 1.0.0\ntitle: AirPods Pro 3 保修与维修流程\npublisher: 项目模拟售后责任组\nverified_at: 2026-10-24\nscope: 中国大陆三包、有限保修、AppleCare+ 与保外服务\nvalid_until: 2026-12-31\nowner_role: aftersales_specialist\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 14,
+      "score": 0,
+      "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "document_name": "02_安全SOP.md",
+      "segment_id": "91783206-96c1-4603-9c59-410760b50e12",
+      "content": "---\ndoc_id: DOC-SAFETY-V1\nsrc_ids: [SRC-PUB-002, SRC-PUB-006, SRC-PUB-009]\nversion: 1.0.0\ntitle: AirPods Pro 3 安全处置 SOP\npublisher: 项目模拟法务安全责任组\nverified_at: 2026-10-24\nscope: 售后咨询中的 A/B 级安全事件\nvalid_until: 2026-12-31\nowner_role: legal_safety_owner\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    }
+  ]
+}

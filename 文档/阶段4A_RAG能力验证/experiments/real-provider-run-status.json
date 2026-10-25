@@ -1,0 +1,85 @@
+{
+  "status": "COMPLETED_WITH_REQUIRED_BFF_GATES",
+  "checked_at": "2026-10-24",
+  "provider": {
+    "name": "Dify Cloud",
+    "version": "Cloud managed; version not exposed by App API; public release baseline 1.18.0",
+    "base_url": "https://api.dify.ai/v1",
+    "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+    "app_mode": "advanced-chat",
+    "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+    "models": {
+      "generation": "deepseek-v4-pro",
+      "embedding": "text-embedding-v4",
+      "rerank": "qwen3-rerank"
+    }
+  },
+  "completed_configs": [
+    {
+      "config_id": "CFG-BASE",
+      "app_version": 2,
+      "dataset": "CANDIDATE",
+      "retrieval_mode": "semantic",
+      "top_k": 3,
+      "rerank": false,
+      "task_count": 17,
+      "core_recall_at_3": 0.62,
+      "core_source_hits": "9/12",
+      "raw_p0_failures": 4
+    },
+    {
+      "config_id": "CFG-HYBRID",
+      "app_version": 5,
+      "dataset": "CANDIDATE",
+      "retrieval_mode": "hybrid",
+      "top_k": 3,
+      "rerank": false,
+      "task_count": 17,
+      "core_recall_at_3": 0.9167,
+      "core_source_hits": "12/12",
+      "raw_p0_failures": 5
+    },
+    {
+      "config_id": "CFG-RERANK",
+      "app_version": 6,
+      "dataset": "CANDIDATE",
+      "retrieval_mode": "hybrid",
+      "top_k": 3,
+      "rerank": true,
+      "rerank_model": "qwen3-rerank",
+      "task_count": 17,
+      "core_recall_at_3": 0.9167,
+      "core_source_hits": "12/12",
+      "raw_p0_failures": 5
+    },
+    {
+      "config_id": "CFG-RERANK-TEST",
+      "app_version": 7,
+      "dataset": "TEST",
+      "retrieval_mode": "hybrid",
+      "top_k": 3,
+      "rerank": true,
+      "task_count": 5,
+      "purpose": "过期、冲突、权限和无知识专项"
+    }
+  ],
+  "final_pipeline": {
+    "app_version": 8,
+    "dataset": "CANDIDATE",
+    "required_bff_gates": ["P0 safety pre-gate", "CONFLICT normalization", "permission filtering"],
+    "task_count": 17,
+    "p0_count": 6,
+    "p0_final_failures": 0,
+    "provider_raw_p0_failures": 5,
+    "business_action_correct": "17/17",
+    "followup_complete": "17/17",
+    "correct_refusal": "4/4",
+    "citation_support": "15/16 applicable"
+  },
+  "limitations": [
+    "Dify 原始回答没有稳定把止损放在第一段，最终流水线必须保留强制安全前置。",
+    "平均响应时间约 31.7 秒，不能直接作为生产 SLA。",
+    "未测试 Top K=5、不同切片长度和关闭引用。",
+    "FastGPT 未获得凭据，因此没有进行跨提供方能力排序。"
+  ]
+}

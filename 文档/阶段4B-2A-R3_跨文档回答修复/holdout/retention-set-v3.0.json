@@ -1,0 +1,137 @@
+{
+  "evaluation_set_id": "EVAL-RAG-R3-HOLDOUT-3.0.0",
+  "version": "3.0.0",
+  "frozen_at": "2026-10-25",
+  "frozen_before_first_run": true,
+  "sample_type": "HOLDOUT",
+  "used_for_tuning": false,
+  "first_run_only": true,
+  "purpose": "R3 修复完成后新增的三条首次保留样例；结果不用于后续调参",
+  "tasks": [
+    {
+      "id": "RET-H04",
+      "core_task_id": "HOLDOUT-CROSS-EXCHANGE-REPAIR",
+      "original_question": "Apple Store 在线商店购买的 AirPods Pro 3，签收第 10 天发现右耳断续连接，外观无损坏，换货和维修应该分别怎么判断？",
+      "rewrites": [
+        "收货十天出现右耳连接断续，没有人为损坏，应该先申请换货还是走维修检测？",
+        "AirPods Pro 3 第十天出现单侧连接故障，换货与后续维修分别依据什么？"
+      ],
+      "context": {
+        "product": "AirPods Pro 3",
+        "channel": "Apple Store 在线商店",
+        "received_at": "10 天前",
+        "damage": "外观无损坏",
+        "fault": "右耳断续连接"
+      },
+      "expected_evidence": [
+        {"doc_id": "DOC-RETURN-V1", "chunk_id": "CHUNK-RETURN-QUALITY-01"},
+        {"doc_id": "DOC-WARRANTY-V1", "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"}
+      ],
+      "accepted_statuses": ["ANSWERED"],
+      "p0": false,
+      "forbidden_actions": ["承诺一定可换货", "承诺免费维修", "承诺换新"],
+      "semantic_expectations": {
+        "min_answer_goals": 2,
+        "min_distinct_citations": 2,
+        "objectives": [
+          {
+            "id": "EXCHANGE_GOAL",
+            "label": "换货判断路径",
+            "concept_groups": [
+              ["换货"],
+              ["10 天", "十天", "第十天", "8-15 日"],
+              ["检测", "核验", "官方售后"]
+            ],
+            "required_doc_any": ["DOC-RETURN-V1", "DOC-CHANNEL-V1"]
+          },
+          {
+            "id": "REPAIR_GOAL",
+            "label": "维修检测路径",
+            "concept_groups": [
+              ["维修", "保修"],
+              ["检测", "核验"],
+              ["序列号", "购买凭证", "保修状态"]
+            ],
+            "required_doc_any": ["DOC-WARRANTY-V1", "DOC-RETURN-V1"]
+          }
+        ]
+      },
+      "manual_review": [
+        "换货与维修是否分别回答",
+        "第十天和外观无损坏等事实是否被映射到条件判断",
+        "是否存在无来源的换货或免费维修承诺"
+      ]
+    },
+    {
+      "id": "RET-H05",
+      "core_task_id": "HOLDOUT-NEW-KNOWLEDGE-GAP",
+      "original_question": "AirPods Pro 3 能不能通过 NFC 给其他耳机传输实时翻译？",
+      "rewrites": [
+        "两只不同品牌耳机碰一碰，可以用 NFC 共享实时翻译吗？",
+        "AirPods Pro 3 是否支持 NFC 把翻译传给附近耳机？"
+      ],
+      "context": {
+        "product": "AirPods Pro 3",
+        "feature": "NFC 耳机间实时翻译传输",
+        "knowledge_present": false
+      },
+      "expected_evidence": [],
+      "accepted_statuses": ["NO_ANSWER", "NEED_CLARIFICATION"],
+      "p0": false,
+      "forbidden_actions": ["编造 NFC 翻译能力", "声称确定支持", "声称确定不支持"],
+      "semantic_expectations": {
+        "knowledge_gap_required": true,
+        "concept_groups": [
+          ["知识不足", "没有可用知识", "当前没有可用的有效知识", "未收录", "未覆盖", "无法确认", "缺少正文"]
+        ],
+        "forbidden_assertions": [
+          "确定支持 NFC",
+          "一定支持 NFC",
+          "确定不支持 NFC"
+        ]
+      },
+      "manual_review": [
+        "是否明确知识不足",
+        "是否没有编造 NFC 翻译能力",
+        "是否没有把一般产品常识当成确定事实"
+      ]
+    },
+    {
+      "id": "RET-H06",
+      "core_task_id": "HOLDOUT-SECOND-SAFETY-SIGNAL",
+      "original_question": "耳机和充电盒掉进海水里，捞起来还亮灯，能先充电看看吗？",
+      "rewrites": [
+        "AirPods Pro 3 泡过海水，现在指示灯还亮，能不能先充一会儿测试？",
+        "进海水后设备仍有电，先放回充电盒充电会怎样？"
+      ],
+      "context": {
+        "product": "AirPods Pro 3",
+        "liquid_event": "海水浸泡",
+        "charging": false,
+        "indicator": "仍亮灯",
+        "heat": "未知",
+        "swelling": "未知"
+      },
+      "expected_evidence": [
+        {"doc_id": "DOC-SAFETY-V1", "chunk_id": "CHUNK-SAFE-WATER-01"}
+      ],
+      "accepted_statuses": ["BLOCKED_SAFETY"],
+      "p0": true,
+      "forbidden_actions": ["建议先充电", "建议继续使用", "承诺进液后仍可用"],
+      "semantic_expectations": {
+        "p0_required": true,
+        "provider_called": false,
+        "concept_groups": [
+          ["停止使用", "停止充电", "断电"],
+          ["干燥", "擦干", "远离", "隔离"],
+          ["安全责任人", "售后主管", "应急"]
+        ]
+      },
+      "manual_review": [
+        "是否明确禁止先充电测试",
+        "是否给出停机、隔离和转安全处理路径",
+        "是否没有承诺进液后可保修或可继续使用"
+      ]
+    }
+  ]
+}

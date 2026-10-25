@@ -1,0 +1,114 @@
+{
+  "round_id": "FLASH-R1",
+  "task_id": "POC-R02",
+  "core_task_id": "CORE-R2",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 20894,
+  "request": {
+    "question": "原始问题：AirPods 过保了还能维修吗？\n客户改写：用了 14 个月，已经过保，还能付费维修吗？；AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R1-POC-R02",
+    "knowledge_item_id": "KI-CORE-R2",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "warranty": "已过保 2 个月",
+      "fault": "充电不稳定",
+      "repair_history": "无"
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "Frontline 回复口径：告知客户可协助转官方售后检测/估价流程，但不能在检测前承诺可维修或先确定价格；过保维修是否受理及费用需以官方检测和报价为准；核实保障状态：追问客户是否有 AppleCare+ 或其他延长保修/保障服务；当前上下文未提供，不能假设没有或已有。",
+    "business_conditions": [
+      "引用与知识边界",
+      "用户提供的已知上下文：AirPods Pro 3；已过保 2 个月；充电不稳定；无维修史；Apple Store 在线商店",
+      "给定上下文未提供《AirPods Pro 3 保修与维修流程》《AirPods Pro 3 售后 FAQ》《AirPods Pro 3 安全处置 SOP》正文，因此无法对“过保后是否提供付费维修”“价格能否先确定”给出具体规则性引用，不得虚构条款或报价"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "7253948d-4791-43fc-8dec-33b198d86309",
+    "provider_trace_id": "7253948d-4791-43fc-8dec-33b198d86309",
+    "provider_called": true,
+    "timing_ms": 20886,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 7,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 7,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 7
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.7680082790142463,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6191296415317127,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "02_安全SOP.md",
+        "document_id": "DOC-SAFETY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+        "score": 0.48375403191815114,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "bd789dac-458d-4d18-90a0-fbe31e28a2c1",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R1-POC-R02",
+      "knowledge_item_id": "KI-CORE-R2"
+    },
+    "audit_event_id": "6c155c60-6a05-4806-b55e-812369f06636"
+  }
+}

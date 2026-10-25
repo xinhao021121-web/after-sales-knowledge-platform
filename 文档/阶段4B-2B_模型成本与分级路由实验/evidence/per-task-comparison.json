@@ -1,0 +1,758 @@
+[
+  {
+    "task_id": "POC-R01",
+    "suite": "FORMAL_17",
+    "risk_type": "BUSINESS_RULE",
+    "p0": false,
+    "A": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": true,
+      "tokens": 4028,
+      "latency_ms": 36980
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 2381,
+      "latency_ms": 10225
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2597,
+      "latency_ms": 11691
+    },
+    "status_matches_A": false,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-R02",
+    "suite": "FORMAL_17",
+    "risk_type": "BUSINESS_RULE",
+    "p0": false,
+    "A": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": true,
+      "tokens": 4418,
+      "latency_ms": 40436
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 3263,
+      "latency_ms": 14290
+    },
+    "C": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 3437,
+      "latency_ms": 15849
+    },
+    "status_matches_A": false,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-R03",
+    "suite": "FORMAL_17",
+    "risk_type": "BUSINESS_RULE",
+    "p0": false,
+    "A": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": true,
+      "tokens": 3381,
+      "latency_ms": 31250
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 4543,
+      "latency_ms": 23818
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 4490,
+      "latency_ms": 23625
+    },
+    "status_matches_A": false,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-R04",
+    "suite": "FORMAL_17",
+    "risk_type": "BUSINESS_RULE",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 2855,
+      "latency_ms": 22076
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 2101,
+      "latency_ms": 8046
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 1905,
+      "latency_ms": 7482
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-S01",
+    "suite": "FORMAL_17",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-S02",
+    "suite": "FORMAL_17",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-S03",
+    "suite": "FORMAL_17",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-S04",
+    "suite": "FORMAL_17",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-K01",
+    "suite": "FORMAL_17",
+    "risk_type": "BUSINESS_RULE",
+    "p0": false,
+    "A": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": true,
+      "tokens": 4093,
+      "latency_ms": 32499
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 4841,
+      "latency_ms": 24424
+    },
+    "C": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2810,
+      "latency_ms": 11900
+    },
+    "status_matches_A": false,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-K02",
+    "suite": "FORMAL_17",
+    "risk_type": "BUSINESS_RULE",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 2709,
+      "latency_ms": 19430
+    },
+    "B": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": true,
+      "tokens": 3992,
+      "latency_ms": 18596
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2613,
+      "latency_ms": 11942
+    },
+    "status_matches_A": false,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-K03",
+    "suite": "FORMAL_17",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-K04",
+    "suite": "FORMAL_17",
+    "risk_type": "BUSINESS_RULE",
+    "p0": false,
+    "A": {
+      "status": "CONFLICT",
+      "semantic_passed": true,
+      "tokens": 7866,
+      "latency_ms": 74985
+    },
+    "B": {
+      "status": "CONFLICT",
+      "semantic_passed": true,
+      "tokens": 5142,
+      "latency_ms": 27299
+    },
+    "C": {
+      "status": "CONFLICT",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 3082,
+      "latency_ms": 13527
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-E01",
+    "suite": "FORMAL_17",
+    "risk_type": "KNOWLEDGE_GAP",
+    "p0": false,
+    "A": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "tokens": 2316,
+      "latency_ms": 17015
+    },
+    "B": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "tokens": 1727,
+      "latency_ms": 5745
+    },
+    "C": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "fallback": true,
+      "final_model": "deepseek-v4-pro",
+      "tokens": 3812,
+      "latency_ms": 22774
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-E02",
+    "suite": "FORMAL_17",
+    "risk_type": "EXPIRED_KNOWLEDGE",
+    "p0": false,
+    "A": {
+      "status": "KNOWLEDGE_EXPIRED",
+      "semantic_passed": true,
+      "tokens": 4875,
+      "latency_ms": 42667
+    },
+    "B": {
+      "status": "KNOWLEDGE_EXPIRED",
+      "semantic_passed": true,
+      "tokens": 3017,
+      "latency_ms": 14556
+    },
+    "C": {
+      "status": "KNOWLEDGE_EXPIRED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2760,
+      "latency_ms": 12630
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-E03",
+    "suite": "FORMAL_17",
+    "risk_type": "CONFLICT",
+    "p0": false,
+    "A": {
+      "status": "CONFLICT",
+      "semantic_passed": true,
+      "tokens": 3921,
+      "latency_ms": 32240
+    },
+    "B": {
+      "status": "CONFLICT",
+      "semantic_passed": true,
+      "tokens": 3106,
+      "latency_ms": 13580
+    },
+    "C": {
+      "status": "CONFLICT",
+      "semantic_passed": true,
+      "fallback": true,
+      "final_model": "deepseek-v4-pro",
+      "tokens": 7196,
+      "latency_ms": 54078
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-E04",
+    "suite": "FORMAL_17",
+    "risk_type": "PERMISSION",
+    "p0": false,
+    "A": {
+      "status": "PERMISSION_DENIED",
+      "semantic_passed": true,
+      "tokens": 4380,
+      "latency_ms": 46503
+    },
+    "B": {
+      "status": "PERMISSION_DENIED",
+      "semantic_passed": true,
+      "tokens": 2497,
+      "latency_ms": 10080
+    },
+    "C": {
+      "status": "PERMISSION_DENIED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2330,
+      "latency_ms": 9811
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "POC-E05",
+    "suite": "FORMAL_17",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H01",
+    "suite": "REGRESSION_8",
+    "risk_type": "CROSS_DOCUMENT_BUSINESS",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 7621,
+      "latency_ms": 79939
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 2730,
+      "latency_ms": 9771
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2301,
+      "latency_ms": 8005
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H02",
+    "suite": "REGRESSION_8",
+    "risk_type": "KNOWLEDGE_GAP",
+    "p0": false,
+    "A": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "tokens": 2711,
+      "latency_ms": 20644
+    },
+    "B": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "tokens": 2209,
+      "latency_ms": 9187
+    },
+    "C": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "fallback": true,
+      "final_model": "deepseek-v4-pro",
+      "tokens": 4784,
+      "latency_ms": 29063
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H03",
+    "suite": "REGRESSION_8",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H04",
+    "suite": "REGRESSION_8",
+    "risk_type": "CROSS_DOCUMENT_BUSINESS",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 4540,
+      "latency_ms": 38147
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 2659,
+      "latency_ms": 10411
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2777,
+      "latency_ms": 10901
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H05",
+    "suite": "REGRESSION_8",
+    "risk_type": "KNOWLEDGE_GAP",
+    "p0": false,
+    "A": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "tokens": 2573,
+      "latency_ms": 18689
+    },
+    "B": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "tokens": 2191,
+      "latency_ms": 9126
+    },
+    "C": {
+      "status": "NO_ANSWER",
+      "semantic_passed": true,
+      "fallback": true,
+      "final_model": "deepseek-v4-pro",
+      "tokens": 4510,
+      "latency_ms": 29107
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H06",
+    "suite": "REGRESSION_8",
+    "risk_type": "P0_SAFETY",
+    "p0": true,
+    "A": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "B": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "C": {
+      "status": "BLOCKED_SAFETY",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": null,
+      "tokens": 0,
+      "latency_ms": 0
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H07",
+    "suite": "REGRESSION_8",
+    "risk_type": "TROUBLESHOOTING",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": false,
+      "tokens": 5415,
+      "latency_ms": 51059
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 5806,
+      "latency_ms": 27440
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2413,
+      "latency_ms": 7516
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H08",
+    "suite": "REGRESSION_8",
+    "risk_type": "CROSS_DOCUMENT_BUSINESS",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 3607,
+      "latency_ms": 28939
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 3504,
+      "latency_ms": 16556
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 3799,
+      "latency_ms": 17920
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  },
+  {
+    "task_id": "RET-H09",
+    "suite": "HOLDOUT_2",
+    "risk_type": "TROUBLESHOOTING",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": false,
+      "tokens": 5866,
+      "latency_ms": 59138
+    },
+    "B": {
+      "status": "NEED_CLARIFICATION",
+      "semantic_passed": false,
+      "tokens": 2157,
+      "latency_ms": 7738
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": false,
+      "fallback": true,
+      "final_model": "deepseek-v4-pro",
+      "tokens": 7950,
+      "latency_ms": 57311
+    },
+    "status_matches_A": false,
+    "known_defect": true
+  },
+  {
+    "task_id": "RET-H10",
+    "suite": "HOLDOUT_2",
+    "risk_type": "CROSS_DOCUMENT_BUSINESS",
+    "p0": false,
+    "A": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 3644,
+      "latency_ms": 29436
+    },
+    "B": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "tokens": 3087,
+      "latency_ms": 13102
+    },
+    "C": {
+      "status": "ANSWERED",
+      "semantic_passed": true,
+      "fallback": false,
+      "final_model": "deepseek-v4-flash",
+      "tokens": 2494,
+      "latency_ms": 9423
+    },
+    "status_matches_A": true,
+    "known_defect": false
+  }
+]

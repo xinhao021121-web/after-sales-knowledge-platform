@@ -1,0 +1,242 @@
+{
+  "task_id": "POC-R03",
+  "core_task_id": "CORE-R3",
+  "question_hash": "4b5991283df7521ba78a5cf889f2886ea160c46ba62bb86674d672099b4ff198",
+  "question_length": 16,
+  "question_summary": {
+    "original": "AirPods 拆封了还能退吗？",
+    "rewrites": [
+      "第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？",
+      "Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？"
+    ]
+  },
+  "answer_status": "ANSWERED",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 2,
+  "covered_source_count": 2,
+  "covered_source_ids": [
+    "DOC-RETURN-V1",
+    "DOC-CHANNEL-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods 拆封了还能退吗？",
+      "第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？",
+      "Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？"
+    ],
+    "internal_candidate_pool_size": 12,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "4dcc2838-0de3-4cf7-8847-3066b63a420e",
+      "provider_request_id": "c23a638e-6359-4dbc-9fe3-f6467b9e11a5",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [
+    {
+      "citation_id": "EVD-b96986c8-3291-4994-925c-22abb7ddc54e",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+      "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+      "score": 0.58797586,
+      "supported_claims": [
+        "第三方平台的退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，同时不得排除消费者依法享有的权利。",
+        "未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "DIFY_MARKER"
+    },
+    {
+      "citation_id": "EVD-b1a33913-9ad5-4842-8360-69d88912fd06",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-RETURN-V1",
+        "version": "1.0.0",
+        "title": "AirPods 退货与退款判断",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06"
+      },
+      "kb_id": "KB-DOC-RETURN-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "score": 0.66568446,
+      "supported_claims": [
+        "Apple Store 在线商店符合条件时可在交付后 14 日内申请退货。",
+        "这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.6745218,
+      "supported_claims": [
+        "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "answer_goals": [
+    {
+      "index": "一",
+      "title": "目标一：第三方平台购买 AirPods 拆封退货",
+      "content": "判断：已拆封且无质量问题，能否退货由该第三方平台、店铺或经销商规则决定；正文未给出“3天内拆封无质量问题即可退”的统一结论，也不能仅凭 Apple 政策判断。 下一步：提供该笔订单对应的第三方平台和店铺名称，进入该平台订单售后入口核验“已拆封无质量问题”是否在可退范围；不承诺可退、免费维修或换新。 依据：[3]",
+      "evidence_supported": true
+    },
+    {
+      "index": "二",
+      "title": "目标二：Apple Store 在线商店购买 AirPods 拆封退货",
+      "content": "判断：Apple Store 在线商店符合条件时可在交付后14日内申请退货；当前3天在14日窗口内，但“已拆封试戴”是否满足该渠道完整退货条件，正文未明确覆盖，需结合官方订单页或退货政策核验。 下一步：进入 Apple Store 在线商店订单售后入口提交退货申请，或核对官网14日退货政策中的商品状态要求；不承诺一定可退。 依据：[2] 不承诺免费维修或换新。",
+      "evidence_supported": true
+    }
+  ],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1533,
+  "completion_tokens": 2771,
+  "total_tokens": 4304,
+  "provider_latency_ms": 31143,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "c23a638e-6359-4dbc-9fe3-f6467b9e11a5",
+  "bff_request_id": "4dcc2838-0de3-4cf7-8847-3066b63a420e",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-RETURN-V1",
+        "chunk_id": "CHUNK-RETURN-LEGAL-01"
+      },
+      {
+        "doc_id": "DOC-RETURN-V1",
+        "chunk_id": "CHUNK-RETURN-APPLE-01"
+      },
+      {
+        "doc_id": "DOC-CHANNEL-V1",
+        "chunk_id": "CHUNK-CHANNEL-CHECK-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.6745218,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "score": 0.66568446,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+        "score": 0.58797586,
+        "claim_support_count": 2
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "AirPods 拆封了还能退吗？",
+        "第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？",
+        "Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？"
+      ],
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3,
+      "candidate_document_count": 5,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "判断：已拆封且无质量问题，能否退货由该第三方平台、店铺或经销商规则决定；正文未给出“3天内拆封无质量问题即可退”的统一结论，也不能仅凭 Apple 政策判断。 判断：Apple Store 在线商店符合条件时可在交付后14日内申请退货；当前3天在14日窗口内，但“已拆封试戴”是否满足该渠道完整退货条件，正文未明确覆盖，需结合官方订单页或退货政策核验。 下一步：提供该笔订单对应的第三方平台和店铺名称，进入该平台订单售后入口核验“已拆封无质量问题”是否在可退范围；不承诺可退、免费维修或换新；进入 Apple Store 在线商店订单售后入口提交退货申请，或核对官网14日退货政策中的商品状态要求；不承诺一定可退。",
+    "answer_goals": [
+      {
+        "index": "一",
+        "title": "目标一：第三方平台购买 AirPods 拆封退货",
+        "content": "判断：已拆封且无质量问题，能否退货由该第三方平台、店铺或经销商规则决定；正文未给出“3天内拆封无质量问题即可退”的统一结论，也不能仅凭 Apple 政策判断。 下一步：提供该笔订单对应的第三方平台和店铺名称，进入该平台订单售后入口核验“已拆封无质量问题”是否在可退范围；不承诺可退、免费维修或换新。 依据：[3]",
+        "evidence_supported": true
+      },
+      {
+        "index": "二",
+        "title": "目标二：Apple Store 在线商店购买 AirPods 拆封退货",
+        "content": "判断：Apple Store 在线商店符合条件时可在交付后14日内申请退货；当前3天在14日窗口内，但“已拆封试戴”是否满足该渠道完整退货条件，正文未明确覆盖，需结合官方订单页或退货政策核验。 下一步：进入 Apple Store 在线商店订单售后入口提交退货申请，或核对官网14日退货政策中的商品状态要求；不承诺一定可退。 依据：[2] 不承诺免费维修或换新。",
+        "evidence_supported": true
+      }
+    ],
+    "suggested_action": "提供该笔订单对应的第三方平台和店铺名称，进入该平台订单售后入口核验“已拆封无质量问题”是否在可退范围；不承诺可退、免费维修或换新；进入 Apple Store 在线商店订单售后入口提交退货申请，或核对官网14日退货政策中的商品状态要求；不承诺一定可退。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 3,
+      "multi_objective_passed": true,
+      "unsupported_count": 0
+    }
+  }
+}

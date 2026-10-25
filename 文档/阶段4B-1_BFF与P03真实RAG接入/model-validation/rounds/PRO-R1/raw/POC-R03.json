@@ -1,0 +1,131 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-R03",
+  "core_task_id": "CORE-R3",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 17547,
+  "request": {
+    "question": "原始问题：AirPods 拆封了还能退吗？\n客户改写：第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？；Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-R03",
+    "knowledge_item_id": "KI-CORE-R3",
+    "product_model": "AirPods Pro 3",
+    "channel": "需区分第三方平台与 Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "channel": "需区分第三方平台与 Apple Store 在线商店",
+      "received_at": "3 天前",
+      "opened": true,
+      "quality_issue": false
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "需区分第三方平台与 Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "请提供订单截图、购买渠道名称、商品页面退货规则截图或链接；第三方平台购买：在订单页走“申请售后/退款”入口，查看系统判定；联系卖家或平台客服确认“拆封但配件齐全、无质量问题”是否可退。",
+    "business_conditions": [
+      "购买渠道：第三方平台还是 Apple Store 在线商店；第三方平台需区分自营、官方旗舰店或普通第三方店铺",
+      "拆封及使用情况：仅拆封试戴，还是已激活、已连接设备、已使用较长时间",
+      "配件与包装：配件齐全、包装是否完好",
+      "购买时间：是否在渠道公示的退货/无理由退货期限内，例如第三方平台 3 天内、Apple 官网 14 天内"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "216db93e-88a1-4e9f-aff2-0f8d8fbaf601",
+    "provider_trace_id": "216db93e-88a1-4e9f-aff2-0f8d8fbaf601",
+    "provider_called": true,
+    "timing_ms": 17541,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 418,
+      "completion_tokens": 1169,
+      "total_tokens": 1587,
+      "provider_latency_ms": 15348,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "NEED_CLARIFICATION",
+      "citation_support_passed": false,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.5673945667209448,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.5468302957868775,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.5333359185411091,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "ae40d013-4091-469d-ba67-2bbb7433c346",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-R03",
+      "knowledge_item_id": "KI-CORE-R3"
+    },
+    "audit_event_id": "58b7d73a-284b-4d68-abb2-893154fd3736"
+  }
+}

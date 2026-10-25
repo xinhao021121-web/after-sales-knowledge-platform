@@ -1,0 +1,130 @@
+{
+  "task_id": "POC-K02",
+  "core_task_id": "CORE-K2",
+  "question_hash": "9d2ecd20586cd0f8b21eaae6bfef8f0aac42e3fb1a51fae02e640ff0d7ee4510",
+  "question_length": 26,
+  "question_summary": {
+    "original": "买了 AppleCare+ 使用两年后能直接换新吗？",
+    "rewrites": [
+      "AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？",
+      "保障快到期了，能不能现在要求直接换一套？"
+    ]
+  },
+  "answer_status": "NEED_CLARIFICATION",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-WARRANTY-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "买了 AppleCare+ 使用两年后能直接换新吗？",
+      "AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？",
+      "保障快到期了，能不能现在要求直接换一套？"
+    ],
+    "internal_candidate_pool_size": 12,
+    "displayed_top_k": 3,
+    "candidate_document_count": 4,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "798dd018-8fb0-4c5b-b562-3c596cdfbe43",
+      "provider_request_id": "7f1711ce-a67b-4c38-b77a-6bd591d689a9",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": false,
+  "citations": [],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 820,
+  "completion_tokens": 2475,
+  "total_tokens": 3295,
+  "provider_latency_ms": 29049,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "7f1711ce-a67b-4c38-b77a-6bd591d689a9",
+  "bff_request_id": "798dd018-8fb0-4c5b-b562-3c596cdfbe43",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-LIMITED-01"
+      },
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+        "score": 0.7490586,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.7249712,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.64239514,
+        "claim_support_count": 0
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "买了 AppleCare+ 使用两年后能直接换新吗？",
+        "AirPods Pro 3 有 AppleCare+，满两年是不是无条件换新？",
+        "保障快到期了，能不能现在要求直接换一套？"
+      ],
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3,
+      "candidate_document_count": 4,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "请按以下步骤补充信息，以便进一步判断；提供 AppleCare+ 购买凭证或合同编号。",
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 0
+    }
+  }
+}

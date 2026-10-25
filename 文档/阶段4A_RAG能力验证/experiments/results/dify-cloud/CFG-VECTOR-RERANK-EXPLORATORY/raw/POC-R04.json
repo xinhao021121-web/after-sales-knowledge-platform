@@ -1,0 +1,78 @@
+{
+  "http_status": 200,
+  "elapsed_ms": 27698,
+  "response": {
+    "event": "message",
+    "task_id": "e12969d8-e208-4e94-b081-027b8f5acb70",
+    "id": "41762084-756c-4748-b2d3-b03f3442017b",
+    "message_id": "41762084-756c-4748-b2d3-b03f3442017b",
+    "conversation_id": "dfe9e88a-3ad1-44c5-a2e1-74971d540b0f",
+    "mode": "advanced-chat",
+    "answer": "<think>\n<!--dify-deepseek-reasoning-->我们需要回答用户。需要仅依据给定上下文回答；上下文不足明确说明，不得猜测。需要涉及具体规则、条件或操作时标注引用。用户原始问题：AirPods Pro 长时间单耳佩戴后另一只不响怎么办？客户改写：右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？；一只耳机有声音另一只没声音，要先检查什么？已知上下文：{\"product\":\"AirPods Pro 3\",\"symptom\":\"单侧无声\",\"volume_balance\":\"未知\",\"cleaning\":\"未检查\",\"reset\":\"未尝试\"} 需要给出条件、引用与下一步动作；知识不足时明确追问或拒答。\n\n我们需要根据提供的知识：CHUNK-FAQ-CONNECT-01 单侧无声与连接排查。内容：单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。\nAirPods Pro 3 售后 FAQ\n\n我们需要回答中文。用户问：长时间单耳佩戴后另一只不响怎么办？右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？一只耳机有声音另一只没声音，要先检查什么？\n\n我们需要引用。上下文给出 product AirPods Pro 3, symptom 单侧无声, volume_balance 未知, cleaning 未检查, reset 未尝试。需要给条件、引用与下一步动作；知识不足时明确追问或拒答。\n\n我们不能直接说不是长期单耳佩戴坏了？知识中有“不得直接把原因归为单耳佩戴”。可以说：根据已知信息，不应直接把原因归为长期单耳佩戴。然后第一步：把两只耳机放回充电盒并合盖至少10秒 [citation:CHUNK-FAQ-CONNECT-01]。检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合 [citation:CHUNK-FAQ-CONNECT-01]。仍未恢复时，可在设备中忽略旧配对并重新配对 [citation:CHUNK-FAQ-CONNECT-01]。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测 [citation:CHUNK-FAQ-CONNECT-01]。不得承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。\n\n用户询问“要先检查什么？” 我们可列出优先级。需要注意用户给的上下文 volume_balance 未知、cleaning 未检查、reset 未尝试，所以我们应该说明这些项目尚未确认，需要先按步骤检查。可能还需追问：设备声道平衡是否居中？耳塞/网罩是否清洁？是否已重置？这些知识不足。但我们有标准排查步骤。可以给出下一步动作。\n\n需要给出条件、引用与下一步动作。比如：\n\n条件判断：在“单侧无声”场景下，如果尚未完成基础排查，不能直接判断为长期单耳佩戴导致损坏，也不能承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。\n\n下一步动作：\n1. 将左右耳机都放回充电盒，合盖等待至少10秒后取出重连 [citation:...]。\n2. 检查左耳耳塞/网罩是否有耳垢或异物堵塞；检查设备音频声道平衡是否居中；确认佩戴贴合 [citation:...]。\n3. 若仍无声，在蓝牙设置中忽略旧配对，重新配对 [citation:...]。\n4. 若完成上述重置/清洁后仍只有一侧持续无声音，才建议转售后检测 [citation:...]。\n\n可能还要说：目前上下文未提供音量平衡、清洁、重置状态，因此无法进一步判断是否因长期单耳佩戴造成；请先完成上述排查，并反馈这些状态。这样可以。\n\n需要确保引用使用 [citation:序号]。只有一个知识块编号 CHUNK-FAQ-CONNECT-01，我们可标注 [citation:CHUNK-FAQ-CONNECT-01]。格式要求：具体规则、条件或操作时在对应结论后用 [citation:序号] 标注引用来源。这个序号可能是 CHUNK-FAQ-CONNECT-01，可以使用 [citation:CHUNK-FAQ-CONNECT-01]。不要编造数字。可能最好每一条都标注。\n\n我们需要考虑是否要提到“不得直接把原因归为单耳佩戴”这一点。是的。用户问是否长期单耳佩戴坏了，我们需说不能直接把原因归为单耳佩戴 [citation]。也要不得承诺换新 [citation]。\n\n可能还需说“AirPods Pro 3”。已知产品是 AirPods Pro 3。我们可以开头：关于 AirPods Pro 3 单侧无声（左耳无声）的问题，根据现有售后排查规则，先执行基础排查，不要先归因为长期单耳佩戴损坏。\n\n需要判断是否需要拒绝？知识不足时明确说明。用户上下文不足：volume_balance未知，cleaning未检查，reset未尝试，因此不能判断原因。我们可以明确说这些信息不足，但可以给出标准下一步。不拒答。\n\n需要确保不提供额外猜测如硬件故障等。我们引用标准。\n\n可能需注意用户说“右耳一直戴，左耳放回盒子很久，现在左耳没声音”。我们可以说，这未必是长期单耳佩戴导致，先按单侧无声排查。因为“不得直接把原因归为单耳佩戴”是规则。\n\n我们可输出：\n\n根据已知上下文，还存在未确认项：声道平衡未知、清洁未检查、重置未尝试，因此不能直接判断“长期单耳佩戴坏了”。对于 AirPods Pro 3 单侧无声，先按以下步骤排查：\n\n1. 将两只耳机都放入充电盒，合盖至少10秒后取出重新连接 [citation:CHUNK-FAQ-CONNECT-01]。\n2. 检查左侧耳塞/网罩是否堵塞；检查设备的声道平衡（左/右）是否居中；确认左耳佩戴贴合 [citation:CHUNK-FAQ-CONNECT-01]。\n3. 如果仍无声，在蓝牙设置中忽略旧配对，然后重新配对 [citation:CHUNK-FAQ-CONNECT-01]。\n4. 只有在一侧持续无声音，或完成重置和清洁后仍反复异常时，才转售后检测 [citation:CHUNK-FAQ-CONNECT-01]。当前不要直接归因为单耳佩戴，也不要承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。\n\n若你已检查声道平衡、清洁、重置状态，请补充结果用于进一步判断。\n\n这样应该符合。需要确保引用标注在对应结论后。可能第4句“当前不要直接归因为单耳佩戴，也不要承诺换新”引用。可以。\n\n需要问：用户问题有点多。可能需要“一只耳机有声音另一只没声音，要先检查什么？”我们已回答。\n\n我们还需要注意，知识块说“单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。” 这是第一步/检查。我们列出。\n\n是否需要提到“忽略旧配对并重新配对”在未恢复时。是的。\n\n可能需要说明“重置和清洁”在规则中提到“完成重置和清洁后仍反复异常”，但具体重置未尝试。上下文 reset 未尝试。我们可提示如仍无效需尝试重置。但规则中没有给出具体重置方法，只有“完成重置和清洁后仍反复异常才转售后”。我们不能猜测重置步骤。可以说“若仍未恢复，可忽略旧配对并重新配对；若你提到的‘重置’尚未尝试，按规则需要完成重置/清洁后仍异常才转售后”。但我们不知道具体重置方法，不能提供。所以可以说“重置”涉及具体操作，当前上下文未提供，但规则要求完成重置和清洁后仍反复异常才转售后 [citation]。如果用户需要具体重置步骤，我们知识不足，需说明无法提供。但用户没有问重置步骤，只需下一步。\n\n需要小心：规则说“只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测”。这意味着转售后的条件。我们可以明确。\n\n可能输出包含：“请勿直接判定为长期单耳佩戴导致；该结论在规则中被明确禁止 [citation:CHUNK-FAQ-CONNECT-01]。” 这样语气也许。\n\n需要确保不要用“不得直接把原因归为单耳佩戴，也不得承诺换新”作为引用。我们可以说“目前不能直接判断为长期单耳佩戴导致，也不能承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。”\n\n需要给结构：条件、引用与下一步动作。可以明确分块。\n\n大致最终回答：\n\n条件：\n- 当前信息：单侧无声；声道平衡未知、清洁未检查、重置未尝试。\n- 因此不能直接判断为“长期单耳佩戴坏了”，也不能承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。\n\n下一步动作（按顺序）：\n1. 将两只 AirPods Pro 3 都放回充电盒，合盖至少 10 秒后再取出连接 [citation:CHUNK-FAQ-CONNECT-01]。\n2. 检查左耳耳塞/网罩是否堵塞、设备声道平衡是否居中、佩戴是否贴合 [citation:CHUNK-FAQ-CONNECT-01]。\n3. 未恢复时，在设备蓝牙中忽略旧配对并重新配对 [citation:CHUNK-FAQ-CONNECT-01]。\n4. 如果只有一侧持续无声音，或完成重置和清洁后仍反复异常，再转售后检测 [citation:CHUNK-FAQ-CONNECT-01]。\n\n如需继续判断，请补充：声道平衡设置、耳塞/网罩清洁状态、是否已重新配对/重置。\n\n这样即可。\n\n需要看用户要求“知识不足时明确说明；知识不足时明确追问或拒答。”我们补充了需要追问。还好。\n\n注意：不能提供具体操作如“重置”方法，因为知识里没有。我们已说完成重置和清洁，但没有给步骤，这OK。或许可以在追问里提到重置状态，而不是提供具体方法。\n\n需要确保没有猜测 AirPods Pro 3 之外的产品信息。OK。\n\n最终回答需要简洁但全面。\n</think>根据已知信息，目前**不能直接判断为“长期单耳佩戴坏了”**，也不能承诺换新 [citation:CHUNK-FAQ-CONNECT-01]。  \n当前存在未确认项：**声道平衡未知、清洁未检查、重置未尝试**，所以先按单侧无声标准排查。\n\n### 下一步动作（按顺序）\n\n1. **重新放回充电盒**  \n   将两只耳机都放回充电盒，合盖至少 **10 秒**后再取出连接 [citation:CHUNK-FAQ-CONNECT-01]。\n\n2. **检查基础项**  \n   检查左耳耳塞/网罩是否堵塞，设备声道平衡是否居中，佩戴是否贴合 [citation:CHUNK-FAQ-CONNECT-01]。\n\n3. **仍未恢复时重新配对**  \n   在设备蓝牙设置中**忽略旧配对**，然后重新配对 [citation:CHUNK-FAQ-CONNECT-01]。\n\n4. **什么情况才转售后**  \n   只有一侧持续无声音，或完成重置和清洁后仍反复异常，才建议转售后检测 [citation:CHUNK-FAQ-CONNECT-01]。\n\n如需继续判断，请补充：  \n- 设备声道平衡是否检查过？  \n- 耳塞/网罩是否已清洁？  \n- 是否已尝试重新配对或重置？",
+    "metadata": {
+      "annotation_reply": null,
+      "retriever_resources": [
+        {
+          "position": 1,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "data_source_type": "upload_file",
+          "segment_id": "43707ffe-2c93-41de-ac36-0e2dca6baca0",
+          "retriever_from": "workflow",
+          "score": 0.74905205,
+          "hit_count": 4,
+          "word_count": 159,
+          "segment_position": 5,
+          "index_node_hash": "a91600c90b414bfc7046772b36b808149096ad17ab0b5ad89ce1f301cbc23cac",
+          "content": "CHUNK-FAQ-CONNECT-01 单侧无声与连接排查\n单侧无声时，先把两只耳机放回充电盒并合盖至少 10 秒；检查耳塞或网罩是否堵塞、设备声道平衡和佩戴贴合。仍未恢复时，可在设备中忽略旧配对并重新配对。只有一侧持续无声音，或完成重置和清洁后仍反复异常，才转售后检测；不得直接把原因归为单耳佩戴，也不得承诺换新。",
+          "page": null,
+          "doc_metadata": null,
+          "title": null,
+          "files": null,
+          "summary": null
+        },
+        {
+          "position": 2,
+          "dataset_id": "0d5a11ce-c017-4376-8099-d8e083243a7d",
+          "dataset_name": "CANDIDATE",
+          "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+          "document_name": "01_售后FAQ.md",
+          "data_source_type": "upload_file",
+          "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+          "retriever_from": "workflow",
+          "score": 0.6358861,
+          "hit_count": 23,
+          "word_count": 20,
+          "segment_position": 2,
+          "index_node_hash": "91d665b9f8cec7c530db3e1c347a9c510d469d751c912276759deab4c3d781cc",
+          "content": "AirPods Pro 3 售后 FAQ",
+          "page": null,
+          "doc_metadata": null,
+          "title": null,
+          "files": null,
+          "summary": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 361,
+        "prompt_unit_price": "0",
+        "prompt_price_unit": "0",
+        "prompt_price": "0",
+        "completion_tokens": 2540,
+        "completion_unit_price": "0",
+        "completion_price_unit": "0",
+        "completion_price": "0",
+        "total_tokens": 2901,
+        "total_price": "0",
+        "currency": "USD",
+        "latency": 26.477,
+        "time_to_first_token": 3.031,
+        "time_to_generate": 24.136
+      },
+      "reasoning": {}
+    },
+    "created_at": 1792832042
+  }
+}

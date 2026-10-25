@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业级 RAG 知识库平台 PRD V1.3 全量逻辑复检</title>
+  <style>
+    :root{color-scheme:light;--ink:#172033;--muted:#64748b;--line:#dbe3ef;--bg:#f5f7fb;--card:#fff;--block:#b42318;--high:#c2410c;--medium:#a16207;--low:#2563eb;--accent:#4338ca;--ok:#15803d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:14px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
+    header,main,footer{width:min(1180px,calc(100% - 32px));margin:auto}
+    header{padding:48px 0 28px}
+    h1{margin:0 0 8px;font-size:clamp(28px,4vw,44px);line-height:1.18}
+    h2{margin:0 0 16px;font-size:22px}
+    h3{margin:0 0 10px;font-size:17px}
+    p{margin:8px 0}
+    .muted{color:var(--muted)}
+    .eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    section{margin:0 0 22px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 8px 28px rgba(30,41,59,.05)}
+    .verdict{border-left:7px solid var(--ok);background:linear-gradient(135deg,#fff,#f0fdf4)}
+    .verdict h2{color:var(--ok)}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+    .stat{padding:16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .stat strong{display:block;font-size:28px;line-height:1.2}
+    .stat span{color:var(--muted)}
+    .risk-scale{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0 24px}
+    .risk-card,.blocker-summary{padding:16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .risk-card h3{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+    .blocker-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .blocker-summary{border-left:4px solid var(--ok)}
+    .blocker-summary strong{display:block;margin-bottom:6px;color:var(--ok)}
+    .table-wrap{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;min-width:760px}
+    th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{background:#f8fafc;white-space:nowrap}
+    .badge{display:inline-block;padding:2px 9px;border-radius:999px;color:#fff;font-size:12px;font-weight:800;white-space:nowrap}
+    .block{background:var(--block)}.high{background:var(--high)}.medium{background:var(--medium)}.low{background:var(--low)}.ok{background:var(--ok)}
+    article{margin-top:16px;padding:20px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    article.medium-risk{border-left:5px solid var(--medium)}
+    .meta{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 14px}
+    .tag{padding:2px 8px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:12px;font-weight:700}
+    dl{display:grid;grid-template-columns:132px minmax(0,1fr);gap:7px 14px;margin:12px 0 0}
+    dt{font-weight:800;color:#334155}dd{margin:0}
+    code{padding:2px 5px;border-radius:5px;background:#eef2f7}
+    ol,ul{padding-left:22px}
+    .callout{padding:14px 16px;border-radius:10px;background:#fff8e8;border:1px solid #f6d995}
+    .closed{padding:12px 14px;border-left:4px solid var(--ok);background:#f0fdf4;border-radius:8px;margin:10px 0}
+    .watermark-layer{position:fixed;inset:0;z-index:10;pointer-events:none;overflow:hidden;color:var(--accent)}
+    .watermark{position:absolute;padding:7px 15px;border:2.5px solid currentColor;border-radius:999px;font-size:24px;font-weight:900;letter-spacing:.08em;white-space:nowrap;opacity:.12;transform:rotate(-18deg)}
+    .wm-1{top:12%;left:4%}.wm-2{right:7%;bottom:10%}
+    .side-nav{position:fixed;top:50%;left:24px;z-index:9;width:168px;padding:8px 0;border-left:1px solid var(--line);transform:translateY(-50%)}
+    .side-nav strong{display:block;padding:0 12px 8px 14px;color:var(--muted);font-size:12px;letter-spacing:.12em}
+    .side-nav a{display:block;padding:7px 12px 7px 14px;border-left:2px solid transparent;color:var(--muted);text-decoration:none}
+    .side-nav a:hover{border-left-color:var(--accent);color:var(--accent)}
+    section[id]{scroll-margin-top:24px}
+    @media(min-width:981px){header,main,footer{width:min(1180px,calc(100% - 260px));margin-left:clamp(220px,calc((100% - 1180px)/2 + 100px),360px);margin-right:24px}}
+    @media(max-width:980px){.side-nav{display:none}header,main,footer{width:min(1180px,calc(100% - 32px));margin-left:auto;margin-right:auto}}
+    @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.risk-scale,.blocker-grid{grid-template-columns:1fr}section{padding:18px}dl{grid-template-columns:1fr;gap:0}dt{margin-top:9px}}
+    @media print{body{background:#fff}header,main,footer{width:100%;margin-left:auto;margin-right:auto}.side-nav{display:none}section,article{break-inside:avoid;box-shadow:none}}
+  </style>
+</head>
+<body>
+  <div class="watermark-layer" aria-hidden="true"><span class="watermark wm-1">@产品老兵杰哥</span><span class="watermark wm-2">@产品老兵杰哥</span></div>
+  <nav class="side-nav" aria-label="报告一级目录">
+    <strong>报告目录</strong>
+    <a href="#scope">检查范围</a>
+    <a href="#verdict">评审结论</a>
+    <a href="#risk-guide">风险说明</a>
+    <a href="#closed">问题关闭</a>
+    <a href="#summary">问题总览</a>
+    <a href="#details">问题详情</a>
+    <a href="#order">修改路线</a>
+    <a href="#decisions">产品拍板</a>
+    <a href="#impact">改全材料</a>
+    <a href="#coverage">覆盖说明</a>
+  </nav>
+  <header>
+    <p class="eyebrow">PRD Logic Check · V1.3</p>
+    <h1>企业级 RAG 知识库平台 PRD V1.3 全量逻辑复检</h1>
+    <p><strong>作者：@产品老兵杰哥（公众号）</strong></p>
+    <p class="muted">生成日期：2026-10-23 · 输入：导师 V1.2 报告、PRD V1.3、追踪矩阵 V1.3、状态总表 V1.3、GTW、异常与权限附录、V1.3 状态图</p>
+  </header>
+  <main>
+    <section id="scope">
+      <h2>检查范围</h2>
+      <p>已完整检查 30 条功能需求、12 条人工确认核心任务、24 条核心 GTW、32 条跨需求验收、7 个对象共 52 个自身状态、18 个跨对象事件、U1-U9、8 类角色、来源失效传播、CASE 关系、单 KB 发布模型和 7 页 Draw.io 状态图。</p>
+      <p class="muted">未覆盖：真实客服访谈、真实客户订单、真实部署合规、线上性能、模型与检索参数，以及 Draw.io 的 PNG 像素级视觉检查。当前环境未安装 draw.io CLI。</p>
+    </section>
+
+    <section id="verdict" class="verdict">
+      <h2>结论：可进入复审</h2>
+      <p>导师 V1.2 报告的发布模型、CASE 关系、来源失效入案、ESC 复发和文档收口问题均已关闭；当前没有新的阻断或高风险问题。剩余 2 个中风险属于后续评测和部署门禁，1 个低风险属于图形预览限制。</p>
+      <div class="stats">
+        <div class="stat"><strong>0</strong><span>阻断</span></div>
+        <div class="stat"><strong>0</strong><span>高风险</span></div>
+        <div class="stat"><strong>2</strong><span>中风险</span></div>
+        <div class="stat"><strong>3</strong><span>去重问题总数</span></div>
+      </div>
+    </section>
+
+    <section id="risk-guide">
+      <h2>风险等级怎么理解？</h2>
+      <p><strong>阻断</strong>表示核心流程无法唯一实现或可能产生不可恢复错误；本轮没有此类问题。</p>
+      <div class="risk-scale">
+        <div class="risk-card"><h3><span class="badge block">阻断</span></h3><p>核心发布、安全或闭环路径无法唯一实现。必须在复审前关闭。</p></div>
+        <div class="risk-card"><h3><span class="badge high">高风险</span></h3><p>主流程可定义，但可能导致越权、错误发布或严重安全后果。</p></div>
+        <div class="risk-card"><h3><span class="badge medium">中风险</span></h3><p>依赖后续人工复核或真实组织配置，不影响当前 PRD 的业务规则唯一性。</p></div>
+        <div class="risk-card"><h3><span class="badge low">低风险</span></h3><p>局部交付或预览限制，不影响需求、状态和验收的可执行性。</p></div>
+      </div>
+      <div class="blocker-grid">
+        <div class="blocker-summary"><strong>本轮无阻断问题</strong><p>首次发布、修复发布、来源失效入案、ESC 复发和受控回滚均有唯一路径。</p></div>
+        <div class="blocker-summary"><strong>本轮无高风险问题</strong><p>R2/R3 强制安全分支、权限分离和审计写入失败阻断均已保留。</p></div>
+      </div>
+      <div class="callout">
+        <strong>后续门禁</strong>
+        <p>进入首次 RAG 评测或真实发布前，必须完成 R3/渠道专项样本人工复核，并由客户确认数据保留、监控阈值和责任人。</p>
+      </div>
+    </section>
+
+    <section id="closed">
+      <h2>历史与本轮问题关闭记录</h2>
+      <div class="closed"><strong>V1.2-PRD-001 已关闭</strong>：P0 采用一 REL 一 KB 版本；唯一作用域加入 <code>knowledge_item_id</code>；业务域级批量快照列入 P1。</div>
+      <div class="closed"><strong>V1.2-PRD-002 已关闭</strong>：CASE 关联改为 0..N；EV-08 在无 CASE 时只推进 KB/REL/AUD；EV-11 关闭同一 KB 版本的全部满足条件 CASE。</div>
+      <div class="closed"><strong>V1.2-PRD-003 已关闭</strong>：新增 EV-18；已有未关闭 CASE 进入 FIXING，已关闭 CASE 进入 REOPENED，无 CASE 时新建 CASE_OPEN。</div>
+      <div class="closed"><strong>V1.2-PRD-004 已关闭</strong>：ESC_CLOSED/DISMISSED 为终态；复发创建新 ESC 并记录 <code>previous_esc_id</code>。</div>
+      <div class="closed"><strong>V1.3 额外发现 1 已关闭</strong>：发布门槛曾把关联 CASE 写成必需条件，现改为“若存在关联 CASE”；无 CASE 首次发布不再被拦截。</div>
+      <div class="closed"><strong>V1.3 额外发现 2 已关闭</strong>：FR-016、FR-017、FR-020 之间存在依赖环，现移除 FR-016 对下游知识版本和发布功能的循环依赖。</div>
+      <div class="closed"><strong>V1.3 事件恢复已补强</strong>：EV-03、EV-06、EV-07、EV-09、EV-15、EV-16 均补充明确失败保持、重试或人工告警路径。</div>
+    </section>
+
+    <section id="summary">
+      <h2>问题总览</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>编号</th><th>风险</th><th>痛苦类型</th><th>结论状态</th><th>问题摘要</th><th>主要位置</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-101">PRD-101</a></td><td><span class="badge medium">中</span></td><td>验证依赖</td><td>潜在风险</td><td>R3/渠道专项样本仍需人工复核</td><td>PRD 13.1；阶段 1B 验收</td></tr>
+            <tr><td><a href="#prd-102">PRD-102</a></td><td><span class="badge medium">中</span></td><td>部署条件</td><td>已知待决</td><td>真实保留期限、告警阈值和责任人尚未配置</td><td>PRD 8.2、13.4</td></tr>
+            <tr><td><a href="#prd-103">PRD-103</a></td><td><span class="badge low">低</span></td><td>交付限制</td><td>信息缺失</td><td>未生成 Draw.io PNG/SVG，不能做像素级检查</td><td>图表说明；V1.3 状态图</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="details">
+      <h2>问题详情</h2>
+      <article id="prd-101" class="medium-risk">
+        <h3>PRD-101 专项样本复核仍待完成</h3>
+        <div class="meta"><span class="badge medium">中风险</span><span class="tag">验证依赖</span><span class="tag">潜在风险</span></div>
+        <dl>
+          <dt>位置与证据</dt><dd>PRD 13.1 与阶段 1B 有条件验收记录明确：未复核 R3 和渠道专项样本不得进入首次正式 RAG 评测。</dd>
+          <dt>漏洞说明</dt><dd>若跳过复核，覆盖率和 GTW 通过可能掩盖安全或渠道判断盲区。</dd>
+          <dt>触发场景</dt><dd>12 条核心任务通过 → 未复核专项样本直接进入评测 → 不安全动作未被测试集发现。</dd>
+          <dt>影响范围</dt><dd>评测结论、安全升级、渠道判断和发布门槛。</dd>
+          <dt>待确认问题</dt><dd>无业务规则选择；由项目负责人完成专项样本人工复核。</dd>
+          <dt>最小修改建议</dt><dd>复核后升级样本版本，并将复核数量、责任人和日期写入评测准备记录。</dd>
+          <dt>关联修改</dt><dd>阶段 1B 样本表、来源清单、PRD 13.1、验收记录。</dd>
+        </dl>
+      </article>
+      <article id="prd-102" class="medium-risk">
+        <h3>PRD-102 真实部署配置待确认</h3>
+        <div class="meta"><span class="badge medium">中风险</span><span class="tag">部署条件</span><span class="tag">已知待决</span></div>
+        <dl>
+          <dt>位置与证据</dt><dd>PRD 8.2、13.4 要求数据保留期限、告警阈值和接收人在真实部署前确认。</dd>
+          <dt>漏洞说明</dt><dd>模拟项目不能虚构合规期限或运营阈值；缺少配置时只能保持阻塞，不能宣称上线就绪。</dd>
+          <dt>触发场景</dt><dd>准备真实部署 → 没有客户法务和运营签署 → 保留策略与告警责任无法验收。</dd>
+          <dt>影响范围</dt><dd>隐私、审计、监控、事故响应和上线合规。</dd>
+          <dt>待确认问题</dt><dd>客户法务、安全和运营负责人最终采用何种保留期限、告警阈值和值班责任。</dd>
+          <dt>最小修改建议</dt><dd>上线前签署部署配置清单；本文不新增虚构参数。</dd>
+          <dt>关联修改</dt><dd>PRD 8.2、13.4、验收记录和部署阶段文档。</dd>
+        </dl>
+      </article>
+      <article id="prd-103">
+        <h3>PRD-103 Draw.io 仅完成结构验证</h3>
+        <div class="meta"><span class="badge low">低风险</span><span class="tag">交付限制</span><span class="tag">信息缺失</span></div>
+        <dl>
+          <dt>位置与证据</dt><dd>图表说明记录当前环境未安装 draw.io CLI；本轮已检查 XML、节点 ID、边引用、geometry 和页面边界。</dd>
+          <dt>漏洞说明</dt><dd>结构有效不等于最终 PNG 的标签排版、重叠和连线视觉质量已确认。</dd>
+          <dt>触发场景</dt><dd>评审者打开 Draw.io → 可能出现长文本拥挤或连线交叉，但不影响业务状态定义。</dd>
+          <dt>影响范围</dt><dd>图形预览和沟通效率，不影响 PRD 规则唯一性。</dd>
+          <dt>待确认问题</dt><dd>无业务规则选择；需要具备 draw.io CLI 的环境导出 PNG/SVG。</dd>
+          <dt>最小修改建议</dt><dd>在可用环境执行 PNG 预览和视觉检查；若需微调，只改布局，不改已确认状态规则。</dd>
+          <dt>关联修改</dt><dd><code>diagrams/04_状态机_V1.3.drawio</code>、图表说明和验收记录。</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>发现问题后，产品经理怎么处理</h2>
+      <ol>
+        <li>先确认是否影响当前 PRD 的业务规则唯一性；本轮没有此类阻断。</li>
+        <li>把后续验证和部署依赖写入门禁，不用虚构数据提前放行。</li>
+        <li>每次修订后同步正文、矩阵、状态、GTW、权限、决策、验收和图表，再执行全量验证。</li>
+      </ol>
+    </section>
+
+    <section id="order">
+      <h2>第 1 步：先看修改路线</h2>
+      <p>当前 V1.3 已关闭发布与闭环阻断，剩余事项按风险门禁顺序推进。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>顺序</th><th>相关问题</th><th>这一轮要解决什么</th><th>为什么先做这一步</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><a href="#prd-101">PRD-101</a></td><td>完成 R3 与渠道专项样本人工复核</td><td>决定首次 RAG 评测是否具备有效安全样本</td></tr>
+            <tr><td>2</td><td><a href="#prd-102">PRD-102</a></td><td>确认真实组织的数据保留、告警与责任人</td><td>决定上线合规和运营门禁</td></tr>
+            <tr><td>3</td><td><a href="#prd-103">PRD-103</a></td><td>在可用环境导出并视觉检查状态图</td><td>提升评审沟通质量，不改变业务规则</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <strong>建议复审门槛</strong>
+        <p>当前 PRD 可进入复审；但首次 RAG 评测前必须关闭 PRD-101，真实上线前必须关闭 PRD-102。</p>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <h2>第 2 步：轮到该问题时，产品拍板</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>你要拍板的事</th><th>为什么现在必须定</th><th>定完要补进 PRD</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-101">PRD-101</a></td><td>专项样本是否完成人工复核并升级版本</td><td>决定评测集是否可用于安全验收</td><td>样本复核记录、评测准备门禁</td></tr>
+            <tr><td><a href="#prd-102">PRD-102</a></td><td>真实保留期限、告警阈值和责任人</td><td>决定上线合规和运营可用性</td><td>部署配置清单、监控责任表</td></tr>
+            <tr><td><a href="#prd-103">PRD-103</a></td><td>无需业务选择；确认可执行的图形导出环境</td><td>避免把 XML 结构通过误写成视觉验收通过</td><td>PNG/SVG 文件和视觉检查记录</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2>第 3 步：拍板后，把相关材料改全</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>相关问题</th><th>拿着什么结论去改</th><th>还要改哪些地方</th><th>怎样算改完</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#prd-101">PRD-101</a></td><td>专项样本人工确认结果</td><td>样本表、来源清单、评测记录、验收记录</td><td>所有 R3/渠道样本有确认状态、责任人和访问日期</td></tr>
+            <tr><td><a href="#prd-102">PRD-102</a></td><td>客户签署的部署配置</td><td>8.2、13.4、监控配置和上线清单</td><td>没有缺失阈值、接收人或保留责任</td></tr>
+            <tr><td><a href="#prd-103">PRD-103</a></td><td>状态图视觉检查结果</td><td>图表说明、PNG/SVG 和必要布局修正</td><td>7 页图无裁切、重叠和无效连线</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="coverage">
+      <h2>覆盖说明</h2>
+      <p>已通过：30 条需求均有业务来源、核心任务、对象、状态/事件、验收和错误码；12 条核心任务均有 GTW；U1-U9 均有拦截与恢复；52 个自身状态均有负责人和出口；EV-01 至 EV-18 均有目标对象、幂等键、审计与失败处理。</p>
+      <p>V1.3 关键不变量已核对：单 REL 单 KB、知识条目级唯一 ACTIVE、CASE 0..N、CASE_LINK 唯一关联、无 CASE 首次发布、一个 REL 关闭多个 CASE、EV-18 来源失效入案、ESC 终态不复活的唯一路径。依赖图已无环，当前文档间链接有效。</p>
+      <p class="muted">本报告不替代阶段 1B 尚未完成的人工样本复核，也不构成真实客户、真实审批链或真实业务结果的证明。</p>
+    </section>
+  </main>
+  <footer>企业级 RAG 知识库平台 PRD V1.3 全量逻辑复检 · 生成日期：2026-10-23</footer>
+</body>
+</html>

@@ -1,0 +1,1645 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="售后知识协作平台项目详情：面向一线客服与售后专员的 AI 辅助工作台。">
+  <title>售后知识协作平台｜项目详情</title>
+  <style>
+    :root {
+      --black: #08080a;
+      --paper: #f5f5f7;
+      --surface: #ffffff;
+      --ink: #1d1d1f;
+      --muted: #6e6e73;
+      --muted-dark: #b8b8bd;
+      --line: #d2d2d7;
+      --line-dark: #333336;
+      --blue: #0066cc;
+      --blue-focus: #0071e3;
+      --blue-soft: #e8f2ff;
+      --risk: #b93830;
+      --risk-soft: #fff0ee;
+      --success: #167b63;
+      --success-soft: #e8f5f1;
+      --display: "SF Pro Display", "Inter", "PingFang SC", "Microsoft YaHei UI", sans-serif;
+      --body: "SF Pro Text", "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --mono: "SFMono-Regular", "Cascadia Code", Consolas, monospace;
+      --content: 1240px;
+      --reading: 980px;
+      --pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 28px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--surface);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.55;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: .18em;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid var(--blue-focus);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--display);
+      letter-spacing: -.025em;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      transform: translateY(-180%);
+      padding: 10px 16px;
+      color: var(--black);
+      background: var(--surface);
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      transform: none;
+    }
+
+    .hero {
+      color: var(--surface);
+      background: var(--black);
+    }
+
+    .topbar,
+    .hero-grid,
+    .hero-bottom,
+    .snapshot-inner,
+    .page,
+    .footer-inner {
+      width: min(var(--content), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      min-height: 68px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 36px;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--surface);
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: var(--black);
+      background: var(--paper);
+      border-radius: 50%;
+      font: 700 11px/1 var(--mono);
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 1px;
+      color: var(--muted-dark);
+      font-size: 11px;
+      font-weight: 400;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+    }
+
+    .topnav a,
+    .back-link {
+      color: rgba(255, 255, 255, .7);
+      text-decoration: none;
+    }
+
+    .topnav a:hover,
+    .back-link:hover {
+      color: var(--surface);
+    }
+
+    .back-link {
+      justify-self: end;
+      padding: 9px 13px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: var(--pill);
+      font-size: 12px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .88fr) minmax(500px, 1.12fr);
+      gap: clamp(44px, 7vw, 96px);
+      align-items: center;
+      padding-block: clamp(72px, 9vw, 126px) clamp(48px, 6vw, 76px);
+    }
+
+    .status-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 24px;
+      color: #a8a8ae;
+      font: 500 11px/1.4 var(--mono);
+      letter-spacing: .025em;
+    }
+
+    .status-line::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: #4cd7a7;
+      border-radius: 50%;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      color: #f7f7f8;
+      font-size: clamp(52px, 6.5vw, 86px);
+      line-height: 1.02;
+      font-weight: 650;
+      letter-spacing: -.05em;
+    }
+
+    .hero-lede {
+      max-width: 660px;
+      margin-bottom: 28px;
+      color: #c3c3c8;
+      font-size: clamp(17px, 1.45vw, 20px);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 11px 20px;
+      color: var(--blue);
+      background: transparent;
+      border: 1px solid rgba(0, 102, 204, .4);
+      border-radius: var(--pill);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color .18s ease, transform .18s ease;
+    }
+
+    .button:hover {
+      background: var(--blue-soft);
+    }
+
+    .button:active {
+      transform: scale(.96);
+    }
+
+    .button.primary {
+      color: var(--surface);
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .button.primary:hover {
+      background: #005bb5;
+    }
+
+    .hero .button {
+      color: var(--surface);
+      border-color: rgba(255, 255, 255, .22);
+    }
+
+    .hero .button:hover {
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .hero .button.primary {
+      color: var(--black);
+      background: var(--surface);
+      border-color: var(--surface);
+    }
+
+    .hero-visual {
+      position: relative;
+      padding-top: 24px;
+    }
+
+    .hero-visual::before {
+      content: "PRODUCT EVIDENCE · P03";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #8d8d93;
+      font: 500 10px/1.4 var(--mono);
+      letter-spacing: .035em;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      border: 1px solid var(--line-dark);
+      border-radius: 18px;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .4);
+    }
+
+    .simulation-stamp {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      padding: 9px 12px;
+      color: var(--surface);
+      background: rgba(8, 8, 10, .9);
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 10px;
+      font: 500 10px/1.4 var(--mono);
+    }
+
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(250px, .8fr);
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .hero-result,
+    .hero-defect,
+    .hero-note {
+      min-height: 116px;
+      padding: 25px 28px 27px 0;
+      border-right: 1px solid var(--line-dark);
+    }
+
+    .hero-defect,
+    .hero-note {
+      padding-left: 28px;
+    }
+
+    .hero-note {
+      border-right: 0;
+    }
+
+    .hero-result strong,
+    .hero-defect strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--surface);
+      font-family: var(--display);
+      font-size: clamp(36px, 4vw, 52px);
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: -.04em;
+    }
+
+    .hero-result span,
+    .hero-defect span,
+    .hero-note {
+      color: #8f8f95;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .snapshot {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .snapshot-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr 1.25fr 1fr;
+    }
+
+    .snapshot-item {
+      padding: 24px 26px 26px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .snapshot-item + .snapshot-item {
+      padding-left: 26px;
+    }
+
+    .snapshot-item:last-child {
+      border-right: 0;
+    }
+
+    .snapshot-item span {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font: 500 10px/1.4 var(--mono);
+    }
+
+    .snapshot-item p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: clamp(40px, 6vw, 82px);
+      padding-block: 72px 96px;
+    }
+
+    .rail {
+      align-self: start;
+      position: sticky;
+      top: 28px;
+    }
+
+    .rail-label {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font: 500 10px/1.4 var(--mono);
+      letter-spacing: .035em;
+    }
+
+    .rail nav {
+      border-top: 1px solid var(--line);
+    }
+
+    .rail a {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      padding: 12px 0;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .rail a span {
+      color: #8a8a90;
+      font: 10px/1.75 var(--mono);
+    }
+
+    .rail a:hover,
+    .rail a.is-active {
+      color: var(--blue);
+    }
+
+    .rail-note {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .mobile-toc {
+      display: none;
+      margin-bottom: 28px;
+      padding: 14px 16px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .mobile-toc summary {
+      font-weight: 600;
+    }
+
+    .mobile-toc nav {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 18px;
+      margin-top: 12px;
+    }
+
+    .mobile-toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .section {
+      padding-bottom: 78px;
+      margin-bottom: 78px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 24px;
+    }
+
+    .section:first-of-type {
+      padding-top: 0;
+    }
+
+    .section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(190px, 290px);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section-label {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font: 500 10px/1.4 var(--mono);
+    }
+
+    .section h2 {
+      margin-bottom: 12px;
+      font-size: clamp(36px, 4.6vw, 56px);
+      line-height: 1.08;
+      font-weight: 650;
+    }
+
+    .section-deck {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section-side {
+      margin: 0;
+      padding-bottom: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .section-side strong {
+      color: var(--ink);
+    }
+
+    .prose {
+      max-width: 72ch;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(250px, .8fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .fact-list {
+      margin: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .fact-list div {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fact-list dt {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .fact-list dd {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .journey {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      margin: 32px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .journey-step {
+      min-height: 112px;
+      padding: 18px 16px 18px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .journey-step + .journey-step {
+      padding-left: 16px;
+    }
+
+    .journey-step:last-child {
+      border-right: 0;
+    }
+
+    .journey-step b {
+      display: block;
+      margin-bottom: 18px;
+      color: #8a8a90;
+      font: 500 10px/1 var(--mono);
+    }
+
+    .journey-step span {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .journey-step small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .claim {
+      margin: 28px 0 0;
+      padding: 18px 20px;
+      color: var(--ink);
+      background: var(--blue-soft);
+      border-left: 3px solid var(--blue);
+      font-size: 14px;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      margin: 28px 0 34px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .flow-step {
+      min-height: 116px;
+      padding: 18px 14px 18px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .flow-step + .flow-step {
+      padding-left: 14px;
+    }
+
+    .flow-step:last-child {
+      border-right: 0;
+    }
+
+    .flow-step b {
+      display: block;
+      margin-bottom: 14px;
+      color: #8a8a90;
+      font: 500 10px/1 var(--mono);
+    }
+
+    .flow-step span {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .flow-step small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    figure {
+      margin: 30px 0 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, .1);
+    }
+
+    figure img {
+      width: 100%;
+      background: #e9ebee;
+    }
+
+    figcaption {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      padding: 14px 18px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    figcaption strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    figcaption code {
+      align-self: center;
+      color: var(--muted);
+      font: 10px/1.4 var(--mono);
+      white-space: nowrap;
+    }
+
+    .warning {
+      margin: 24px 0;
+      padding: 19px 21px;
+      color: var(--ink);
+      background: var(--risk-soft);
+      border-left: 3px solid var(--risk);
+      font-size: 14px;
+    }
+
+    .warning strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: var(--display);
+      font-size: 18px;
+    }
+
+    .warning p {
+      margin: 0;
+    }
+
+    .decision-list {
+      margin: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .decision {
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr);
+      gap: 30px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .decision dt {
+      font-weight: 650;
+    }
+
+    .decision dd {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .decision dd strong {
+      color: var(--ink);
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-bottom: 28px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .result {
+      padding: 22px 20px 24px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .result + .result {
+      padding-left: 20px;
+    }
+
+    .result:last-child {
+      border-right: 0;
+    }
+
+    .result strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--display);
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: -.04em;
+    }
+
+    .result span {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 24px 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      color: var(--muted);
+      background: var(--paper);
+      font: 500 10px/1.4 var(--mono);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td.num {
+      white-space: nowrap;
+      font-family: var(--mono);
+    }
+
+    details {
+      margin-top: 18px;
+      padding: 15px 17px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    details p:last-child,
+    details ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .boundary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin: 28px 0;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .boundary {
+      padding: 24px;
+      background: var(--surface);
+    }
+
+    .boundary h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .boundary ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .source-row,
+    .end-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 24px;
+      font-size: 13px;
+    }
+
+    .end-actions {
+      align-items: center;
+      margin-top: 34px;
+    }
+
+    footer {
+      color: #b5b5ba;
+      background: var(--black);
+    }
+
+    .footer-inner {
+      padding: 28px 0 36px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 12px;
+    }
+
+    footer a {
+      color: #d2d2d7;
+    }
+
+    @media (max-width: 1020px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 54px;
+      }
+
+      .hero-visual {
+        max-width: 860px;
+      }
+
+      .snapshot-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .snapshot-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .snapshot-item:nth-child(n+3) {
+        border-top: 1px solid var(--line);
+      }
+
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .rail {
+        display: none;
+      }
+
+      .mobile-toc {
+        display: block;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      .hero-grid,
+      .hero-bottom,
+      .snapshot-inner,
+      .page,
+      .footer-inner {
+        width: min(100% - 28px, var(--content));
+      }
+
+      .topbar {
+        grid-template-columns: 1fr auto;
+      }
+
+      .topnav {
+        display: none;
+      }
+
+      .hero-grid {
+        padding-block: 58px 46px;
+      }
+
+      h1 {
+        font-size: clamp(48px, 14vw, 68px);
+      }
+
+      .hero-bottom {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-result,
+      .hero-defect,
+      .hero-note {
+        min-height: auto;
+        padding: 20px 0;
+        border-right: 0;
+        border-top: 1px solid var(--line-dark);
+      }
+
+      .hero-defect,
+      .hero-note {
+        padding-left: 0;
+      }
+
+      .snapshot-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .snapshot-item,
+      .snapshot-item + .snapshot-item {
+        padding: 17px 0;
+        border-right: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .snapshot-item:first-child {
+        border-top: 0;
+      }
+
+      .page {
+        padding-block: 48px 72px;
+      }
+
+      .section {
+        padding-bottom: 56px;
+        margin-bottom: 56px;
+      }
+
+      .section-head,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        gap: 16px;
+      }
+
+      .section-side {
+        padding-bottom: 0;
+      }
+
+      .journey {
+        grid-template-columns: 1fr;
+      }
+
+      .journey-step,
+      .journey-step + .journey-step {
+        min-height: auto;
+        padding: 16px 0;
+        border-right: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .journey-step:first-child {
+        border-top: 0;
+      }
+
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-step,
+      .flow-step + .flow-step {
+        min-height: auto;
+        padding: 15px 0;
+        border-right: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .flow-step:first-child {
+        border-top: 0;
+      }
+
+      .flow-step b {
+        margin-bottom: 7px;
+      }
+
+      figcaption {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .decision {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .result,
+      .result + .result {
+        padding: 17px 0;
+        border-right: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .result:first-child {
+        border-top: 0;
+      }
+
+      .boundary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .back-link {
+        padding: 8px 10px;
+        font-size: 11px;
+      }
+
+      .mobile-toc nav {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      body {
+        color: #111;
+        background: #fff;
+        font-size: 10pt;
+      }
+
+      .hero,
+      footer {
+        color: #111;
+        background: #fff;
+      }
+
+      .topnav,
+      .back-link,
+      .skip-link,
+      .button,
+      .rail,
+      .mobile-toc,
+      .hero-visual::before,
+      .simulation-stamp {
+        display: none !important;
+      }
+
+      .hero-grid,
+      .page,
+      .section-head,
+      .split {
+        display: block;
+      }
+
+      .hero-grid {
+        padding: 0 0 10mm;
+      }
+
+      .hero-bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        color: #111;
+        border-color: #bbb;
+      }
+
+      .hero-result strong,
+      .hero-defect strong {
+        color: #111;
+      }
+
+      .hero-result span,
+      .hero-defect span,
+      .hero-note,
+      .hero-lede,
+      .status-line {
+        color: #333;
+      }
+
+      .snapshot-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .page {
+        padding: 0;
+      }
+
+      .section,
+      .section-head,
+      figure,
+      .warning,
+      .decision,
+      .boundary,
+      details {
+        break-inside: avoid;
+      }
+
+      .section {
+        padding-bottom: 8mm;
+        margin-bottom: 8mm;
+      }
+
+      .section h2 {
+        font-size: 21pt;
+      }
+
+      figure {
+        box-shadow: none;
+      }
+
+      figure img {
+        max-height: 105mm;
+        object-fit: contain;
+        object-position: top;
+      }
+
+      table {
+        min-width: 0;
+      }
+
+      a {
+        color: #111;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="hero">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">LH</span>
+        <span>
+          李昕昊
+          <small>售后知识协作 · 项目详情</small>
+        </span>
+      </a>
+      <nav class="topnav" aria-label="项目章节">
+        <a href="#problem">问题</a>
+        <a href="#solution">方案</a>
+        <a href="#decisions">取舍</a>
+        <a href="#evidence">证据</a>
+        <a href="#boundary">边界</a>
+      </nav>
+      <a class="back-link" href="index.html">返回作品集</a>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <div class="status-line">模拟企业内部项目 / 内部学习原型 / 非生产系统</div>
+        <h1>让每一次售后建议，都能被验证。</h1>
+        <p class="hero-lede">
+          面向一线客服与售后专员的 AI 辅助工作台。补齐客户上下文，检索有效知识，生成有条件边界的建议，再由有权限的人确认发送。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://xinhao-after-sales.pages.dev/" target="_blank" rel="noopener noreferrer">打开交互原型</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/P03_after_sales.png" alt="P03 售后协作任务页面：上下文版本、知识证据、处理建议和人工确认">
+        <span class="simulation-stamp">模拟组织 · 模拟数据</span>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-result">
+        <strong>9/9</strong>
+        <span>正式核心任务检索到期望知识来源</span>
+      </div>
+      <div class="hero-defect">
+        <strong>1</strong>
+        <span>已公开的未修复检索缺陷</span>
+      </div>
+      <p class="hero-note">
+        9/9 表示 9 条核心任务均命中期望来源，不代表所有售后问题都能正确回答。项目未接入真实组织、客服系统和生产 SLA。
+      </p>
+    </div>
+  </header>
+
+  <section class="snapshot" aria-label="项目快照">
+    <div class="snapshot-inner">
+      <div class="snapshot-item">
+        <span>目标用户</span>
+        <p>一线客服、售后专员、知识运营、客服主管与 AI 评测人员。</p>
+      </div>
+      <div class="snapshot-item">
+        <span>我的职责</span>
+        <p>产品定义、流程与权限、原型、评测和上线前验收。</p>
+      </div>
+      <div class="snapshot-item">
+        <span>AI 的位置</span>
+        <p>基于有效知识生成建议，不负责风险判定、最终承诺和知识发布。</p>
+      </div>
+      <div class="snapshot-item">
+        <span>当前状态</span>
+        <p>内部学习原型；仍未达到真实企业生产条件。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="page">
+    <aside class="rail" aria-label="项目章节导航">
+      <p class="rail-label">项目阅读路径</p>
+      <nav>
+        <a href="#problem"><span>01</span>用户与问题</a>
+        <a href="#solution"><span>02</span>产品方案</a>
+        <a href="#decisions"><span>03</span>关键判断</a>
+        <a href="#evidence"><span>04</span>结果与证据</a>
+        <a href="#boundary"><span>05</span>缺陷与边界</a>
+      </nav>
+      <p class="rail-note">
+        项目使用模拟组织、角色和公开资料摘要。截图来自本项目原型，不代表真实企业生产界面。
+      </p>
+    </aside>
+
+    <main id="main">
+      <details class="mobile-toc">
+        <summary>本页目录</summary>
+        <nav aria-label="移动端项目章节">
+          <a href="#problem">用户与问题</a>
+          <a href="#solution">产品方案</a>
+          <a href="#decisions">关键判断</a>
+          <a href="#evidence">结果与证据</a>
+          <a href="#boundary">缺陷与边界</a>
+        </nav>
+      </details>
+
+      <section class="section" id="problem">
+        <div class="section-head">
+          <div>
+            <p class="section-label">01 / 用户与问题</p>
+            <h2>一次售后判断，需要哪些条件？</h2>
+            <p class="section-deck">渠道、时间、商品状态、证据和安全风险共同决定下一步。</p>
+          </div>
+          <p class="section-side">
+            <strong>项目性质</strong><br>
+            公开资料驱动的模拟企业内部项目，不是真实客户系统。
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="prose">
+            <p>
+              同一副耳机能否退货、保修、维修或换新，可能取决于销售渠道、签收日期、商品状态、故障表现、购买凭证和安全风险。客户通常无法一次提供完整事实，公开规则又会过期或冲突。
+            </p>
+            <p>
+              如果系统先给出一段看似确定的答案，再补来源，就会把安全、责任和知识治理问题留到最晚。因此产品先把“回答问题”拆成可验证的处理过程。
+            </p>
+          </div>
+          <dl class="fact-list">
+            <div><dt>需求样本</dt><dd>30 条公开问法，36 条结构化标注</dd></div>
+            <div><dt>核心任务</dt><dd>12 条经人工确认</dd></div>
+            <div><dt>不做什么</dt><dd>不伪造访谈，不做消费者端全自动客服</dd></div>
+          </dl>
+        </div>
+
+        <div class="journey" aria-label="售后咨询现状旅程">
+          <div class="journey-step"><b>01</b><span>诉求进入</span><small>客户只描述症状或情绪</small></div>
+          <div class="journey-step"><b>02</b><span>补齐信息</span><small>客服反复询问渠道、时间与凭证</small></div>
+          <div class="journey-step"><b>03</b><span>查找规则</span><small>文档分散，适用条件不一致</small></div>
+          <div class="journey-step"><b>04</b><span>形成判断</span><small>证据不足时不敢承诺或错误承诺</small></div>
+          <div class="journey-step"><b>05</b><span>没有沉淀</span><small>失败停在工单或群聊，无法修复知识</small></div>
+        </div>
+
+        <p class="claim">
+          产品定位：售后人员辅助工作台是主入口；知识治理与评测是支撑后台。价值发生在一次咨询被正确处理，而不是文档被上传。
+        </p>
+      </section>
+
+      <section class="section" id="solution">
+        <div class="section-head">
+          <div>
+            <p class="section-label">02 / 产品方案</p>
+            <h2>把证据放回一线任务现场。</h2>
+            <p class="section-deck">先补上下文，再判断条件、引用正文和确认发送。</p>
+          </div>
+          <p class="section-side">
+            <strong>主入口 P03</strong><br>
+            回答不可绕过上下文、证据、风险与承诺边界。
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="prose">
+            <p>
+              P03 把一次咨询做成单一任务上下文。上下文缺失时没有“直接发送”按钮；补齐后才进入判断和建议阶段。建议必须附带正文依据，主管可以确认，但不能编辑一线录入的上下文。
+            </p>
+            <p>
+              这样，“我为什么这样判断”“谁有权发送”和“客户当时提供了什么事实”都能在同一个页面复核。
+            </p>
+          </div>
+          <dl class="fact-list">
+            <div><dt>原型规模</dt><dd>13 页、8 类角色、15 条演示路径</dd></div>
+            <div><dt>系统入口</dt><dd>售后任务而非知识后台</dd></div>
+            <div><dt>结果约束</dt><dd>建议、证据、风险与审计同步变化</dd></div>
+          </dl>
+        </div>
+
+        <div class="flow" aria-label="核心处理流程">
+          <div class="flow-step"><b>01</b><span>客户诉求</span><small>咨询任务进入</small></div>
+          <div class="flow-step"><b>02</b><span>上下文快照</span><small>补齐并保留版本</small></div>
+          <div class="flow-step"><b>03</b><span>检索证据</span><small>有效来源与正文</small></div>
+          <div class="flow-step"><b>04</b><span>条件化建议</span><small>写清承诺边界</small></div>
+          <div class="flow-step"><b>05</b><span>人工确认</span><small>权限与责任链</small></div>
+          <div class="flow-step"><b>06</b><span>知识修复</span><small>案例 → 评测 → 发布</small></div>
+        </div>
+
+        <figure>
+          <img src="assets/P03_after_sales.png" alt="P03 售后协作任务页：上下文缺失时仍处于待确认状态" loading="lazy">
+          <figcaption>
+            <span><strong>上下文缺失时，不能直接发送。</strong> 页面把事实、证据和建议放在同一任务上下文中，确认动作由权限角色完成。</span>
+            <code>P03 · 售后协作任务</code>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="decisions">
+        <div class="section-head">
+          <div>
+            <p class="section-label">03 / 关键判断</p>
+            <h2>三类判断不能交给模型。</h2>
+            <p class="section-deck">安全、引用和责任边界由产品与规则控制，模型只负责在有效知识上生成建议。</p>
+          </div>
+          <p class="section-side">
+            <strong>真实 Dify 原始回答</strong><br>
+            首轮测试有 5/6 条没有把止损放在第一段。
+          </p>
+        </div>
+
+        <div class="warning">
+          <strong>高风险信号先停止，再判断售后路径</strong>
+          <p>冒烟、明火、鼓包、异常发热、进液后异常等情况先进入止损与升级流程；安全责任人单独关闭风险单。</p>
+        </div>
+
+        <dl class="decision-list">
+          <div class="decision">
+            <dt>风险判定</dt>
+            <dd><strong>交给确定性规则，不交给模型。</strong>因为模型漏掉止损时不会主动暴露错误；前置规则能把安全动作变成可测试的门禁。</dd>
+          </div>
+          <div class="decision">
+            <dt>回答依据</dt>
+            <dd><strong>每条事实性主张都需要有效正文支持。</strong>引用不足时降级为追问、拒答或转人工，而不是补一个无法核验的来源。</dd>
+          </div>
+          <div class="decision">
+            <dt>发送责任</dt>
+            <dd><strong>建议不等于客户答复。</strong>建议必须由有权限的人确认后才能发送，确保承诺、例外和沟通责任成立。</dd>
+          </div>
+          <div class="decision">
+            <dt>知识治理</dt>
+            <dd><strong>来源、知识版本、评测和发布分开管理。</strong>来源失效会阻断新引用和新发布，但不会覆盖历史审计记录。</dd>
+          </div>
+        </dl>
+
+        <figure>
+          <img src="assets/P05_risk_stop.png" alt="P05 风险升级单：停止使用并断开充电的前置止损页面" loading="lazy">
+          <figcaption>
+            <span><strong>风险单不因咨询被答复而自动关闭。</strong>止损、升级、复核和关闭责任被拆开记录，避免一次回复替代风险处置。</span>
+            <code>P05 · 风险升级单</code>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="evidence">
+        <div class="section-head">
+          <div>
+            <p class="section-label">04 / 结果与证据</p>
+            <h2>17 条正式任务如何验收？</h2>
+            <p class="section-deck">检索来源、安全、引用、回归和已公开缺陷分别验收。</p>
+          </div>
+          <p class="section-side">
+            <strong>结果口径</strong><br>
+            核心任务通过，不等于全部售后问题通过。
+          </p>
+        </div>
+
+        <div class="result-grid" aria-label="核心验收结果">
+          <div class="result">
+            <strong>9/9</strong>
+            <span>核心任务命中期望知识来源</span>
+          </div>
+          <div class="result">
+            <strong>0</strong>
+            <span>高风险与引用门禁最终漏项</span>
+          </div>
+          <div class="result">
+            <strong>1</strong>
+            <span>已知检索缺陷 RET-H09</span>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>验收项</th>
+                <th>结果</th>
+                <th>口径</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>核心来源命中</td><td class="num">9/9</td><td>正式核心任务的期望知识来源</td></tr>
+              <tr><td>高风险最终失败</td><td class="num">0</td><td>规则在模型调用前完成门禁</td></tr>
+              <tr><td>回答引用失败</td><td class="num">0</td><td>需要回答的事实性主张均有正文依据</td></tr>
+              <tr><td>既有回归</td><td class="num">8/8</td><td>固定回归样本的语义通过</td></tr>
+              <tr><td>保留样例</td><td class="num">1/2</td><td>RET-H09 仍未修复</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure>
+          <img src="assets/P10_real_evaluation.png" alt="P10 评测中心：正式任务、核心来源命中、安全门禁和引用结果" loading="lazy">
+          <figcaption>
+            <span><strong>质量不是一个总分。</strong> 来源、状态、安全、引用和供应商错误分别验收，失败样本不被删除或合并。</span>
+            <code>P10 · 评测中心</code>
+          </figcaption>
+        </figure>
+
+        <details>
+          <summary>展开模型成本与默认方案</summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>组</th>
+                  <th>语义通过</th>
+                  <th>Token</th>
+                  <th>平均延迟</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>A · Pro</td><td class="num">25/27</td><td class="num">80,819</td><td class="num">38.0s</td></tr>
+                <tr><td>B · Flash</td><td class="num">26/27</td><td class="num">60,953</td><td class="num">14.4s</td></tr>
+                <tr><td>C · Flash→Pro</td><td class="num">26/27</td><td class="num">68,060</td><td class="num">15.2s</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Flash 本轮延迟更低，但存在状态漂移和单轮波动；混合路由没有相对 Flash 增加语义通过，却多耗 Token。因此默认保持 Pro，不启用自动 Flash 路由。Dify 实际账单仍未知，不宣称节省金额。
+          </p>
+        </details>
+
+      </section>
+
+      <section class="section" id="boundary">
+        <div class="section-head">
+          <div>
+            <p class="section-label">05 / 缺陷与边界</p>
+            <h2>现在能做到什么，不能做到什么？</h2>
+            <p class="section-deck">已知缺陷和生产阻断不藏在案例之外。</p>
+          </div>
+          <p class="section-side">
+            <strong>生产状态</strong><br>
+            FORBIDDEN。项目停留在内部原型，不进入发布。
+          </p>
+        </div>
+
+        <div class="boundary-grid">
+          <div class="boundary">
+            <h3>已经完成</h3>
+            <ul>
+              <li>上下文、证据、风险、人工确认和知识修复形成完整链路。</li>
+              <li>真实 Dify 入库与评测已跑通，关键结果和失败样本均保留。</li>
+              <li>13 页原型、8 类角色、30 条功能需求和 57 个对象状态完成设计。</li>
+            </ul>
+          </div>
+          <div class="boundary">
+            <h3>尚未完成</h3>
+            <ul>
+              <li>未接入真实企业权限、客服系统、人工审核链和生产 SLA。</li>
+              <li>未做真实用户验收、并发和成本账单核验。</li>
+              <li>RET-H09 仍会把单目标连接问题误判为多目标。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="warning">
+          <strong>如果继续推进</strong>
+          <p>先修复保留样例并冻结固定回归集，再做重复模型实验；随后接入真实组织权限、客服系统和审计链。在完成这些之前，不把原型描述成生产系统。</p>
+        </div>
+
+        <details>
+          <summary>展开项目规模与相关文档</summary>
+          <ul>
+            <li>PRD V1.4、对象状态、权限职责分离、信息架构和 13 页高保真原型。</li>
+            <li>BFF、RAG Adapter、真实 CANDIDATE 入库、固定 27 条对照和上线前风险冻结。</li>
+            <li>项目截图和业务数据均为模拟或公开资料摘要，不包含 API Key 或真实客户隐私。</li>
+          </ul>
+        </details>
+
+        <div class="end-actions">
+          <a class="button primary" href="https://xinhao-after-sales.pages.dev/" target="_blank" rel="noopener noreferrer">打开 13 页交互原型</a>
+          <a class="button" href="index.html">返回作品集</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>李昕昊 · 售后知识协作 · 模拟项目</span>
+      <span><a href="index.html">作品集首页</a> · <a href="https://github.com/xinhao021121-web" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const links = [...document.querySelectorAll(".rail a")];
+      const sections = links
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      if (!("IntersectionObserver" in window) || sections.length === 0) return;
+
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+
+        for (const link of links) {
+          const active = link.getAttribute("href") === `#${visible.target.id}`;
+          link.classList.toggle("is-active", active);
+          if (active) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+      }, {
+        rootMargin: "-18% 0px -62% 0px",
+        threshold: [0, .2, .5]
+      });
+
+      for (const section of sections) observer.observe(section);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "captured_at": "2026-10-25T13:31:35.993Z",
+  "frozen_from_commit": "7feb9d0",
+  "source_mode": "REAL_DIFY",
+  "model": "deepseek-v4-pro",
+  "dataset": "CANDIDATE",
+  "threshold": 0.9167,
+  "formal_17": {
+    "run_id": "EVAL-REAL-658cce03-c558-4e40-b0d7-ca59f96f92e8",
+    "status": "PASSED",
+    "task_count": 17,
+    "recall_at_3": 1,
+    "covered_source_count": 9,
+    "expected_source_count": 9,
+    "core_source_hits": 7,
+    "core_source_denominator": 7,
+    "p0_failures": 0,
+    "citation_failures": 0,
+    "provider_errors": 0,
+    "model_effective_answered": 3
+  },
+  "regression_8": {
+    "run_id": "REGRESSION-REAL-R5-43339807-22bf-4ba4-b06b-8e47da7a4d07",
+    "status": "PASSED",
+    "semantic_passed_count": 8,
+    "task_count": 8,
+    "p0_failures": 0,
+    "citation_failures": 0,
+    "provider_errors": 0
+  },
+  "holdout_2": {
+    "run_id": "HOLDOUT-REAL-R5-30f0b5e0-edc7-4ab2-a278-c199d0d8c0f7",
+    "status": "FAILED",
+    "semantic_passed_count": 1,
+    "task_count": 2,
+    "ret_h09": {
+      "answer_status": "ANSWERED",
+      "semantic_passed": false,
+      "missing_action_groups": [
+        [
+          "放回充电盒",
+          "合盖"
+        ]
+      ],
+      "provider_request_id": "9f4560f3-72a7-4de3-b8d9-655f75d3da05",
+      "bff_request_id": "34f7a30f-6578-4f74-ace5-8e9219c37c6c"
+    },
+    "ret_h10": {
+      "answer_status": "ANSWERED",
+      "semantic_passed": true,
+      "provider_request_id": "c6d08271-9112-4f36-8379-cefab19a8295",
+      "bff_request_id": "08345948-22bc-4dc1-9d2b-52ef7dc31387"
+    }
+  },
+  "cost_status": "COST_UNKNOWN"
+}

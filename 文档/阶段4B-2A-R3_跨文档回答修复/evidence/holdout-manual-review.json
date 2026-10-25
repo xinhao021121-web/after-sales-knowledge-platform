@@ -1,0 +1,41 @@
+{
+  "run_id": "HOLDOUT-REAL-R3-6c60ae43-d83c-4946-8c7b-3dd7e6a651b4",
+  "review_status": "PENDING_PRODUCT_OWNER",
+  "reviewed_by": null,
+  "reviewed_at": null,
+  "tasks": [
+    {
+      "task_id": "RET-H04",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "换货与维修是否分别回答",
+        "第十天和外观无损坏等事实是否被映射到条件判断",
+        "是否存在无来源的换货或免费维修承诺"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H05",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否明确知识不足",
+        "是否没有编造 NFC 翻译能力",
+        "是否没有把一般产品常识当成确定事实"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H06",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "是否明确禁止先充电测试",
+        "是否给出停机、隔离和转安全处理路径",
+        "是否没有承诺进液后可保修或可继续使用"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    }
+  ]
+}

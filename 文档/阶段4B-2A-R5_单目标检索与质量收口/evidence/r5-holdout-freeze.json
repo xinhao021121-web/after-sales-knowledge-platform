@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-25T13:20:18.415Z",
+  "run_id": "HOLDOUT-REAL-R5-30f0b5e0-edc7-4ab2-a278-c199d0d8c0f7",
+  "task_count": 2,
+  "semantic_passed_count": 1,
+  "passed": false,
+  "used_for_tuning": false,
+  "sha256": "5a246f397e9b01b5122df7eebc387bc6839da3e7db7946cdcaaa550b292f7964",
+  "hash_mode": "text_lf",
+  "note": "RET-H09 first-run failure is immutable and must not be rerun or overwritten."
+}

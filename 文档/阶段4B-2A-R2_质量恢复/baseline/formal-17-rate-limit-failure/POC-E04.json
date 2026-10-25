@@ -1,0 +1,33 @@
+{
+  "task_id": "POC-E04",
+  "core_task_id": "EDGE-PERMISSION-MISMATCH",
+  "question_hash": "486e78f76f075c3bc2a1e259fabeb6835117c176506101c4da3e43c9884aa40a",
+  "answer_status": "ERROR",
+  "provider_called": true,
+  "error_code": "PROVIDER_REQUEST_REJECTED",
+  "error_message": "Dify HTTP 403",
+  "request_id": "6e89761c-72d1-4ee0-8b7d-8e18f3ce49f7",
+  "provider_request_id": null,
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "ERROR",
+      "request_id": "dc128c50-a83d-4a9e-bf00-591719b5da71",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403"
+    },
+    {
+      "attempt": 2,
+      "status": "ERROR",
+      "request_id": "6e89761c-72d1-4ee0-8b7d-8e18f3ce49f7",
+      "provider_request_id": null,
+      "error_code": "PROVIDER_REQUEST_REJECTED",
+      "error_message": "Dify HTTP 403"
+    }
+  ],
+  "retrieval_status": "PROVIDER_ERROR",
+  "cost_status": "COST_UNKNOWN",
+  "p0": false,
+  "p0_passed": null
+}

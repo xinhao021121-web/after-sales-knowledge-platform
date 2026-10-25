@@ -1,0 +1,129 @@
+{
+  "captured_at": "2026-10-25T13:20:18.417Z",
+  "status": "FAILED",
+  "formal": {
+    "run_id": "EVAL-REAL-658cce03-c558-4e40-b0d7-ca59f96f92e8",
+    "status": "PASSED",
+    "source_mode": "REAL_DIFY",
+    "model": "deepseek-v4-pro",
+    "dataset": "CANDIDATE",
+    "task_count": 17,
+    "metrics": {
+      "task_count": 17,
+      "core_task_count": 12,
+      "p0_task_count": 6,
+      "provider_call_count": 11,
+      "p0_gate_count": 6,
+      "answer_status_counts": {
+        "NEED_CLARIFICATION": 3,
+        "ANSWERED": 3,
+        "BLOCKED_SAFETY": 6,
+        "CONFLICT": 2,
+        "NO_ANSWER": 1,
+        "KNOWLEDGE_EXPIRED": 1,
+        "PERMISSION_DENIED": 1
+      },
+      "retrieval_completed_core_count": 7,
+      "retrieval_expected_source_count": 9,
+      "retrieval_covered_source_count": 9,
+      "recall_at_3_core": 1,
+      "correct_source_hits_core": 7,
+      "correct_source_denominator": 7,
+      "source_hit_rate_core": 1,
+      "provider_error_core_count": 0,
+      "result_classification": {
+        "p0_short_circuit": 6,
+        "retrieval_completed": 7,
+        "provider_error": 0,
+        "non_core_retrieval": 4
+      },
+      "p0_final_failures": 0,
+      "citation_failures": 0,
+      "provider_errors": 0,
+      "quality_gate_status": "PASSED",
+      "quality_warnings": [],
+      "quality_baseline": {
+        "recall_at_3_core": 0.9167,
+        "source_hit_rate_core": 1,
+        "model_effective_answer_count_min": 1
+      },
+      "cost": {
+        "cost_status": "COST_UNKNOWN",
+        "currency": null,
+        "model_request_count": 11,
+        "p0_short_circuit_count": 6,
+        "p0_short_circuit_model_cost": 0,
+        "all_effective_response_count": 17,
+        "model_effective_answer_count": 3,
+        "correct_source_hit_count": 8,
+        "prompt_tokens_total": 16455,
+        "completion_tokens_total": 29421,
+        "total_tokens_total": 45876,
+        "prompt_tokens_average": 1495.909090909091,
+        "completion_tokens_average": 2674.6363636363635,
+        "provider_latency_average_ms": 31303.272727272728,
+        "provider_latency_p95_ms": 57387,
+        "all_effective_response_cost": null,
+        "model_effective_answer_cost": null,
+        "correct_source_hit_cost": null,
+        "formula": {
+          "all_effective_response_cost": "全部模型费用 / 可验收响应数",
+          "model_effective_answer_cost": "模型费用 / claim门禁通过的ANSWERED数",
+          "correct_source_hit_cost": "模型费用 / 正确来源命中数"
+        }
+      }
+    }
+  },
+  "poc_r04": {
+    "run_id": "EVAL-REAL-658cce03-c558-4e40-b0d7-ca59f96f92e8",
+    "status": "ANSWERED",
+    "semantic_passed": true,
+    "citation_support_passed": true,
+    "hidden_goal_reference_count": 0
+  },
+  "regression": {
+    "run_id": "REGRESSION-REAL-R5-43339807-22bf-4ba4-b06b-8e47da7a4d07",
+    "task_count": 8,
+    "semantic_passed_count": 8,
+    "passed": true,
+    "ret_h07_semantic_passed": true,
+    "ret_h07_power_evidence_present": true,
+    "ret_h08_semantic_passed": true,
+    "cost_status": "COST_UNKNOWN"
+  },
+  "holdout": {
+    "run_id": "HOLDOUT-REAL-R5-30f0b5e0-edc7-4ab2-a278-c199d0d8c0f7",
+    "used_for_tuning": false,
+    "task_count": 2,
+    "semantic_passed_count": 1,
+    "passed": false,
+    "ret_h09": {
+      "answer_status": "ANSWERED",
+      "semantic_passed": false,
+      "provider_request_id": "9f4560f3-72a7-4de3-b8d9-655f75d3da05",
+      "bff_request_id": "34f7a30f-6578-4f74-ace5-8e9219c37c6c",
+      "missing_visible_action_groups": [
+        [
+          "放回充电盒",
+          "合盖"
+        ]
+      ]
+    },
+    "ret_h10": {
+      "answer_status": "ANSWERED",
+      "semantic_passed": true,
+      "provider_request_id": "c6d08271-9112-4f36-8379-cefab19a8295",
+      "bff_request_id": "08345948-22bc-4dc1-9d2b-52ef7dc31387"
+    }
+  },
+  "uniqueness": {
+    "active_document_count": 5,
+    "logical_active_document_count": 5,
+    "duplicate_active_logical_documents": []
+  },
+  "threshold_unchanged": 0.9167,
+  "cost_status": "COST_UNKNOWN",
+  "release_performed": false,
+  "entered_4b2b": false,
+  "failure_reason": "RET-H09 首次保留样例语义失败，遗漏放回充电盒并合盖；按要求未重跑或调参。"
+}

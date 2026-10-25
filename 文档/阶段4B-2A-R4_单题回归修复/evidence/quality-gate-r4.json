@@ -1,0 +1,125 @@
+{
+  "captured_at": "2026-10-25T12:11:04.932Z",
+  "status": "FAILED",
+  "formal": {
+    "run_id": "EVAL-REAL-8279ab81-8545-4473-acaf-80df57d5bd95",
+    "status": "PASSED",
+    "metrics": {
+      "task_count": 17,
+      "core_task_count": 12,
+      "p0_task_count": 6,
+      "provider_call_count": 11,
+      "p0_gate_count": 6,
+      "answer_status_counts": {
+        "NEED_CLARIFICATION": 3,
+        "ANSWERED": 3,
+        "BLOCKED_SAFETY": 6,
+        "CONFLICT": 2,
+        "NO_ANSWER": 1,
+        "KNOWLEDGE_EXPIRED": 1,
+        "PERMISSION_DENIED": 1
+      },
+      "retrieval_completed_core_count": 7,
+      "retrieval_expected_source_count": 9,
+      "retrieval_covered_source_count": 9,
+      "recall_at_3_core": 1,
+      "correct_source_hits_core": 7,
+      "correct_source_denominator": 7,
+      "source_hit_rate_core": 1,
+      "provider_error_core_count": 0,
+      "result_classification": {
+        "p0_short_circuit": 6,
+        "retrieval_completed": 7,
+        "provider_error": 0,
+        "non_core_retrieval": 4
+      },
+      "p0_final_failures": 0,
+      "citation_failures": 0,
+      "provider_errors": 0,
+      "quality_gate_status": "PASSED",
+      "quality_warnings": [],
+      "quality_baseline": {
+        "recall_at_3_core": 0.9167,
+        "source_hit_rate_core": 1,
+        "model_effective_answer_count_min": 1
+      },
+      "cost": {
+        "cost_status": "COST_UNKNOWN",
+        "currency": null,
+        "model_request_count": 11,
+        "p0_short_circuit_count": 6,
+        "p0_short_circuit_model_cost": 0,
+        "all_effective_response_count": 17,
+        "model_effective_answer_count": 3,
+        "correct_source_hit_count": 8,
+        "prompt_tokens_total": 14425,
+        "completion_tokens_total": 32170,
+        "total_tokens_total": 46595,
+        "prompt_tokens_average": 1311.3636363636363,
+        "completion_tokens_average": 2924.5454545454545,
+        "provider_latency_average_ms": 33555.181818181816,
+        "provider_latency_p95_ms": 63457,
+        "all_effective_response_cost": null,
+        "model_effective_answer_cost": null,
+        "correct_source_hit_cost": null,
+        "formula": {
+          "all_effective_response_cost": "全部模型费用 / 可验收响应数",
+          "model_effective_answer_cost": "模型费用 / claim门禁通过的ANSWERED数",
+          "correct_source_hit_cost": "模型费用 / 正确来源命中数"
+        }
+      }
+    },
+    "passed": true
+  },
+  "poc_r04": {
+    "status": "ANSWERED",
+    "semantic_passed": true,
+    "citation_support_passed": true,
+    "hidden_goal_reference_count": 0
+  },
+  "regression": {
+    "run_id": "REGRESSION-REAL-R4-096a077a-9840-4343-9346-6610f7c0507c",
+    "task_count": 6,
+    "semantic_passed_count": 6,
+    "passed": true,
+    "expected_source_count": 4,
+    "covered_source_count": 2,
+    "recall_at_3": 0.5
+  },
+  "holdout": {
+    "run_id": "HOLDOUT-REAL-R4-543139f9-0578-4b1f-a923-0975c771dd75",
+    "used_for_tuning": false,
+    "task_count": 2,
+    "semantic_passed_count": 1,
+    "passed": false,
+    "failed_tasks": [
+      {
+        "task_id": "RET-H07",
+        "answer_status": "ANSWERED",
+        "answer": "核对产品身份：确认耳机型号是否为 A3063/A3064/A3065，充电盒是否为 A3122，并核对序列号、购买渠道和购买或签收日期。 若型号、序列号与购买凭证无法对应，不直接承诺退换或免费维修，转保修身份核验。",
+        "missing_visible_action_groups": [
+          [
+            "线缆",
+            "电源",
+            "适配器"
+          ],
+          [
+            "接口",
+            "触点",
+            "碎屑"
+          ]
+        ]
+      }
+    ]
+  },
+  "uniqueness": {
+    "active_document_count": 5,
+    "logical_active_document_count": 5,
+    "duplicate_active_logical_documents": []
+  },
+  "threshold_unchanged": 0.9167,
+  "cost_status": "COST_UNKNOWN",
+  "release_performed": false,
+  "entered_4b2b": false,
+  "failure_reason": "RET-H07 first holdout answer used product-identity checks instead of the expected power/connection troubleshooting and therefore failed business semantics."
+}

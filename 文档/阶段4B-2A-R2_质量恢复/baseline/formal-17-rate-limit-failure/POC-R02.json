@@ -1,0 +1,130 @@
+{
+  "task_id": "POC-R02",
+  "core_task_id": "CORE-R2",
+  "question_hash": "0c8e49d41818917b60a02f867cfc7daea18f704b7fcd5fb64bd1f572a012de49",
+  "question_length": 17,
+  "question_summary": {
+    "original": "AirPods 过保了还能维修吗？",
+    "rewrites": [
+      "用了 14 个月，已经过保，还能付费维修吗？",
+      "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+    ]
+  },
+  "answer_status": "NEED_CLARIFICATION",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-WARRANTY-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "SUBQUERY_ROUND_ROBIN_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods 过保了还能维修吗？",
+      "用了 14 个月，已经过保，还能付费维修吗？",
+      "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+    ],
+    "internal_candidate_pool_size": 18,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "91eccf13-67ff-4070-8a7d-0124a7613967",
+      "provider_request_id": "5ec28517-54b3-422c-9a2f-e398c872b63b",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": false,
+  "citations": [],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 814,
+  "completion_tokens": 1202,
+  "total_tokens": 2016,
+  "provider_latency_ms": 15176,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "5ec28517-54b3-422c-9a2f-e398c872b63b",
+  "bff_request_id": "91eccf13-67ff-4070-8a7d-0124a7613967",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-OOW-01"
+      },
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.78915936,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+        "score": 0.7093048,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.6712053,
+        "claim_support_count": 0
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "SUBQUERY_ROUND_ROBIN_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "AirPods 过保了还能维修吗？",
+        "用了 14 个月，已经过保，还能付费维修吗？",
+        "AirPods Pro 3 过保后有没有维修服务，价格能先确定吗？"
+      ],
+      "internal_candidate_pool_size": 18,
+      "displayed_top_k": 3,
+      "candidate_document_count": 5,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "请补充检索《04_保修与维修流程.md》的正文，重点查找：保修期限、过保/保外维修政策、付费维修条件、充电不稳定故障处理及价格表；请用户准备购买凭证、发票、序列号和购买渠道；是否在官方或授权渠道购买会影响后续判断。",
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 0
+    }
+  }
+}

@@ -1,0 +1,4 @@
+configuration,round,average_ms,median_ms,p95_ms,provider_calls
+deepseek-v4-pro,PRO-R1,29900,27061,64759,11
+deepseek-v4-flash,FLASH-R1,17586,16835,33744,11
+deepseek-v4-flash,FLASH-R2,17378,13237,32564,11

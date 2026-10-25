@@ -1,0 +1,10 @@
+{
+  "stage": "PUBLISHED",
+  "status": 200,
+  "body": {
+    "result": "success",
+    "created_at": 1792920468
+  },
+  "versions_status": 401,
+  "latest_versions": []
+}

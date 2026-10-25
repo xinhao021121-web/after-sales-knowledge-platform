@@ -1,0 +1,127 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-E01",
+  "core_task_id": "EDGE-NO-KNOWLEDGE",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 14463,
+  "request": {
+    "question": "原始问题：AirPods Pro 3 可以用卫星电话吗？\n客户改写：没有手机信号时，AirPods Pro 3 能不能直接连卫星求救？；这款耳机支持卫星通话功能吗？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-E01",
+    "knowledge_item_id": "KI-EDGE-NO-KNOWLEDGE",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "feature": "卫星电话",
+      "knowledge_present": false
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NO_ANSWER",
+    "ui_state": "NO_ANSWER",
+    "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+    "suggested_action": "建议补充 AirPods Pro 3 的官方产品规格、功能说明或技术支持文档，特别是涉及卫星通信、紧急求救、无蜂窝网络下的连接能力等内容；若用户需要立即确认功能或处理售后问题，建议转接人工客服或产品技术支持，由人工核实最新官方规格和政策。",
+    "business_conditions": [
+      "已知上下文显示：产品为 AirPods Pro 3，功能点为“卫星电话”，但知识库中 `knowledge_present = false`，即未检索到任何相关事实、业务条件、例外或操作步骤",
+      "因此，无法判断 AirPods Pro 3 是否具备卫星通信硬件、是否需要配合 iPhone 使用，也无法提供售后场景下的功能支持、维修或故障处理条件"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "413a2368-5166-4682-855d-fb594646f33e",
+    "provider_trace_id": "413a2368-5166-4682-855d-fb594646f33e",
+    "provider_called": true,
+    "timing_ms": 14459,
+    "error_code": "NO_ANSWER",
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 391,
+      "completion_tokens": 770,
+      "total_tokens": 1161,
+      "provider_latency_ms": 10251,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "NO_ANSWER",
+      "citation_support_passed": false,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6338707296991726,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.5359874525409593,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "02_安全SOP.md",
+        "document_id": "DOC-SAFETY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+        "score": 0.5206291935797609,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "28e38be5-6acd-4391-b210-323fc695f35e",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-E01",
+      "knowledge_item_id": "KI-EDGE-NO-KNOWLEDGE"
+    },
+    "audit_event_id": "e3d31434-ea3d-4714-89c9-88fa252f31e9"
+  }
+}

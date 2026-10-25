@@ -1,0 +1,53 @@
+{
+  "lock_id": "4B2B-MODEL-ROUTING-INPUT-LOCK-1.0.0",
+  "captured_at": "2026-10-25T13:47:09.012Z",
+  "baseline_commit": "e663689",
+  "default_model": "deepseek-v4-pro",
+  "experiment_model": "deepseek-v4-flash",
+  "task_count": 27,
+  "suites": {
+    "FORMAL_17": 17,
+    "REGRESSION_8": 8,
+    "HOLDOUT_2": 2
+  },
+  "files": {
+    "fixed_regression": {
+      "source": "阶段4B-2A_原型结项与质量风险冻结/fixed-regression/retention-set-frozen-final-1.0.0.json",
+      "frozen_copy": "baseline/fixed-regression-used.json",
+      "sha256": "35eef41e7c1ac4eeda901905e12fade0bcc8bb688fc2ad84443d370619a4f19b"
+    },
+    "prompt": {
+      "source": "阶段4B-2A-R5_单目标检索与质量收口/configs/r5-system-prompt.txt",
+      "frozen_copy": "configs/r5-prompt-frozen.txt",
+      "sha256": "843b9185b09113a620cb6d57ddba4d113f098f20872d4c7304e0d48baaf72466"
+    },
+    "quality_gate_r5": {
+      "source": "阶段4B-2A-R5_单目标检索与质量收口/evidence/quality-gate-r5.json",
+      "frozen_copy": "baseline/quality-gate-r5.json",
+      "sha256": "4c6092f8a3c795c4564614724fb57b255203361fc283e4ba817605fd8fc390cf"
+    },
+    "p10_r5": {
+      "source": "阶段4B-2A-R5_单目标检索与质量收口/evidence/p10-real-r5.json",
+      "frozen_copy": "baseline/p10-real-r5.json",
+      "sha256": "e240316f18ebcb058438d322271ba77b1dece609be7f9c648b03ab30431ac03b"
+    },
+    "ret_h09_first_failure": {
+      "source": "阶段4B-2A-R5_单目标检索与质量收口/evidence/holdout/RET-H09.json",
+      "frozen_copy": "baseline/ret-h09-first-failure.json",
+      "sha256": "9bcda40b14b55aaae02855feb23318031329fb90c153c16610c2861af3f6a6d4"
+    }
+  },
+  "unchanged_inputs": [
+    "CANDIDATE dataset",
+    "fixed 27 tasks and expected sources",
+    "R5 system prompt",
+    "BFF Top3 selection",
+    "P0, permission, expiry, conflict, claim and provider-error gates"
+  ],
+  "prohibited_changes": [
+    "change tasks or expected evidence",
+    "change prompt or retrieval",
+    "fix RET-H09",
+    "make Flash the default without explicit experiment mode"
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "captured_at": "2026-10-25T21:22:04.081Z",
+  "status": "PASSED",
+  "markdown_file_count": 10,
+  "html_local_link_count": 35,
+  "portfolio_entry": "作品集\\index.html",
+  "project_case": "作品集\\项目案例.html",
+  "launcher_verified": true,
+  "desktop": {
+    "viewport_width": 1440,
+    "document_width": 1440,
+    "body_width": 1440,
+    "images": [
+      {
+        "src": "assets/P03_after_sales.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/P03_after_sales.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/P05_risk_stop.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/P10_real_evaluation.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/zhipin.png",
+        "complete": true,
+        "naturalWidth": 2720
+      },
+      {
+        "src": "assets/askneed.png",
+        "complete": true,
+        "naturalWidth": 1440
+      }
+    ],
+    "overflow": [],
+    "simulation_label_visible": true,
+    "h1_count": 1,
+    "h1_text": "李昕昊",
+    "missing_alt_count": 0,
+    "main_project_visible": true,
+    "primary_landmarks": 4,
+    "hero_metric_count": 3,
+    "project_result_count": 3,
+    "visible_work_count": 2,
+    "work_link_count": 2,
+    "external_work_link_count": 1,
+    "local_work_link_count": 1,
+    "external_work_links_safe": true,
+    "work_cta_count": 2,
+    "archive_count": 2,
+    "archive_link_count": 2,
+    "capabilities_background": "rgb(245, 245, 247)",
+    "flagship_background": "rgb(245, 245, 247)",
+    "contact_background": "rgb(8, 8, 10)"
+  },
+  "mobile": {
+    "viewport_width": 390,
+    "document_width": 390,
+    "body_width": 390,
+    "images": [
+      {
+        "src": "assets/P03_after_sales.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/P03_after_sales.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/P05_risk_stop.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/P10_real_evaluation.png",
+        "complete": true,
+        "naturalWidth": 1440
+      },
+      {
+        "src": "assets/zhipin.png",
+        "complete": true,
+        "naturalWidth": 2720
+      },
+      {
+        "src": "assets/askneed.png",
+        "complete": true,
+        "naturalWidth": 1440
+      }
+    ],
+    "overflow": [],
+    "simulation_label_visible": true,
+    "h1_count": 1,
+    "h1_text": "李昕昊",
+    "missing_alt_count": 0,
+    "main_project_visible": true,
+    "primary_landmarks": 4,
+    "hero_metric_count": 3,
+    "project_result_count": 3,
+    "visible_work_count": 2,
+    "work_link_count": 2,
+    "external_work_link_count": 1,
+    "local_work_link_count": 1,
+    "external_work_links_safe": true,
+    "work_cta_count": 2,
+    "archive_count": 2,
+    "archive_link_count": 2,
+    "capabilities_background": "rgb(245, 245, 247)",
+    "flagship_background": "rgb(245, 245, 247)",
+    "contact_background": "rgb(8, 8, 10)"
+  },
+  "case_desktop": {
+    "viewport_width": 1440,
+    "document_width": 1440,
+    "overflow": [],
+    "image_count": 4,
+    "missing_image_count": 0,
+    "missing_alt_count": 0,
+    "simulation_label_visible": true,
+    "h1_count": 1,
+    "h1_text": "让每一次售后建议，都能被验证。",
+    "section_count": 5,
+    "figure_count": 3,
+    "result_count": 3,
+    "prototype_link_count": 2,
+    "rail_display": "block",
+    "mobile_toc_display": "none"
+  },
+  "case_mobile": {
+    "viewport_width": 390,
+    "document_width": 390,
+    "overflow": [],
+    "image_count": 4,
+    "missing_image_count": 0,
+    "missing_alt_count": 0,
+    "simulation_label_visible": true,
+    "h1_count": 1,
+    "h1_text": "让每一次售后建议，都能被验证。",
+    "section_count": 5,
+    "figure_count": 3,
+    "result_count": 3,
+    "prototype_link_count": 2,
+    "rail_display": "none",
+    "mobile_toc_display": "block"
+  },
+  "askneed_desktop": {
+    "viewport_width": 1440,
+    "document_width": 1440,
+    "overflow": [],
+    "image_count": 4,
+    "missing_image_count": 0,
+    "missing_alt_count": 0,
+    "h1_count": 1,
+    "h1_text": "把装修需求问全、问清、问定。",
+    "section_count": 5,
+    "case_count": 0
+  },
+  "askneed_mobile": {
+    "viewport_width": 390,
+    "document_width": 390,
+    "overflow": [],
+    "image_count": 4,
+    "missing_image_count": 0,
+    "missing_alt_count": 0,
+    "h1_count": 1,
+    "h1_text": "把装修需求问全、问清、问定。",
+    "section_count": 5,
+    "case_count": 0
+  },
+  "other_practice_desktop": {
+    "viewport_width": 1440,
+    "document_width": 1440,
+    "overflow": [],
+    "image_count": 0,
+    "missing_image_count": 0,
+    "missing_alt_count": 0,
+    "h1_count": 1,
+    "h1_text": "验证流程编排，也验证产品分析。",
+    "section_count": 0,
+    "case_count": 2
+  },
+  "other_practice_mobile": {
+    "viewport_width": 390,
+    "document_width": 390,
+    "overflow": [],
+    "image_count": 0,
+    "missing_image_count": 0,
+    "missing_alt_count": 0,
+    "h1_count": 1,
+    "h1_text": "验证流程编排，也验证产品分析。",
+    "section_count": 0,
+    "case_count": 2
+  },
+  "print": {
+    "viewport_width": 794,
+    "document_width": 794,
+    "simulation_label_visible": true,
+    "pdf_bytes": 680182
+  },
+  "page_errors": []
+}

@@ -1,0 +1,221 @@
+{
+  "comparison_id": "PRO-FLASH-AB-COST-4B1-3.0.0",
+  "generated_at": "2026-10-25T06:54:42.878Z",
+  "evaluation_set_id": "EVAL-RAG-POC-1.0.0",
+  "dataset": "CANDIDATE",
+  "pro": {
+    "round_id": "PRO-R1",
+    "model": "deepseek-v4-pro",
+    "task_count": 17,
+    "provider_call_count": 11,
+    "p0_gate_count": 6,
+    "recall_at_3_core": 0.9306,
+    "correct_source_hits_core": 12,
+    "correct_source_denominator": 12,
+    "citation_support_core": {
+      "passed": 10,
+      "reviewed": 12
+    },
+    "citation_support_all": {
+      "passed": 12,
+      "reviewed": 15
+    },
+    "business_action_correct": 17,
+    "followup_complete": 17,
+    "correct_refusal": 4,
+    "refusal_denominator": 4,
+    "p0_final_failures": 0,
+    "cost": {
+      "call_count": 11,
+      "effective_answer_count": 1,
+      "average_prompt_tokens": 504.4,
+      "average_completion_tokens": 2063.5,
+      "single_request_estimated_cost": null,
+      "effective_answer_estimated_cost": null,
+      "correct_source_hit_estimated_cost": null,
+      "fallback_count": 0,
+      "manual_escalation_count": 8,
+      "cost_status": "COST_UNKNOWN",
+      "auto_effective_answer_count": 1,
+      "validated_effective_answer_count": 17
+    },
+    "timing": {
+      "provider": {
+        "count": 11,
+        "average_ms": 29900,
+        "median_ms": 27061,
+        "p95_ms": 64759,
+        "min_ms": 14459,
+        "max_ms": 64759
+      },
+      "all_tasks_wall": {
+        "count": 17,
+        "average_ms": 19355,
+        "median_ms": 19696,
+        "p95_ms": 64765,
+        "min_ms": 3,
+        "max_ms": 64765
+      }
+    },
+    "provider_published_version": 12,
+    "prompt_version": "DIFY-PROMPT-CLAIM-20261025",
+    "dataset_version": "1.0.0"
+  },
+  "stage4a_pro_baseline": {
+    "model": "deepseek-v4-pro",
+    "recall_at_3_core": 0.9167,
+    "correct_source_hits_core": 12,
+    "correct_source_denominator": 12,
+    "citation_support_core": {
+      "passed": 8,
+      "reviewed": 12
+    },
+    "citation_support_all": {
+      "passed": 11,
+      "reviewed": 15
+    },
+    "business_action_correct": 17,
+    "followup_complete": 17,
+    "correct_refusal": 4,
+    "refusal_denominator": 4,
+    "p0_final_failures": 0,
+    "timing": {
+      "provider": {
+        "count": 11,
+        "average_ms": 28737,
+        "median_ms": 27028,
+        "p95_ms": 49663,
+        "min_ms": 12219,
+        "max_ms": 49663
+      }
+    }
+  },
+  "flash_rounds": [
+    {
+      "round_id": "FLASH-R1",
+      "model": "deepseek-v4-flash",
+      "task_count": 17,
+      "provider_call_count": 11,
+      "p0_gate_count": 6,
+      "recall_at_3_core": 0.7639,
+      "correct_source_hits_core": 10,
+      "correct_source_denominator": 12,
+      "citation_support_core": {
+        "passed": 8,
+        "reviewed": 12
+      },
+      "citation_support_all": {
+        "passed": 10,
+        "reviewed": 15
+      },
+      "business_action_correct": 17,
+      "followup_complete": 17,
+      "correct_refusal": 4,
+      "refusal_denominator": 4,
+      "p0_final_failures": 0,
+      "cost": {
+        "call_count": 0,
+        "effective_answer_count": 1,
+        "average_prompt_tokens": null,
+        "average_completion_tokens": null,
+        "single_request_estimated_cost": null,
+        "effective_answer_estimated_cost": null,
+        "correct_source_hit_estimated_cost": null,
+        "fallback_count": 0,
+        "manual_escalation_count": 8,
+        "cost_status": "COST_UNKNOWN",
+        "auto_effective_answer_count": 1,
+        "validated_effective_answer_count": 17
+      },
+      "timing": {
+        "provider": {
+          "count": 11,
+          "average_ms": 17586,
+          "median_ms": 16835,
+          "p95_ms": 33744,
+          "min_ms": 8506,
+          "max_ms": 33744
+        },
+        "all_tasks_wall": {
+          "count": 17,
+          "average_ms": 11387,
+          "median_ms": 10621,
+          "p95_ms": 33763,
+          "min_ms": 3,
+          "max_ms": 33763
+        }
+      }
+    },
+    {
+      "round_id": "FLASH-R2",
+      "model": "deepseek-v4-flash",
+      "task_count": 17,
+      "provider_call_count": 11,
+      "p0_gate_count": 6,
+      "recall_at_3_core": 0.7639,
+      "correct_source_hits_core": 10,
+      "correct_source_denominator": 12,
+      "citation_support_core": {
+        "passed": 8,
+        "reviewed": 12
+      },
+      "citation_support_all": {
+        "passed": 10,
+        "reviewed": 15
+      },
+      "business_action_correct": 17,
+      "followup_complete": 17,
+      "correct_refusal": 4,
+      "refusal_denominator": 4,
+      "p0_final_failures": 0,
+      "cost": {
+        "call_count": 0,
+        "effective_answer_count": 0,
+        "average_prompt_tokens": null,
+        "average_completion_tokens": null,
+        "single_request_estimated_cost": null,
+        "effective_answer_estimated_cost": null,
+        "correct_source_hit_estimated_cost": null,
+        "fallback_count": 0,
+        "manual_escalation_count": 8,
+        "cost_status": "COST_UNKNOWN",
+        "auto_effective_answer_count": 0,
+        "validated_effective_answer_count": 17
+      },
+      "timing": {
+        "provider": {
+          "count": 11,
+          "average_ms": 17378,
+          "median_ms": 13237,
+          "p95_ms": 32564,
+          "min_ms": 8561,
+          "max_ms": 32564
+        },
+        "all_tasks_wall": {
+          "count": 17,
+          "average_ms": 11253,
+          "median_ms": 11498,
+          "p95_ms": 32576,
+          "min_ms": 4,
+          "max_ms": 32576
+        }
+      }
+    }
+  ],
+  "pro_meets_stage4a_baseline": true,
+  "flash_vs_pro_verdict": "FLASH_DEGRADED",
+  "verdict": "PRO_PRIMARY_PASS",
+  "decision": {
+    "primary_model": "deepseek-v4-pro",
+    "flash_status": "COST_OPTIMIZATION_CANDIDATE_ONLY",
+    "recommended_primary_model": "deepseek-v4-pro",
+    "active_dify_model_changed_automatically": true,
+    "fallback_strategy": "阶段4B1仅使用Pro；Flash保留两轮真实证据，阶段4B2再评估Flash优先、Pro回退的路由，不在本阶段实现复杂模型路由。"
+  },
+  "limitations": [
+    "六条P0按既定规则由BFF短路，不调用生成模型。",
+    "E02/E03/E04仍按题面在当前CANDIDATE应用中执行；来源命中指标只按12条核心任务计算。",
+    "Dify切片有时只返回文档标题；这类切片不计为claim级可追溯引用。",
+    "无法确认官方单价，所有模型成本标记为 COST_UNKNOWN；Dify usage 中的 0 元不视为免费。"
+  ]
+}

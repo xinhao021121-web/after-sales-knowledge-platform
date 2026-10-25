@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="页面层级">
+    <mxGraphModel pageHeight="900" grid="1" gridSize="10" fold="1" tooltips="1" page="1" pageWidth="1600" connect="1" guides="1" arrows="1" shadow="0" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="页面层级图｜9 个工作面，13 个唯一页面" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;fontColor=#111111;" id="title" vertex="1" parent="1">
+          <mxGeometry width="900" as="geometry" y="30" height="50" x="40" />
+        </mxCell>
+        <mxCell value="企业售后知识平台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="root" vertex="1" parent="1">
+          <mxGeometry width="300" as="geometry" y="100" height="60" x="650" />
+        </mxCell>
+        <mxCell value="今日工作台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-0" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="30" />
+        </mxCell>
+        <mxCell id="surface-edge-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-0" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P01&#xA;今日工作台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p01-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="35" />
+        </mxCell>
+        <mxCell id="page-edge-0-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-0" target="p01-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="一线售后辅助" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-1" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="202" />
+        </mxCell>
+        <mxCell id="surface-edge-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-1" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P02&#xA;咨询任务队列" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p02-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="207" />
+        </mxCell>
+        <mxCell id="page-edge-1-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-1" target="p02-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P03&#xA;售后协作任务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p03-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="460" height="80" x="207" />
+        </mxCell>
+        <mxCell id="page-edge-1-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-1" target="p03-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="风险升级" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-2" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="374" />
+        </mxCell>
+        <mxCell id="surface-edge-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-2" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P04&#xA;风险队列" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p04-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="379" />
+        </mxCell>
+        <mxCell id="page-edge-2-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-2" target="p04-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P05&#xA;风险升级单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p05-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="460" height="80" x="379" />
+        </mxCell>
+        <mxCell id="page-edge-2-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-2" target="p05-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="知识来源" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-3" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="546" />
+        </mxCell>
+        <mxCell id="surface-edge-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-3" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P06&#xA;知识来源台账" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p06-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="551" />
+        </mxCell>
+        <mxCell id="page-edge-3-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-3" target="p06-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="知识与审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-4" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="718" />
+        </mxCell>
+        <mxCell id="surface-edge-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-4" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P07&#xA;知识与业务审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p07-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="723" />
+        </mxCell>
+        <mxCell id="page-edge-4-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-4" target="p07-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="案例与链路" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-5" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="890" />
+        </mxCell>
+        <mxCell id="surface-edge-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-5" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P08&#xA;问题案例队列" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p08-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="895" />
+        </mxCell>
+        <mxCell id="page-edge-5-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-5" target="p08-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P09&#xA;案例与修复链路" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p09-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="460" height="80" x="895" />
+        </mxCell>
+        <mxCell id="page-edge-5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-5" target="p09-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="评测中心" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-6" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="1062" />
+        </mxCell>
+        <mxCell id="surface-edge-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-6" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P10&#xA;评测中心" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p10-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="1067" />
+        </mxCell>
+        <mxCell id="page-edge-6-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-6" target="p10-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="发布与回滚" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-7" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="1234" />
+        </mxCell>
+        <mxCell id="surface-edge-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-7" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P11&#xA;发布与回滚" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p11-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="1239" />
+        </mxCell>
+        <mxCell id="page-edge-7-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-7" target="p11-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="权限与审计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#666666;fontStyle=1;align=center;verticalAlign=middle;fontColor=#111111;" id="surface-8" vertex="1" parent="1">
+          <mxGeometry width="150" as="geometry" y="230" height="70" x="1406" />
+        </mxCell>
+        <mxCell id="surface-edge-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="root" target="surface-8" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P12&#xA;权限与职责" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p12-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="360" height="80" x="1411" />
+        </mxCell>
+        <mxCell id="page-edge-8-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-8" target="p12-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="P13&#xA;审计与运行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;align=left;verticalAlign=middle;spacingLeft=10;fontColor=#111111;" id="p13-cell" vertex="1" parent="1">
+          <mxGeometry width="140" as="geometry" y="460" height="80" x="1411" />
+        </mxCell>
+        <mxCell id="page-edge-8-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontColor=#333333;" source="surface-8" target="p13-cell" edge="1" parent="1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jump-p06-p10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="p06-cell" target="p10-cell" edge="1" parent="1" value="来源失效影响评测">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jump-p10-p07" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontColor=#333333;" source="p10-cell" target="p07-cell" edge="1" parent="1" value="评测失败/需修 KB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell value="页面详情、入口、出口、权限、FR 和验收见 03_页面清单.csv；角色导航差异见 01_角色入口与任务地图.md。" style="text;html=1;fontSize=14;align=left;verticalAlign=middle;fontColor=#555555;" id="legend" vertex="1" parent="1">
+          <mxGeometry width="1450" as="geometry" y="730" height="60" x="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

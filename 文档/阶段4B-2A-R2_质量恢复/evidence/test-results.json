@@ -1,0 +1,49 @@
+{
+  "captured_at": "2026-10-25",
+  "status": "PASSED",
+  "provider_live_test_used_archived_evidence": false,
+  "tests": [
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/server-unit.mjs",
+      "status": "PASSED",
+      "coverage": "BFF API, 6 P0 gates, privacy, idempotency, timeout/network, rate-limit classification, secret-safe audit"
+    },
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/stage4b2-unit.mjs",
+      "status": "PASSED",
+      "coverage": "document diversity, R04 actionable evidence, knowledge gap, ingestion update, retry, metrics"
+    },
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/e2e-stage4b2.mjs",
+      "status": "PASSED",
+      "coverage": "P06/P10 browser flow, refresh recovery, P0 short circuit, cost unknown, responsive layout"
+    },
+    {
+      "command": "node 文档/阶段4B-1_BFF与P03真实RAG接入/tests/e2e-bff.mjs",
+      "status": "PASSED",
+      "coverage": "live Dify health/retrieval/answer, 6 P0 gates, persistence, no-secret browser state, 4 screenshots"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a.ps1",
+      "status": "PASSED",
+      "coverage": "4B-2A service, browser, contract, cost separation and test hygiene"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a-r1.ps1",
+      "status": "PASSED",
+      "coverage": "R1 FAILED baseline, canonical update, uniqueness, archived evidence"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b2a-r2.ps1",
+      "status": "PASSED",
+      "coverage": "R2 17-task PASSED gate, holdout, unique versions, request evidence and secret hygiene"
+    },
+    {
+      "command": "pwsh -NoProfile -File 文档/阶段4B-1_BFF与P03真实RAG接入/tests/validate-stage4b1.ps1",
+      "status": "PASSED",
+      "coverage": "historical 4B-1, stage 3B 13 pages/15 flows, stage 4A contract and archived real evidence"
+    }
+  ],
+  "quality_evidence": "evidence/quality-gate-r2.json",
+  "secrets_exposed": false
+}

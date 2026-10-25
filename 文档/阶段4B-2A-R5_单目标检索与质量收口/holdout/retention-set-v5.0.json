@@ -1,0 +1,112 @@
+{
+  "evaluation_set_id": "EVAL-RAG-R5-HOLDOUT-5.0.0",
+  "version": "5.0.0",
+  "frozen_at": "2026-10-25",
+  "frozen_before_first_run": true,
+  "sample_type": "HOLDOUT",
+  "used_for_tuning": false,
+  "first_run_only": true,
+  "purpose": "R5 修复完成后的两条首次保留样例；结果不用于继续调参",
+  "tasks": [
+    {
+      "id": "RET-H09",
+      "core_task_id": "HOLDOUT-SECOND-CONNECTION-TROUBLESHOOTING",
+      "original_question": "AirPods Pro 3 右耳连不上手机，放回充电盒有指示但取出后仍然无法连接，应该怎么排查？",
+      "rewrites": [
+        "右耳能放进充电盒但取出来连不上，忽略配对后还是失败，要先检查什么？",
+        "AirPods Pro 3 单耳连接失败，充电盒有提示，下一步怎么处理？"
+      ],
+      "context": {
+        "product": "AirPods Pro 3",
+        "symptom": "右耳取出后无法连接",
+        "case_indicator": "充电盒有指示",
+        "reset": "未知",
+        "cleaning": "未检查"
+      },
+      "expected_evidence": [
+        {"doc_id": "DOC-FAQ-V1", "chunk_id": "CHUNK-FAQ-CONNECT-01"}
+      ],
+      "accepted_statuses": ["ANSWERED", "NEED_CLARIFICATION"],
+      "p0": false,
+      "forbidden_actions": ["承诺免费维修", "承诺免费换新", "指导拆机"],
+      "semantic_expectations": {
+        "require_citation_regardless_status": true,
+        "forbid_generic_fallback_when_evidence": true,
+        "action_concept_groups": [
+          ["放回充电盒", "合盖"],
+          ["检查", "清洁"],
+          ["重新配对", "忽略旧配对", "重置"],
+          ["售后", "检测"],
+          ["不承诺免费维修或换新", "不得承诺免费维修或换新"]
+        ]
+      },
+      "manual_review": [
+        "是否给出单耳连接排查顺序",
+        "是否没有把改写中的既有操作当成用户事实",
+        "是否有真实正文引用",
+        "是否没有免费维修或换新承诺"
+      ]
+    },
+    {
+      "id": "RET-H10",
+      "core_task_id": "HOLDOUT-CROSS-RETURN-WARRANTY-20D",
+      "original_question": "Apple Store 在线商店购买的 AirPods Pro 3，交付第 20 天出现续航明显下降和充电不稳定，退货和保修检测应该分别怎么判断？",
+      "rewrites": [
+        "收货二十天发现掉电快且充电不稳，应该走退货还是保修检测？",
+        "AirPods Pro 3 第二十天出现电池和充电问题，退货与后续维修分别依据什么？"
+      ],
+      "context": {
+        "product": "AirPods Pro 3",
+        "channel": "Apple Store 在线商店",
+        "received_at": "20 天前",
+        "faults": ["续航明显下降", "充电不稳定"]
+      },
+      "expected_evidence": [
+        {"doc_id": "DOC-WARRANTY-V1", "chunk_id": "CHUNK-WARRANTY-EVIDENCE-01"},
+        {"doc_id": "DOC-FAQ-V1", "chunk_id": "CHUNK-FAQ-BATTERY-01"}
+      ],
+      "accepted_statuses": ["ANSWERED"],
+      "p0": false,
+      "forbidden_actions": ["承诺一定可退", "承诺免费维修", "承诺换新"],
+      "semantic_expectations": {
+        "min_answer_goals": 2,
+        "min_distinct_citations": 2,
+        "forbid_generic_fallback_when_evidence": true,
+        "action_concept_groups": [
+          ["退货", "退换"],
+          ["保修", "维修"],
+          ["检测", "核验"],
+          ["不承诺免费维修或换新", "不得承诺免费维修或换新"]
+        ],
+        "objectives": [
+          {
+            "id": "RETURN_GOAL",
+            "label": "退货判断路径",
+            "concept_groups": [
+              ["退货", "退换"],
+              ["20 天", "二十天"],
+              ["渠道", "签收", "期限"]
+            ],
+            "required_doc_any": ["DOC-RETURN-V1", "DOC-CHANNEL-V1"]
+          },
+          {
+            "id": "WARRANTY_GOAL",
+            "label": "保修或维修检测路径",
+            "concept_groups": [
+              ["保修", "维修"],
+              ["检测", "核验"],
+              ["电池", "续航", "购买凭证"]
+            ],
+            "required_doc_any": ["DOC-WARRANTY-V1", "DOC-FAQ-V1"]
+          }
+        ]
+      },
+      "manual_review": [
+        "退货与保修检测是否分别回答",
+        "第 20 天事实是否用于时间条件判断",
+        "是否至少引用两个不同正文切片",
+        "是否存在确定退货或免费维修承诺"
+      ]
+    }
+  ]
+}

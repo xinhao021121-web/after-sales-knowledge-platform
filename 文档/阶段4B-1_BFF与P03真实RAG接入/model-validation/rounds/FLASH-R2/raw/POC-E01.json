@@ -1,0 +1,111 @@
+{
+  "round_id": "FLASH-R2",
+  "task_id": "POC-E01",
+  "core_task_id": "EDGE-NO-KNOWLEDGE",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 11498,
+  "request": {
+    "question": "原始问题：AirPods Pro 3 可以用卫星电话吗？\n客户改写：没有手机信号时，AirPods Pro 3 能不能直接连卫星求救？；这款耳机支持卫星通话功能吗？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R2-POC-E01",
+    "knowledge_item_id": "KI-EDGE-NO-KNOWLEDGE",
+    "product_model": "AirPods Pro 3",
+    "channel": "Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "feature": "卫星电话",
+      "knowledge_present": false
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NO_ANSWER",
+    "ui_state": "NO_ANSWER",
+    "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+    "suggested_action": "升级核实：转二线/产品知识库管理员，核对 Apple 官方技术规格及卫星求救支持文档；向客户追问：确认客户指“耳机独立连卫星”还是“搭配 iPhone 的卫星求救”，并提供设备型号、地区、系统版本。",
+    "business_conditions": [
+      "无可用引用（给定上下文未提供可追溯来源）。"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "aedd120f-449e-4bb5-96ea-2bd84b4ed0c5",
+    "provider_trace_id": "aedd120f-449e-4bb5-96ea-2bd84b4ed0c5",
+    "provider_called": true,
+    "timing_ms": 11493,
+    "error_code": "NO_ANSWER",
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 0,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.6394179846991727,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.5410715105409591,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "02_安全SOP.md",
+        "document_id": "DOC-SAFETY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+        "score": 0.5176498411118358,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "7115991b-6b32-4356-9925-2ecea424983b",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R2-POC-E01",
+      "knowledge_item_id": "KI-EDGE-NO-KNOWLEDGE"
+    },
+    "audit_event_id": "728dadb5-b2cd-4979-924d-df3b1a69f15b"
+  }
+}

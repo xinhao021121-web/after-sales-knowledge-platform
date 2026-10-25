@@ -1,0 +1,139 @@
+{
+  "round_id": "FLASH-R2",
+  "task_id": "POC-R03",
+  "core_task_id": "CORE-R3",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 29664,
+  "request": {
+    "question": "原始问题：AirPods 拆封了还能退吗？\n客户改写：第三方平台买的三天内拆封，配件齐全但没有质量问题，可以退吗？；Apple 官网买的耳机拆开试戴后还能不能用 14 天退货？\n请给出业务条件、引用与下一步动作；知识不足时明确追问或拒答。",
+    "asq_id": "ASQ-4B1-FLASH-R2-POC-R03",
+    "knowledge_item_id": "KI-CORE-R3",
+    "product_model": "AirPods Pro 3",
+    "channel": "需区分第三方平台与 Apple Store 在线商店",
+    "customer_context": {
+      "product": "AirPods Pro 3",
+      "channel": "需区分第三方平台与 Apple Store 在线商店",
+      "received_at": "3 天前",
+      "opened": true,
+      "quality_issue": false
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "需区分第三方平台与 Apple Store 在线商店"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "NEED_CLARIFICATION",
+    "ui_state": "NEED_CLARIFICATION",
+    "answer": "当前证据不足以形成确定结论，系统已保留可核验来源并转入补充信息或人工复核。",
+    "suggested_action": "先确认渠道与订单：请客户提供订单号，并确认是第三方平台还是 Apple Store 在线商店/Apple 官网在线订单；Apple Store 在线商店订单：告知可在交付后 14 日内通过订单页面提交退货申请，是否通过以退货条件核验为准；不要承诺“拆封试戴必退”。",
+    "business_conditions": [
+      "### 1. 第三方平台购买：三天内拆封、配件齐全、无质量问题"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-b1a33913-9ad5-4842-8360-69d88912fd06",
+        "source": {
+          "src_id": "SRC-PUB-003",
+          "doc_id": "DOC-RETURN-V1",
+          "version": "1.0.0",
+          "title": "AirPods 退货与退款判断",
+          "url": "https://www.apple.com.cn/shop/help/returns_refund",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06"
+        },
+        "kb_id": "KB-DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "score": 0.573169797198458,
+        "supported_claims": [
+          "Apple Store 在线商店符合条件时可在交付后 14 日内申请退货。",
+          "这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true
+      }
+    ],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "6377f76c-dc47-462b-b8bc-9bcb9e4c70d9",
+    "provider_trace_id": "6377f76c-dc47-462b-b8bc-9bcb9e4c70d9",
+    "provider_called": true,
+    "timing_ms": 29659,
+    "error_code": null,
+    "source_mode": "REAL_RAG",
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 9,
+      "claim_supported_citations": 1,
+      "unsupported_citations": 4,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": false,
+      "supported_count": 1,
+      "unsupported_count": 4
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "score": 0.573169797198458,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "5e6195a9-6406-4b4b-9d57-006dede54e87",
+        "score": 0.5572090856205357,
+        "claim_support_count": 0
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.5400545700940882,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "6dddd88b-f913-4413-9140-350677041b18",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-FLASH-R2-POC-R03",
+      "knowledge_item_id": "KI-CORE-R3"
+    },
+    "audit_event_id": "99c38858-a18a-42c9-89c1-b937e5480b66"
+  }
+}

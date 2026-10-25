@@ -1,0 +1,225 @@
+{
+  "task_id": "POC-K01",
+  "core_task_id": "CORE-K1",
+  "question_hash": "c94f779bc10da3a758b6615aa2b05292c5ddf287f9b96a2f92aa8d68c6cfa633",
+  "question_length": 13,
+  "question_summary": {
+    "original": "京东苹果售后是授权维修吗？",
+    "rewrites": [
+      "京东店铺说能修 AirPods，是不是 Apple 授权服务商？",
+      "平台名字叫苹果售后，就可以认定为授权维修吗？"
+    ]
+  },
+  "answer_status": "NEED_CLARIFICATION",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-CHANNEL-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "京东苹果售后是授权维修吗？",
+      "京东店铺说能修 AirPods，是不是 Apple 授权服务商？",
+      "平台名字叫苹果售后，就可以认定为授权维修吗？"
+    ],
+    "internal_candidate_pool_size": 10,
+    "displayed_top_k": 3,
+    "candidate_document_count": 3,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "dd5d1685-e23e-45c0-bf82-752129506206",
+      "provider_request_id": "a71bba76-6d9d-422c-b30f-e04392bf56ce",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [
+    {
+      "citation_id": "EVD-def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+      "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+      "score": 0.6096663,
+      "supported_claims": [
+        "“某平台售后是否为授权维修”必须核验服务商全称、工单、维修项目和授权范围。",
+        "公开知识无法确认时，标记知识缺口并转渠道负责人，不得凭平台名称认定授权。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+      "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+      "score": 0.6007119,
+      "supported_claims": [
+        "回答退货、保修或授权问题前，必须确认销售主体、平台店铺、订单、发票、序列号、签收时间和实际售后入口。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.57211924,
+      "supported_claims": [
+        "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。",
+        "在线商店退货商业政策不得自动扩展到第三方卖家。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "DIFY_MARKER"
+    }
+  ],
+  "answer_goals": [
+    {
+      "index": "一",
+      "title": "目标一：京东“苹果售后”是否为授权维修",
+      "content": "判断：不能仅凭“京东”或“苹果售后”平台名称认定授权；当前“京东第三方或自营身份未确认、服务商全称未知、无工单、维修项目未知”，不满足授权核验条件，无法确认是否授权维修。 下一步：核验该订单的销售主体、平台店铺全称、订单/发票、产品序列号、签收时间及实际售后入口显示的服务商全称、工单号、维修项目和授权范围，并将以上信息同步渠道负责人核验；维修相关不承诺免费维修或换新。 依据：[1] CHUNK-CHANNEL-AUTH-01；[2] CHUNK-CHANNEL-CHECK-01；[3] CHUNK-CHANNEL-OFFICIAL-01",
+      "evidence_supported": true
+    }
+  ],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1489,
+  "completion_tokens": 1736,
+  "total_tokens": 3225,
+  "provider_latency_ms": 19891,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "a71bba76-6d9d-422c-b30f-e04392bf56ce",
+  "bff_request_id": "dd5d1685-e23e-45c0-bf82-752129506206",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-CHANNEL-V1",
+        "chunk_id": "CHUNK-CHANNEL-AUTH-01"
+      },
+      {
+        "doc_id": "DOC-CHANNEL-V1",
+        "chunk_id": "CHUNK-CHANNEL-CHECK-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+        "score": 0.6096663,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "8df034b6-01ff-4af2-bf4a-fadf69511b5b",
+        "score": 0.6007119,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.57211924,
+        "claim_support_count": 2
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "京东苹果售后是授权维修吗？",
+        "京东店铺说能修 AirPods，是不是 Apple 授权服务商？",
+        "平台名字叫苹果售后，就可以认定为授权维修吗？"
+      ],
+      "internal_candidate_pool_size": 10,
+      "displayed_top_k": 3,
+      "candidate_document_count": 3,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "下一步：核验该订单的销售主体、平台店铺全称、订单/发票、产品序列号、签收时间及实际售后入口显示的服务商全称、工单号、维修项目和授权范围，并将以上信息同步渠道负责人核验；维修相关不承诺免费维修或换新。 完成上述步骤后可继续判断。",
+    "answer_goals": [
+      {
+        "index": "一",
+        "title": "目标一：京东“苹果售后”是否为授权维修",
+        "content": "判断：不能仅凭“京东”或“苹果售后”平台名称认定授权；当前“京东第三方或自营身份未确认、服务商全称未知、无工单、维修项目未知”，不满足授权核验条件，无法确认是否授权维修。 下一步：核验该订单的销售主体、平台店铺全称、订单/发票、产品序列号、签收时间及实际售后入口显示的服务商全称、工单号、维修项目和授权范围，并将以上信息同步渠道负责人核验；维修相关不承诺免费维修或换新。 依据：[1] CHUNK-CHANNEL-AUTH-01；[2] CHUNK-CHANNEL-CHECK-01；[3] CHUNK-CHANNEL-OFFICIAL-01",
+        "evidence_supported": true
+      }
+    ],
+    "suggested_action": "核验该订单的销售主体、平台店铺全称、订单/发票、产品序列号、签收时间及实际售后入口显示的服务商全称、工单号、维修项目和授权范围，并将以上信息同步渠道负责人核验；维修相关不承诺免费维修或换新。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 3,
+      "multi_objective_passed": true,
+      "unsupported_count": 0
+    }
+  }
+}

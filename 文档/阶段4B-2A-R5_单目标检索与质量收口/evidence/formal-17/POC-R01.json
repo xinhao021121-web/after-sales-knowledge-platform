@@ -1,0 +1,228 @@
+{
+  "task_id": "POC-R01",
+  "core_task_id": "CORE-R1",
+  "question_hash": "bfcd03167bc45a73537dee9fd9dc6ddae87929552eef873139e6f2d13fe6af67",
+  "question_length": 21,
+  "question_summary": {
+    "original": "耳机还在保修期，电池不耐用，维修要收费吗？",
+    "rewrites": [
+      "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+      "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+    ]
+  },
+  "answer_status": "NEED_CLARIFICATION",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 2,
+  "covered_source_count": 2,
+  "covered_source_ids": [
+    "DOC-FAQ-V1",
+    "DOC-WARRANTY-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "耳机还在保修期，电池不耐用，维修要收费吗？",
+      "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+      "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+    ],
+    "internal_candidate_pool_size": 11,
+    "displayed_top_k": 3,
+    "candidate_document_count": 4,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "4a53c461-ab74-4f5e-8102-394b15aa65c3",
+      "provider_request_id": "d0e2802a-315f-420b-ba1c-bb72368733da",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [
+    {
+      "citation_id": "EVD-b5440479-d296-42d2-ae07-eaad8e9ed770",
+      "source": {
+        "src_id": "SRC-PUB-006",
+        "doc_id": "DOC-WARRANTY-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 保修与维修流程",
+        "url": "https://support.apple.com/zh-cn/airpods/repair?services=service",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770"
+      },
+      "kb_id": "KB-DOC-WARRANTY-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+      "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+      "score": 0.667562,
+      "supported_claims": [
+        "制造缺陷可进入 Apple 一年有限保修或相应法定保修判断。",
+        "正常电池老化不属于有限保修范围。",
+        "电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+      "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+      "score": 0.6607641,
+      "supported_claims": [
+        "续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。",
+        "Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。",
+        "检测前不得承诺免费维修，也不得断言一定收费。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "score": 0.6580724,
+      "supported_claims": [
+        "Apple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "answer_goals": [
+    {
+      "index": "一",
+      "title": "目标一：保修期内电池不耐用维修是否收费/能否免费换电池",
+      "content": "判断：检测前无法确定是否收费；续航下降可能来自音量、降噪、空间音频、通话、温度和正常电池老化，正常电池老化不属于 Apple 一年有限保修；是否属制造缺陷、法定三包或 AppleCare+ 需结合购买日期、渠道、保障合同、当前容量、检测结果和当前资格判断。[1][2] 下一步：通过 Apple Store 在线商店或直营官方支持入口预约检测，提供购买日期 2026-02-10、渠道、续航约 2.5 小时及保障信息，并记录音量、降噪、空间音频、通话、温度等使用情况，由官方检测区分制造缺陷或正常老化；不承诺免费维修或换新，也不断言一定收费。[2][3] 依据：[1][2][3] 补充正文步骤：电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新[1]",
+      "evidence_supported": true
+    }
+  ],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1568,
+  "completion_tokens": 2720,
+  "total_tokens": 4288,
+  "provider_latency_ms": 30903,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "d0e2802a-315f-420b-ba1c-bb72368733da",
+  "bff_request_id": "4a53c461-ab74-4f5e-8102-394b15aa65c3",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-FAQ-V1",
+        "chunk_id": "CHUNK-FAQ-BATTERY-01"
+      },
+      {
+        "doc_id": "DOC-WARRANTY-V1",
+        "chunk_id": "CHUNK-WARRANTY-LIMITED-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+        "score": 0.667562,
+        "claim_support_count": 3
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+        "score": 0.6607641,
+        "claim_support_count": 3
+      },
+      {
+        "position": 3,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.6580724,
+        "claim_support_count": 2
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "ORIGINAL_QUERY_RELEVANCE_FIRST",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "耳机还在保修期，电池不耐用，维修要收费吗？",
+        "AirPods Pro 3 买了 8 个月，续航只剩两个多小时，检测前能确定免费换电池吗？",
+        "官方线上买的耳机保修期内电池掉电快，维修费用怎么判断？"
+      ],
+      "internal_candidate_pool_size": 11,
+      "displayed_top_k": 3,
+      "candidate_document_count": 4,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "下一步：通过 Apple Store 在线商店或直营官方支持入口预约检测，提供购买日期 2026-02-10、渠道、续航约 2.5 小时及保障信息，并记录音量、降噪、空间音频、通话、温度等使用情况，由官方检测区分制造缺陷或正常老化；不承诺免费维修或换新，也不断言一定收费；电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。。 完成上述步骤后可继续判断。",
+    "answer_goals": [
+      {
+        "index": "一",
+        "title": "目标一：保修期内电池不耐用维修是否收费/能否免费换电池",
+        "content": "判断：检测前无法确定是否收费；续航下降可能来自音量、降噪、空间音频、通话、温度和正常电池老化，正常电池老化不属于 Apple 一年有限保修；是否属制造缺陷、法定三包或 AppleCare+ 需结合购买日期、渠道、保障合同、当前容量、检测结果和当前资格判断。[1][2] 下一步：通过 Apple Store 在线商店或直营官方支持入口预约检测，提供购买日期 2026-02-10、渠道、续航约 2.5 小时及保障信息，并记录音量、降噪、空间音频、通话、温度等使用情况，由官方检测区分制造缺陷或正常老化；不承诺免费维修或换新，也不断言一定收费。[2][3] 依据：[1][2][3] 补充正文步骤：电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新[1]",
+        "evidence_supported": true
+      }
+    ],
+    "suggested_action": "通过 Apple Store 在线商店或直营官方支持入口预约检测，提供购买日期 2026-02-10、渠道、续航约 2.5 小时及保障信息，并记录音量、降噪、空间音频、通话、温度等使用情况，由官方检测区分制造缺陷或正常老化；不承诺免费维修或换新，也不断言一定收费；电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 3,
+      "multi_objective_passed": true,
+      "unsupported_count": 0
+    }
+  }
+}

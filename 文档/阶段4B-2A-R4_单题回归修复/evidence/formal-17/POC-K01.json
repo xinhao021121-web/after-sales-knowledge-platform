@@ -1,0 +1,186 @@
+{
+  "task_id": "POC-K01",
+  "core_task_id": "CORE-K1",
+  "question_hash": "c94f779bc10da3a758b6615aa2b05292c5ddf287f9b96a2f92aa8d68c6cfa633",
+  "question_length": 13,
+  "question_summary": {
+    "original": "京东苹果售后是授权维修吗？",
+    "rewrites": [
+      "京东店铺说能修 AirPods，是不是 Apple 授权服务商？",
+      "平台名字叫苹果售后，就可以认定为授权维修吗？"
+    ]
+  },
+  "answer_status": "NEED_CLARIFICATION",
+  "provider_called": true,
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-CHANNEL-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "京东苹果售后是授权维修吗？",
+      "京东店铺说能修 AirPods，是不是 Apple 授权服务商？",
+      "平台名字叫苹果售后，就可以认定为授权维修吗？"
+    ],
+    "internal_candidate_pool_size": 14,
+    "displayed_top_k": 3,
+    "candidate_document_count": 4,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "4481c01a-c3db-45c2-998b-cbd1ca60b2c4",
+      "provider_request_id": "ec9093db-108d-4aeb-b16b-5e0db61f3324",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [
+    {
+      "citation_id": "EVD-def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+      "source": {
+        "src_id": "SRC-PUB-003",
+        "doc_id": "DOC-CHANNEL-V1",
+        "version": "1.0.0",
+        "title": "售后渠道差异与责任边界",
+        "url": "https://www.apple.com.cn/shop/help/returns_refund",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d"
+      },
+      "kb_id": "KB-DOC-CHANNEL-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+      "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+      "score": 0.57988346,
+      "supported_claims": [
+        "“某平台售后是否为授权维修”必须核验服务商全称、工单、维修项目和授权范围。",
+        "公开知识无法确认时，标记知识缺口并转渠道负责人，不得凭平台名称认定授权。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.57301253,
+      "supported_claims": [
+        "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+        "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "answer_goals": [],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": true,
+  "refusal_correct": null,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1303,
+  "completion_tokens": 2541,
+  "total_tokens": 3844,
+  "provider_latency_ms": 26452,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": null,
+  "provider_request_id": "ec9093db-108d-4aeb-b16b-5e0db61f3324",
+  "bff_request_id": "4481c01a-c3db-45c2-998b-cbd1ca60b2c4",
+  "evidence": {
+    "expected": [
+      {
+        "doc_id": "DOC-CHANNEL-V1",
+        "chunk_id": "CHUNK-CHANNEL-AUTH-01"
+      },
+      {
+        "doc_id": "DOC-CHANNEL-V1",
+        "chunk_id": "CHUNK-CHANNEL-CHECK-01"
+      }
+    ],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "def320df-5b93-48d1-8c8a-40eeaf0e6d2d",
+        "score": 0.57988346,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "score": 0.57301253,
+        "claim_support_count": 3
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+        "score": 0,
+        "claim_support_count": 2
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "京东苹果售后是授权维修吗？",
+        "京东店铺说能修 AirPods，是不是 Apple 授权服务商？",
+        "平台名字叫苹果售后，就可以认定为授权维修吗？"
+      ],
+      "internal_candidate_pool_size": 14,
+      "displayed_top_k": 3,
+      "candidate_document_count": 4,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "下一步：请向店铺要求提供服务商全称、工单、维修项目及授权范围证明；同时补充 AirPods 型号、序列号、购买渠道和购买或签收日期进行产品身份核验。若公开知识无法确认，应标记知识缺口并转渠道负责人，不承诺免费维修或换新。 完成上述步骤后可继续判断。",
+    "answer_goals": [],
+    "suggested_action": "请向店铺要求提供服务商全称、工单、维修项目及授权范围证明；同时补充 AirPods 型号、序列号、购买渠道和购买或签收日期进行产品身份核验。若公开知识无法确认，应标记知识缺口并转渠道负责人，不承诺免费维修或换新。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 2,
+      "multi_objective_passed": true,
+      "unsupported_count": 0
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-25T14:14:00.000Z",
+  "stage": "SWITCH_C_FALLBACK_TO_PRO",
+  "status": "FAILED",
+  "error_code": "ERR_TIMED_OUT",
+  "error_message": "page.goto timed out navigating to the Dify workflow console",
+  "model_switch_applied": false,
+  "action": "PRESERVED_AND_RETRIED",
+  "note": "This infrastructure timeout is not a model-quality result."
+}

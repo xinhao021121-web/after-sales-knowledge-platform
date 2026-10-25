@@ -1,0 +1,36 @@
+{
+  "stage": "PUBLISHED",
+  "status": 200,
+  "body": "{\"result\":\"success\",\"created_at\":1792931623}\n",
+  "versions_status": 200,
+  "versions": [
+    {
+      "version_number": null,
+      "marked_name": "",
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 21,
+      "marked_name": "R5-RELEVANCE",
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 20,
+      "marked_name": "R5-RELEVANCE",
+      "knowledge_top_k": [
+        10
+      ]
+    },
+    {
+      "version_number": 19,
+      "marked_name": "R5-RELEVANCE",
+      "knowledge_top_k": [
+        10
+      ]
+    }
+  ]
+}

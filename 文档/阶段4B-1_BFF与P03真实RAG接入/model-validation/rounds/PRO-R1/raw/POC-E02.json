@@ -1,0 +1,128 @@
+{
+  "round_id": "PRO-R1",
+  "task_id": "POC-E02",
+  "core_task_id": "EDGE-EXPIRED-KNOWLEDGE",
+  "dataset": "CANDIDATE",
+  "p0": false,
+  "http_status": 200,
+  "wall_ms": 32210,
+  "request": {
+    "question": "原始问题：第三方平台拆封耳机为什么一定不能退？\n客户改写：旧规则说第三方渠道拆封都不退，现在还有效吗？；能不能按旧版第三方规则直接拒绝退货？",
+    "asq_id": "ASQ-4B1-PRO-R1-POC-E02",
+    "knowledge_item_id": "KI-EDGE-EXPIRED-KNOWLEDGE",
+    "product_model": "AirPods Pro 3",
+    "channel": "第三方平台",
+    "customer_context": {
+      "channel": "第三方平台",
+      "knowledge_state": "仅命中已过期旧规则",
+      "current_policy_missing": true
+    },
+    "role": "frontline",
+    "tenant_id": "tenant-demo",
+    "environment": "candidate",
+    "top_k": 3,
+    "retrieval_mode": "hybrid",
+    "rerank": true,
+    "metadata_filter": {
+      "enabled": true,
+      "active_only": true,
+      "channels": [
+        "第三方平台"
+      ],
+      "source_statuses": [
+        "active"
+      ]
+    },
+    "citation_mode": "required"
+  },
+  "response": {
+    "answer_status": "KNOWLEDGE_EXPIRED",
+    "ui_state": "KNOWLEDGE_EXPIRED",
+    "answer": "检索到的知识版本已过期，不能作为现行售后依据。",
+    "suggested_action": "不得按旧版规则直接拒绝，也不应承诺退款、退货、换货或免费维修；追问并核验：具体订单平台/店铺/经销商、现行退换规则、是否远程交易、签收日期、拆封及使用状态、配件完整性、退货原因、是否属于法定无理由退货例外。",
+    "business_conditions": [
+      "第三方平台退换时限、责任主体和服务入口由平台、店铺或经销商规则决定，但不得排除消费者依法享有的权利；未取得具体订单与渠道规则前，只能追问和说明条件，不能承诺退货、换货或免费维修【CHUNK-CHANNEL-THIRD-01】",
+      "远程交易消费者通常适用收到商品之日起七日内无理由退货，但商品应保持完好，并同时满足法定例外和实际渠道规则；购买渠道、签收日期、商品状态、配件完整性和退货原因必须一并核验；不得只根据“拆封”一个关键词给出确定结论【CHUNK-RETURN-LEGAL-01】",
+      "当前知识状态为“仅命中已过期旧规则，current_policy_missing=true”，即没有可用的现行第三方平台规则支持直接拒绝"
+    ],
+    "citations": [],
+    "risk": {
+      "level": "R1",
+      "p0_triggered": false,
+      "escalation_required": false
+    },
+    "provider_request_id": "cba96ece-5054-4ee8-bb1d-d4970075efcc",
+    "provider_trace_id": "cba96ece-5054-4ee8-bb1d-d4970075efcc",
+    "provider_called": true,
+    "timing_ms": 32205,
+    "error_code": "KNOWLEDGE_EXPIRED",
+    "source_mode": "REAL_RAG",
+    "cost": {
+      "provider": "Dify Cloud",
+      "model": "deepseek-v4-pro",
+      "prompt_tokens": 516,
+      "completion_tokens": 2928,
+      "total_tokens": 3444,
+      "provider_latency_ms": 30310,
+      "estimated_input_cost": null,
+      "estimated_output_cost": null,
+      "estimated_total_cost": null,
+      "cost_status": "COST_UNKNOWN",
+      "answer_status": "KNOWLEDGE_EXPIRED",
+      "citation_support_passed": true,
+      "effective_answer": false
+    },
+    "evidence_summary": {
+      "retrieved_count": 3,
+      "valid_count": 3,
+      "expired_filtered": 0,
+      "permission_filtered": 0,
+      "citation_markers": 0,
+      "claim_supported_citations": 0,
+      "unsupported_citations": 0,
+      "disallowed_citations": 0,
+      "unresolved_markers": 0
+    },
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 0,
+      "unsupported_count": 0
+    },
+    "retrieval_resources": [
+      {
+        "position": 1,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "b96986c8-3291-4994-925c-22abb7ddc54e",
+        "score": 0.7023069513647183,
+        "claim_support_count": 2
+      },
+      {
+        "position": 2,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "80a0de81-a589-4945-b8f4-cb4b47a0e71f",
+        "score": 0.45175893,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "03_退货规则.md",
+        "document_id": "DOC-RETURN-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+        "score": 0.451394258,
+        "claim_support_count": 0
+      }
+    ],
+    "request_id": "8bf80692-df7c-4fef-869d-7e294e16c056",
+    "request_echo": {
+      "asq_id": "ASQ-4B1-PRO-R1-POC-E02",
+      "knowledge_item_id": "KI-EDGE-EXPIRED-KNOWLEDGE"
+    },
+    "audit_event_id": "f9cb9a45-ba54-471d-a001-79e3e82b23a8"
+  }
+}

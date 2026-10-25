@@ -1,0 +1,177 @@
+{
+  "task_id": "RET-H07",
+  "core_task_id": "HOLDOUT-SINGLE-TARGET-TROUBLESHOOTING",
+  "sample_type": "HOLDOUT",
+  "original_question": "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+  "question_context": {
+    "product": "AirPods Pro 3",
+    "symptom": "左耳不充电且指示灯不亮",
+    "cable": "未知",
+    "power": "未知",
+    "cleaning": "未检查"
+  },
+  "answer_status": "ANSWERED",
+  "provider_called": true,
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "recall_at_3": 1,
+  "source_hit": true,
+  "expected_source_count": 1,
+  "covered_source_count": 1,
+  "covered_source_ids": [
+    "DOC-FAQ-V1"
+  ],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods Pro 3 左耳放回充电盒后仍不充电，指示灯不亮，应该先怎么排查？",
+      "左耳放回盒子没有充电提示，换线和换电源都不亮，要先检查哪些位置？",
+      "AirPods Pro 3 单耳不充电，指示灯也不亮，第一步怎么处理？"
+    ],
+    "internal_candidate_pool_size": 14,
+    "displayed_top_k": 3,
+    "candidate_document_count": 4,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_resources": [
+    {
+      "position": 1,
+      "document_name": "04_保修与维修流程.md",
+      "document_id": "DOC-WARRANTY-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+      "score": 0.66856086,
+      "claim_support_count": 0
+    },
+    {
+      "position": 2,
+      "document_name": "01_售后FAQ.md",
+      "document_id": "DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.658562,
+      "claim_support_count": 3
+    },
+    {
+      "position": 3,
+      "document_name": "02_安全SOP.md",
+      "document_id": "DOC-SAFETY-V1",
+      "kb_version_id": "1.0.0",
+      "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "score": 0.5546776,
+      "claim_support_count": 3
+    }
+  ],
+  "answer": "核对产品身份：确认耳机型号是否为 A3063/A3064/A3065，充电盒是否为 A3122，并核对序列号、购买渠道和购买或签收日期。 若型号、序列号与购买凭证无法对应，不直接承诺退换或免费维修，转保修身份核验。",
+  "answer_goals": [],
+  "suggested_action": "由有权限角色复核引用与承诺边界后确认。",
+  "citations": [
+    {
+      "citation_id": "EVD-489e6131-b959-43ca-8529-c28b6708777b",
+      "source": {
+        "src_id": "SRC-PUB-001",
+        "doc_id": "DOC-FAQ-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 售后 FAQ",
+        "url": "https://support.apple.com/zh-cn/airpods",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b"
+      },
+      "kb_id": "KB-DOC-FAQ-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "score": 0.658562,
+      "supported_claims": [
+        "AirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。",
+        "回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。",
+        "型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    },
+    {
+      "citation_id": "EVD-c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "source": {
+        "src_id": "SRC-PUB-002",
+        "doc_id": "DOC-SAFETY-V1",
+        "version": "1.0.0",
+        "title": "AirPods Pro 3 安全处置 SOP",
+        "url": "https://support.apple.com/zh-cn/guide/airpods/dev4744b22af/web",
+        "verified_at": "2026-10-24",
+        "valid_until": "2026-12-31",
+        "status": "active",
+        "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f"
+      },
+      "kb_id": "KB-DOC-SAFETY-V1",
+      "kb_version_id": "1.0.0",
+      "chunk_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "segment_id": "c2363d96-a5f6-46eb-ae83-e4e01c77a30f",
+      "score": 0.5546776,
+      "supported_claims": [
+        "进液后立即停止佩戴和充电，用柔软干燥的无绒布擦干外表，放入充电盒前至少等待 2 小时完全干燥。",
+        "不得使用加热、压缩空气、甩动或尖锐物清理接口和声学孔。",
+        "抗汗抗水能力不构成潮湿状态继续充电的许可。"
+      ],
+      "claim_support_status": "SUPPORTED",
+      "traceable": true,
+      "grounding_mode": "BFF_CLAIM_MATCH"
+    }
+  ],
+  "citation_support": {
+    "required": true,
+    "passed": true,
+    "supported_count": 2,
+    "multi_objective_passed": true,
+    "unsupported_count": 0
+  },
+  "citation_gate_passed": true,
+  "forbidden_action_match": null,
+  "business_semantics": {
+    "status_accepted": true,
+    "objectives_passed": true,
+    "knowledge_gap_passed": true,
+    "safety_concepts_passed": true,
+    "visible_goal_labels": [],
+    "unseen_goal_labels": [],
+    "action_internal_references": [],
+    "visible_action_missing_groups": [
+      [
+        "线缆",
+        "电源",
+        "适配器"
+      ],
+      [
+        "接口",
+        "触点",
+        "碎屑"
+      ]
+    ],
+    "generic_fallback_only": false,
+    "forbidden_assertions": [],
+    "document_request_matches": [],
+    "forbidden_action_match": null,
+    "citation_gate_passed": true,
+    "goal_count_passed": true,
+    "provider_call_gate_passed": true,
+    "p0_gate_passed": true,
+    "objectives": [],
+    "passed": false
+  },
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1267,
+  "completion_tokens": 2647,
+  "total_tokens": 3914,
+  "provider_latency_ms": 26335,
+  "bff_latency_ms": 30598,
+  "bff_request_id": "e0c39b95-4a83-46b2-8297-70bab2d5f39f",
+  "provider_request_id": "a1a2745c-2682-4661-88c9-a707ba20438b",
+  "error_code": null,
+  "cost_status": "COST_UNKNOWN"
+}

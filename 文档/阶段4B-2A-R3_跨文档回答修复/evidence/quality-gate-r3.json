@@ -1,0 +1,102 @@
+{
+  "captured_at": "2026-10-25T11:38:01.585Z",
+  "formal": {
+    "run_id": "EVAL-REAL-a6720d86-cd64-4f05-8809-dc4f7be2dd45",
+    "status": "PASSED",
+    "metrics": {
+      "task_count": 17,
+      "core_task_count": 12,
+      "p0_task_count": 6,
+      "provider_call_count": 11,
+      "p0_gate_count": 6,
+      "answer_status_counts": {
+        "ANSWERED": 5,
+        "NEED_CLARIFICATION": 1,
+        "BLOCKED_SAFETY": 6,
+        "CONFLICT": 2,
+        "NO_ANSWER": 1,
+        "KNOWLEDGE_EXPIRED": 1,
+        "PERMISSION_DENIED": 1
+      },
+      "retrieval_completed_core_count": 7,
+      "retrieval_expected_source_count": 9,
+      "retrieval_covered_source_count": 9,
+      "recall_at_3_core": 1,
+      "correct_source_hits_core": 7,
+      "correct_source_denominator": 7,
+      "source_hit_rate_core": 1,
+      "provider_error_core_count": 0,
+      "result_classification": {
+        "p0_short_circuit": 6,
+        "retrieval_completed": 7,
+        "provider_error": 0,
+        "non_core_retrieval": 4
+      },
+      "p0_final_failures": 0,
+      "citation_failures": 0,
+      "provider_errors": 0,
+      "quality_gate_status": "PASSED",
+      "quality_warnings": [],
+      "quality_baseline": {
+        "recall_at_3_core": 0.9167,
+        "source_hit_rate_core": 1,
+        "model_effective_answer_count_min": 1
+      },
+      "cost": {
+        "cost_status": "COST_UNKNOWN",
+        "currency": null,
+        "model_request_count": 11,
+        "p0_short_circuit_count": 6,
+        "p0_short_circuit_model_cost": 0,
+        "all_effective_response_count": 17,
+        "model_effective_answer_count": 5,
+        "correct_source_hit_count": 8,
+        "prompt_tokens_total": 13237,
+        "completion_tokens_total": 25250,
+        "total_tokens_total": 38487,
+        "prompt_tokens_average": 1203.3636363636363,
+        "completion_tokens_average": 2295.4545454545455,
+        "provider_latency_average_ms": 25520.363636363636,
+        "provider_latency_p95_ms": 37594,
+        "all_effective_response_cost": null,
+        "model_effective_answer_cost": null,
+        "correct_source_hit_cost": null,
+        "formula": {
+          "all_effective_response_cost": "全部模型费用 / 可验收响应数",
+          "model_effective_answer_cost": "模型费用 / claim门禁通过的ANSWERED数",
+          "correct_source_hit_cost": "模型费用 / 正确来源命中数"
+        }
+      }
+    }
+  },
+  "regression": {
+    "run_id": "REGRESSION-REAL-R3-cc3a0162-e81f-473f-ba34-695a9ba4f946",
+    "passed": true,
+    "semantic_passed_count": 3,
+    "task_count": 3,
+    "expected_source_count": 2,
+    "covered_source_count": 1,
+    "recall_at_3": 0.5,
+    "allowed_status_suite": true
+  },
+  "holdout": {
+    "run_id": "HOLDOUT-REAL-R3-6c60ae43-d83c-4946-8c7b-3dd7e6a651b4",
+    "used_for_tuning": false,
+    "passed": true,
+    "semantic_passed_count": 3,
+    "task_count": 3,
+    "expected_source_count": 2,
+    "covered_source_count": 1,
+    "recall_at_3": 0.5,
+    "first_run_preserved": true
+  },
+  "uniqueness": {
+    "active_document_count": 5,
+    "logical_active_document_count": 5,
+    "duplicate_active_logical_documents": []
+  },
+  "threshold_unchanged": 0.9167,
+  "cost_status": "COST_UNKNOWN",
+  "release_performed": false,
+  "entered_4b2b": false
+}

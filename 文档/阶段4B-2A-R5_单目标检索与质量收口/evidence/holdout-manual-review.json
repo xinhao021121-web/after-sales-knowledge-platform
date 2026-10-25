@@ -1,0 +1,32 @@
+{
+  "run_id": "HOLDOUT-REAL-R5-30f0b5e0-edc7-4ab2-a278-c199d0d8c0f7",
+  "review_status": "PENDING_PRODUCT_OWNER",
+  "reviewed_by": null,
+  "reviewed_at": null,
+  "tasks": [
+    {
+      "task_id": "RET-H09",
+      "automatic_semantic_passed": false,
+      "checklist": [
+        "是否给出单耳连接排查顺序",
+        "是否没有把改写中的既有操作当成用户事实",
+        "是否有真实正文引用",
+        "是否没有免费维修或换新承诺"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    },
+    {
+      "task_id": "RET-H10",
+      "automatic_semantic_passed": true,
+      "checklist": [
+        "退货与保修检测是否分别回答",
+        "第 20 天事实是否用于时间条件判断",
+        "是否至少引用两个不同正文切片",
+        "是否存在确定退货或免费维修承诺"
+      ],
+      "product_owner_decision": null,
+      "notes": ""
+    }
+  ]
+}

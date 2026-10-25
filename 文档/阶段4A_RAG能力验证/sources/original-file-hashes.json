@@ -1,0 +1,25 @@
+{
+  "verified_at": "2026-10-24",
+  "root": "项目1/文档/原始参考资料",
+  "files": [
+    {"file": "原始参考资料/资料来源索引.md", "bytes": 3547, "sha256": "b5e08342422d41bb3693911d9d04c269d330a064b318f60fca84967b5541f436"},
+    {"file": "原始参考资料/01_售后FAQ/01_AirPods_官方支持首页.pdf", "bytes": 721367, "sha256": "638e0ac6196a18f56601412ff7c9b6ef003c90bd8a1ec4c3ba9e8450f8279d82"},
+    {"file": "原始参考资料/01_售后FAQ/02_AirPods_重启取消配对或还原.pdf", "bytes": 180389, "sha256": "8e2895a4e725355c3fc89b13685539b2b27fa42f592622355698e8853b0d2770"},
+    {"file": "原始参考资料/01_售后FAQ/03_AirPods_与非Apple设备配对.pdf", "bytes": 94599, "sha256": "572d9f0ff878bcde68b50184b538b6d00dbdabdad8b7071df29e57b043b38ddc"},
+    {"file": "原始参考资料/01_售后FAQ/04_AirPods_充电与状态指示.pdf", "bytes": 688811, "sha256": "2b4f7b3d33f0f358943c7101a1ac55bd54288eb9c134040fc7ef994e209b2f3f"},
+    {"file": "原始参考资料/01_售后FAQ/05_AirPods_Pro_3_心率监测.pdf", "bytes": 346364, "sha256": "a290cb6baf610a74f0bdfedcdfc292e34dec341397e3486e1ee09958103f12cd"},
+    {"file": "原始参考资料/02_使用与安全SOP/01_AirPods_重要安全事项和操作信息.pdf", "bytes": 269777, "sha256": "c03f6fd707a93d00d86c51936fc6c6f77cb4d19a1a99e4d1e7808d22db401db5"},
+    {"file": "原始参考资料/02_使用与安全SOP/02_AirPods_Pro_清洁方法.pdf", "bytes": 5327376, "sha256": "dfd9080eee119da81663332a7c3001271d8eec1e62c4b0571ebdd9f80d842f92"},
+    {"file": "原始参考资料/02_使用与安全SOP/03_AirPods_抗汗抗水性能.pdf", "bytes": 255258, "sha256": "87e78692a1411ce109525a58915b1272bea0977d1ae949a6258e4e17acf98792"},
+    {"file": "原始参考资料/02_使用与安全SOP/04_AirPods_Pro_3_技术规格.pdf", "bytes": 849039, "sha256": "7d11f5302631deaf012851810e2c0684963f6e5a4d55afc49d5a057554cacd59"},
+    {"file": "原始参考资料/03_七日无理由退货/01_Apple_退货与退款.pdf", "bytes": 540835, "sha256": "e1974ab4f7f814e6f8feda0178a2bdbac2e596aaa87cc35956e73c29fa6c5cd8"},
+    {"file": "原始参考资料/03_七日无理由退货/02_中华人民共和国消费者权益保护法.pdf", "bytes": 1184226, "sha256": "6e56cbfffbcb023948d875d8f4b99e7e37cdfa72a2fe78e857b05f777f5b70ab"},
+    {"file": "原始参考资料/03_七日无理由退货/03_Apple产品与中国消费者权益相关法律法规.pdf", "bytes": 658317, "sha256": "bf040c904bcb553ac0c024e3b4bf0709470db3d6246ead673776a1019519e36a"},
+    {"file": "原始参考资料/04_保修与维修流程/01_AirPods_服务与维修.pdf", "bytes": 379562, "sha256": "ce0f7b57b97c785015cd23e760b81c2da028279ef768673ace63a4e26cf07111"},
+    {"file": "原始参考资料/04_保修与维修流程/02_Apple中国大陆硬件保修.pdf", "bytes": 350037, "sha256": "e0fd077fecfa95b5d02685e50930a97717c13333e5b7bba1f2eb09becfcf46af"},
+    {"file": "原始参考资料/04_保修与维修流程/03_AirPods_识别型号.pdf", "bytes": 2905225, "sha256": "fa5bf94e666d8d060c73985b2f79ac16160c7402eab4529a9ca2157adb5ac5b4"},
+    {"file": "原始参考资料/05_渠道差异说明/01_Apple退货与退款政策.pdf", "bytes": 540835, "sha256": "e1974ab4f7f814e6f8feda0178a2bdbac2e596aaa87cc35956e73c29fa6c5cd8"},
+    {"file": "原始参考资料/05_渠道差异说明/02_Apple授权经销商查询.pdf", "bytes": 347760, "sha256": "bdfeb10aa492f7745cb32f4fffa293744d4afa0c7eb86796129027dd7b79a9d8"},
+    {"file": "原始参考资料/05_渠道差异说明/03_Apple产品与中国消费者权益相关法律法规.pdf", "bytes": 658317, "sha256": "bf040c904bcb553ac0c024e3b4bf0709470db3d6246ead673776a1019519e36a"}
+  ]
+}

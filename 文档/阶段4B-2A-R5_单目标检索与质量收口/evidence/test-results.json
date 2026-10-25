@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-25T13:27:00.000Z",
+  "status": "PASSED",
+  "commands": [
+    {
+      "command": "node tests/server-unit.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "node tests/stage4b2-unit.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "node tests/e2e-stage4b2.mjs",
+      "status": "PASSED"
+    },
+    {
+      "command": "npm run validate:4b2a-r5",
+      "status": "PASSED"
+    }
+  ],
+  "formal_run_id": "EVAL-REAL-658cce03-c558-4e40-b0d7-ca59f96f92e8",
+  "regression_run_id": "REGRESSION-REAL-R5-43339807-22bf-4ba4-b06b-8e47da7a4d07",
+  "holdout_run_id": "HOLDOUT-REAL-R5-30f0b5e0-edc7-4ab2-a278-c199d0d8c0f7",
+  "overall_quality": "FAILED",
+  "failure_reason": "RET-H09 first holdout result remains a semantic failure."
+}

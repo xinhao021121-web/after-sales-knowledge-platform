@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-25T12:11:04.930Z",
+  "before": {
+    "evidence": "baseline/r3-system-prompt.txt",
+    "version": 16,
+    "model": "deepseek-v4-pro",
+    "top_k": 10
+  },
+  "after": {
+    "evidence": "evidence/dify-config-after-r4.json",
+    "version": 18,
+    "model": "deepseek-v4-pro",
+    "top_k": 10,
+    "prompt_sha256": "46e7e45caa996b3ae6238cebfa4ba356b4a9dc944d792407b96e97977a593d59"
+  },
+  "changes": [
+    "same business problem cannot be split into cause and troubleshooting goals",
+    "next-step actions must be self-contained and cannot reference goal labels",
+    "repair and replacement journeys must explicitly state no free repair or replacement promise"
+  ],
+  "business_knowledge_published": false
+}

@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-10-25T13:20:18.410Z",
+  "before": {
+    "evidence": "baseline/dify-config-r4-final.json",
+    "version": 18,
+    "marked_name": "R4-CANDIDATE-VISIBLE",
+    "model": "deepseek-v4-pro",
+    "top_k": 10,
+    "reranking_model": {
+      "provider": "langgenius/tongyi/tongyi",
+      "model": "qwen3-rerank"
+    },
+    "prompt_sha256": "46e7e45caa996b3ae6238cebfa4ba356b4a9dc944d792407b96e97977a593d59"
+  },
+  "after": {
+    "evidence": "evidence/dify-config-after-r5.json",
+    "version": 21,
+    "marked_name": "R5-RELEVANCE",
+    "model": "deepseek-v4-pro",
+    "top_k": 10,
+    "reranking_model": {
+      "provider": "langgenius/tongyi/tongyi",
+      "model": "qwen3-rerank"
+    },
+    "prompt_sha256": "6f354ed76dbdc62ec9048eafee5713bcdfe0c2f6b1312ea6a85d64a21d2620a8"
+  },
+  "changes": [
+    "single-objective questions retrieve with the original question only",
+    "rewrites supplement intent and cannot add facts treated as user-confirmed",
+    "single-objective selection is relevance-first and may return several segments from one logical document",
+    "document diversity is reserved for explicit multi-objective questions",
+    "internal candidate pool remains 10 while the user-visible answer is evaluated on Top3"
+  ],
+  "business_knowledge_published": false
+}

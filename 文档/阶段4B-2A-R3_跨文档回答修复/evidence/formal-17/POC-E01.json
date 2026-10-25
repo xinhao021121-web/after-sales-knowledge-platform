@@ -1,0 +1,136 @@
+{
+  "task_id": "POC-E01",
+  "core_task_id": "EDGE-NO-KNOWLEDGE",
+  "question_hash": "af384b9ff69c7cbd5da791bf1abac1809f077dfcf915651e46262159dd52216a",
+  "question_length": 23,
+  "question_summary": {
+    "original": "AirPods Pro 3 可以用卫星电话吗？",
+    "rewrites": [
+      "没有手机信号时，AirPods Pro 3 能不能直接连卫星求救？",
+      "这款耳机支持卫星通话功能吗？"
+    ]
+  },
+  "answer_status": "NO_ANSWER",
+  "provider_called": true,
+  "recall_at_3": null,
+  "source_hit": null,
+  "expected_source_count": 0,
+  "covered_source_count": 0,
+  "covered_source_ids": [],
+  "retrieval_diversity": {
+    "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+    "requested_internal_top_k": 10,
+    "subquery_count": 3,
+    "subqueries": [
+      "AirPods Pro 3 可以用卫星电话吗？",
+      "没有手机信号时，AirPods Pro 3 能不能直接连卫星求救？",
+      "这款耳机支持卫星通话功能吗？"
+    ],
+    "internal_candidate_pool_size": 12,
+    "displayed_top_k": 3,
+    "candidate_document_count": 5,
+    "displayed_document_count": 3,
+    "duplicate_segments_suppressed": 0
+  },
+  "retrieval_status": "RETRIEVAL_COMPLETED",
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "status": "SUCCESS",
+      "request_id": "068aff05-d47c-4720-994c-b5f02c7d22a6",
+      "provider_request_id": "88b59e7b-9c8f-4813-8a76-828100a6888d",
+      "error_code": null
+    }
+  ],
+  "citation_support_passed": true,
+  "citations": [],
+  "answer_goals": [
+    {
+      "index": "一",
+      "title": "目标一：AirPods Pro 3 卫星电话/直连卫星求救/卫星通话支持",
+      "content": "判断：现有检索证据未包含 AirPods Pro 3 支持卫星电话、无信号直连卫星求救或卫星通话功能的条件、限制或说明，无法确认该产品是否具备相关能力。 下一步：转 Apple 官方技术支持或人工售后，按耳机型号 A3063/A3064/A3065 核验功能规格；在官方确认前，不对“可用卫星电话”或“可直连卫星求救”作承诺。 依据：[1][2][3]",
+      "evidence_supported": true
+    }
+  ],
+  "business_action_status": "AUTO_STATUS_MATCH",
+  "business_action_correct": true,
+  "forbidden_action_match": null,
+  "followup_complete": false,
+  "refusal_correct": true,
+  "p0": false,
+  "p0_passed": null,
+  "prompt_tokens": 1081,
+  "completion_tokens": 1580,
+  "total_tokens": 2661,
+  "provider_latency_ms": 19587,
+  "cost_status": "COST_UNKNOWN",
+  "estimated_total_cost": null,
+  "source_mode": "REAL_RAG",
+  "error_code": "NO_ANSWER",
+  "provider_request_id": "88b59e7b-9c8f-4813-8a76-828100a6888d",
+  "bff_request_id": "068aff05-d47c-4720-994c-b5f02c7d22a6",
+  "evidence": {
+    "expected": [],
+    "retrieved": [
+      {
+        "position": 1,
+        "document_name": "04_保修与维修流程.md",
+        "document_id": "DOC-WARRANTY-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+        "score": 0.6292401,
+        "claim_support_count": 0
+      },
+      {
+        "position": 2,
+        "document_name": "05_渠道差异说明.md",
+        "document_id": "DOC-CHANNEL-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+        "score": 0.6066761,
+        "claim_support_count": 2
+      },
+      {
+        "position": 3,
+        "document_name": "01_售后FAQ.md",
+        "document_id": "DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+        "score": 0.6020725,
+        "claim_support_count": 3
+      }
+    ],
+    "retrieval_diversity": {
+      "merge_strategy": "REPRESENTATIVE_REWRITE_DOCUMENT_DEDUPE",
+      "requested_internal_top_k": 10,
+      "subquery_count": 3,
+      "subqueries": [
+        "AirPods Pro 3 可以用卫星电话吗？",
+        "没有手机信号时，AirPods Pro 3 能不能直接连卫星求救？",
+        "这款耳机支持卫星通话功能吗？"
+      ],
+      "internal_candidate_pool_size": 12,
+      "displayed_top_k": 3,
+      "candidate_document_count": 5,
+      "displayed_document_count": 3,
+      "duplicate_segments_suppressed": 0
+    },
+    "answer": "当前没有可用的有效知识，不能生成确定售后结论。请转人工或补充官方资料。",
+    "answer_goals": [
+      {
+        "index": "一",
+        "title": "目标一：AirPods Pro 3 卫星电话/直连卫星求救/卫星通话支持",
+        "content": "判断：现有检索证据未包含 AirPods Pro 3 支持卫星电话、无信号直连卫星求救或卫星通话功能的条件、限制或说明，无法确认该产品是否具备相关能力。 下一步：转 Apple 官方技术支持或人工售后，按耳机型号 A3063/A3064/A3065 核验功能规格；在官方确认前，不对“可用卫星电话”或“可直连卫星求救”作承诺。 依据：[1][2][3]",
+        "evidence_supported": true
+      }
+    ],
+    "suggested_action": "转 Apple 官方技术支持或人工售后，按耳机型号 A3063/A3064/A3065 核验功能规格；在官方确认前，不对“可用卫星电话”或“可直连卫星求救”作承诺；依据：[1][2][3]。",
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 0,
+      "multi_objective_passed": true,
+      "unsupported_count": 1
+    }
+  }
+}

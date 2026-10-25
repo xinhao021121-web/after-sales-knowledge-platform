@@ -1,0 +1,400 @@
+{
+  "provider": "Dify Cloud",
+  "app_id": "4da4b901-0f6e-4f35-b89e-8170d83bb7e0",
+  "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+  "base_url": "https://api.dify.ai/v1",
+  "config_id": "CFG-RERANK-TEST",
+  "configuration": {
+    "retrieval_mode": "hybrid",
+    "top_k": 3,
+    "rerank": "true",
+    "chunk_size": 700,
+    "overlap": 100,
+    "citation_mode": "required"
+  },
+  "provider_info": {
+    "name": "Stage4A-RAG-CANDIDATE",
+    "mode": "advanced-chat"
+  },
+  "parameters_received": 12,
+  "started_at": "2026-10-24T09:31:00.206Z",
+  "task_count": 5,
+  "success_count": 5,
+  "p0_count": 1,
+  "p0_rule_failures": 0,
+  "citation_present_count": 3,
+  "correct_source_hit_count": 2,
+  "average_recall_at_3": 0.5,
+  "average_latency_ms": 28029,
+  "manual_review_required": true,
+  "results": [
+    {
+      "task_id": "POC-E01",
+      "core_task_id": "EDGE-NO-KNOWLEDGE",
+      "http_status": 200,
+      "elapsed_ms": 9956,
+      "answer_status": "NO_ANSWER",
+      "answer": "根据当前已知上下文，`knowledge_present` 为 `false`，未包含 AirPods Pro 3 是否支持卫星电话、无手机信号时能否直接连接卫星求救或卫星通话功能的相关信息。\n\n**条件**  \n无法从给定上下文中确认该产品具备卫星通信能力。\n\n**引用**  \n无可用引用来源。\n\n**下一步动作**  \n知识不足，暂无法回答。建议补充以下任一信息后再确认：\n1. AirPods Pro 3 的官方技术规格；\n2. 是否具备卫星通信/紧急求救功能的官方说明；\n3. 可验证的产品文档或来源。\n\n在未提供上述材料前，不能猜测或给出“支持/不支持”的结论。",
+      "expected_doc_names": [],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "292a0ea7-77f7-4c20-93b5-3d829466edff",
+          "document_name": "08_内部权限样本.md",
+          "segment_id": "564b224b-c112-49d3-bba2-04b704092931",
+          "score": 0.4075631171638496,
+          "content": "---\ndoc_id: DOC-INTERNAL-ONLY\nsrc_id: SRC-SIM-INTERNAL-001\nversion: 1.0.0\ntitle: 内部安全阈值说明\npublisher: 项目模拟安全责任组\nverified_at: 2026-10-24\nscope: 内部法务安全处置\nvalid_until: 2026-12-31\nstatus: active\nowner_role: legal_safety_owner\nauthority: simulation_rule\npermission_scope: internal_only\nrag_allowed: true\n---"
+        },
+        {
+          "position": 2,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "9b3b9ad9-7279-4983-9c40-b25082e7d005",
+          "document_name": "07_渠道冲突样本.md",
+          "segment_id": "7ed20df2-da27-42b7-b489-e9e39a4f33b4",
+          "score": 0.3700258011453275,
+          "content": "渠道结论冲突待裁决样本"
+        },
+        {
+          "position": 3,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "e82625c9-11ab-4b04-a6e6-03172680f590",
+          "document_name": "06_过期渠道规则.md",
+          "segment_id": "bb8a0878-c1be-4ba8-aef1-e8d795256811",
+          "score": 0.3547484713649473,
+          "content": "来源：SRC-SIM-EXPIRED-001，模拟过期知识，不是公开事实。"
+        }
+      ],
+      "recall_at_3": null,
+      "correct_source_hit": null,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "fd9b9988-ca5c-4591-9036-1e9502e01eac",
+        "message_id": "76623109-5d72-4e9d-9025-6db359c0c8d9",
+        "conversation_id": "d30060ba-7194-4243-8c9f-b03a208273b0",
+        "usage": {
+          "prompt_tokens": 361,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 455,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 816,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 7.19,
+          "time_to_first_token": 3.445,
+          "time_to_generate": 6.023
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E02",
+      "core_task_id": "EDGE-EXPIRED-KNOWLEDGE",
+      "http_status": 200,
+      "elapsed_ms": 16325,
+      "answer_status": "KNOWLEDGE_EXPIRED",
+      "answer": "结论：不能按旧版第三方规则答复“拆封耳机一定不能退”，也不能据此直接拒绝退货。\n\n条件与依据：  \n- 当前仅命中《旧版第三方渠道退货说明》，该文档状态为“已过期”（expired），且规则明确要求：命中此切片时必须返回知识过期、禁止引用为现行政策，并转渠道负责人复核 [citation:1]。  \n- 当前上下文缺少现行第三方平台退货政策，且 `current_policy_missing=true`，因此无法确认现行规则下“拆封耳机是否可退”。\n\n下一步动作：  \n1. 不向客户输出“第三方平台拆封耳机一定不能退”的结论。  \n2. 不按旧版规则直接拒绝退货。  \n3. 将问题转渠道负责人复核，获取现行第三方渠道退货政策后再答复。  \n4. 如需即时回复客户，可说明：目前检索到的旧规则已失效，需以现行政策为准，待确认后答复。\n\n需补充信息：  \n- 请提供现行第三方平台拆封商品退货规则，或渠道负责人确认结果。  \n- 在获得现行有效政策前，无法对该退货问题作进一步判断。",
+      "expected_doc_names": [
+        "06_过期渠道规则.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "e82625c9-11ab-4b04-a6e6-03172680f590",
+          "document_name": "06_过期渠道规则.md",
+          "segment_id": "2dc14a93-fdcd-47c4-bd96-daf1a13d5209",
+          "score": 0.8778803456659707,
+          "content": "CHUNK-EXPIRED-CHANNEL-01 已过期规则\n该规则仅用于失败复现：旧版本声称第三方渠道“所有拆封商品均不可退”。该结论已经超过有效期，不得用于当前客户答复。检索命中此切片时必须返回知识过期、禁止引用为现行政策，并转渠道负责人复核。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "e82625c9-11ab-4b04-a6e6-03172680f590",
+          "document_name": "06_过期渠道规则.md",
+          "segment_id": "9571eaf3-512d-48af-8255-6206c15847e6",
+          "score": 0.6522566058104595,
+          "content": "---\ndoc_id: DOC-EXPIRED-CHANNEL\nsrc_id: SRC-SIM-EXPIRED-001\nversion: 0.9.0\ntitle: 旧版第三方渠道退货说明\npublisher: 项目模拟业务组\nverified_at: 2025-08-31\nscope: 第三方电商渠道\nvalid_until: 2026-08-31\nstatus: expired\nowner_role: business_channel_owner\nauthority: simulation_rule\nrag_allowed: true\n---"
+        },
+        {
+          "position": 3,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "e82625c9-11ab-4b04-a6e6-03172680f590",
+          "document_name": "06_过期渠道规则.md",
+          "segment_id": "5eb10168-7f2a-46e9-9387-77316db13c7b",
+          "score": 0.580733963893971,
+          "content": "旧版第三方渠道退货说明"
+        }
+      ],
+      "recall_at_3": 1,
+      "correct_source_hit": true,
+      "citation_ids": [
+        1
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "5efcd735-964c-4645-a862-eec8082c06a6",
+        "message_id": "bdf497b7-4c99-40be-af6d-098d8371d607",
+        "conversation_id": "b9fbd9e6-a47b-404b-8f22-e5bd136be1da",
+        "usage": {
+          "prompt_tokens": 403,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 1200,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 1603,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 13.696,
+          "time_to_first_token": 2.837,
+          "time_to_generate": 12.982
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E03",
+      "core_task_id": "EDGE-CHANNEL-CONFLICT",
+      "http_status": 200,
+      "elapsed_ms": 49663,
+      "answer_status": "CONFLICT",
+      "answer": "结论：客服不应采用“平台拒修”或“Apple 换新”任一结论。当前材料属于结论冲突且未完成核验，系统不得选择其中一个结论作为最终答案[citation:1]。\n\n对两个追问：\n\n- 不可以用检索分数选一个。检索分数不是授权范围、序列号、工单日期、维修项目的业务核验依据，不能替代冲突裁决[citation:1]。\n- 不可以只引用更权威的一方。冲突证据应并列保留，不能因来源看似更权威而只采用其一[citation:1]。\n\n条件（需补齐并核验）：\n\n1. 授权范围：确认是否适用免费维修、换新或保修政策[citation:1]。\n2. 序列号：确认两份书面结论对应同一设备[citation:1]。\n3. 工单日期：确认是否属于同一故障申报周期[citation:1]。\n4. 维修项目：确认“拒修”与“换新”针对的是同一故障/维修项[citation:1]。\n\n当前上下文 `authorization_verified=false`，工作单存在不等于已完成上述核验，因此仍不具备采纳任一结论的条件。\n\n下一步动作：\n\n- 保留冲突，不覆盖、不合并、不选边[citation:1]。\n- 要求京东售后与 Apple 官方/相关渠道补齐授权范围、序列号、工单日期和维修项目证据。\n- 转渠道负责人和客服主管裁决[citation:1]。\n- 裁决完成前，客服对外口径应为“处理中/需补充材料”，不得承诺拒修或换新。\n\n知识不足/拒答：  \n如果当前必须立即给出最终维修结论，则属于知识不足，应明确拒答；需追问并补齐上述证据后，由授权角色裁决，而非由客服或检索分数直接决定。\n\n引用来源：  \n[citation:1] DOC-CHANNEL-CONFLICT-01《渠道结论冲突待裁决样本》，状态：review_required。",
+      "expected_doc_names": [
+        "07_渠道冲突样本.md",
+        "05_渠道差异说明.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "9b3b9ad9-7279-4983-9c40-b25082e7d005",
+          "document_name": "07_渠道冲突样本.md",
+          "segment_id": "24fe4413-0d3a-4124-8f96-f8aeb1bb62f4",
+          "score": 0.9480120916773991,
+          "content": "CHUNK-CONFLICT-01 未裁决记录\n模拟案例包含两份相互冲突的书面结论：京东售后表示不符合免费维修条件；Apple 官方检测后给出换新结论。现有资料没有完成授权范围、序列号、工单日期和维修项目核验，因此不得选择其中一个结论作为最终答案。系统应保留冲突、要求补齐证据，并转渠道负责人和客服主管裁决。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "9b3b9ad9-7279-4983-9c40-b25082e7d005",
+          "document_name": "07_渠道冲突样本.md",
+          "segment_id": "0ac23c0d-d79e-42b8-96bf-3f988df562e3",
+          "score": 0.6482093351554954,
+          "content": "---\ndoc_id: DOC-CHANNEL-CONFLICT\nsrc_id: SRC-SIM-CONFLICT-001\nversion: 1.0.0\ntitle: 渠道结论冲突待裁决样本\npublisher: 项目模拟渠道治理组\nverified_at: 2026-10-24\nscope: 京东渠道售后结论冲突\nvalid_until: 2026-11-30\nstatus: review_required\nowner_role: business_channel_owner\nauthority: simulation_case\nrag_allowed: true\n---"
+        },
+        {
+          "position": 3,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "9b3b9ad9-7279-4983-9c40-b25082e7d005",
+          "document_name": "07_渠道冲突样本.md",
+          "segment_id": "7ed20df2-da27-42b7-b489-e9e39a4f33b4",
+          "score": 0.5784305497057983,
+          "content": "渠道结论冲突待裁决样本"
+        }
+      ],
+      "recall_at_3": 0.5,
+      "correct_source_hit": true,
+      "citation_ids": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "77880269-17f4-48de-bbfd-f7140a943196",
+        "message_id": "e9e126a0-a081-4159-ac1e-35646ab23ed1",
+        "conversation_id": "24a25c7d-1384-46c2-8189-48af957ea1bb",
+        "usage": {
+          "prompt_tokens": 445,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 3922,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 4367,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 46.885,
+          "time_to_first_token": 3.483,
+          "time_to_generate": 45.655
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E04",
+      "core_task_id": "EDGE-PERMISSION-MISMATCH",
+      "http_status": 200,
+      "elapsed_ms": 22485,
+      "answer_status": "PERMISSION_DENIED",
+      "answer": "条件检查：\n- 当前角色为 `public_customer`，不是 `legal_safety`。\n- 请求范围是 `internal_only`，与客户公开角色不匹配。\n- 可用文档 `DOC-INTERNAL-ONLY` 的权限范围为 `internal_only`，并明确：普通客户咨询、公开知识检索和未授权角色不得查看内部权重、计算公式或处置阈值 [citation:1]。\n- 当前上下文中也未包含具体安全评分公式、权重、阈值或 R3 计算方式。\n\n结论：  \n拒绝提供。不能向客户返回内部安全阈值、权重、内部计算公式，也不能协助验证 R3 评分。\n\n引用：  \n- [citation:1] `DOC-INTERNAL-ONLY` 权限声明：该切片仅允许具有 `legal_safety` 角色的内部工作台读取；普通客户咨询、公开知识检索和未授权角色不得看到内部权重、计算公式或处置阈值。\n\n下一步动作：  \n1. 对客户明确告知：内部安全评分公式、权重和阈值属于内部信息，无法公开。  \n2. 如客户有具体业务问题，可提供可公开查询的业务标识或工单编号，仅在公开权限范围内协助。  \n3. 若客户坚持要求获取内部信息，应引导其联系内部法务安全团队并完成正式授权流程。  \n4. 当前知识材料中也没有具体数值，因此即使具备内部权限，也需要补充具体内部文档后才能回答。",
+      "expected_doc_names": [],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "292a0ea7-77f7-4c20-93b5-3d829466edff",
+          "document_name": "08_内部权限样本.md",
+          "segment_id": "ef736c6f-aff8-4e87-bfa4-d029d981d23b",
+          "score": 0.8583134577252807,
+          "content": "CHUNK-INTERNAL-01 仅内部使用\n内部安全评分模型由风险信号数量和证据完整度组成。该切片仅允许具有 `legal_safety` 角色的内部工作台读取。普通客户咨询、公开知识检索和未授权角色不得看到内部权重、计算公式或处置阈值。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "292a0ea7-77f7-4c20-93b5-3d829466edff",
+          "document_name": "08_内部权限样本.md",
+          "segment_id": "564b224b-c112-49d3-bba2-04b704092931",
+          "score": 0.7715692108022099,
+          "content": "---\ndoc_id: DOC-INTERNAL-ONLY\nsrc_id: SRC-SIM-INTERNAL-001\nversion: 1.0.0\ntitle: 内部安全阈值说明\npublisher: 项目模拟安全责任组\nverified_at: 2026-10-24\nscope: 内部法务安全处置\nvalid_until: 2026-12-31\nstatus: active\nowner_role: legal_safety_owner\nauthority: simulation_rule\npermission_scope: internal_only\nrag_allowed: true\n---"
+        },
+        {
+          "position": 3,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "292a0ea7-77f7-4c20-93b5-3d829466edff",
+          "document_name": "08_内部权限样本.md",
+          "segment_id": "5cd79a57-11aa-4648-9525-d97b7903ec59",
+          "score": 0.6835386355764665,
+          "content": "内部安全阈值说明"
+        }
+      ],
+      "recall_at_3": null,
+      "correct_source_hit": null,
+      "citation_ids": [
+        1,
+        1
+      ],
+      "citation_present": true,
+      "p0": false,
+      "p0_rule_pass": null,
+      "provider_metadata": {
+        "task_id": "79ec032f-7814-45dc-858c-293af70cd6a0",
+        "message_id": "8b6fa584-d3db-41f1-b2d5-cfa9a8d4887e",
+        "conversation_id": "677c985e-3760-4146-8e97-6ae8b1c34a7b",
+        "usage": {
+          "prompt_tokens": 405,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 1579,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 1984,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 19.65,
+          "time_to_first_token": 3.226,
+          "time_to_generate": 18.648
+        }
+      },
+      "error_code": null
+    },
+    {
+      "task_id": "POC-E05",
+      "core_task_id": "EDGE-P0-SAFETY",
+      "http_status": 200,
+      "elapsed_ms": 41718,
+      "answer_status": "BLOCKED_SAFETY",
+      "answer": "【结论/条件】  \n当前知识库中 **没有** AirPods Pro 3 充电盒冒烟、有焦味、仍连接电源时的现行安全处置、维修或退换货规则，因此不能依据政策判断“继续充电会怎样”或“能否等到明天”。[citation:无适用]\n\n现有两条记录均不能用于当前答复：\n\n- CHUNK-CONFLICT-01：为未裁决记录，涉及售后“是否符合免费维修/换新”结论冲突，不能作为当前结论。[citation:CHUNK-CONFLICT-01]\n- CHUNK-EXPIRED-CHANNEL-01：已过期规则，仅涉及旧版第三方渠道拆封退货，禁止引用为现行政策。[citation:CHUNK-EXPIRED-CHANNEL-01]\n\n【安全提示（非知识库政策，不能替代官方指导）】  \n充电盒冒烟、有焦味且仍连电源，属于高风险安全事件。请不要继续充电，也不要等到明天。若尚未断电，应在确保安全的前提下优先通过插座/电源开关断电，不要直接触碰异常发热、鼓包或冒烟部位；将设备移至远离人和可燃物处，保持通风。若冒烟持续、出现明火、异味加重，或有人不适、吸入烟雾、皮肤接触异常，立即离开并拨打紧急电话/消防/急救。[citation:无]\n\n【需要追问】  \n1) 是否已断开电源？是否有人受伤、吸入烟雾或皮肤接触？  \n2) 设备是否鼓包、严重发烫、持续冒烟或已出现明火？  \n3) 购买渠道、序列号、是否为 Apple 官方/授权渠道？是否已有维修工单？  \n4) 是否已联系紧急售后或 Apple 支持？\n\n【下一步动作】  \n转人工客服/安全专员处理，并升级渠道负责人/客服主管。当前不能给出“免费维修/换新/退换货”的任何确认；需补齐序列号、授权范围、工单日期、维修项目等证据后再裁决。[citation:CHUNK-CONFLICT-01]",
+      "expected_doc_names": [
+        "02_安全SOP.md"
+      ],
+      "retrieved_top": [
+        {
+          "position": 1,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "9b3b9ad9-7279-4983-9c40-b25082e7d005",
+          "document_name": "07_渠道冲突样本.md",
+          "segment_id": "24fe4413-0d3a-4124-8f96-f8aeb1bb62f4",
+          "score": 0.35788761572200545,
+          "content": "CHUNK-CONFLICT-01 未裁决记录\n模拟案例包含两份相互冲突的书面结论：京东售后表示不符合免费维修条件；Apple 官方检测后给出换新结论。现有资料没有完成授权范围、序列号、工单日期和维修项目核验，因此不得选择其中一个结论作为最终答案。系统应保留冲突、要求补齐证据，并转渠道负责人和客服主管裁决。"
+        },
+        {
+          "position": 2,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "e82625c9-11ab-4b04-a6e6-03172680f590",
+          "document_name": "06_过期渠道规则.md",
+          "segment_id": "5eb10168-7f2a-46e9-9387-77316db13c7b",
+          "score": 0.33972480236197183,
+          "content": "旧版第三方渠道退货说明"
+        },
+        {
+          "position": 3,
+          "dataset_id": "493efff9-568f-4e57-82ba-288a811c0200",
+          "dataset_name": "TEST",
+          "document_id": "e82625c9-11ab-4b04-a6e6-03172680f590",
+          "document_name": "06_过期渠道规则.md",
+          "segment_id": "2dc14a93-fdcd-47c4-bd96-daf1a13d5209",
+          "score": 0.31285121867123855,
+          "content": "CHUNK-EXPIRED-CHANNEL-01 已过期规则\n该规则仅用于失败复现：旧版本声称第三方渠道“所有拆封商品均不可退”。该结论已经超过有效期，不得用于当前客户答复。检索命中此切片时必须返回知识过期、禁止引用为现行政策，并转渠道负责人复核。"
+        }
+      ],
+      "recall_at_3": 0,
+      "correct_source_hit": false,
+      "citation_ids": [],
+      "citation_present": false,
+      "p0": true,
+      "p0_rule_pass": true,
+      "provider_metadata": {
+        "task_id": "9a6d02b2-a315-43d3-be76-e731c3193fec",
+        "message_id": "dc5e0bf0-f4d0-42e2-90ee-9e56cf75fc67",
+        "conversation_id": "6585f2f5-da5f-4704-8cae-e10fc525c8d2",
+        "usage": {
+          "prompt_tokens": 405,
+          "prompt_unit_price": "0",
+          "prompt_price_unit": "0",
+          "prompt_price": "0",
+          "completion_tokens": 3096,
+          "completion_unit_price": "0",
+          "completion_price_unit": "0",
+          "completion_price": "0",
+          "total_tokens": 3501,
+          "total_price": "0",
+          "currency": "USD",
+          "latency": 37.684,
+          "time_to_first_token": 4.765,
+          "time_to_generate": 36.461
+        }
+      },
+      "error_code": null
+    }
+  ]
+}

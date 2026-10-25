@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="咨询任务">
+    <mxGraphModel pageWidth="1200" pageHeight="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+      <mxCell id="ct" value="咨询任务状态" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="400" height="40" as="geometry"/></mxCell>
+      <mxCell id="n1" value="新建" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="n2" value="待补上下文" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="240" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="n3" value="判断中" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="450" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="n4" value="建议待确认" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="650" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="n5" value="已答复" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="860" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="n6" value="已解决" style="rounded=1;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="860" y="250" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="n7" value="已关闭" style="ellipse;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="860" y="380" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="n8" value="专家转交" style="rounded=1;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1"><mxGeometry x="450" y="250" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="n9" value="风险候选" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="450" y="380" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="n10" value="知识缺口→CASE" style="rounded=1;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1"><mxGeometry x="650" y="250" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="n11" value="已取消" style="ellipse;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="240" y="380" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n1" target="n2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n2" target="n3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n3" target="n4"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n4" target="n5"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n5" target="n6"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n6" target="n7"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n3" target="n8"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#B85450;html=1;" edge="1" parent="1" source="n3" target="n9"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n3" target="n10"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="n1" target="n11"><mxGeometry relative="1" as="geometry"/></mxCell>
+    </root></mxGraphModel>
+  </diagram>
+  <diagram name="风险升级">
+    <mxGraphModel pageWidth="1200" pageHeight="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+      <mxCell id="rt" value="风险升级状态" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="400" height="40" as="geometry"/></mxCell>
+      <mxCell id="r1" value="候选" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="r2" value="确认风险" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="240" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="r3" value="止损中" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="450" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="r4" value="已升级" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="650" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="r5" value="观察中" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="850" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="r6" value="已关闭" style="ellipse;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="850" y="280" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="r7" value="已排除" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="240" y="280" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="r8" value="已重开" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="650" y="280" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="re1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r1" target="r2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r2" target="r3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r3" target="r4"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r4" target="r5"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r5" target="r6"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r2" target="r7"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#B85450;html=1;" edge="1" parent="1" source="r6" target="r8"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#B85450;html=1;" edge="1" parent="1" source="r8" target="r2"><mxGeometry relative="1" as="geometry"/></mxCell>
+    </root></mxGraphModel>
+  </diagram>
+  <diagram name="知识来源">
+    <mxGraphModel pageWidth="1400" pageHeight="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+      <mxCell id="st" value="知识来源 SRC 状态｜不直接代表知识已发布" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="800" height="40" as="geometry"/></mxCell>
+      <mxCell id="s1" value="活跃 ACTIVE" style="rounded=1;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="s2" value="待复核 REVIEW_REQUIRED" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="260" y="120" width="190" height="60" as="geometry"/></mxCell>
+      <mxCell id="s3" value="已过期 EXPIRED" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="520" y="120" width="160" height="60" as="geometry"/></mxCell>
+      <mxCell id="s4" value="已替代 SUPERSEDED" style="rounded=1;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1"><mxGeometry x="750" y="120" width="180" height="60" as="geometry"/></mxCell>
+      <mxCell id="s5" value="已撤回 WITHDRAWN" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="520" y="300" width="180" height="60" as="geometry"/></mxCell>
+      <mxCell id="s6" value="不可访问 UNAVAILABLE" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="260" y="300" width="190" height="60" as="geometry"/></mxCell>
+      <mxCell id="s7" value="关联 KB 复核&#xa;REL 影响评估" style="rounded=1;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1"><mxGeometry x="800" y="300" width="220" height="60" as="geometry"/></mxCell>
+      <mxCell id="se1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="s1" target="s2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="s2" target="s1"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="s2" target="s3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="s3" target="s4"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#B85450;html=1;" edge="1" parent="1" source="s2" target="s5"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="s2" target="s6"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="s6" target="s2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#B85450;html=1;" edge="1" parent="1" source="s5" target="s7"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="se9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="s1" target="s4"><mxGeometry relative="1" as="geometry"/></mxCell>
+    </root></mxGraphModel>
+  </diagram>
+  <diagram name="知识版本">
+    <mxGraphModel pageWidth="1300" pageHeight="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+      <mxCell id="kt" value="知识版本 KB 状态｜对外生效由 REL 唯一负责" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="800" height="40" as="geometry"/></mxCell>
+      <mxCell id="k1" value="草稿 DRAFT" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="k2" value="业务审核 BUSINESS_REVIEW" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="250" y="120" width="220" height="60" as="geometry"/></mxCell>
+      <mxCell id="k3" value="评测待执行 EVAL_PENDING" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="530" y="120" width="220" height="60" as="geometry"/></mxCell>
+      <mxCell id="k4" value="可发布 APPROVED_FOR_RELEASE" style="rounded=1;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="810" y="120" width="240" height="60" as="geometry"/></mxCell>
+      <mxCell id="k5" value="已拒绝 REJECTED" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="250" y="300" width="180" height="60" as="geometry"/></mxCell>
+      <mxCell id="k6" value="已撤回 WITHDRAWN" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="530" y="300" width="180" height="60" as="geometry"/></mxCell>
+      <mxCell id="k7" value="等待 REL 发布&#xa;不是 KB 自身状态" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;dashed=1;" vertex="1" parent="1"><mxGeometry x="810" y="300" width="240" height="60" as="geometry"/></mxCell>
+      <mxCell id="ke1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="k1" target="k2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ke2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="k2" target="k3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ke3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="k3" target="k4"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ke4" value="拒绝" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;" edge="1" parent="1" source="k2" target="k5"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ke5" value="来源撤回" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;" edge="1" parent="1" source="k2" target="k6"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ke6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;" edge="1" parent="1" source="k4" target="k7"><mxGeometry relative="1" as="geometry"/></mxCell>
+    </root></mxGraphModel>
+  </diagram>
+  <diagram name="问题案例">
+    <mxGraphModel pageWidth="1400" pageHeight="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+      <mxCell id="pt" value="问题案例状态｜评测通过待发布是合法停留态" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="850" height="40" as="geometry"/></mxCell>
+      <mxCell id="p1" value="待分诊" style="rounded=1;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="p2" value="已分诊" style="rounded=1;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1"><mxGeometry x="230" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="p3" value="证据备齐" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="420" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="p4" value="修复中" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="610" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="p5" value="回归待执行" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="800" y="120" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="p6" value="评测通过待发布" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="990" y="120" width="170" height="60" as="geometry"/></mxCell>
+      <mxCell id="p7" value="已关闭" style="ellipse;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="990" y="300" width="170" height="60" as="geometry"/></mxCell>
+      <mxCell id="p8" value="已重开" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="610" y="300" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="p9" value="已延期" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="230" y="300" width="140" height="60" as="geometry"/></mxCell>
+      <mxCell id="pe1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p1" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p2" target="p3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p3" target="p4"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p4" target="p5"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p5" target="p6"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe6" value="REL_ACTIVE 或联合不发布决定" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p6" target="p7"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe7" value="新问题" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;" edge="1" parent="1" source="p7" target="p8"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;" edge="1" parent="1" source="p8" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="pe9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p2" target="p9"><mxGeometry relative="1" as="geometry"/></mxCell>
+    </root></mxGraphModel>
+  </diagram>
+  <diagram name="评测任务">
+    <mxGraphModel pageWidth="1200" pageHeight="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+      <mxCell id="et" value="评测任务状态" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="400" height="40" as="geometry"/></mxCell>
+      <mxCell id="e1" value="待执行" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="e2" value="执行中" style="rounded=1;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="240" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="e3" value="通过" style="rounded=1;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="440" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="e4" value="失败" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="440" y="280" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="e5" value="受阻" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="240" y="280" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="ee1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e1" target="e2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ee2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e2" target="e3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ee3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;" edge="1" parent="1" source="e2" target="e4"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="ee4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e2" target="e5"><mxGeometry relative="1" as="geometry"/></mxCell>
+    </root></mxGraphModel>
+  </diagram>
+  <diagram name="发布版本">
+    <mxGraphModel pageWidth="1200" pageHeight="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+      <mxCell id="rt" value="发布版本 REL 状态｜对外生效的唯一归属" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="800" height="40" as="geometry"/></mxCell>
+      <mxCell id="r1" value="待批准" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="150" height="60" as="geometry"/></mxCell>
+      <mxCell id="r2" value="已发布 REL_ACTIVE" style="rounded=1;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1"><mxGeometry x="260" y="120" width="180" height="60" as="geometry"/></mxCell>
+      <mxCell id="r3" value="已替代 SUPERSEDED" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="520" y="120" width="190" height="60" as="geometry"/></mxCell>
+      <mxCell id="r4" value="已停用 SUSPENDED" style="rounded=1;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1"><mxGeometry x="520" y="280" width="190" height="60" as="geometry"/></mxCell>
+      <mxCell id="r5" value="已回滚 ROLLED_BACK" style="rounded=1;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="800" y="280" width="200" height="60" as="geometry"/></mxCell>
+      <mxCell id="r0" value="已拒绝 REJECTED" style="rounded=1;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="40" y="280" width="180" height="60" as="geometry"/></mxCell>
+      <mxCell id="re1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r1" target="r2"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re0" value="拒绝" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r1" target="r0"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r2" target="r3"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re3" value="严重异常" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;" edge="1" parent="1" source="r2" target="r4"><mxGeometry relative="1" as="geometry"/></mxCell>
+      <mxCell id="re4" value="回滚" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="r4" target="r5"><mxGeometry relative="1" as="geometry"/></mxCell>
+    </root></mxGraphModel>
+  </diagram>
+</mxfile>

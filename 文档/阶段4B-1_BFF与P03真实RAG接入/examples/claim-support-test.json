@@ -1,0 +1,48 @@
+{
+  "notice": "BFF服务端测试夹具，不是真实Dify结果；用于证明claim级引用结构和无claim降级。",
+  "source_mode": "TEST_FIXTURE_NOT_DIFY",
+  "answered": {
+    "answer_status": "ANSWERED",
+    "answer": "检测前不能承诺免费维修，应核对保障并完成检测。",
+    "suggested_action": "完成检测后确认维修资格。",
+    "business_conditions": [
+      "电池续航下降需检测并核对保障范围。"
+    ],
+    "citations": [
+      {
+        "citation_id": "EVD-SEG-FAQ-BATTERY",
+        "source": {
+          "src_id": "SRC-PUB-001",
+          "doc_id": "DOC-FAQ-V1",
+          "version": "1.0.0",
+          "title": "AirPods Pro 3 售后 FAQ",
+          "url": "https://support.apple.com/zh-cn/airpods",
+          "verified_at": "2026-10-24",
+          "valid_until": "2026-12-31",
+          "status": "active",
+          "segment_id": "SEG-FAQ-BATTERY"
+        },
+        "kb_id": "KB-DOC-FAQ-V1",
+        "kb_version_id": "1.0.0",
+        "chunk_id": "SEG-FAQ-BATTERY",
+        "segment_id": "SEG-FAQ-BATTERY",
+        "supported_claims": [
+          "电池续航下降需检测并核对保障范围。"
+        ],
+        "claim_support_status": "SUPPORTED",
+        "traceable": true
+      }
+    ],
+    "citation_support": {
+      "required": true,
+      "passed": true,
+      "supported_count": 1,
+      "unsupported_count": 0
+    }
+  },
+  "no_claim_downgrade": {
+    "status": "NEED_CLARIFICATION",
+    "citation_count": 0,
+    "citation_support": false
+  }
+}

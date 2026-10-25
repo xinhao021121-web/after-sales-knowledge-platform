@@ -1,0 +1,122 @@
+{
+  "captured_at": "2026-10-25T09:35:29.476Z",
+  "source_mode": "REAL_DIFY_DATASET_RETRIEVE",
+  "dataset": "CANDIDATE",
+  "query": "Apple 官网购买的 AirPods Pro 3 收货三天已拆封，充电不稳定，应该走退货还是保修检测？购买或售后渠道：需区分第三方平台与 Apple Store 在线商店",
+  "latency_ms": 1849,
+  "internal_candidate_pool_size": 14,
+  "records": [
+    {
+      "position": 1,
+      "score": 0.8063726,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "cbac61a9-83cb-4884-9549-191107a48124",
+      "content": "AirPods Pro 3 保修与维修流程"
+    },
+    {
+      "position": 2,
+      "score": 0.79969716,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "0d90cbfa-96de-48bb-855b-a93ce18d8942",
+      "content": "AirPods Pro 3 售后 FAQ"
+    },
+    {
+      "position": 3,
+      "score": 0.74790466,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "c9e4c89b-5f87-439f-9d8f-055213241714",
+      "content": "AirPods 退货与退款判断"
+    },
+    {
+      "position": 4,
+      "score": 0.6914711,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "489e6131-b959-43ca-8529-c28b6708777b",
+      "content": "CHUNK-FAQ-IDENTIFY-01 产品身份\nAirPods Pro 3 耳机型号为 A3063、A3064、A3065，MagSafe 充电盒型号为 A3122。回答售后问题前应核对型号、序列号、购买渠道和购买或签收日期。型号、序列号与购买凭证无法对应时，不直接承诺退换或免费维修，转保修身份核验。"
+    },
+    {
+      "position": 5,
+      "score": 0.6880969,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "a5da3389-7e07-49ff-ab5a-a979904ba5c8",
+      "content": "---\ndoc_id: DOC-WARRANTY-V1\nsrc_ids: [SRC-PUB-006, SRC-PUB-007, SRC-PUB-008, SRC-PUB-011]\nversion: 1.0.0\ntitle: AirPods Pro 3 保修与维修流程\npublisher: 项目模拟售后责任组\nverified_at: 2026-10-24\nscope: 中国大陆三包、有限保修、AppleCare+ 与保外服务\nvalid_until: 2026-12-31\nowner_role: aftersales_specialist\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 6,
+      "score": 0.6594215,
+      "document_id": "584fca4f-7b16-4b33-977c-a31b3b575604",
+      "document_name": "02_安全SOP.md",
+      "segment_id": "4d008009-ab7c-4312-80e2-1c24793a98b8",
+      "content": "AirPods Pro 3 安全处置 SOP"
+    },
+    {
+      "position": 7,
+      "score": 0.63620496,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "10f400d1-219f-478f-a4e0-32bee71b3e9d",
+      "content": "---\ndoc_id: DOC-RETURN-V1\nsrc_ids: [SRC-PUB-003, SRC-PUB-004, SRC-PUB-005, SRC-PUB-010]\nversion: 1.0.0\ntitle: AirPods 退货与退款判断\npublisher: 项目模拟业务与渠道责任组\nverified_at: 2026-10-24\nscope: 中国大陆远程交易与 Apple Store 在线商店\nvalid_until: 2026-12-31\nowner_role: business_channel_owner\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 8,
+      "score": 0.6228095,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "d03e14e6-f26f-4557-a1d3-d5f7633f6c07",
+      "content": "---\ndoc_id: DOC-FAQ-V1\nsrc_ids: [SRC-PUB-001, SRC-PUB-006, SRC-PUB-013]\nversion: 1.0.0\ntitle: AirPods Pro 3 售后 FAQ\npublisher: 项目模拟企业知识运营\nverified_at: 2026-10-24\nscope: 中国大陆公开售后与产品支持咨询\nvalid_until: 2026-12-31\nowner_role: knowledge_operator\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 9,
+      "score": 0.61597025,
+      "document_id": "38c33fc0-0617-4d39-adaa-3fd633f2a13a",
+      "document_name": "04_保修与维修流程.md",
+      "segment_id": "b5440479-d296-42d2-ae07-eaad8e9ed770",
+      "content": "CHUNK-WARRANTY-LIMITED-01 有限保修\n制造缺陷可进入 Apple 一年有限保修或相应法定保修判断。正常电池老化不属于有限保修范围。电池容量下降是否达到 AppleCare+ 服务资格，应核对保障合同、当前容量、购买日期和服务历史，不能仅凭“满两年”直接承诺换新。"
+    },
+    {
+      "position": 10,
+      "score": 0.58893,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "3ffeabc7-24ac-495d-b08a-9dd7f525c6e2",
+      "content": "CHUNK-RETURN-QUALITY-01 质量故障\n商品存在质量故障时，应优先核验中国三包。一般时间口径为交付后 0-7 日可退货、8-15 日可换货、16 日至 1 年可维修；与无理由退货是不同路径。最终动作需结合检测、销售商和渠道责任判断。"
+    },
+    {
+      "position": 11,
+      "score": 0,
+      "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "document_name": "05_渠道差异说明.md",
+      "segment_id": "dec60b83-78d2-4e12-9e28-365784fcf1f9",
+      "content": "CHUNK-CHANNEL-OFFICIAL-01 官方渠道\nApple Store 在线商店和线下直营渠道可依据各自适用的退货、保修和服务入口判断。在线商店退货商业政策不得自动扩展到第三方卖家。"
+    },
+    {
+      "position": 12,
+      "score": 0,
+      "document_id": "7ebee0b1-6d94-4b01-b667-f89aff2e37eb",
+      "document_name": "05_渠道差异说明.md",
+      "segment_id": "1282a63a-1aab-40ed-9f15-859d69f931f1",
+      "content": "---\ndoc_id: DOC-CHANNEL-V1\nsrc_ids: [SRC-PUB-003, SRC-PUB-012, SRC-PUB-010]\nversion: 1.0.0\ntitle: 售后渠道差异与责任边界\npublisher: 项目模拟业务与渠道责任组\nverified_at: 2026-10-24\nscope: Apple 官方线上、线下直营、第三方平台与授权服务渠道\nvalid_until: 2026-12-31\nowner_role: business_channel_owner\nauthority: derived_public_summary\nrag_allowed: true\n---"
+    },
+    {
+      "position": 13,
+      "score": 0,
+      "document_id": "c90141ec-2630-441e-a817-1a9a52ce07b7",
+      "document_name": "03_退货规则.md",
+      "segment_id": "b1a33913-9ad5-4842-8360-69d88912fd06",
+      "content": "CHUNK-RETURN-APPLE-01 Apple 在线商店商业政策\nApple Store 在线商店符合条件时可在交付后 14 日内申请退货。这是 Apple 在线商店的商业政策，不应自动套用到第三方平台、线下经销商或二手渠道。"
+    },
+    {
+      "position": 14,
+      "score": 0,
+      "document_id": "1a7df480-448a-4985-ac0a-37d7bd962e04",
+      "document_name": "01_售后FAQ.md",
+      "segment_id": "08ccc92f-7bd5-4b6a-8573-5a18292b1254",
+      "content": "CHUNK-FAQ-BATTERY-01 续航下降\n续航下降可能来自音量、降噪、空间音频、通话、温度和电池正常老化。Apple 有限保修不覆盖正常电池损耗；是否属于故障、法定三包或 AppleCare+ 服务，需要结合购买日期、渠道、保障合同、检测结果和当前资格判断。检测前不得承诺免费维修，也不得断言一定收费。"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "evaluation_set_id": "EVAL-RAG-R4-POC-R04-VISIBLE-1.0.0",
+  "version": "1.0.0",
+  "sample_type": "REGRESSION",
+  "frozen_at": "2026-10-25",
+  "task": {
+    "id": "POC-R04",
+    "core_task_id": "CORE-R4",
+    "dataset": "CANDIDATE",
+    "category": "售后规则判断",
+    "original_question": "AirPods Pro 长时间单耳佩戴后另一只不响怎么办？",
+    "rewrites": [
+      "右耳一直戴，左耳放回盒子很久，现在左耳没声音，是长期单耳佩戴坏了吗？",
+      "一只耳机有声音另一只没声音，要先检查什么？"
+    ],
+    "context": {
+      "product": "AirPods Pro 3",
+      "symptom": "单侧无声",
+      "volume_balance": "未知",
+      "cleaning": "未检查",
+      "reset": "未尝试"
+    },
+    "required_business_conditions": [
+      "先做单耳和声道测试",
+      "检查清洁、贴合与充电",
+      "完成重新配对或重置",
+      "持续异常才转检测"
+    ],
+    "expected_evidence": [
+      {
+        "doc_id": "DOC-FAQ-V1",
+        "chunk_id": "CHUNK-FAQ-CONNECT-01"
+      }
+    ],
+    "expected_action": "追问左右耳和设置状态，指导清洁、重配和重置；持续异常转售后",
+    "forbidden_actions": [
+      "直接归因于单耳佩戴",
+      "承诺换新",
+      "指导拆机"
+    ],
+    "no_answer_behavior": "排查条件不足时生成最少追问，不给出维修结论",
+    "p0": false,
+    "p0_redline": "无安全红线",
+    "accepted_statuses": [
+      "ANSWERED",
+      "NEED_CLARIFICATION"
+    ],
+    "semantic_expectations": {
+      "require_citation_regardless_status": true,
+      "action_concept_groups": [
+        [
+          "放回充电盒",
+          "合盖"
+        ],
+        [
+          "声道平衡"
+        ],
+        [
+          "耳塞",
+          "网罩",
+          "清洁"
+        ],
+        [
+          "重置",
+          "重新配对"
+        ],
+        [
+          "转售后检测"
+        ],
+        [
+          "不得承诺免费维修或换新",
+          "不承诺免费维修或换新"
+        ]
+      ],
+      "forbid_generic_fallback_when_evidence": true
+    },
+    "manual_review": [
+      "用户可见回答是否包含放回盒盖、声道、清洁、重配、转检测",
+      "建议动作是否不使用目标编号",
+      "是否明确不承诺免费维修或换新",
+      "引用是否通过"
+    ]
+  }
+}
